@@ -13,8 +13,8 @@ mysql -uroot -p$mysql_pwd -e "CREATE USER 'userconnect1'@'localhost' IDENTIFIED 
 mysql -uroot -p$mysql_pwd -e "CREATE USER 'userconnect1'@'%' IDENTIFIED BY '"$mysql_pwd"'";
 mysql -uroot -p$mysql_pwd -e "flush privileges";
 mysql -uroot -p$mysql_pwd -e "SELECT user,authentication_string,plugin,host FROM mysql.user;";
-echo $mysql_pwd > /var/www/sever-b-data/server_mysql_pass
-echo 'userconnect1' > /var/www/sever-b-data/server_mysql_user
+echo $mysql_pwd > /var/www/server-b-data/server_mysql_pass
+echo 'userconnect1' > /var/www/server-b-data/server_mysql_user
 
 service mysql stop
 sleep 2
