@@ -31,17 +31,17 @@ sudo bash /var/www/server-b/bash/scripts/update_upgrade.sh
 sudo apt install nano -y
 
 server_os=$(. /etc/os-release; echo ${PRETTY_NAME/*, /})
-echo $server_os > /var/www/www-panel-data/server_os
+echo $server_os > /var/www/server-b-data/server_os
 
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_bck
 sudo bash /var/www/server-b/bash/scripts/ssh_port_set.sh
 
 sudo bash /var/www/server-b/bash/scripts/nginx_install.sh
-sudo cp /etc/nginx/sites-enabled/default /var/www/www-panel-data/nginx-sites-enabled-default_bck
-sudo cp /etc/nginx/nginx.conf /var/www/www-panel-data/nginx_conf_bck
+sudo cp /etc/nginx/sites-enabled/default /var/www/server-b-data/nginx-sites-enabled-default_bck
+sudo cp /etc/nginx/nginx.conf /var/www/server-b-data/nginx_conf_bck
 
 sudo bash /var/www/server-b/bash/scripts/php_install.sh
-sudo cp /etc/php/7.2/fpm/php.ini /var/www/www-panel-data/php_ini_bck
+sudo cp /etc/php/7.2/fpm/php.ini /var/www/server-b-data/php_ini_bck
 
 sudo bash /var/www/server-b/bash/scripts/node_npm_install.sh
 
