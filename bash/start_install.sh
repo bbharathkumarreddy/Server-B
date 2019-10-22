@@ -30,6 +30,8 @@ echo -------------------------------------------------
 sudo bash /var/www/server-b/bash/scripts/update_upgrade.sh
 sudo apt install nano -y
 
+sudo bash /var/www/server-b/bash/scripts/ip-save.sh
+
 server_os=$(. /etc/os-release; echo ${PRETTY_NAME/*, /})
 echo $server_os > /var/www/server-b-data/server_os
 
