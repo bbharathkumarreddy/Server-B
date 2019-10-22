@@ -69,5 +69,10 @@ server_ip=$(curl ifconfig.co)
 server_b_port='8805'
 echo $server_b_port > /var/www/server-b-data/server_b_port
 
+
+server_b_port='linux-instance'
+echo $server_b_port > /var/www/server-b-data/server_name
+
+
 echo "Access your SERVER B at http://${server_ip}:${server_b_port}"
 echo '/////////////// SERVER B INSTALLATION COMPLETED SUCCESSFULLY / RESTART FOR SSH PORT CHANGES IF REQUIRED \\\\\\\\\\\\\\\'
