@@ -64,7 +64,7 @@
                         <div class="card-body">
 
                             <small>Server</small><br> &nbsp;
-                            <b><?php readfile("/var/www/server-b-data/server_name") ?></b> &nbsp;
+                            <b style="font-size: smaller;"><?php readfile("/var/www/server-b-data/server_name") ?></b> &nbsp;
                             <b></b>
                             <br>
                             <small>Public IP</small><br> &nbsp;
