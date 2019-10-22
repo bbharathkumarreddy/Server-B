@@ -1,7 +1,8 @@
 <?php include_once('top.php'); ?>
 <div class="container-fluid">
-
-<iframe src="http://34.74.139.145:8800/filemanager.php?p=" frameborder="0" style="width:100%;height:1000px;"></iframe>
+<?php $public_ip = @readfile("/var/www/server-b-data/server_public_ip"); ?>
+<?php $server_b_port = @readfile("/var/www/server-b-data/server_b_port"); ?>
+<iframe src="http://<?php echo $public_ip.':'.$server_b_port; ?>/filemanager.php?p=" frameborder="0" style="width:100%;height:1000px;"></iframe>
 
 </div>
 <?php include_once('bottom.php'); ?>
