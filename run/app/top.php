@@ -68,10 +68,10 @@
                             <b></b>
                             <br>
                             <small>Public IP</small><br> &nbsp;
-                            <b>192.168.1.100</b>
+                            <b><?php readfile("/var/www/server-b-data/server_public_ip") ?></b>
                             <br>
                             <small>Private IP</small><br> &nbsp;
-                            <b>-</b>
+                            <b><?php readfile("/var/www/server-b-data/server_int_ip") ?></b>
                         </div>
                     </div>
                 </div>
