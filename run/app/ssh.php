@@ -2,7 +2,7 @@
 <div class="container-fluid">
 <?php $public_ip = readfile("/var/www/server-b-data/server_public_ip"); ?>
 <?php $server_b_port = readfile("/var/www/server-b-data/server_b_port"); ?>
-<iframe src="http://<?php echo $public_ip.':'.$server_b_port; ?>/" frameborder="0" style="width:100%;height:600px;"></iframe>
+<iframe src="http://<?php readfile("/var/www/server-b-data/server_public_ip").':'.readfile("/var/www/server-b-data/server_b_port"); ?>/" frameborder="0" style="width:100%;height:600px;"></iframe>
 
 </div>
 <?php include_once('bottom.php'); ?>
