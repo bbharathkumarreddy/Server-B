@@ -1,6 +1,6 @@
 #!/bin/bash
 #install command below
-#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/start_install.sh
+#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/bash/start_install.sh
 
 #/etc/ssh/sshd_config
 #/etc/php/7.2/fpm/php.ini
@@ -12,10 +12,10 @@ echo +++++  Server B Installation Started  ++++++
 echo --------------------------------------------------
 
 sudo rm -rf /var/www/server-b-data
-sudo rm -rf /var/www/server-b-data
-
 sudo rm -rf /var/www/site_1
 sudo rm -rf /var/www/site_1_cert
+
+sudo mkdir /var/www/server-b-data
 sudo mkdir /var/www/site_1
 sudo mkdir /var/www/site_1/php
 sudo mkdir /var/www/site_1/node
