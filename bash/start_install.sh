@@ -48,16 +48,17 @@ sudo bash /var/www/server-b/bash/scripts/php_install.sh
 sudo cp /etc/php/7.2/fpm/php.ini /var/www/server-b-data/php_ini_bck
 
 sudo bash /var/www/server-b/bash/scripts/node_npm_install.sh
-
+sleep 2
 sudo bash /var/www/server-b/bash/scripts/mysqldb_install.sh
 sudo cp /etc/mysql/mysql.conf.d/mysqld_bck.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo bash /var/www/server-b/bash/scripts/mysqldb_config.sh
-
+sleep 3
 sudo bash /var/www/server-b/bash/scripts/nginx_timezone_config.sh
 sudo bash /var/www/server-b/bash/scripts/php_config.sh
-
-sudo bash /var/www/server-b/bash/scripts/shell_in_a_box.sh
-
+sleep 2
+read -p "Shell in a box port : " shell_in_a_box_port
+sudo bash /var/www/server-b/bash/scripts/shell_in_a_box.sh ${shell_in_a_box_port}
+sleep 2
 sudo bash  /var/www/server-b/bash/scripts/newuser-it.sh
 
 sudo bash /var/www/server-b/bash/scripts/generate_auth_key.sh
