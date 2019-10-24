@@ -56,6 +56,13 @@ sudo bash /var/www/server-b/bash/scripts/mysqldb_config.sh
 sudo bash /var/www/server-b/bash/scripts/nginx_timezone_config.sh
 sudo bash /var/www/server-b/bash/scripts/php_config.sh
 
+sudo bash /var/www/server-b/bash/scripts/shell_in_a_box.sh
+
+read -p "Create new ubunut linux user : " shell_in_a_box_user
+read -p "Set password : " shell_in_a_box_pwd
+
+sudo bash  /var/www/server-b/bash/scripts/newuser shell_in_a_box_user shell_in_a_box_pwd
+
 sudo bash /var/www/server-b/bash/scripts/generate_auth_key.sh
 sleep 10
 echo 'System restarts in 10 seconds and after restart system connects SSH only in new port entered';
