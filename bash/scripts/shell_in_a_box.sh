@@ -7,5 +7,7 @@ echo -------------------------------------------------
 sleep 2
 sed -i "s/4200/4201/g" /etc/default/shellinabox
 sed -i "s/--no-beep/--no-beep   --disable-ssl/g" /etc/default/shellinabox
-sleep
-sudo service shellinaboxd start
+sleep 1
+sudo service shellinabox stop
+sleep 1
+sudo service shellinabox start
