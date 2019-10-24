@@ -43,7 +43,7 @@ sudo cp /etc/nginx/sites-enabled/default /var/www/server-b-data/nginx-sites-enab
 sudo cp /etc/nginx/nginx.conf /var/www/server-b-data/nginx_conf_bck
 sudo cp /var/www/server-b/bash/files/nginx.conf /etc/nginx/sites-enabled/default
 sudo service nginx reload
-
+sleep 3
 sudo bash /var/www/server-b/bash/scripts/php_install.sh
 sudo cp /etc/php/7.2/fpm/php.ini /var/www/server-b-data/php_ini_bck
 
