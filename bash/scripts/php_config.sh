@@ -15,7 +15,7 @@ echo "PHP New Current Timezone = ${new_php_timezone_string}"
 sudo service php7.2-fpm reload
 sleep 2 
 echo -------------------------------------------------
-echo xxxxxxxxxxx  PHP CONFIG STARTED     xxxxxxxxxxxx
+echo xxxxxxxxxxx  PHP CONFIG COMPLETED    xxxxxxxxxxxx
 echo -------------------------------------------------
 
 #timedatectl list-timezones
