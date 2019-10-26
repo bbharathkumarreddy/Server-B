@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo chmod 777 /var/www/server-b
-sudo chmod 777 /var/www/server-b-data
+sudo chmod -R 777 /var/www/server-b
+sudo chmod -R 777 /var/www/server-b-data
