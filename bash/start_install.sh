@@ -30,7 +30,7 @@ echo -------------------------------------------------
 echo ++++++++     System Setup Started      ++++++++++
 echo -------------------------------------------------
 
-sudo bash /var/www/server-b/bash/scripts/update_upgrade.sh
+sudo bash /var/www/server-b/bash/scripts/update-upgrade.sh
 sudo apt install nano -y
 
 sudo bash /var/www/server-b/bash/scripts/ip-save.sh
