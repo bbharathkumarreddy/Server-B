@@ -1,5 +1,5 @@
 <?php $host = "http://".file_get_contents("/var/www/server-b-data/server_public_ip").`:`.file_get_contents("/var/www/server-b-data/server_b_port"); ?>
-<? echo 'Link - '.$host; ?>
+<?php echo 'Link - '.$host; ?>
 <!DOCTYPE html>
 <html lang="en">
 
