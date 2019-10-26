@@ -74,9 +74,11 @@ server_ip=$(curl ifconfig.co)
 server_b_port='8805'
 echo $server_b_port > /var/www/server-b-data/server_b_port
 
-
 server_b_port='linux-instance'
 echo $server_b_port > /var/www/server-b-data/server_name
+sudo bash /var/www/server-b/bash/scripts/file_per.sh
+
+crontab -l | { cat; echo "@reboot /var/www/server-b/bash/scripts/ip-save.sh > /dev/null 2>&1"; } | crontab -
 
 echo "Access your SERVER B at http://${server_ip}:${server_b_port}"
 echo '/////////////// SERVER B INSTALLATION COMPLETED SUCCESSFULLY / RESTART FOR SSH PORT CHANGES IF REQUIRED \\\\\\\\\\\\\\\'
