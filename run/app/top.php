@@ -1,3 +1,4 @@
+<?php $host = "http://".file_get_contents("/var/www/server-b-data/server_public_ip").`:`.file_get_contents("/var/www/server-b-data/server_b_port"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,14 +100,14 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo $host.'/app/filemanager.php'; ?>">
                     <i class="fa fa-file-code"></i>
                     <span>File Manger</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo $host.'/app/ssh.php'; ?>">
                     <i class="fa fa-greater-than"></i>
                     <span>SSH</span>
                 </a>
