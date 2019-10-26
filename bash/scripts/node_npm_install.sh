@@ -2,6 +2,7 @@
 echo -------------------------------------------------
 echo +++++++++  NODE NPM INSTALL STARTED  ++++++++++++
 echo -------------------------------------------------
+sleep 5
 sudo apt install nodejs -y
 sudo apt install npm -y
 echo "Node version"
