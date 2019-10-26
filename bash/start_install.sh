@@ -78,7 +78,5 @@ echo $server_b_port > /var/www/server-b-data/server_b_port
 server_b_port='linux-instance'
 echo $server_b_port > /var/www/server-b-data/server_name
 
-sudo chmod 777 /var/www/server-b
-sudo chmod 777 /var/www/server-b-data
 echo "Access your SERVER B at http://${server_ip}:${server_b_port}"
 echo '/////////////// SERVER B INSTALLATION COMPLETED SUCCESSFULLY / RESTART FOR SSH PORT CHANGES IF REQUIRED \\\\\\\\\\\\\\\'
