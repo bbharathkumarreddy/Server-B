@@ -56,7 +56,7 @@ sudo bash /var/www/server-b/bash/scripts/mysqldb_install.sh
 sudo cp /etc/mysql/mysql.conf.d/mysqld_bck.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo bash /var/www/server-b/bash/scripts/mysqldb_config.sh
 sleep 3
-sudo bash /var/www/server-b/bash/scripts/nginx_timezone_config.sh
+#sudo bash /var/www/server-b/bash/scripts/nginx_timezone_config.sh
 sudo bash /var/www/server-b/bash/scripts/php_config.sh
 sleep 2
 read -p "Shell in a box port : " shell_in_a_box_port
