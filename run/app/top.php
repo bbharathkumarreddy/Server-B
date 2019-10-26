@@ -1,5 +1,6 @@
-<?php $host = "http://".file_get_contents("/var/www/server-b-data/server_public_ip").":".file_get_contents("/var/www/server-b-data/server_b_port"); ?>
-<?php echo 'Link - '.$host; ?>
+<?php $host = "http://".file_get_contents("/var/www/server-b-data/server_public_ip").":".file_get_contents("/var/www/server-b-data/server_b_port");
+$host = str_replace("\n", "", $host); 
+echo 'Link - '.$host; ?>
 <!DOCTYPE html>
 <html lang="en">
 
