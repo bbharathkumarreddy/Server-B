@@ -82,5 +82,5 @@ echo $server_b_name > /var/www/server-b-data/server_name
 
 crontab -l | { cat; echo "@reboot /var/www/server-b/bash/scripts/ip-save.sh > /dev/null 2>&1"; } | crontab -
 
-echo "Access your SERVER B at http://${server_ip}:${server_b_port}"
+echo "Access your SERVER B at http://${server_ip}:${server_b_port}/app/filemanager.php"
 echo '/////////////// SERVER B INSTALLATION COMPLETED SUCCESSFULLY / RESTART FOR SSH PORT CHANGES IF REQUIRED \\\\\\\\\\\\\\\'
