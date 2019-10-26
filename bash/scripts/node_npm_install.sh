@@ -8,6 +8,7 @@ echo "Node version"
 nodejs -v
 echo "NPM version"
 npm -v
+sleep 5
 echo -------------------------------------------------
 echo ++++++++ NODE NPM INSTALL COMPLETED    ++++++++++            
 echo -------------------------------------------------
