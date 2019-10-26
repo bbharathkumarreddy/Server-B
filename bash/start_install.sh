@@ -21,6 +21,9 @@ sudo mkdir /var/www/site_1/php
 sudo mkdir /var/www/site_1/node
 sudo mkdir /var/www/site_1/static
 sudo mkdir /var/www/site_1_cert
+chmod -R 777 /var/www/server-b
+chmod -R 777 /var/www/server-b-data
+
 sudo cp /var/www/server-b/bash/files/php_info.php /var/www/site_1/php/php_info.php
 
 echo -------------------------------------------------
@@ -43,10 +46,10 @@ sudo cp /etc/nginx/sites-enabled/default /var/www/server-b-data/nginx-sites-enab
 sudo cp /etc/nginx/nginx.conf /var/www/server-b-data/nginx_conf_bck
 sudo cp /var/www/server-b/bash/files/nginx.conf /etc/nginx/sites-enabled/default
 sudo service nginx reload
-sleep 3
+sleep 5
 sudo bash /var/www/server-b/bash/scripts/php_install.sh
 sudo cp /etc/php/7.2/fpm/php.ini /var/www/server-b-data/php_ini_bck
-
+sleep 5
 sudo bash /var/www/server-b/bash/scripts/node_npm_install.sh
 sleep 2
 sudo bash /var/www/server-b/bash/scripts/mysqldb_install.sh
@@ -76,7 +79,6 @@ echo $server_b_port > /var/www/server-b-data/server_b_port
 
 server_b_port='linux-instance'
 echo $server_b_port > /var/www/server-b-data/server_name
-sudo bash /var/www/server-b/bash/scripts/file_per.sh
 
 crontab -l | { cat; echo "@reboot /var/www/server-b/bash/scripts/ip-save.sh > /dev/null 2>&1"; } | crontab -
 
