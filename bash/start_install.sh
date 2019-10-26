@@ -65,7 +65,7 @@ sleep 2
 sudo bash  /var/www/server-b/bash/scripts/newuser-it.sh
 
 sudo bash /var/www/server-b/bash/scripts/generate_auth_key.sh
-sleep 10
+sleep 5
 echo 'System restarts in 10 seconds and after restart system connects SSH only in new port entered';
 #sudo apt install build-essential -y
 #sudo service ssh reload
@@ -77,8 +77,8 @@ server_ip=$(curl ifconfig.co)
 server_b_port='8805'
 echo $server_b_port > /var/www/server-b-data/server_b_port
 
-server_b_port='linux-instance'
-echo $server_b_port > /var/www/server-b-data/server_name
+server_b_name='linux-instance'
+echo $server_b_name > /var/www/server-b-data/server_name
 
 crontab -l | { cat; echo "@reboot /var/www/server-b/bash/scripts/ip-save.sh > /dev/null 2>&1"; } | crontab -
 
