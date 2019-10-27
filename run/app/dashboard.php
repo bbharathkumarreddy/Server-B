@@ -199,9 +199,10 @@
                     success: function(data) {
                         data =$.trim(data.replace(/[\t\n]+/g, ' '))
                         console.log(data)
+                        console.log(data.includes('Already up to date'))
                         if(data.includes('Already up to date')){
                             alert('Update Successful');
-                            location.reload(true);
+                            //location.reload(true);
                         }
                         else{
                             alert('Already up to date');
