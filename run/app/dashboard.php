@@ -197,7 +197,7 @@
                     dataType: 'text',
                     type: 'get',
                     success: function(data) {
-                        if(data.search('Already up to date')){
+                        if(data.includes('Already up to date')){
                             alert('Update Successful');
                             location.reload(true);
                         }
