@@ -191,7 +191,7 @@
     <script src="js/demo/line-chart.js"></script>
     <script>
         $(document).ready(function() {
-            $('#update').click(function() {
+            $('#update-btn').click(function() {
                 $.ajax({
                     url: '/api/update-server-b.php',
                     dataType: 'text',
