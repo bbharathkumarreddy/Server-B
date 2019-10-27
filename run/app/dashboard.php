@@ -199,6 +199,7 @@
                     success: function(data) {
                         if(data.search('Already up to date')){
                             alert('Update Successful');
+                            location.reload(true);
                         }
                         else{
                             alert('Already up to date');
