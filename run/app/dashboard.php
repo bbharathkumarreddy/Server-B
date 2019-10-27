@@ -197,7 +197,7 @@
                     dataType: 'text',
                     type: 'get',
                     success: function(data) {
-                        
+                        alert('Update Complete');
                     },
                 });
             });
