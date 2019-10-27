@@ -7,7 +7,7 @@ MEM_TOTAL=$(free -m | awk 'NR==2{printf "%s\n", $2}')
 TIMESTAMP=$(date +%s)
 
 LINE=`grep ens4 /proc/net/dev | sed s/.*://`;
-NET_RECEIVED=`echo $LINE | awk '{print ens4}'`
+NET_RECEIVED=`echo $LINE | awk '{print $1}'`
 NET_TRANSMITTED=`echo $LINE | awk '{print $9}'`
 NET_TOTAL=$(($NET_RECEIVED+$NET_TRANSMITTED))
 
