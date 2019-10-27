@@ -1,0 +1,1 @@
+<?php echo shell_exec('tail -30 /var/www/server-b-data/sys_stat_log'); ?>
