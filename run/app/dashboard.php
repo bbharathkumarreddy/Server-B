@@ -197,6 +197,7 @@
                     dataType: 'text',
                     type: 'get',
                     success: function(data) {
+                        data = data.replace(/\s+/g, " ");
                         console.log(data)
                         if(data.includes('Already up to date')){
                            // alert('Update Successful');
