@@ -217,7 +217,7 @@
                         console.log(data)
                     },
                 });
-            }, 1000);
+            }, 3000);
         });
     </script>
     <?php include_once('page-complete.php'); ?>
