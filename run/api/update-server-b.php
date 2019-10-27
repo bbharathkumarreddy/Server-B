@@ -1,5 +1,5 @@
 <?php
-echo 'git update started <br>';
+echo 'git update started<br>';
 $a = shell_exec("sudo bash /var/www/server-b/bash/scripts/server-b-git-update.sh");
 echo $a;
 echo '<br>complete';
