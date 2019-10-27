@@ -11,5 +11,5 @@ NET_RECEIVED=`echo $LINE | awk '{print $1}'`
 NET_TRANSMITTED=`echo $LINE | awk '{print $9}'`
 NET_TOTAL=$(($NET_RECEIVED+$NET_TRANSMITTED))
 
-DATA_STRING="["${TIMESTAMP}","${CPU}","${DISK_USAGE}","${DISK_TOTAL}","${MEM_USAGE}","${MEM_TOTAL}","${NET_RECEIVED}","${NET_TRANSMITTED}","${NET_TOTAL}"],"
+DATA_STRING="['${TIMESTAMP}','${CPU}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'],"
 echo ${DATA_STRING} >> /var/www/server-b-data/sys_stat_log
