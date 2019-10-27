@@ -199,8 +199,8 @@
                     success: function(data) {
                         console.log(data)
                         if(data.includes('Already up to date')){
-                            alert('Update Successful');
-                            location.reload(true);
+                           // alert('Update Successful');
+                           // location.reload(true);
                         }
                         else{
                             alert('Already up to date');
