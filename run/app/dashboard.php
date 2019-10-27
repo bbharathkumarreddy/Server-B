@@ -173,7 +173,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col-3 m-auto text-center">
-                                <a id="update-btn"><i class="fas fa-sync fa-2x text-info"></i><br>Update</a>
+                                <a id="update-btn" style="cursor: pointer;"><i class="fas fa-sync fa-2x text-info"></i><br>Update</a>
                             </div>
                         </div>
                     </div>
