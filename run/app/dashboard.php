@@ -162,6 +162,26 @@
         </div>
 
 </div>
+<div class="row">
+<div class="col-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Server B Update</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">                  
+                    <div class="col-3 m-auto text-center">
+                      <a href="#"><i class="fas fa-sync fa-2x text-info"></i><br>Update</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+</div>
 <?php include_once('bottom.php'); ?>
 <!-- Page level plugins -->
 <script src="vendor/chart.js/Chart.min.js"></script>
