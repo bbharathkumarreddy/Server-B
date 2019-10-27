@@ -208,6 +208,16 @@
                     },
                 });
             });
+            setInterval(function(){
+                $.ajax({
+                    url: '/api/sys_stat.php',
+                    dataType: 'json',
+                    type: 'get',
+                    success: function(data) {
+                        console.log(data)
+                    },
+                });
+            }, 1000);
         });
     </script>
     <?php include_once('page-complete.php'); ?>
