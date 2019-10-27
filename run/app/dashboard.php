@@ -197,7 +197,12 @@
                     dataType: 'text',
                     type: 'get',
                     success: function(data) {
-                        alert('Update Complete');
+                        if(data.search('Already up to date')){
+                            alert('Update Successful');
+                        }
+                        else{
+                            alert('Already up to date');
+                        }
                     },
                 });
             });
