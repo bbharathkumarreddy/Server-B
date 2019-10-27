@@ -1,6 +1,6 @@
 <?php
-echo 'git update started';
-$a = exec("sudo bash /var/www/server-b/bash/scripts/server-b-git-update.sh");
+echo 'git update started <br>';
+$a = shell_exec("sudo bash /var/www/server-b/bash/scripts/server-b-git-update.sh");
 echo $a;
-echo 'complete';
+echo '<br>complete';
 ?>
