@@ -1,6 +1,5 @@
 <?php include_once('top.php'); ?>
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -144,26 +143,26 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col-3 m-auto text-center">
-                      <a href="#"><i class="fas fa-play fa-2x text-success"></i><br>Start</a>
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-3 m-auto text-center">
+                                <a href="#"><i class="fas fa-play fa-2x text-success"></i><br>Start</a>
+                            </div>
+                            <div class="col-3 m-auto text-center">
+                                <a href="#"><i class="fas fa-stop fa-2x text-danger"></i><br>Stop</a>
+                            </div>
+                            <div class="col-3 m-auto text-center">
+                                <a href="#"><i class="fas fa-sync fa-2x text-info"></i><br>Restart</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-3 m-auto text-center">
-                      <a href="#"><i class="fas fa-stop fa-2x text-danger"></i><br>Stop</a>
-                    </div>
-                    <div class="col-3 m-auto text-center">
-                      <a href="#"><i class="fas fa-sync fa-2x text-info"></i><br>Restart</a>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
         </div>
 
-</div>
-<div class="row">
-<div class="col-12 col-lg-12">
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-12">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -171,28 +170,37 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">                  
-                    <div class="col-3 m-auto text-center">
-                      <a href="#"><i class="fas fa-sync fa-2x text-info"></i><br>Update</a>
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-3 m-auto text-center">
+                                <a id="update-btn"><i class="fas fa-sync fa-2x text-info"></i><br>Update</a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
         </div>
-</div>
-<?php include_once('bottom.php'); ?>
-<!-- Page level plugins -->
-<script src="vendor/chart.js/Chart.min.js"></script>
+    </div>
+    <?php include_once('bottom.php'); ?>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-<!-- Page level custom scripts -->
-<script src="js/demo/chart-area-demo.js"></script>
-<script src="js/demo/chart-pie-demo.js"></script>
-<script src="js/demo/line-chart.js"></script>
-<script>
-    $(document).ready(function() {
-
-    });
-</script>
-<?php include_once('page-complete.php'); ?>
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/line-chart.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#update').click(function() {
+                $.ajax({
+                    url: '/api/update-server-b.php',
+                    dataType: 'text',
+                    type: 'get',
+                    success: function(data) {
+                        
+                    },
+                });
+            });
+        });
+    </script>
+    <?php include_once('page-complete.php'); ?>
