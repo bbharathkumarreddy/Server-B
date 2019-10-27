@@ -7,7 +7,7 @@
  <footer class="sticky-footer bg-white">
      <div class="container my-auto">
          <div class="copyright text-center my-auto">
-             <span>Copyright &copy; Admin B Panel, A Cubepost Make 2019</span>
+             <span>Copyright &copy; Admin B Panel, A Cubepost Make 2019 - Server-B <?php readfile('/var/www/server-b-data/server_b_ver'); ?></span>
          </div>
      </div>
  </footer>
