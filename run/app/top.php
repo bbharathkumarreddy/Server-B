@@ -80,7 +80,7 @@ $host = str_replace("\n", "", $host); ?>
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo $host.'/app/dashboard.php'; ?>">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -103,7 +103,7 @@ $host = str_replace("\n", "", $host); ?>
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $host.'/app/filemanager.php'; ?>">
                     <i class="fa fa-file-code"></i>
-                    <span>File Manger</span>
+                    <span>File Manager</span>
                 </a>
             </li>
 
