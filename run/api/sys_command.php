@@ -6,7 +6,7 @@ if(isset($_GET['cmd']) && $_GET['cmd'] == 'shutdown'){
     $status = 'success';
 }
 elseif(isset($_GET['cmd']) && $_GET['cmd'] == 'reboot'){ 
-    $data = system("sudo reboot now");
+    $data = shell_exec("sudo reboot now");
     $status = 'success';
 }
 echo $status.'<br>'.$data;
