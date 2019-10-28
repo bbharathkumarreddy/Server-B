@@ -1,4 +1,5 @@
 <?php
+echo 'user-'.shell_exec('whoami');
 $status = 'fail';
 if(isset($_GET['cmd']) && $_GET['cmd'] == 'shutdown'){ 
     $data = shell_exec("/sbin/shutdown");
