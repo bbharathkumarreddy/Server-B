@@ -149,10 +149,10 @@
                                 <a class="" command="start"><i class="fas fa-play fa-2x text"></i><br>Start</a>
                             </div>
                             <div class="col-3 m-auto text-center">
-                                <a class="command-btn" command="stop" href="javascript:;"><i class="fas fa-stop fa-2x text-danger"></i><br>Stop</a>
+                                <a class="command-btn" command="shutdown" href="javascript:;"><i class="fas fa-stop fa-2x text-danger"></i><br>Stop</a>
                             </div>
                             <div class="col-3 m-auto text-center">
-                                <a class="command-btn" command="restart" href="javascript:;"><i class="fas fa-sync fa-2x text-info"></i><br>Restart</a>
+                                <a class="command-btn" command="reboot" href="javascript:;"><i class="fas fa-sync fa-2x text-info"></i><br>Restart</a>
                             </div>
                         </div>
                     </div>
