@@ -2,7 +2,7 @@
 echo 'user-'.shell_exec('whoami');
 $status = 'fail';
 if(isset($_GET['cmd']) && $_GET['cmd'] == 'shutdown'){ 
-    $data = shell_exec("/sbin/shutdown");
+    $data = shell_exec("/bin/shutdown");
     $status = 'success';
 }
 elseif(isset($_GET['cmd']) && $_GET['cmd'] == 'reboot'){ 
