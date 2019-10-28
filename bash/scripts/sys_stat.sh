@@ -1,4 +1,7 @@
 #!/bin/bash
+LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $10}')
+LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $11}')
+LOAD_15=$(top -bn1 | grep load | awk '{printf "%s\n", $12}')
 CPU=$(top -bn1 | grep load | awk '{printf "%.2f\n", $(NF-2)}')
 DISK_USAGE=$(df -h | awk '$NF=="/"{printf "%.1f\n", $3}')
 DISK_TOTAL=$(df -h | awk '$NF=="/"{printf "%.1f\n", $2}')
@@ -11,5 +14,5 @@ NET_RECEIVED=`echo $LINE | awk '{print $1}'`
 NET_TRANSMITTED=`echo $LINE | awk '{print $9}'`
 NET_TOTAL=$(($NET_RECEIVED+$NET_TRANSMITTED))
 
-DATA_STRING="['${TIMESTAMP}','${CPU}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'],"
+DATA_STRING="['${TIMESTAMP}','${CPU}','${LOAD_1}','${LOAD_5}','${LOAD_15}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'],"
 echo ${DATA_STRING} >> /var/www/server-b-data/sys_stat_log

@@ -208,6 +208,22 @@
                     },
                 });
             });
+
+            $('.command-btn').click(function() {
+                var command = $(this).attr('command');
+                $.ajax({
+                    url: '/api/sys_command.php',
+                    dataType: 'text',
+                    type: 'get',
+                    data:{cmd:command},
+                    success: function(data) {
+                        console.log(data);
+                        alert('Already up to date');
+                    },
+                });
+            });
+
+
             setInterval(function(){
                 $.ajax({
                     url: '/api/sys_stat.php',
