@@ -1,7 +1,7 @@
 <?php
 $status = 'fail';
 if(isset($_GET['cmd']) && $_GET['cmd'] == 'shutdown'){ 
-    $data = shell_exec("bash /var/www/server-b/bash/scripts/shutdown.sh");
+    $data = shell_exec("/sbin/shutdown");
     $status = 'success';
 }
 elseif(isset($_GET['cmd']) && $_GET['cmd'] == 'reboot'){ 
