@@ -211,6 +211,7 @@
 
             $('.command-btn').click(function() {
                 var command = $(this).attr('command');
+                alert('command '+command);
                 $.ajax({
                     url: '/api/sys_command.php',
                     dataType: 'text',
