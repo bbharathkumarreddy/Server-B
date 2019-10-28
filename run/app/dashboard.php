@@ -33,7 +33,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas class="myPieChart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -52,7 +52,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas class="myPieChart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -71,7 +71,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas class="myPieChart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -90,7 +90,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas class="myPieChart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -109,7 +109,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas class="myPieChart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -217,7 +217,7 @@
                         console.log(data)
                     },
                 });
-            }, 3000);
+            }, 30000);
         });
     </script>
     <?php include_once('page-complete.php'); ?>
