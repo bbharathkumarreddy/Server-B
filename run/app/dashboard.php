@@ -186,13 +186,12 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/line-chart.js"></script>
     <script>
         $(document).ready(function() {
             $('#update-btn').click(function() {
-                console.log('a')
                 $.ajax({
                     url: '/api/update-server-b.php',
                     dataType: 'text',
@@ -209,7 +208,7 @@
                     },
                 });
             });
-            
+
             $('.command-btn').click(function() {
                 var command = $(this).attr('command');
                 alert('Please wait for '+command);
@@ -225,26 +224,33 @@
                 });
             });
             console.log('a')
-            $.ajax({
-                url: '/api/sys_command.php',
-                dataType: 'text',
-                type: 'get',
-                success: function(data) {
-                    console.log(data);
-                    alert(data);
-                },
-            });
 
-            $.ajax({
-                url: '/api/sys_stat.php',
-                dataType: 'JSON',
-                type: 'GET',
-                success: function(data) {
-                    console.log(data);
-                    alert(data);
-                },
-            });
-            
+            setInterval(function(){
+                $.ajax({
+                    url: '/api/sys_stat.php',
+                    dataType: 'json',
+                    type: 'get',
+                    success: function(data_1) {
+                        
+                        console.__proto__.log(data_1);
+                        for(var i=0;i<data_1.data.length;i++){
+                            var dt = new Date(data_1.data[i][0]);
+                            var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                            
+                            
+                            
+                        }
+                        var dt = new Date(data_1.data[12][0]);
+                        var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                        mylinechart_2.data.labels.push(data_1.data[12][0]);
+                        mylinechart_2.data.labels.splice(0,13);
+                        mylinechart_2.update();
+                    },
+                });
+            }, 2000);
+
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
                 type: 'line',
@@ -281,7 +287,17 @@
                 }
             });
 
-            
+            setInterval(function(){ 
+
+                
+                // mylinechart_2.data.datasets[Math.floor((Math.random() * 3) + 1)].data[Math.floor((Math.random() * 10) + 1)] = Math.floor((Math.random() * 500) + 1);//this update the value of may
+                // mylinechart_2.data.datasets.forEach((dataset) => {
+                //     dataset.data.push(Math.floor((Math.random() * 800) + 1));
+                // });
+                // mylinechart_2.data.labels.push(Math.floor((Math.random() * 100) + 1));
+                // mylinechart_2.data.labels.splice(0,1);
+                // mylinechart_2.update();
+             }, 10000);
         });
     </script>
     <?php include_once('page-complete.php'); ?>
