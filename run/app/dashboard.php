@@ -237,7 +237,6 @@
 
             $.ajax({
                 url: '/api/sys_stat.php',
-                dataType: 'text',
                 type: 'GET',
                 success: function(data) {
                     console.log(data);
