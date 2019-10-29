@@ -242,6 +242,7 @@
                             
                         }
                         var date = new Date(data.data[12][0]*1000);
+                        var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
                         // Year
                         var year = date.getFullYear();
