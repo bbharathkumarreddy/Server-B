@@ -241,12 +241,30 @@
                             
                             
                         }
-                        var dt = new Date(data.data[12][0]);
-                        console.log(data.data[12][0])
-                        console.log(dt)
-                        var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                        console.log(time);
-                        mylinechart_2.data.labels.push(time);
+                        var date = new Date(data.data[12][0]*1000);
+
+                        // Year
+                        var year = date.getFullYear();
+
+                        // Month
+                        var month = months_arr[date.getMonth()];
+
+                        // Day
+                        var day = date.getDate();
+
+                        // Hours
+                        var hours = date.getHours();
+
+                        // Minutes
+                        var minutes = "0" + date.getMinutes();
+
+                        // Seconds
+                        var seconds = "0" + date.getSeconds();
+
+                        // Display date time in MM-dd-yyyy h:m:s format
+                        var convdataTime = month+'-'+day+'-'+year+' '+hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+                        
+                        mylinechart_2.data.labels.push(convdataTime);
                         mylinechart_2.data.labels.splice(0,1);
                         mylinechart_2.update();
                     },
