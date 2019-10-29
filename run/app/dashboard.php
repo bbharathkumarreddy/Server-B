@@ -225,7 +225,15 @@
                 });
             });
             console.log('a')
-            
+            $.ajax({
+                    url: '/api/sys_command.php',
+                    dataType: 'text',
+                    type: 'get',
+                    success: function(data) {
+                        console.log(data);
+                        alert(data);
+                    },
+                });
             $.ajax({
                 url: '/api/sys_stat.php',
                 dataType: 'json',
