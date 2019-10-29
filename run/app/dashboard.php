@@ -236,8 +236,17 @@
                         for(var i=0;i<data_1.data.length;i++){
                             var dt = new Date(data_1.data[i][0]);
                             var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                            console.__proto__.log(time);
+                           
+                            
+                            
+                            
                         }
+                        var dt = new Date(data_1.data[12][0]);
+                        var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                        mylinechart_2.data.labels.push(time);
+                        mylinechart_2.data.labels.splice(0,13);
+                        mylinechart_2.update();
                     },
                 });
             }, 2000);
@@ -281,13 +290,13 @@
             setInterval(function(){ 
 
                 
-                mylinechart_2.data.datasets[Math.floor((Math.random() * 3) + 1)].data[Math.floor((Math.random() * 10) + 1)] = Math.floor((Math.random() * 500) + 1);//this update the value of may
-                mylinechart_2.data.datasets.forEach((dataset) => {
-                    dataset.data.push(Math.floor((Math.random() * 800) + 1));
-                });
-                mylinechart_2.data.labels.push(Math.floor((Math.random() * 100) + 1));
-                mylinechart_2.data.labels.splice(0,1);
-                mylinechart_2.update();
+                // mylinechart_2.data.datasets[Math.floor((Math.random() * 3) + 1)].data[Math.floor((Math.random() * 10) + 1)] = Math.floor((Math.random() * 500) + 1);//this update the value of may
+                // mylinechart_2.data.datasets.forEach((dataset) => {
+                //     dataset.data.push(Math.floor((Math.random() * 800) + 1));
+                // });
+                // mylinechart_2.data.labels.push(Math.floor((Math.random() * 100) + 1));
+                // mylinechart_2.data.labels.splice(0,1);
+                // mylinechart_2.update();
              }, 10000);
         });
     </script>
