@@ -243,7 +243,7 @@
                         }
                         var dt = new Date(data_1.data[12][0]);
                         var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
+                           alert('a')
                         mylinechart_2.data.labels.push(time);
                         mylinechart_2.data.labels.splice(0,13);
                         mylinechart_2.update();
