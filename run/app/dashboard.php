@@ -232,11 +232,11 @@
                     type: 'get',
                     success: function(data) {
                         
-                        console.log(data)
+                        console.log(data);
                         for(var i=0;i<data.data.length;i++){
                             var dt = new Date();
                             var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                            console.log(time)
+                            console.log(time);
                         }
                     },
                 });
