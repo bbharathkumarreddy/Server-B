@@ -226,14 +226,15 @@
             });
             console.log('a')
             
-                $.ajax({
-                    url: '/api/sys_stat.php',
-                    dataType: 'json',
-                    type: 'get',
-                    success: function(data_1) {
-                       console.log(data_1)
-                    }
-                });
+            $.ajax({
+                url: '/api/sys_stat.php',
+                dataType: 'json',
+                type: 'get',
+                success: function(data_1) {
+                    console.log(data_1);
+                    alert(data_1);
+                }
+            });
             
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
