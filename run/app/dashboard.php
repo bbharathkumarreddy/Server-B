@@ -223,7 +223,7 @@
                     },
                 });
             });
-
+            console.log('a')
 
             setInterval(function(){
                 $.ajax({
