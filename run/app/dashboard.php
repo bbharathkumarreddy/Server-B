@@ -226,22 +226,23 @@
             });
             console.log('a')
             $.ajax({
-                    url: '/api/sys_command.php',
-                    dataType: 'text',
-                    type: 'get',
-                    success: function(data) {
-                        console.log(data);
-                        alert(data);
-                    },
-                });
+                url: '/api/sys_command.php',
+                dataType: 'text',
+                type: 'get',
+                success: function(data) {
+                    console.log(data);
+                    alert(data);
+                },
+            });
+
             $.ajax({
                 url: '/api/sys_stat.php',
                 dataType: 'json',
-                type: 'get',
-                success: function(data_1) {
-                    console.log(data_1);
-                    alert(data_1);
-                }
+                type: 'GET',
+                success: function(data) {
+                    console.log(data);
+                    alert(data);
+                },
             });
             
             var line_chart_2 = document.getElementById('line-chart-2');
