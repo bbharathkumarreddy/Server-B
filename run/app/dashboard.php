@@ -192,6 +192,7 @@
     <script>
         $(document).ready(function() {
             $('#update-btn').click(function() {
+                console.log('a')
                 $.ajax({
                     url: '/api/update-server-b.php',
                     dataType: 'text',
