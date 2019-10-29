@@ -232,7 +232,7 @@
                     type: 'get',
                     success: function(data_1) {
                         
-                        console.__proto__.log(data_1);
+                        console.log(data_1);
                         for(var i=0;i<data_1.data.length;i++){
                             var dt = new Date(data_1.data[i][0]);
                             var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
@@ -243,9 +243,9 @@
                         }
                         var dt = new Date(data_1.data[12][0]);
                         var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
-                        mylinechart_2.data.labels.push(data_1.data[12][0]);
-                        mylinechart_2.data.labels.splice(0,13);
+                        console.log(time);
+                        mylinechart_2.data.labels.push(time);
+                        mylinechart_2.data.labels.splice(0,1);
                         mylinechart_2.update();
                     },
                 });
