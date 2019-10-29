@@ -240,7 +240,7 @@
                         }
                     },
                 });
-            }, 1000);
+            }, 2000);
 
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
