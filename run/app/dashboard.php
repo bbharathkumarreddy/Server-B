@@ -230,11 +230,11 @@
                     url: '/api/sys_stat.php',
                     dataType: 'json',
                     type: 'get',
-                    success: function(data) {
+                    success: function(data_1) {
                         
-                        console.log(data);
-                        for(var i=0;i<data.data.length;i++){
-                            var dt = new Date();
+                        console.log(data_1);
+                        for(var i=0;i<data_1.data.length;i++){
+                            var dt = new Date(data_1.data[i][0]);
                             var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
                             console.log(time);
                         }
