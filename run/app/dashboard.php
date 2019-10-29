@@ -263,7 +263,7 @@
                         var seconds = "0" + date.getSeconds();
 
                         // Display date time in MM-dd-yyyy h:m:s format
-                        var convdataTime = month+'-'+day+'-'+year+' '+hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+                        var convdataTime = hours + ':' + minutes.substr(-2);
                         
                         mylinechart_2.data.labels.push(convdataTime);
                         mylinechart_2.data.labels.splice(0,1);
