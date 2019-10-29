@@ -224,8 +224,8 @@
                 });
             });
             console.log('a')
-
-            setInterval(function(){
+            for(var k=0;k<100;k++){
+            //setInterval(function(){
                 $.ajax({
                     url: '/api/sys_stat.php',
                     dataType: 'json',
@@ -249,8 +249,9 @@
                         mylinechart_2.update();
                     },
                 });
-            }, 2000);
-
+            //}, 2000);
+            sleep(2000)
+             }
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
                 type: 'line',
@@ -298,6 +299,10 @@
                 // mylinechart_2.data.labels.splice(0,1);
                 // mylinechart_2.update();
              }, 10000);
+
+             function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+            }
         });
     </script>
     <?php include_once('page-complete.php'); ?>
