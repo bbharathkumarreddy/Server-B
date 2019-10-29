@@ -192,8 +192,6 @@
     <script>
         $(document).ready(function() {
             $('#update-btn').click(function() {
-                myBarChart.data.datasets[0].data[4] = 50;//this update the value of may
-                myBarChart.update();
                 $.ajax({
                     url: '/api/update-server-b.php',
                     dataType: 'text',
