@@ -224,8 +224,7 @@
                 });
             });
             console.log('a')
-            for(var k=0;k<100;k++){
-            //setInterval(function(){
+            
                 $.ajax({
                     url: '/api/sys_stat.php',
                     dataType: 'json',
@@ -249,9 +248,7 @@
                         mylinechart_2.update();
                     },
                 });
-            //}, 2000);
-            sleep(2000)
-             }
+            
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
                 type: 'line',
