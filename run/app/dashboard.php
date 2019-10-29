@@ -224,7 +224,7 @@
                 });
             });
             console.log('a')
-
+            var t = 10000;
             setInterval(function(){
                 $.ajax({
                     url: '/api/sys_stat.php',
@@ -251,7 +251,7 @@
                         mylinechart_2.update();
                     },
                 });
-            }, 2000);
+            }, t);
 
             var line_chart_2 = document.getElementById('line-chart-2');
             var mylinechart_2 = new Chart(line_chart_2, {
