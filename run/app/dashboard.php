@@ -380,7 +380,7 @@ function timestamp_date(timestamp){
                                 label: "Data Up+",
                                 borderColor: "#f6c23e",
                                 fill: false
-                            }.{
+                            },{
                                 data: dd_11,
                                 label: "Total Net",
                                 borderColor: "#f6c23e",
