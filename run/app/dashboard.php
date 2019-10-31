@@ -438,29 +438,29 @@ function timestamp_date(timestamp){
             function time_series(){
                 var d = new Date(); //get a date object
                 //d.setHours(0,0,0,0); //reassign it to today's midnight
-                d.setMinutes(d.getMinutes());
+                d.setMinutes(d.getMinutes() - 16);
 
                 var date = d.getDate();
                 var timeSeriesArr = [];
                 var timeSeriesArrTemp = [];
                 var i=0;
-                while ( date == d.getDate() )
+                while ( i<=16 )
                 {
-                var hours = d.getHours();
-                var minutes = d.getMinutes();
-                hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
-                var ampm = "AM";
-                ampm = hours > 12 ? "PM": "AM";
-                hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
-                hours = ( "0" + hours ).slice(-2); //pad with 0
-                minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
-                timeSeriesArr.push( hours + ":" + minute + " " + ampm );
-                timeSeriesArrTemp.push(hours + ":" + minute);
-                d.setMinutes( d.getMinutes() + 1); //increment by 5 minutes 
-                i++;               
-                if(i>16){
-                 //   break;
-                }
+                    var hours = d.getHours();
+                    var minutes = d.getMinutes();
+                    hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
+                    var ampm = "AM";
+                    ampm = hours > 12 ? "PM": "AM";
+                    hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
+                    hours = ( "0" + hours ).slice(-2); //pad with 0
+                    minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
+                    timeSeriesArr.push( hours + ":" + minute + " " + ampm );
+                    timeSeriesArrTemp.push(hours + ":" + minute);
+                    d.setMinutes( d.getMinutes() + 1); //increment by 1 minutes 
+                    i++;               
+                    if(i>16){
+                        break;
+                    }
                 }  
                 console.log('Timeseries')      
                 console.log([timeSeriesArr,timeSeriesArrTemp]);
