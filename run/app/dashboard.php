@@ -268,7 +268,7 @@ function timestamp_date(timestamp){
                 type: 'get',
                 success: function(data) {   
                     //data = sample;   
-                    chart_reload(data)
+                    chart_load(data)
                 }
             });
             var t = 10000;
@@ -373,9 +373,71 @@ function timestamp_date(timestamp){
                         dd_10.push(new_data_arr[r][10]);
                         dd_11.push(new_data_arr[r][11]);
                     }
-                    document.getElementById("line-chart-sys-monit-cont").innerHTML = '&nbsp;';
-                    document.getElementById("line-chart-sys-monit-cont").innerHTML = '<canvas id="line-chart-sys-monit"></canvas>';
-                    var ctx = document.getElementById("line-chart-sys-monit").getContext("2d");
+
+
+                line_chart_sys_monit.data.labels = dd_0;
+                line_chart_sys_monit.data.datasets[0] = dd_1;
+                line_chart_sys_monit.data.datasets[1] = dd_2;
+                line_chart_sys_monit.update();
+            }
+            function chart_load(data){
+                var data_set_1 = [];              
+                    for(var i=0;i<data.data.length;i++){
+                        var timestamp_date_1 = timestamp_date(data.data[i][0]);
+                        data.data[i].push(timestamp_date_1[1],timestamp_date_1[0]);   // insert datetime                     
+                        data_set_1.push(data.data[i][7]); 
+                    }
+                    console.log(data)
+                    let timeArr = time_series();
+                    console.log('Time')
+                    console.log(timeArr[0])
+                    let new_data_arr = [];
+                    let tempIndexFound = -1;
+                    for(var j=0;j<timeArr[0].length;j++){
+                        let tempData = [];
+                
+                        for(var k=0;k<data.data.length;k++){
+                            tempIndexFound = -1;
+                            if(data.data[k].indexOf(timeArr[0][j]) > 0){
+                                tempIndexFound = k;
+                                break;                                
+                            }
+                        }
+                        if(tempIndexFound >= 0){
+                            tempData= data.data[k];
+                        }
+                        else{
+                            tempData.push(NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,timeArr[1][j],timeArr[0][j]);
+                        }
+                        new_data_arr.push(tempData)
+                    }
+                    console.log(new_data_arr,j)
+                    dd_0 = []; // label time
+                    dd_1 = []; // cpu
+                    dd_2 = []; // load 1
+                    dd_3 = []; // load 5
+                    dd_4 = []; // load 15
+                    dd_5 = []; // disk usage
+                    dd_6 = []; // disk total
+                    dd_7 = []; // mem usage
+                    dd_8 = []; // mem total
+                    dd_9 = []; // NET_RECEIVED
+                    dd_10 = []; // NET_TRANSMITTED
+                    dd_11 = []; // NET_TOTAL
+                    for(var r=0;r<new_data_arr.length;r++){
+                        dd_0.push(new_data_arr[r][13]);
+                        dd_1.push(new_data_arr[r][1]);
+                        dd_2.push(new_data_arr[r][2]);
+                        dd_3.push(new_data_arr[r][3]);
+                        dd_4.push(new_data_arr[r][4]);
+                        dd_5.push(new_data_arr[r][5]);
+                        dd_6.push(new_data_arr[r][6]);
+                        dd_7.push(new_data_arr[r][7]);
+                        dd_8.push(new_data_arr[r][8]);
+                        dd_9.push(new_data_arr[r][9]);
+                        dd_10.push(new_data_arr[r][10]);
+                        dd_11.push(new_data_arr[r][11]);
+                    }
                     var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
                     var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
                         type: 'line',
@@ -390,36 +452,6 @@ function timestamp_date(timestamp){
                                 data: dd_2,
                                 label: "Load 1",
                                 borderColor: "#4E73DD",
-                                fill: false
-                            }, {
-                                data: dd_3,
-                                label: "Load 5",
-                                borderColor: "#4E73DD",
-                                fill: false
-                            }, {
-                                data: dd_4,
-                                label: "Load 15",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_5,
-                                label: "Disk Usage",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_6,
-                                label: "Disk Total",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_7,
-                                label: "Mem Usage",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_8,
-                                label: "Mem Total",
-                                borderColor: "#f6c23e",
                                 fill: false
                             }]
                         },
