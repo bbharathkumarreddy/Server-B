@@ -311,7 +311,7 @@ function timestamp_date(timestamp){
                     dd_9 = []; // NET_RECEIVED
                     dd_10 = []; // NET_TRANSMITTED
                     dd_11 = []; // NET_TOTAL
-                    for(var r=1;r<new_data_arr.length;r++){
+                    for(var r=0;r<new_data_arr.length;r++){
                         dd_0.push(new_data_arr[r][13]);
                         dd_1.push(new_data_arr[r][1]);
                         dd_2.push(new_data_arr[r][2]);
