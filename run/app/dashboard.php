@@ -270,7 +270,7 @@ function timestamp_date(timestamp){
                     //data = sample;   
                     var data_set_1 = [];              
                     for(var i=0;i<data.data.length;i++){
-                        var timestamp_date_1 = timestamp_date(data.data[i][0]*1000);
+                        var timestamp_date_1 = timestamp_date(data.data[i][0]);
                         data.data[i].push(timestamp_date_1[1],timestamp_date_1[0]);   // insert datetime                     
                         data_set_1.push(data.data[i][7]); 
                     }
