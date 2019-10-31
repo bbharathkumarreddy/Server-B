@@ -208,7 +208,7 @@
 function timestamp_date(timestamp){
                 var d = new Date(timestamp*1000); //get a date object                
                 
-                let t=('0'+u.getUTCHours()).slice(-2) + ':' + ('0' + u.getUTCMinutes()).slice(-2);
+                let t=('0'+d.getUTCHours()).slice(-2) + ':' + ('0' + d.getUTCMinutes()).slice(-2);
                 
 
 
