@@ -373,6 +373,7 @@ function timestamp_date(timestamp){
                             }]
                         },
                         options: {
+                            spanGaps: false,
                             responsive: true,
                             title: {
                                 display: false,
