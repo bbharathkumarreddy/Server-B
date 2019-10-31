@@ -445,7 +445,7 @@ function timestamp_date(timestamp){
                 var timeSeriesArr = [];
                 var timeSeriesArrTemp = [];
                 var i=0;
-                while ( i<=15 )
+                while ( i<=14 )
                 {
                     var hours = d.getHours();
                     var minutes = d.getMinutes();
@@ -459,7 +459,7 @@ function timestamp_date(timestamp){
                     timeSeriesArrTemp.push(hours + ":" + minute);
                     d.setMinutes( d.getMinutes() + 1); //increment by 1 minutes 
                     i++;               
-                    if(i>15){
+                    if(i>14){
                         break;
                     }
                 }  
