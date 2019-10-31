@@ -459,7 +459,7 @@ function timestamp_date(timestamp){
                 d.setMinutes( d.getMinutes() + 1); //increment by 5 minutes 
                 i++;               
                 if(i>16){
-                    break;
+                 //   break;
                 }
                 }  
                 console.log('Timeseries')      
