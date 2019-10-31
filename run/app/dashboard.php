@@ -223,6 +223,7 @@ function timestamp_date(timestamp){
                 minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
                 var time = hours + ":" + minute + " " + ampm ;
                 var timeTemp = hours + ":" + minute;
+                console.log([time,timeTemp,t]);
                 return([time,timeTemp,t]);
             }
             
