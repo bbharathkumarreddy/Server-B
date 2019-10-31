@@ -129,7 +129,7 @@
                 <div class="card-body">
                     <div class="text-center small">
                         <div class="chart-pie pb-2" >
-                            <canvas id="line-chart"></canvas>
+                            <canvas id="line-chart-sys-monit"></canvas>
                         </div>
                     </div>
                 </div>
@@ -188,9 +188,41 @@
     <!-- Page level custom scripts -->
     <!-- <script src="js/demo/chart-area-demo.js"></script> -->
     <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/line-chart.js"></script>
+    <!-- <script src="js/demo/line-chart.js"></script> -->
     <script>
         $(document).ready(function() {
+            var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
+["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
+["1572491102","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4115953","511883","4627836"],
+["1572491162","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4129135","519214","4648349"],
+["1572491221","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4139987","524747","4664734"],
+["1572491282","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4152701","531638","4684339"],
+["1572491342","0.00","0.00,","0.00,","0.00","2.2","9.6","336","579","4164967","537575","4702542"],
+["1572491401","0.00","0.00,","0.00,","0.00","2.2","9.6","339","579","4177847","544932","4722779"],
+["1572491462","0.00","0.00,","0.00,","0.00","2.2","9.6","339","579","4187701","555501","4743202"],
+["1572491522","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4193281","560714","4753995"],
+["1572491581","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4203633","566357","4769990"],
+["1572491642","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4214623","572688","4787311"],
+["1572491702","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4227287","579763","4807050"]]};
+
+function timestamp_date(timestamp){
+                var d = new Date(timestamp*1000); //get a date object                
+                var date = d.getDate();
+                var hours = d.getHours();
+                var minutes = d.getMinutes();
+                hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
+                var ampm = "AM";
+                ampm = hours > 12 ? "PM": "AM";
+                hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
+                hours = ( "0" + hours ).slice(-2); //pad with 0
+                minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
+                var time = hours + ":" + minute + " " + ampm ;
+                var timeTemp = hours + ":" + minute;
+                return([time,timeTemp]);
+            }
+            
+
+            
             $('#update-btn').click(function() {
                 $.ajax({
                     url: '/api/update-server-b.php',
@@ -223,17 +255,96 @@
                     },
                 });
             });
-            console.log('a')
+            let template = '[TIMESTAMP,CPU,LOAD_1,LOAD_5,LOAD_15,DISK_USAGE,DISK_TOTAL,MEM_USAGE,MEM_TOTAL,NET_RECEIVED,NET_TRANSMITTED,NET_TOTAL,DATETIME,DATETIME]';
+            $.ajax({
+                url: '/',
+                dataType: 'text',
+                type: 'get',
+                success: function(data) {   
+                    data = sample;   
+                    var data_set_1 = [];              
+                    for(var i=0;i<data.data.length;i++){
+                        var timestamp_date_1 = timestamp_date(data.data[i][0]*1000);
+                        data.data[i].push(timestamp_date_1[1],timestamp_date_1[0]);   // insert datetime                     
+                        data_set_1.push(data.data[i][7]); 
+                    }
+                    console.log(data)
+                    let timeArr = time_series();
+                    console.log('Time')
+                    console.log(timeArr[0])
+                    let new_data_arr = [];
+                    let tempIndexFound = -1;
+                    for(var j=0;j<timeArr[0].length;j++){
+                        let tempData = [];
+                
+                        for(var k=0;k<data.data.length;k++){
+                            tempIndexFound = -1;
+                            if(data.data[k].indexOf(timeArr[0][j]) > 0){
+                                tempIndexFound = k;
+                                break;                                
+                            }
+                        }
+                        if(tempIndexFound > 0){
+                            tempData= data.data[k];
+                        }
+                        else{
+                            tempData.push(NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,timeArr[1][j],timeArr[0][j]);
+                        }
+                        new_data_arr.push(tempData)
+                    }
+                    console.log(new_data_arr)
+                    var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
+                    var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
+                        type: 'line',
+                        data: {
+                            labels: timeArr[1],
+                            datasets: [{
+                                data: data_set_1,
+                                label: "Memory",
+                                borderColor: "#1cc88a",
+                                fill: false
+                            }, {
+                                data: [282, 350, 411, 502, 635, 809, 947, 250, 0, 300],
+                                label: "Egress",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }, {
+                                data: [168, 600, 178, 190, 203, 276, 408, 547, 675, 734],
+                                label: "Total Ingress",
+                                borderColor: "#e74a3b",
+                                fill: false
+                            }, {
+                                data: [40, 0, 10, 16, 24, 150, 74, 167, 508, 784],
+                                label: "Total Egress",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            title: {
+                                display: false,
+                                text: 'System Monitoring'
+                            }
+                        }
+                    });
+
+                }
+            });
             var t = 10000;
             setInterval(function(){
                 $.ajax({
-                    url: '/api/sys_stat.php',
+                    url: '/',
                     dataType: 'json',
                     type: 'get',
                     success: function(data) {
                         
                         console.log(data);
                         for(var i=0;i<data.data.length;i++){
+                            var cr_dt = new Date();
+                            var cr_time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                            
                             var dt = new Date(data.data[i][0]);
                             var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
                            
@@ -272,53 +383,35 @@
                 });
             }, t);
 
-            var line_chart_2 = document.getElementById('line-chart-2');
-            var mylinechart_2 = new Chart(line_chart_2, {
-                type: 'line',
-                data: {
-                    labels: [100, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 100, 200, 100, 30],
-                    datasets: [{
-                        data: [600, 170, 178, 190, 0, 0, 0, 03, 276, 408, 547, 675, 600],
-                        label: "Ingress",
-                        borderColor: "#1cc88a",
-                        fill: false
-                    }, {
-                        data: [282, 350, 411, 502, 635, 809, 947, 250, 0, 300],
-                        label: "Egress",
-                        borderColor: "#4E73DD",
-                        fill: false
-                    }, {
-                        data: [168, 600, 178, 190, 203, 276, 408, 547, 675, 734],
-                        label: "Total Ingress",
-                        borderColor: "#e74a3b",
-                        fill: false
-                    }, {
-                        data: [40, 0, 10, 16, 24, 150, 74, 167, 508, 784],
-                        label: "Total Egress",
-                        borderColor: "#f6c23e",
-                        fill: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    title: {
-                        display: true,
-                        text: 'World population per region (in millions)'
-                    }
+            function time_series(){
+                var d = new Date(); //get a date object
+                //d.setHours(0,0,0,0); //reassign it to today's midnight
+                d.setMinutes(d.getMinutes() - 16);
+
+                var date = d.getDate();
+                var timeArr = [];
+                var timeArrTemp = [];
+                var i=0;
+                while ( date == d.getDate() )
+                {
+                var hours = d.getHours();
+                var minutes = d.getMinutes();
+                hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
+                var ampm = "AM";
+                ampm = hours > 12 ? "PM": "AM";
+                hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
+                hours = ( "0" + hours ).slice(-2); //pad with 0
+                minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
+                timeArr.push( hours + ":" + minute + " " + ampm );
+                timeArrTemp.push(hours + ":" + minute);
+                d.setMinutes( d.getMinutes() + 1); //increment by 5 minutes 
+                i++;               
+                if(i>16){
+                    break;
                 }
-            });
-
-            setInterval(function(){ 
-
-                
-                // mylinechart_2.data.datasets[Math.floor((Math.random() * 3) + 1)].data[Math.floor((Math.random() * 10) + 1)] = Math.floor((Math.random() * 500) + 1);//this update the value of may
-                // mylinechart_2.data.datasets.forEach((dataset) => {
-                //     dataset.data.push(Math.floor((Math.random() * 800) + 1));
-                // });
-                // mylinechart_2.data.labels.push(Math.floor((Math.random() * 100) + 1));
-                // mylinechart_2.data.labels.splice(0,1);
-                // mylinechart_2.update();
-             }, 10000);
+                }        
+                return([timeArr,timeArrTemp]);
+            }
         });
     </script>
     <?php include_once('page-complete.php'); ?>
