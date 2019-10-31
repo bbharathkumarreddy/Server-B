@@ -374,8 +374,8 @@ function timestamp_date(timestamp){
                         dd_10.push(new_data_arr[r][10]);
                         dd_11.push(new_data_arr[r][11]);
                     }
-
-
+                console.log('new update')
+                console.log(dd_1)
                 line_chart_sys_monit_chart.data.labels = dd_0;
                 line_chart_sys_monit_chart.data.datasets[0] = dd_1;
                 line_chart_sys_monit_chart.data.datasets[1] = dd_2;
