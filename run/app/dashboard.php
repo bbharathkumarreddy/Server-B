@@ -312,18 +312,18 @@ function timestamp_date(timestamp){
                     dd_10 = []; // NET_TRANSMITTED
                     dd_11 = []; // NET_TOTAL
                     for(var r=1;r<new_data_arr.length;r++){
-                        dd_0.push(new_data_arr[i][13]);
-                        dd_1.push(new_data_arr[i][1]);
-                        dd_2.push(new_data_arr[i][2]);
-                        dd_3.push(new_data_arr[i][3]);
-                        dd_4.push(new_data_arr[i][4]);
-                        dd_5.push(new_data_arr[i][5]);
-                        dd_6.push(new_data_arr[i][6]);
-                        dd_7.push(new_data_arr[i][7]);
-                        dd_8.push(new_data_arr[i][8]);
-                        dd_9.push(new_data_arr[i][9]);
-                        dd_10.push(new_data_arr[i][10]);
-                        dd_11.push(new_data_arr[i][11]);
+                        dd_0.push(new_data_arr[r][13]);
+                        dd_1.push(new_data_arr[r][1]);
+                        dd_2.push(new_data_arr[r][2]);
+                        dd_3.push(new_data_arr[r][3]);
+                        dd_4.push(new_data_arr[r][4]);
+                        dd_5.push(new_data_arr[r][5]);
+                        dd_6.push(new_data_arr[r][6]);
+                        dd_7.push(new_data_arr[r][7]);
+                        dd_8.push(new_data_arr[r][8]);
+                        dd_9.push(new_data_arr[r][9]);
+                        dd_10.push(new_data_arr[r][10]);
+                        dd_11.push(new_data_arr[r][11]);
                     }
                     var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
                     var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
