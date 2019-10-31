@@ -261,7 +261,7 @@ function timestamp_date(timestamp){
                 dataType: 'json',
                 type: 'get',
                 success: function(data) {   
-                    data = sample;   
+                    //data = sample;   
                     var data_set_1 = [];              
                     for(var i=0;i<data.data.length;i++){
                         var timestamp_date_1 = timestamp_date(data.data[i][0]*1000);
