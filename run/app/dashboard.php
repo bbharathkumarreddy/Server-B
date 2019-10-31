@@ -299,18 +299,18 @@ function timestamp_date(timestamp){
                         new_data_arr.push(tempData)
                     }
                     console.log(new_data_arr)
-                    dd_0_arr = []; // label time
-                    dd_1_arr = []; // cpu
-                    dd_2_arr = []; // load 1
-                    dd_3_arr = []; // load 5
-                    dd_4_arr = []; // load 15
-                    dd_5_arr = []; // disk usage
-                    dd_6_arr = []; // disk total
-                    dd_7_arr = []; // mem usage
-                    dd_8_arr = []; // mem total
-                    dd_9_arr = []; // NET_RECEIVED
-                    dd_10_arr = []; // NET_TRANSMITTED
-                    dd_11_arr = []; // NET_TOTAL
+                    dd_0 = []; // label time
+                    dd_1 = []; // cpu
+                    dd_2 = []; // load 1
+                    dd_3 = []; // load 5
+                    dd_4 = []; // load 15
+                    dd_5 = []; // disk usage
+                    dd_6 = []; // disk total
+                    dd_7 = []; // mem usage
+                    dd_8 = []; // mem total
+                    dd_9 = []; // NET_RECEIVED
+                    dd_10 = []; // NET_TRANSMITTED
+                    dd_11 = []; // NET_TOTAL
                     for(var r=1;r<new_data_arr.length;r++){
                         dd_0.push(new_data_arr[i][13]);
                         dd_1.push(new_data_arr[i][1]);
