@@ -207,6 +207,11 @@
 
 function timestamp_date(timestamp){
                 var d = new Date(timestamp*1000); //get a date object                
+                
+                let t=('0'+u.getUTCHours()).slice(-2) + ':' + ('0' + u.getUTCMinutes()).slice(-2);
+                
+
+
                 var date = d.getDate();
                 var hours = d.getHours();
                 var minutes = d.getMinutes();
@@ -218,7 +223,7 @@ function timestamp_date(timestamp){
                 minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
                 var time = hours + ":" + minute + " " + ampm ;
                 var timeTemp = hours + ":" + minute;
-                return([time,timeTemp]);
+                return([time,timeTemp,t]);
             }
             
 
