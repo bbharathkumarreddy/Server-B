@@ -128,7 +128,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="text-center small">
-                        <div class="chart-pie pb-2" >
+                        <div class="chart-pie pb-2" id="line-chart-sys-monit-cont">
                             <canvas id="line-chart-sys-monit"></canvas>
                         </div>
                     </div>
@@ -373,6 +373,9 @@ function timestamp_date(timestamp){
                         dd_10.push(new_data_arr[r][10]);
                         dd_11.push(new_data_arr[r][11]);
                     }
+                    document.getElementById("line-chart-sys-monit-cont").innerHTML = '&nbsp;';
+                    document.getElementById("line-chart-sys-monit-cont").innerHTML = '<canvas id="line-chart-sys-monit"></canvas>';
+                    var ctx = document.getElementById("myCanvas").getContext("2d");
                     var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
                     var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
                         type: 'line',
