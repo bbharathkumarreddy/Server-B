@@ -257,7 +257,7 @@ function timestamp_date(timestamp){
             });
             let template = '[TIMESTAMP,CPU,LOAD_1,LOAD_5,LOAD_15,DISK_USAGE,DISK_TOTAL,MEM_USAGE,MEM_TOTAL,NET_RECEIVED,NET_TRANSMITTED,NET_TOTAL,DATETIME,DATETIME]';
             $.ajax({
-                url: '/api/sys_command.php',
+                url: '/api/sys_stat.php',
                 dataType: 'json',
                 type: 'get',
                 success: function(data) {   
