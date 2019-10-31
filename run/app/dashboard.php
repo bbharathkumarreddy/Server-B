@@ -299,29 +299,90 @@ function timestamp_date(timestamp){
                         new_data_arr.push(tempData)
                     }
                     console.log(new_data_arr)
+                    dd_0_arr = []; // label time
+                    dd_1_arr = []; // cpu
+                    dd_2_arr = []; // load 1
+                    dd_3_arr = []; // load 5
+                    dd_4_arr = []; // load 15
+                    dd_5_arr = []; // disk usage
+                    dd_6_arr = []; // disk total
+                    dd_7_arr = []; // mem usage
+                    dd_8_arr = []; // mem total
+                    dd_9_arr = []; // NET_RECEIVED
+                    dd_10_arr = []; // NET_TRANSMITTED
+                    dd_11_arr = []; // NET_TOTAL
+                    for(var r=1;r<new_data_arr.length;r++){
+                        dd_0.push(new_data_arr[i][13]);
+                        dd_1.push(new_data_arr[i][1]);
+                        dd_2.push(new_data_arr[i][2]);
+                        dd_3.push(new_data_arr[i][3]);
+                        dd_4.push(new_data_arr[i][4]);
+                        dd_5.push(new_data_arr[i][5]);
+                        dd_6.push(new_data_arr[i][6]);
+                        dd_7.push(new_data_arr[i][7]);
+                        dd_8.push(new_data_arr[i][8]);
+                        dd_9.push(new_data_arr[i][9]);
+                        dd_10.push(new_data_arr[i][10]);
+                        dd_11.push(new_data_arr[i][11]);
+                    }
                     var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
                     var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
                         type: 'line',
                         data: {
-                            labels: timeArr[1],
+                            labels: dd_0,
                             datasets: [{
-                                data: data_set_1,
-                                label: "Memory",
-                                borderColor: "#1cc88a",
-                                fill: false
-                            }, {
-                                data: [282, 350, 411, 502, 635, 809, 947, 250, 0, 300],
-                                label: "Egress",
-                                borderColor: "#4E73DD",
-                                fill: false
-                            }, {
-                                data: [168, 600, 178, 190, 203, 276, 408, 547, 675, 734],
-                                label: "Total Ingress",
+                                data: dd_1,
+                                label: "CPU",
                                 borderColor: "#e74a3b",
                                 fill: false
                             }, {
-                                data: [40, 0, 10, 16, 24, 150, 74, 167, 508, 784],
-                                label: "Total Egress",
+                                data: dd_2,
+                                label: "Load 1",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }, {
+                                data: dd_3,
+                                label: "Load 5",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }, {
+                                data: dd_4,
+                                label: "Load 15",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_5,
+                                label: "Disk Usage",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_6,
+                                label: "Disk Total",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_7,
+                                label: "Mem Usage",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_8,
+                                label: "Mem Total",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_9,
+                                label: "Data Down+",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            },{
+                                data: dd_10,
+                                label: "Data Up+",
+                                borderColor: "#f6c23e",
+                                fill: false
+                            }.{
+                                data: dd_11,
+                                label: "Total Net",
                                 borderColor: "#f6c23e",
                                 fill: false
                             }]
