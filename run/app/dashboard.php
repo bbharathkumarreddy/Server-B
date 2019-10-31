@@ -376,10 +376,10 @@ function timestamp_date(timestamp){
                     }
 
 
-                line_chart_sys_monit.data.labels = dd_0;
-                line_chart_sys_monit.data.datasets[0] = dd_1;
-                line_chart_sys_monit.data.datasets[1] = dd_2;
-                line_chart_sys_monit.update();
+                line_chart_sys_monit_chart.data.labels = dd_0;
+                line_chart_sys_monit_chart.data.datasets[0] = dd_1;
+                line_chart_sys_monit_chart.data.datasets[1] = dd_2;
+                line_chart_sys_monit_chart.update();
             }
             function chart_load(data){
                 var data_set_1 = [];              
