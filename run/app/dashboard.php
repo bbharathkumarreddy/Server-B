@@ -268,7 +268,94 @@ function timestamp_date(timestamp){
                 type: 'get',
                 success: function(data) {   
                     //data = sample;   
-                    var data_set_1 = [];              
+                    chart_reload(data)
+                }
+            });
+            var t = 10000;
+            setInterval(function(){
+                $.ajax({
+                    url: '/',
+                    dataType: 'json',
+                    type: 'get',
+                    success: function(data) {
+                        
+                        console.log(data);
+                        for(var i=0;i<data.data.length;i++){
+                            var cr_dt = new Date();
+                            var cr_time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                            
+                            var dt = new Date(data.data[i][0]);
+                            var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                           
+                            
+                            
+                            
+                        }
+                        var date = new Date(data.data[12][0]*1000);
+                        var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+                        // Year
+                        var year = date.getFullYear();
+
+                        // Month
+                        var month = months_arr[date.getMonth()];
+
+                        // Day
+                        var day = date.getDate();
+
+                        // Hours
+                        var hours = date.getHours();
+
+                        // Minutes
+                        var minutes = "0" + date.getMinutes();
+
+                        // Seconds
+                        var seconds = "0" + date.getSeconds();
+
+                        // Display date time in MM-dd-yyyy h:m:s format
+                        var convdataTime = hours + ':' + minutes.substr(-2);
+                        
+                        mylinechart_2.data.labels.push(convdataTime);
+                        mylinechart_2.data.labels.splice(0,1);
+                        mylinechart_2.update();
+                    },
+                });
+            }, t);
+
+            function time_series(){
+                var d = new Date(); //get a date object
+                //d.setHours(0,0,0,0); //reassign it to today's midnight
+                d.setMinutes(d.getMinutes() - 14);
+
+                var date = d.getDate();
+                var timeSeriesArr = [];
+                var timeSeriesArrTemp = [];
+                var i=0;
+                while ( i<=14 )
+                {
+                    var hours = d.getHours();
+                    var minutes = d.getMinutes();
+                    hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
+                    var ampm = "AM";
+                    ampm = hours > 12 ? "PM": "AM";
+                    hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
+                    hours = ( "0" + hours ).slice(-2); //pad with 0
+                    minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
+                    timeSeriesArr.push( hours + ":" + minute + " " + ampm );
+                    timeSeriesArrTemp.push(hours + ":" + minute);
+                    d.setMinutes( d.getMinutes() + 1); //increment by 1 minutes 
+                    i++;               
+                    if(i>14){
+                        break;
+                    }
+                }  
+                console.log('Timeseries')      
+                console.log([timeSeriesArr,timeSeriesArrTemp]);
+                return([timeSeriesArr,timeSeriesArrTemp]);
+            }
+            function chart_reload(data){
+                var data_set_1 = [];              
                     for(var i=0;i<data.data.length;i++){
                         var timestamp_date_1 = timestamp_date(data.data[i][0]);
                         data.data[i].push(timestamp_date_1[1],timestamp_date_1[0]);   // insert datetime                     
@@ -382,90 +469,6 @@ function timestamp_date(timestamp){
                         }
                     });
 
-                }
-            });
-            var t = 10000;
-            setInterval(function(){
-                $.ajax({
-                    url: '/',
-                    dataType: 'json',
-                    type: 'get',
-                    success: function(data) {
-                        
-                        console.log(data);
-                        for(var i=0;i<data.data.length;i++){
-                            var cr_dt = new Date();
-                            var cr_time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
-                            
-                            var dt = new Date(data.data[i][0]);
-                            var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
-                            
-                            
-                            
-                        }
-                        var date = new Date(data.data[12][0]*1000);
-                        var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-                        // Year
-                        var year = date.getFullYear();
-
-                        // Month
-                        var month = months_arr[date.getMonth()];
-
-                        // Day
-                        var day = date.getDate();
-
-                        // Hours
-                        var hours = date.getHours();
-
-                        // Minutes
-                        var minutes = "0" + date.getMinutes();
-
-                        // Seconds
-                        var seconds = "0" + date.getSeconds();
-
-                        // Display date time in MM-dd-yyyy h:m:s format
-                        var convdataTime = hours + ':' + minutes.substr(-2);
-                        
-                        mylinechart_2.data.labels.push(convdataTime);
-                        mylinechart_2.data.labels.splice(0,1);
-                        mylinechart_2.update();
-                    },
-                });
-            }, t);
-
-            function time_series(){
-                var d = new Date(); //get a date object
-                //d.setHours(0,0,0,0); //reassign it to today's midnight
-                d.setMinutes(d.getMinutes() - 14);
-
-                var date = d.getDate();
-                var timeSeriesArr = [];
-                var timeSeriesArrTemp = [];
-                var i=0;
-                while ( i<=14 )
-                {
-                    var hours = d.getHours();
-                    var minutes = d.getMinutes();
-                    hours = hours == 0 ? 12: hours; //if it is 0, then make it 12
-                    var ampm = "AM";
-                    ampm = hours > 12 ? "PM": "AM";
-                    hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
-                    hours = ( "0" + hours ).slice(-2); //pad with 0
-                    minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
-                    timeSeriesArr.push( hours + ":" + minute + " " + ampm );
-                    timeSeriesArrTemp.push(hours + ":" + minute);
-                    d.setMinutes( d.getMinutes() + 1); //increment by 1 minutes 
-                    i++;               
-                    if(i>14){
-                        break;
-                    }
-                }  
-                console.log('Timeseries')      
-                console.log([timeSeriesArr,timeSeriesArrTemp]);
-                return([timeSeriesArr,timeSeriesArrTemp]);
             }
         });
     </script>
