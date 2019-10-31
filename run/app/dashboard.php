@@ -461,7 +461,9 @@ function timestamp_date(timestamp){
                 if(i>16){
                     break;
                 }
-                }        
+                }  
+                console.log('Timeseries')      
+                console.log([timeArr,timeArrTemp]);
                 return([timeArr,timeArrTemp]);
             }
         });
