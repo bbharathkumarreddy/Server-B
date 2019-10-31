@@ -204,7 +204,8 @@
 ["1572491581","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4203633","566357","4769990"],
 ["1572491642","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4214623","572688","4787311"],
 ["1572491702","0.00","0.00,","0.00,","0.00","2.2","9.6","338","579","4227287","579763","4807050"]]};
-
+var line_chart_sys_monit = '';
+var line_chart_sys_monit_chart = '';
 function timestamp_date(timestamp){
                 var d = new Date(timestamp*1000); //get a date object                
                 
@@ -438,8 +439,8 @@ function timestamp_date(timestamp){
                         dd_10.push(new_data_arr[r][10]);
                         dd_11.push(new_data_arr[r][11]);
                     }
-                    var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
-                    var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
+                     line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
+                     line_chart_sys_monit_chart = new Chart(line_chart_sys_monit, {
                         type: 'line',
                         data: {
                             labels: dd_0,
