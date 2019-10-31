@@ -375,7 +375,7 @@ function timestamp_date(timestamp){
                     }
                     document.getElementById("line-chart-sys-monit-cont").innerHTML = '&nbsp;';
                     document.getElementById("line-chart-sys-monit-cont").innerHTML = '<canvas id="line-chart-sys-monit"></canvas>';
-                    var ctx = document.getElementById("myCanvas").getContext("2d");
+                    var ctx = document.getElementById("line-chart-sys-monit").getContext("2d");
                     var line_chart_sys_monit = document.getElementById('line-chart-sys-monit');
                     var line_chart_sys_monit = new Chart(line_chart_sys_monit, {
                         type: 'line',
