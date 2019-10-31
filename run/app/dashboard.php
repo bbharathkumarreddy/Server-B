@@ -370,21 +370,6 @@ function timestamp_date(timestamp){
                                 label: "Mem Total",
                                 borderColor: "#f6c23e",
                                 fill: false
-                            },{
-                                data: dd_9,
-                                label: "Data Down+",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_10,
-                                label: "Data Up+",
-                                borderColor: "#f6c23e",
-                                fill: false
-                            },{
-                                data: dd_11,
-                                label: "Total Net",
-                                borderColor: "#f6c23e",
-                                fill: false
                             }]
                         },
                         options: {
