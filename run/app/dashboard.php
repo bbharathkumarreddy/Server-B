@@ -290,7 +290,7 @@ function timestamp_date(timestamp){
                                 break;                                
                             }
                         }
-                        if(tempIndexFound > 0){
+                        if(tempIndexFound >= 0){
                             tempData= data.data[k];
                         }
                         else{
