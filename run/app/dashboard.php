@@ -298,7 +298,7 @@ function timestamp_date(timestamp){
                         }
                         new_data_arr.push(tempData)
                     }
-                    console.log(new_data_arr)
+                    console.log(new_data_arr,j)
                     dd_0 = []; // label time
                     dd_1 = []; // cpu
                     dd_2 = []; // load 1
