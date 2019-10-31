@@ -441,8 +441,8 @@ function timestamp_date(timestamp){
                 d.setMinutes(d.getMinutes() - 16);
 
                 var date = d.getDate();
-                var timeArr = [];
-                var timeArrTemp = [];
+                var timeSeriesArr = [];
+                var timeSeriesArrTemp = [];
                 var i=0;
                 while ( date == d.getDate() )
                 {
@@ -454,8 +454,8 @@ function timestamp_date(timestamp){
                 hours = hours > 12 ? hours - 12: hours; //if more than 12, reduce 12 and set am/pm flag
                 hours = ( "0" + hours ).slice(-2); //pad with 0
                 minute = ( "0" + d.getMinutes() ).slice(-2); //pad with 0
-                timeArr.push( hours + ":" + minute + " " + ampm );
-                timeArrTemp.push(hours + ":" + minute);
+                timeSeriesArr.push( hours + ":" + minute + " " + ampm );
+                timeSeriesArrTemp.push(hours + ":" + minute);
                 d.setMinutes( d.getMinutes() + 1); //increment by 5 minutes 
                 i++;               
                 if(i>16){
@@ -463,8 +463,8 @@ function timestamp_date(timestamp){
                 }
                 }  
                 console.log('Timeseries')      
-                console.log([timeArr,timeArrTemp]);
-                return([timeArr,timeArrTemp]);
+                console.log([timeSeriesArr,timeSeriesArrTemp]);
+                return([timeSeriesArr,timeSeriesArrTemp]);
             }
         });
     </script>
