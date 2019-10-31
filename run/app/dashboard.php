@@ -439,7 +439,7 @@ function timestamp_date(timestamp){
             function time_series(){
                 var d = new Date(); //get a date object
                 //d.setHours(0,0,0,0); //reassign it to today's midnight
-                d.setMinutes(d.getMinutes() - 16);
+                d.setMinutes(d.getMinutes() - 14);
 
                 var date = d.getDate();
                 var timeSeriesArr = [];
