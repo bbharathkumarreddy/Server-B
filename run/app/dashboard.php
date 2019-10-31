@@ -274,53 +274,14 @@ function timestamp_date(timestamp){
             var t = 10000;
             setInterval(function(){
                 $.ajax({
-                    url: '/',
-                    dataType: 'json',
-                    type: 'get',
-                    success: function(data) {
-                        
-                        console.log(data);
-                        for(var i=0;i<data.data.length;i++){
-                            var cr_dt = new Date();
-                            var cr_time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
-                            
-                            var dt = new Date(data.data[i][0]);
-                            var time = dt.getDate()+" "+ dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                           
-                            
-                            
-                            
-                        }
-                        var date = new Date(data.data[12][0]*1000);
-                        var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-                        // Year
-                        var year = date.getFullYear();
-
-                        // Month
-                        var month = months_arr[date.getMonth()];
-
-                        // Day
-                        var day = date.getDate();
-
-                        // Hours
-                        var hours = date.getHours();
-
-                        // Minutes
-                        var minutes = "0" + date.getMinutes();
-
-                        // Seconds
-                        var seconds = "0" + date.getSeconds();
-
-                        // Display date time in MM-dd-yyyy h:m:s format
-                        var convdataTime = hours + ':' + minutes.substr(-2);
-                        
-                        mylinechart_2.data.labels.push(convdataTime);
-                        mylinechart_2.data.labels.splice(0,1);
-                        mylinechart_2.update();
-                    },
-                });
+                url: '/api/sys_stat.php',
+                dataType: 'json',
+                type: 'get',
+                success: function(data) {   
+                    //data = sample;   
+                    chart_reload(data)
+                }
+            });
             }, t);
 
             function time_series(){
