@@ -138,16 +138,17 @@
             </div>
         </div>
         <div class="col-6 col-lg-6">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4" style="height:550px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Network Analysis</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Newtwork & Disk Analytics</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="text-center small">
-                        <div class="chart-pie pb-2" >
-                            <canvas id="line-chart-2"></canvas>
+                        <div class="chart-pie pb-2" id="line-chart-newtork-analytics-disk-cont">
+                             <canvas id="line-chart-newtork-analytics"></canvas>
+                            <canvas id="line-chart-disk-analytics"></canvas>                            
                         </div>
                     </div>
                 </div>
@@ -387,6 +388,17 @@ function timestamp_date(timestamp){
                 line_chart_sys_monit_chart_1.data.datasets[0].data = dd_7;
                 line_chart_sys_monit_chart_1.data.datasets[1].data = dd_8;
                 line_chart_sys_monit_chart_1.update();
+
+                line_chart_sys_newtork_analytics.data.labels = dd_0;
+                line_chart_sys_newtork_analytics.data.datasets[0].data = dd_9;
+                line_chart_sys_newtork_analytics.data.datasets[1].data = dd_10;
+                line_chart_sys_newtork_analytics.data.datasets[1].data = dd_11;
+                line_chart_sys_newtork_analytics.update();
+
+                line_chart_sys_disk_analytics.data.labels = dd_0;
+                line_chart_sys_disk_analytics.data.datasets[0].data = dd_5;
+                line_chart_sys_disk_analytics.data.datasets[1].data = dd_6;
+                line_chart_sys_disk_analytics.update();
             }
             function chart_load(data){
                 var data_set_1 = [];              
@@ -497,6 +509,65 @@ function timestamp_date(timestamp){
                             title: {
                                 display: false,
                                 text: 'System Monitoring'
+                            }
+                        }
+                    });
+
+                    line_chart_newtork_analytics = document.getElementById('line-chart-newtork-analytics');
+                     line_chart_newtork_analytics_chart = new Chart(line_chart_newtork_analytics, {
+                        type: 'line',
+                        data: {
+                            labels: dd_0,
+                            datasets: [{
+                                data: dd_9,
+                                label: "Data Download",
+                                borderColor: "#e74a3b",
+                                fill: false
+                            }, {
+                                data: dd_10,
+                                label: "Data Upload",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            },{
+                                data: dd_11,
+                                label: "Total Data",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            spanGaps: false,
+                            responsive: true,
+                            title: {
+                                display: false,
+                                text: 'System Monitoring'
+                            }
+                        }
+                    });
+
+                    line_chart_disk_analytics = document.getElementById('line-chart-disk-analytics');
+                     line_chart_disk_analytics_chart = new Chart(line_chart_disk_analytics, {
+                        type: 'line',
+                        data: {
+                            labels: dd_0,
+                            datasets: [{
+                                data: dd_5,
+                                label: "Disk Usage",
+                                borderColor: "#e74a3b",
+                                fill: false
+                            }, {
+                                data: dd_6,
+                                label: "Total Disk",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            spanGaps: false,
+                            responsive: true,
+                            title: {
+                                display: false,
+                                text: 'Disk Monitoring'
                             }
                         }
                     });
