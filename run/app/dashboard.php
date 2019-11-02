@@ -492,7 +492,7 @@ function timestamp_date(timestamp){
                         options: {
                             legend: {
                                 display: false
-                            }
+                            },
                             spanGaps: false,
                             responsive: true,
                             title: {
