@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="col-6 col-lg-6">
-            <div class="card shadow mb-4" style="height:550px;">
+            <div class="card shadow mb-4" style="height:750px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">System Monitoring</h6>
@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="col-6 col-lg-6">
-            <div class="card shadow mb-4" style="height:550px;">
+            <div class="card shadow mb-4" style="height:750px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Newtwork & Disk Analytics</h6>
