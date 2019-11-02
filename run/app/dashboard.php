@@ -129,7 +129,9 @@
                 <div class="card-body">
                     <div class="text-center small">
                         <div class="chart-pie pb-2" id="line-chart-sys-monit-cont">
+                             <canvas id="line-chart-sys-monit-1"></canvas>
                             <canvas id="line-chart-sys-monit"></canvas>
+                            
                         </div>
                     </div>
                 </div>
@@ -380,6 +382,10 @@ function timestamp_date(timestamp){
                 line_chart_sys_monit_chart.data.datasets[0].data = dd_1;
                 line_chart_sys_monit_chart.data.datasets[1].data = dd_2;
                 line_chart_sys_monit_chart.update();
+
+                line_chart_sys_monit_chart_1.data.datasets[0].data = dd_7;
+                line_chart_sys_monit_chart_1.data.datasets[1].data = dd_8;
+                line_chart_sys_monit_chart_1.update();_1
             }
             function chart_load(data){
                 var data_set_1 = [];              
@@ -457,6 +463,36 @@ function timestamp_date(timestamp){
                             }]
                         },
                         options: {
+                            spanGaps: false,
+                            responsive: true,
+                            title: {
+                                display: false,
+                                text: 'System Monitoring'
+                            }
+                        }
+                    });
+
+
+                    line_chart_sys_monit_1 = document.getElementById('line-chart-sys-monit-1');
+                     line_chart_sys_monit_chart_1 = new Chart(line_chart_sys_monit_1, {
+                        type: 'line',
+                        data: {
+                            datasets: [{
+                                data: dd_7,
+                                label: "Memory",
+                                borderColor: "#e74a3b",
+                                fill: false
+                            }, {
+                                data: dd_8,
+                                label: "Total Memory",
+                                borderColor: "#4E73DD",
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            legend: {
+                                display: false
+                            }
                             spanGaps: false,
                             responsive: true,
                             title: {
