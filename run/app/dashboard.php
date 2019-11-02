@@ -383,9 +383,10 @@ function timestamp_date(timestamp){
                 line_chart_sys_monit_chart.data.datasets[1].data = dd_2;
                 line_chart_sys_monit_chart.update();
 
+                line_chart_sys_monit_chart_1.data.labels = dd_0;
                 line_chart_sys_monit_chart_1.data.datasets[0].data = dd_7;
                 line_chart_sys_monit_chart_1.data.datasets[1].data = dd_8;
-                line_chart_sys_monit_chart_1.update();_1
+                line_chart_sys_monit_chart_1.update();
             }
             function chart_load(data){
                 var data_set_1 = [];              
@@ -477,6 +478,7 @@ function timestamp_date(timestamp){
                      line_chart_sys_monit_chart_1 = new Chart(line_chart_sys_monit_1, {
                         type: 'line',
                         data: {
+                            labels: dd_0,
                             datasets: [{
                                 data: dd_7,
                                 label: "Memory",
@@ -490,9 +492,6 @@ function timestamp_date(timestamp){
                             }]
                         },
                         options: {
-                            legend: {
-                                display: false
-                            },
                             spanGaps: false,
                             responsive: true,
                             title: {
