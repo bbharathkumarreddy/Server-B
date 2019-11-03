@@ -389,16 +389,16 @@ function timestamp_date(timestamp){
                 line_chart_sys_monit_chart_1.data.datasets[1].data = dd_8;
                 line_chart_sys_monit_chart_1.update();
 
-                line_chart_sys_newtork_analytics.data.labels = dd_0;
-                line_chart_sys_newtork_analytics.data.datasets[0].data = dd_9;
-                line_chart_sys_newtork_analytics.data.datasets[1].data = dd_10;
-                line_chart_sys_newtork_analytics.data.datasets[1].data = dd_11;
-                line_chart_sys_newtork_analytics.update();
+                line_chart_network_analytics_chart.data.labels = dd_0;
+                line_chart_network_analytics_chart.data.datasets[0].data = dd_9;
+                line_chart_network_analytics_chart.data.datasets[1].data = dd_10;
+                line_chart_network_analytics_chart.data.datasets[1].data = dd_11;
+                line_chart_network_analytics_chart.update();
 
-                line_chart_sys_disk_analytics.data.labels = dd_0;
-                line_chart_sys_disk_analytics.data.datasets[0].data = dd_5;
-                line_chart_sys_disk_analytics.data.datasets[1].data = dd_6;
-                line_chart_sys_disk_analytics.update();
+                line_chart_disk_analytics_chart.data.labels = dd_0;
+                line_chart_disk_analytics_chart.data.datasets[0].data = dd_5;
+                line_chart_disk_analytics_chart.data.datasets[1].data = dd_6;
+                line_chart_disk_analytics_chart.update();
             }
             function chart_load(data){
                 var data_set_1 = [];              
@@ -513,8 +513,8 @@ function timestamp_date(timestamp){
                         }
                     });
 
-                    line_chart_newtork_analytics = document.getElementById('line-chart-newtork-analytics');
-                     line_chart_newtork_analytics_chart = new Chart(line_chart_newtork_analytics, {
+                    line_chart_network_analytics = document.getElementById('line-chart-newtork-analytics');
+                     line_chart_network_analytics_chart = new Chart(line_chart_network_analytics, {
                         type: 'line',
                         data: {
                             labels: dd_0,
