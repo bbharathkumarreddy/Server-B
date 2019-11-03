@@ -5,7 +5,7 @@
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
     </div>
     <div class="row">
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 col-lg-2">
+        <div class="col-6 col-lg-2">
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -119,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-lg-6">
+        <div class="col-12 col-lg-6">
             <div class="card shadow mb-4" style="height:750px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -137,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 col-lg-6">
+        <div class="col-12 col-lg-6">
             <div class="card shadow mb-4" style="height:750px;">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
