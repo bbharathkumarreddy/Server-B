@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="card shadow mb-4" style="height:750px;">
+            <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">System Monitoring</h6>
@@ -128,7 +128,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="text-center small">
-                        <div class="chart-pie pb-2" id="line-chart-sys-monit-cont">
+                        <div class="chart-pie pb-2" style="height: auto !important;"  id="line-chart-sys-monit-cont">
                              <canvas id="line-chart-sys-monit-1"></canvas>
                             <canvas id="line-chart-sys-monit"></canvas>
                             
@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="card shadow mb-4" style="height:750px;">
+            <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Newtwork & Disk Analytics</h6>
@@ -146,7 +146,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="text-center small">
-                        <div class="chart-pie pb-2" id="line-chart-newtork-analytics-disk-cont">
+                        <div class="chart-pie pb-2" style="height: auto !important;" id="line-chart-newtork-analytics-disk-cont">
                              <canvas id="line-chart-newtork-analytics"></canvas>
                             <canvas id="line-chart-disk-analytics"></canvas>                            
                         </div>
