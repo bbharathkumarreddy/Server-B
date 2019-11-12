@@ -392,7 +392,7 @@ function timestamp_date(timestamp){
                 line_chart_network_analytics_chart.data.labels = dd_0;
                 line_chart_network_analytics_chart.data.datasets[0].data = dd_9;
                 line_chart_network_analytics_chart.data.datasets[1].data = dd_10;
-                line_chart_network_analytics_chart.data.datasets[1].data = dd_11;
+                line_chart_network_analytics_chart.data.datasets[2].data = dd_11;
                 line_chart_network_analytics_chart.update();
 
                 line_chart_disk_analytics_chart.data.labels = dd_0;
