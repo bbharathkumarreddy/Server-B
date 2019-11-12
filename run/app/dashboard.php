@@ -520,17 +520,17 @@ function timestamp_date(timestamp){
                             labels: dd_0,
                             datasets: [{
                                 data: dd_9,
-                                label: "Data Download",
+                                label: "Data Download in KB",
                                 borderColor: "#e74a3b",
                                 fill: false
                             }, {
                                 data: dd_10,
-                                label: "Data Upload",
-                                borderColor: "#4E73DD",
+                                label: "Data Upload in KB",
+                                borderColor: "#1cc88a",
                                 fill: false
                             },{
                                 data: dd_11,
-                                label: "Total Data",
+                                label: "Total Data in KB",
                                 borderColor: "#4E73DD",
                                 fill: false
                             }]
