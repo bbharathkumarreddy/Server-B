@@ -81,6 +81,7 @@ server_b_name='linux-instance'
 echo $server_b_name > /var/www/server-b-data/server_name
 
 crontab -l | { cat; echo "@reboot /var/www/server-b/bash/scripts/ip-save.sh > /dev/null 2>&1"; } | crontab -
+crontab -l | { cat; echo "*/1 * * * * /var/www/server-b/bash/scripts/sys_stat.sh > /dev/null 2>&1"; } | crontab -
 chmod -R 777 /var/www/server-b
 chmod -R 777 /var/www/server-b-data
 echo "Access your SERVER B at http://${server_ip}:${server_b_port}/app/filemanager.php"
