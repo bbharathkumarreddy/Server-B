@@ -14,7 +14,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="myPieChart"></canvas>
+                        <canvas id="pie_chart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -188,9 +188,26 @@
     <?php include_once('bottom.php'); ?>
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
-
+    
     <script>
         $(document).ready(function() {
+            var pie_chart_1 = document.getElementById("pie_chart_1").getContext("2d");
+var pie_chart_1_chart = new Chart(pie_chart_1).Doughnut(
+	// Datas
+	[
+		{
+			value: 80,
+			color:"#F7464A",
+			highlight: "#FF5A5E",
+			label: "CPU"
+		},
+		{
+			value: 20,
+			color: "#46BFBD",
+			highlight: "#5AD3D1",
+			label: "Free CPU"
+		}
+	]);
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
 ["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
 ["1572491102","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4115953","511883","4627836"],
