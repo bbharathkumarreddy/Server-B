@@ -207,8 +207,7 @@
 // And for a doughnut chart
 var pie_chart_1_chart = new Chart(pie_chart_1, {
     type: 'doughnut',
-    data: data,
-    options: options
+    data: data
 });
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
 ["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
