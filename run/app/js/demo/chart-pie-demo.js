@@ -73,8 +73,8 @@ setInterval(function() {
         success: function(data) {
             data = JSON.parse(data);
             console.log(data)
-            var mem_usage = parseInt(data[7]);
-            var mem_tot = parseInt(data[8]);
+            var mem_usage = parseInt(data[9]);
+            var mem_tot = parseInt(data[10]);
             var mem_free = mem_tot - mem_usage;
             console.log(mem_usage, mem_free)
             pie_chart_3.data.datasets[0].data = [mem_usage, mem_free];
