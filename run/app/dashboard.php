@@ -198,10 +198,8 @@
 
   //doughnut chart data
   var data1 = {
-    labels: ["match1", "match2", "match3", "match4", "match5"],
     datasets: [
       {
-        label: "TeamA Score",
         data: [10, 50, 25, 70, 40],
         backgroundColor: [
           "#DEB887",
@@ -223,22 +221,7 @@
   };
   //options
   var options = {
-    responsive: true,
-    title: {
-      display: true,
-      position: "top",
-      text: "Doughnut Chart",
-      fontSize: 18,
-      fontColor: "#111"
-    },
-    legend: {
-      display: true,
-      position: "bottom",
-      labels: {
-        fontColor: "#333",
-        fontSize: 16
-      }
-    }
+    responsive: true
   };
 
   //create Chart class object
