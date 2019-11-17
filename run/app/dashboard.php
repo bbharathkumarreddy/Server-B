@@ -14,7 +14,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas id="pie_chart_1"></canvas>
+                        <canvas class="myPieChart"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -188,56 +188,13 @@
     <?php include_once('bottom.php'); ?>
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
-    
+
+    <!-- Page level custom scripts -->
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="js/demo/line-chart.js"></script> -->
     <script>
         $(document).ready(function() {
-
-            
-  //get the doughnut chart canvas
-  var ctx1 = $("#pie_chart_1");
-
-  //doughnut chart data
-  var data1 = {
-    labels: ["CPU", "Free CPU"],
-    datasets: [
-      {
-        label: "CPU",
-        data: [80,20],
-        backgroundColor: [
-            "#2E8B57",
-            "#A9A9A9"          
-        ]
-      }
-    ]
-  };
-  //options
-  var options = {
-    responsive: true,
-    title: {
-      display: true,
-      position: "top",
-      text: "Doughnut Chart",
-      fontSize: 18,
-      fontColor: "#111"
-    },
-    legend: {
-      display: true,
-      position: "bottom",
-      labels: {
-        fontColor: "#333",
-        fontSize: 16
-      }
-    }
-  };
-
-  //create Chart class object
-  var pie_chart_1_chart = new Chart(pie_chart_1, {
-    type: "doughnut",
-    data: data1,
-    options: options
-  });
-
-
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
 ["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
 ["1572491102","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4115953","511883","4627836"],
