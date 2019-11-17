@@ -1,7 +1,7 @@
 <?php 
 if(isset($_GET['live']) && $_GET['live'] == 'true')
 {   echo 'a';
-    $LOAD_1 = get_server_memory_usage();
+    $LOAD_1 = shell_exec('bash /var/www/server-b/bash/scripts/sys_stat_live.sh');
 
      echo $LOAD_1;
 }
@@ -16,7 +16,7 @@ echo str_replace("],\n]", ']]',$new_json);
 
 function get_server_memory_usage(){
 
-    $free = shell_exec(`free -m`);
+    $free = shell_exec('free -m');
   
 
     return $free;
