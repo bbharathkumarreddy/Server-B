@@ -64,7 +64,8 @@ var pie_chart_3 = new Chart(document.getElementById("pie_chart_3"), {
         cutoutPercentage: 80,
     },
 });
-
+pie_chart_3.data.datasets[0].data = [60, 40];
+pie_chart_3.update();
 setInterval(function() {
     $.ajax({
         url: '/api/sys_stat.php?live=true',
