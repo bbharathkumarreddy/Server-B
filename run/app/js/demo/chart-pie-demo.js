@@ -69,9 +69,9 @@ pie_chart_3.update();
 setInterval(function() {
     $.ajax({
         url: '/api/sys_stat.php?live=true',
-        dataType: 'json',
         type: 'get',
         success: function(data) {
+            console.log(data)
             var mem_usage = parseInt(data.data[7]);
             var mem_tot = parseInt(data.data[8]);
             var mem_free = mem_tot - mem_usage;
