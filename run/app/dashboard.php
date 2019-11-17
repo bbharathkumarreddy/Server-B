@@ -184,6 +184,7 @@
             </div>
         </div>
     </div>
+    </div>
     <?php include_once('bottom.php'); ?>
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
