@@ -14,7 +14,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="pie_chart_1"></canvas>
+                        <canvid="pie_chart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -33,7 +33,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="pie_chart_2"></canvas>
+                        <canvas id="pie_chart_2"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -52,7 +52,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="pie_chart_3"></canvas>
+                        <canvas id="pie_chart_3"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -71,7 +71,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="pie_chart_4"></canvas>
+                        <canvas id="pie_chart_4"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -90,7 +90,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvas class="pie_chart_5"></canvas>
+                        <canvas id="pie_chart_5"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
