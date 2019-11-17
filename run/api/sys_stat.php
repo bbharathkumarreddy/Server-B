@@ -1,7 +1,7 @@
 <?php 
 if(isset($_GET['live']) && $_GET['live'] == 'true')
 {   echo 'a';
-    $LOAD_1 = shell_exec(`top -bn1 | grep load | awk '{printf "%s\n", $10}`);
+    $LOAD_1 = shell_exec(`free -m | awk 'NR==2{printf "%s\n", $3}'`);
  /*   $LOAD_1 = shell_exec("top -bn1 | grep load | awk '{printf "%s\n", $11}");
     LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $10}')
 LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $11}')
