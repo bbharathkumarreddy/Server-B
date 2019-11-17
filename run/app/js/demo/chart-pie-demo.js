@@ -72,6 +72,7 @@ setInterval(function() {
         type: 'get',
         success: function(data) {
             data = JSON.parse(data);
+            console.log(data)
             var mem_usage = parseInt(data[7]);
             var mem_tot = parseInt(data[8]);
             var mem_free = mem_tot - mem_usage;
