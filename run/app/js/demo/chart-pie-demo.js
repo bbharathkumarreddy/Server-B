@@ -71,7 +71,7 @@ setInterval(function() {
         url: '/api/sys_stat.php?live=true',
         type: 'get',
         success: function(data) {
-            console.log(data)
+            data = JSON.parse(data);
             var mem_usage = parseInt(data.data[7]);
             var mem_tot = parseInt(data.data[8]);
             var mem_free = mem_tot - mem_usage;
