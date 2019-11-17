@@ -189,10 +189,6 @@
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <!-- <script src="js/demo/line-chart.js"></script> -->
     <script>
         $(document).ready(function() {
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
