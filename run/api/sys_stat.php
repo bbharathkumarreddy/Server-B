@@ -16,7 +16,7 @@ echo str_replace("],\n]", ']]',$new_json);
 
 function get_server_memory_usage(){
 
-    $free = shell_exec('free -m');
+    $free = shell_exec(`free -m`);
   
 
     return $free;
