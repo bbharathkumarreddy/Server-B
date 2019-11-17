@@ -191,24 +191,64 @@
     
     <script>
         $(document).ready(function() {
-            var pie_chart_1 = document.getElementById("pie_chart_1");
-            data = {
-    datasets: [{
-        data: [10, 20, 30]
-    }],
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
+            
+  //get the doughnut chart canvas
+  var pie_chart_1 = $("#pie_chart_1");
+
+  //doughnut chart data
+  var data1 = {
+    labels: ["match1", "match2", "match3", "match4", "match5"],
+    datasets: [
+      {
+        label: "TeamA Score",
+        data: [10, 50, 25, 70, 40],
+        backgroundColor: [
+          "#DEB887",
+          "#A9A9A9",
+          "#DC143C",
+          "#F4A460",
+          "#2E8B57"
+        ],
+        borderColor: [
+          "#CDA776",
+          "#989898",
+          "#CB252B",
+          "#E39371",
+          "#1D7A46"
+        ],
+        borderWidth: [1, 1, 1, 1, 1]
+      }
     ]
-};
-// And for a doughnut chart
-var pie_chart_1_chart = new Chart(pie_chart_1, {
-    type: 'doughnut',
-    data: data
-});
+  };
+  //options
+  var options = {
+    responsive: true,
+    title: {
+      display: true,
+      position: "top",
+      text: "Doughnut Chart",
+      fontSize: 18,
+      fontColor: "#111"
+    },
+    legend: {
+      display: true,
+      position: "bottom",
+      labels: {
+        fontColor: "#333",
+        fontSize: 16
+      }
+    }
+  };
+
+  //create Chart class object
+  var pie_chart_1_chart = new Chart(pie_chart_1, {
+    type: "doughnut",
+    data: data1,
+    options: options
+  });
+
+
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
 ["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
 ["1572491102","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4115953","511883","4627836"],
