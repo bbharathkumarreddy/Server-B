@@ -14,7 +14,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2" style="height: 150px !important;">
-                        <canvid id="pie_chart_1"></canvas>
+                        <canvas id="pie_chart_1"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
