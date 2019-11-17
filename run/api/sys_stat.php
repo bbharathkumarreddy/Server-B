@@ -1,8 +1,8 @@
 <?php 
 if(isset($_GET['live']) && $_GET['live'] == 'true')
 {   $LOAD_1 = shell_exec('bash /var/www/server-b/bash/scripts/sys_stat_live.sh');
-    str_replace("'", '"',$LOAD_1); 
-    echo "{data:".$LOAD_1."}";
+    $LOAD_1 = explode(',',$LOAD_1); 
+    echo json_encode($LOAD_1);
 }
 else{
 $data = shell_exec('tail -15 /var/www/server-b-data/sys_stat_log');
