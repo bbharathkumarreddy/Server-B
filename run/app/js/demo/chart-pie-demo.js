@@ -78,4 +78,4 @@ setInterval(function() {
             pie_chart_3.update();
         }
     });
-}, 10);
+}, 10000);
