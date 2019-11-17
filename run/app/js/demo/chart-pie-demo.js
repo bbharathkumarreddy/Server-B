@@ -72,11 +72,11 @@ setInterval(function() {
         dataType: 'json',
         type: 'get',
         success: function(data) {
-            var mem_usage = data.data[7];
-            var mem_tot = data.data[8];
+            var mem_usage = parseInt(data.data[7]);
+            var mem_tot = parseInt(data.data[8]);
             var mem_free = mem_tot - mem_usage;
             pie_chart_3.data.datasets[0].data = [mem_usage, mem_free];
             pie_chart_3.update();
         }
     });
-}, 10000);
+}, 5000);
