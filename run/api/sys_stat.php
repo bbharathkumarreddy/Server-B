@@ -1,5 +1,5 @@
 <?php 
-if(!isset($_GET['live']) && $_GET['live'] == 'true')
+if(isset($_GET['live']) && $_GET['live'] == 'true')
 {   $LOAD_1 = shell_exec(`top -bn1 | grep load | awk '{printf "%s\n", $10}`);
  /*   $LOAD_1 = shell_exec("top -bn1 | grep load | awk '{printf "%s\n", $11}");
     LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $10}')
