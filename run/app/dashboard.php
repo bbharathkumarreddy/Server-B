@@ -192,22 +192,24 @@
     <script>
         $(document).ready(function() {
             var pie_chart_1 = document.getElementById("pie_chart_1").getContext("2d");
-var pie_chart_1_chart = new Chart(pie_chart_1).Doughnut(
-	// Datas
-	[
-		{
-			value: 80,
-			color:"#F7464A",
-			highlight: "#FF5A5E",
-			label: "CPU"
-		},
-		{
-			value: 20,
-			color: "#46BFBD",
-			highlight: "#5AD3D1",
-			label: "Free CPU"
-		}
-	]);
+            data = {
+    datasets: [{
+        data: [10, 20, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ]
+};
+// And for a doughnut chart
+var pie_chart_1_chart = new Chart(pie_chart_1, {
+    type: 'doughnut',
+    data: data,
+    options: options
+});
             var sample = {"data":[["1572490982","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4092411","494223","4586634"],
 ["1572491041","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4103777","505427","4609204"],
 ["1572491102","0.00","0.00,","0.00,","0.00","2.2","9.6","337","579","4115953","511883","4627836"],
