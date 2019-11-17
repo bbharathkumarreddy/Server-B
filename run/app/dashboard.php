@@ -37,7 +37,7 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
+                            <i class="fas fa-circle text-success"></i> LOAD
                         </span>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
+                            <i class="fas fa-circle text-success"></i> RAM
                         </span>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
+                            <i class="fas fa-circle text-success"></i> STORAGE
                         </span>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
+                            <i class="fas fa-circle text-success"></i> Data Download
                         </span>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
+                            <i class="fas fa-circle text-success"></i> Data Upload
                         </span>
                     </div>
                 </div>
