@@ -191,7 +191,7 @@
     
     <script>
         $(document).ready(function() {
-            var pie_chart_1 = document.getElementById("pie_chart_1").getContext("2d");
+            var pie_chart_1 = document.getElementById("pie_chart_1");
             data = {
     datasets: [{
         data: [10, 20, 30]
