@@ -1,6 +1,7 @@
 <?php 
 if(isset($_GET['live']) && $_GET['live'] == 'true')
 {   $LOAD_1 = shell_exec('bash /var/www/server-b/bash/scripts/sys_stat_live.sh');
+    str_replace("'", '"',$LOAD_1); 
     echo "{data:".$LOAD_1."}";
 }
 else{
