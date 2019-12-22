@@ -1,6 +1,6 @@
 #!/bin/bash
 config_path='/var/www/server-b/system/config.sh'
-source config_path
+source $config_path
 
 #sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
 
@@ -43,7 +43,7 @@ install(){
 }
 
 getallKey(){
-   cat config_path
+   cat $config_path
 }
 
 getKey(){
@@ -56,11 +56,11 @@ setKey(){
     value=value="${!1}"
     if [ -z "$value" ]
     then
-        echo $key"='"$2"'" >> config_path
+        echo $key"='"$2"'" >> $config_path
     else
         echo $2
         value="${2//\//\\/}"
-        sed -i "s/^$1=.*/$1='$value'/" config_path
+        sed -i "s/^$1=.*/$1='$value'/" $config_path
         echo $value
     fi
     
