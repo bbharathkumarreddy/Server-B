@@ -2,13 +2,14 @@
 
 #install command below
 #sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
-source ../main.sh
-
+source ../config.sh
 echo --------------------------------------------------
 echo +++++  Server B Installation Started  ++++++
 echo --------------------------------------------------
-
+echo $ssh_port
+exit 0
 sudo mkdir $site_path
+
 sudo mkdir $site_path'php'
 sudo mkdir $site_path'node'
 sudo mkdir $site_path'static'
