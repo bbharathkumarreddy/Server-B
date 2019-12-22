@@ -1,7 +1,8 @@
 #!/bin/bash
-source /var/www/server-b/system/config.sh
+config_path='/var/www/server-b/system/config.sh'
+source config_path
 
-#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/main.sh install
+#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
 
 #/etc/ssh/sshd_config
 #/etc/php/7.2/fpm/php.ini
@@ -16,12 +17,10 @@ install(){
     echo $ssh_port
 
     sudo mkdir $site_path
-
     sudo mkdir $site_path'php'
     sudo mkdir $site_path'node'
     sudo mkdir $site_path'static'
     sudo mkdir $site_path'cert'
-
     server_b_file_per
 
     load_ip
@@ -44,7 +43,7 @@ install(){
 }
 
 getallKey(){
-   cat ../config.sh
+   cat config_path
 }
 
 getKey(){
@@ -57,11 +56,11 @@ setKey(){
     value=value="${!1}"
     if [ -z "$value" ]
     then
-        echo $key"='"$2"'" >> ../config.sh
+        echo $key"='"$2"'" >> config_path
     else
         echo $2
         value="${2//\//\\/}"
-        sed -i "s/^$1=.*/$1='$value'/" ../config.sh
+        sed -i "s/^$1=.*/$1='$value'/" config_path
         echo $value
     fi
     
@@ -156,7 +155,6 @@ install_php(){
     sudo cp /etc/php/7.2/fpm/php.ini $backup_path`php.ini.bck`
     sleep 3
     sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' /etc/php/7.2/fpm/php.ini
-    
     sudo service php7.2-fpm reload
 
     new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" /etc/php/7.2/fpm/php.ini | tail -1 | grep -o '"[^"]\+"');
@@ -186,14 +184,13 @@ install_mysql(){
     mysql -uroot -p$root_password -e "CREATE USER '$alt_user'@'%' IDENTIFIED BY '"$alt_pwd"'";
     mysql -uroot -p$root_password -e "flush privileges";
     mysql -uroot -p$root_password -e "SELECT user,authentication_string,plugin,host FROM mysql.user;";
-    
+
     setKey 'mysql_root_password' $root_password
     setKey 'mysql_alt_user' $alt_user
     setKey 'mysql_alt_password' $alt_pwd
 
 
     sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf $backup_path`mysqld.cnf.bck`
-
     service mysql stop
     sleep 2
     service mysql start
@@ -221,9 +218,8 @@ config_mysql(){
     cur_mysqlbind_addr_string=$(sudo grep "\bbind-address\b" /etc/mysql/mysql.conf.d/mysqld.cnf)
     sed -i "s/${cur_mysqlbind_addr_string}/bind-address            = ${mysql_bind_address}/g" /etc/mysql/mysql.conf.d/mysqld.cnf
     setKey 'mysql_bind_address' $mysql_bind_address
-    
-    echo 'Note: MySQL service restarts in new configuration => Port:'$mysql_port' AND bind to address:'$mysql_bind_address
 
+    echo 'Note: MySQL service restarts in new configuration => Port:'$mysql_port' AND bind to address:'$mysql_bind_address
     service mysql stop
     sleep 2
     service mysql start
@@ -245,7 +241,7 @@ install_shell_in_a_box(){
     sleep 2
     sed -i "s/$shell_in_box_port/$1/g" /etc/default/shellinabox
     sed -i "s/--no-beep/--no-beep   --disable-ssl/g" /etc/default/shellinabox
-    $shell_in_box_port=$1
+    shell_in_box_port=$1
     setKey 'shell_in_box_port' $shell_in_box_port
     sleep 1
     sudo service shellinabox stop
