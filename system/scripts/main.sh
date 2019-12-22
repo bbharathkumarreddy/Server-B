@@ -114,7 +114,7 @@ install_nginx(){
 
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
-    sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
+    sudo cp "${files_path}nginx.conf" /etc/nginx/sites-enabled/default
     sudo service nginx reload reload
     echo -------------------------------------------------
     echo xxxxxxxx  NGINX INSTALL COMPLETED     xxxxxxxxxxx
