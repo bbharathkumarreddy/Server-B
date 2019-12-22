@@ -172,11 +172,11 @@ install_mysql(){
     sudo apt install mysql-server -y
     sleep 3
 
-    $root_password=$1
-    $alt_user=$2
-    $alt_pwd=$3
-    $mysql_port=$4
-    $mysql_bind_address=$5
+    root_password=$1
+    alt_user=$2
+    alt_pwd=$3
+    mysql_port=$4
+    mysql_bind_address=$5
 
     mysql  -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '"$root_password"'";
     mysql -uroot -p$root_password -e "CREATE USER '$alt_user'@'localhost' IDENTIFIED BY '"$alt_pwd"'";
@@ -207,8 +207,8 @@ config_mysql(){
     echo ++++++++++++  MYSQL PORT CONFIG   +++++++++++++++
     echo -------------------------------------------------
 
-    $mysql_port=$1
-    $mysql_bind_address=$2
+    mysql_port=$1
+    mysql_bind_address=$2
     
     cur_mysqlport_string=$(sudo grep "\bport\b" /etc/mysql/mysql.conf.d/mysqld.cnf)
     sed -i "s/${cur_mysqlport_string}/port            = ${mysql_port}/g" /etc/mysql/mysql.conf.d/mysqld.cnf
