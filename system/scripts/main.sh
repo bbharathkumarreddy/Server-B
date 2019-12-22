@@ -328,10 +328,9 @@ system_stat_current(){
     NET_TRANSMITTED=`echo $LINE | awk '{print $9}'`
 
     NET_RECEIVED=$(($NET_RECEIVED/1000))
-
     NET_TRANSMITTED=$(($NET_TRANSMITTED/1000))
-
     NET_TOTAL=$(($NET_RECEIVED+$NET_TRANSMITTED))
+    
     DATA_STRING="'${TIMESTAMP}','${CPU}','${LOAD_1}','${LOAD_5}','${LOAD_15}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'"
     echo ${DATA_STRING}
 }
