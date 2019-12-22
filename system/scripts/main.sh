@@ -32,7 +32,7 @@ install(){
     install_mysql mysql123 alt_root mysql123 3305 0.0.0.0
     install_shell_in_a_box 8887
     install_node_npm
-    sudo cp /etc/ssh/sshd_config $backup_path`sshd_config_bck`
+    sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
     generate_auth_key
     new_user ubt ubt
     ssh_port_set 24
@@ -114,7 +114,7 @@ install_nginx(){
 
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
-    sudo cp /var/www/server-b/system/files/nginx.conf /etc/nginx/sites-enabled/default
+    sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
     sudo service nginx reload reload
     echo -------------------------------------------------
     echo xxxxxxxx  NGINX INSTALL COMPLETED     xxxxxxxxxxx
@@ -150,8 +150,8 @@ install_php(){
     sudo apt install php-fpm php-mysql -y
     echo "PHP Version"
     php -r 'echo PHP_VERSION;'
-    sudo cp $files_path`php_info.php` $site_path`php/php_info.php`
-    sudo cp /etc/php/7.2/fpm/php.ini $backup_path`php.ini.bck`
+    sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
+    sudo cp /etc/php/7.2/fpm/php.ini $backup_path'php.ini.bck'
     sleep 3
     sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' /etc/php/7.2/fpm/php.ini
     sudo service php7.2-fpm reload
@@ -189,7 +189,7 @@ install_mysql(){
     setKey 'mysql_alt_password' $alt_pwd
 
 
-    sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf $backup_path`mysqld.cnf.bck`
+    sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf $backup_path'mysqld.cnf.bck'
     service mysql stop
     sleep 2
     service mysql start
