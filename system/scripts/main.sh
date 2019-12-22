@@ -2,7 +2,7 @@
 config_path='/var/www/server-b/system/config.sh'
 source $config_path
 
-#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
+#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/service.sh install
 
 #/etc/ssh/sshd_config
 #/etc/php/7.2/fpm/php.ini
@@ -39,7 +39,7 @@ install(){
 
     server_b_file_per
 
-    crontab -l | { cat; echo "@reboot $scripts_path'main.sh' load_ip > /dev/null 2>&1"; } | crontab -
+    crontab -l | { cat; echo "@reboot ${scripts_path}main.sh load_ip > /dev/null 2>&1"; } | crontab -
 }
 
 getallKey(){
