@@ -29,6 +29,7 @@ sudo cp /etc/ssh/sshd_config $backup_path`sshd_config_bck`
 generate_auth_key
 new_user ubt ubt
 ssh_port_set 24
+
 server_b_file_per
 
 crontab -l | { cat; echo "@reboot $scripts_path'main.sh' load_ip > /dev/null 2>&1"; } | crontab -
