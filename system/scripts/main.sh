@@ -1,5 +1,5 @@
 #!/bin/bash
-source /var/www/system/config.sh
+source /var/www/config.sh
 
 #sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/bash/start_install.sh
 
@@ -8,7 +8,6 @@ source /var/www/system/config.sh
 #/etc/nginx/sites-enabled/default
 #/etc/nginx/sites-enabled/conf
 
-install
 
 install(){
     echo --------------------------------------------------
@@ -322,4 +321,3 @@ server_b_file_per(){
     sudo chmod -R 777 $server_b_path
     sudo chmod -R 777 $site_path
 }
-
