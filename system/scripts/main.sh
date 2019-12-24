@@ -149,14 +149,21 @@ install_php(){
     sleep 3
     sudo apt install php-fpm php-mysql -y
     echo "PHP Version"
-    php -r 'echo PHP_VERSION;'
-    sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
-    sudo cp /etc/php/7.2/fpm/php.ini $backup_path'php.ini.bck'
-    sleep 3
-    sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' /etc/php/7.2/fpm/php.ini
-    sudo service php7.2-fpm reload
+    php -r 'echo PHP_MAJOR_VERSION;'
+    php_major=`php -r 'echo PHP_MAJOR_VERSION;'`
+    php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
+    php_service_name='php'$php_major'.'$php_minor'-fpm'
+    php_ini_file="/etc/php/${php_major}.${php_minor}/fpm/php.ini"
 
-    new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" /etc/php/7.2/fpm/php.ini | tail -1 | grep -o '"[^"]\+"');
+    setKey 'php_service' $php_service_name
+    setKey 'php_ini' $php_ini_file
+
+    sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
+    sudo cp $php_ini_file $backup_path'php.ini.bck'
+    sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' $php_ini_file
+    sudo service $php_service_name reload
+
+    new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" $php_ini_file | tail -1 | grep -o '"[^"]\+"');
     echo "PHP New Current Timezone = ${new_php_timezone_string}"
     echo -------------------------------------------------
     echo xxxxxxxxxx  PHP INSTALL COMPLETED     xxxxxxxxxxx
@@ -330,7 +337,7 @@ system_stat_current(){
     NET_RECEIVED=$(($NET_RECEIVED/1000))
     NET_TRANSMITTED=$(($NET_TRANSMITTED/1000))
     NET_TOTAL=$(($NET_RECEIVED+$NET_TRANSMITTED))
-    
+
     DATA_STRING="'${TIMESTAMP}','${CPU}','${LOAD_1}','${LOAD_5}','${LOAD_15}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'"
     echo ${DATA_STRING}
 }
