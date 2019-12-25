@@ -46,7 +46,7 @@
         var e = new Date(serverNow)
         phpTime=parseInt(phpTime)+1000;
         document.getElementById('time').innerHTML =  phpTimeZone + " "+ e.toLocaleDateString() + " " + e.getHours() + ":" + checkTime(e.getMinutes()) + ":" + checkTime(e.getSeconds());
-        var t = setTimeout(startTime, 1000);    
+        var t = setTimeout(startTime, 500);    
     }
     function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
