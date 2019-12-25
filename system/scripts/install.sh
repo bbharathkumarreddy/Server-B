@@ -39,7 +39,7 @@ install(){
     echo --------------------------------------------------
     echo ++++++++  Server B Installation Started  +++++++++
     echo --------------------------------------------------
-    sudo mkdir -p $server_b_data
+    sudo mkdir -p $server_b_data_path
     sudo mkdir -p $site_path
     sudo mkdir -p $site_path'php'
     sudo mkdir -p $site_path'node'
