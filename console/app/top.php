@@ -98,77 +98,77 @@ $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey p
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-desktop"></i>
                     <span>Website</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-chess-board"></i>
                     <span>Services</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-file-code"></i>
                     <span>File Manger</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-file"></i>
                     <span>Log Point</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-greater-than"></i>
                     <span>SSH</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-tasks"></i>
-                    <span>Cron</span>
+                    <span>Cron Manager</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-code-branch"></i>
                     <span>GIT Setup</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-cog"></i>
                     <span>Config</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-box-open"></i>
                     <span>Setup</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-box-open"></i>
                     <span>Logout</span>
                 </a>
