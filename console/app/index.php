@@ -1,2 +1,2 @@
 <?php
-phpinfo();
+header("Location: app/dashboard.php"); 
