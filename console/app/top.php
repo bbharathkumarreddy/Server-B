@@ -1,3 +1,8 @@
+<?php
+$server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_name");
+$private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
+$public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,14 +84,14 @@
                         <div class="card-body">
 
                             <small>Server</small><br> &nbsp;
-                            <b>GCP Server 01</b> &nbsp;
+                            <b><?php echo $server_name; ?></b> &nbsp;
                             <b></b>
                             <br>
                             <small>Public IP</small><br> &nbsp;
-                            <b>192.168.1.100</b>
+                            <b><?php echo $public_ip; ?></b>
                             <br>
                             <small>Private IP</small><br> &nbsp;
-                            <b>-</b>
+                            <b><?php echo $private_ip; ?></b>
                         </div>
                     </div>
                 </div>
