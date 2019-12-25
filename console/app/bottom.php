@@ -5,7 +5,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2020 - Server B, Server Management</span>
+                        <span>Copyright &copy; 2020 - Server B, | Last Updated @ <?php echo shell_exec("bash /var/www/server-b/system/scripts/service.sh setKey ".date("Y-m-d").'.'.date("h:i:sa")); ?></span>
                     </div>
                 </div>
             </footer>
