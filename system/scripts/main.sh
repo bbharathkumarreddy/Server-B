@@ -39,6 +39,8 @@ install(){
     server_b_file_per
 
     crontab -l | { cat; echo "@reboot ${scripts_path}service.sh load_ip > /dev/null 2>&1"; } | crontab -
+    addLogFile 'syslog' '/var/log/syslog'
+    addLogFile 'authlog' '/var/log/auth.log'
     claer_ram
 }
 
@@ -116,6 +118,10 @@ install_nginx(){
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
     sudo service nginx reload reload
+    
+    addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
+    addLogFile 'nginx_error_log' 'nginx_error_log /var/log/nginx/error.log'
+
     echo -------------------------------------------------
     echo xxxxxxxx  NGINX INSTALL COMPLETED     xxxxxxxxxxx
     echo -------------------------------------------------
@@ -165,6 +171,8 @@ install_php(){
 
     new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" $php_ini_file | tail -1 | grep -o '"[^"]\+"');
     echo "PHP New Current Timezone = ${new_php_timezone_string}"
+
+    addLogFile "php_log" "/var/log/${php_service_name}.log"
     echo -------------------------------------------------
     echo xxxxxxxxxx  PHP INSTALL COMPLETED     xxxxxxxxxxx
     echo -------------------------------------------------
@@ -345,4 +353,16 @@ system_stat_current(){
 server_b_file_per(){
     sudo chmod -R 777 $server_b_path
     sudo chmod -R 777 $site_path
+}
+
+addLogFile(){
+    name=$1
+    location=$2
+    echo $1 $2 >> $logpoint_path
+}
+
+removeLogFile(){
+   full_name_path=$1
+   full_name_path="${full_name_path//\//\\/}"
+   sed -i "/${full_name_path}/d" $logpoint_path
 }
