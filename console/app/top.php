@@ -41,7 +41,6 @@
     <script>
     let phpTimeZone="<?php $date = new DateTime(); $timeZone = $date->getTimezone(); echo $timeZone->getName(); ?>";
     let phpTime=parseInt("<?php echo time().'000'; ?>");
-    console.log(phpTimeZone)
     function startTime() {
         var serverNow = new Date(phpTime).toLocaleString("en-US", {timeZone: phpTimeZone});
         var e = new Date(serverNow)
