@@ -82,6 +82,7 @@ install(){
     load_os
     update_upgrade
     install_nano
+    getallKey
     exit 0;
     install_nginx
     install_php
