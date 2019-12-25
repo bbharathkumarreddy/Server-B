@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin B Panel</title>
+    <title>Server B</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -68,7 +68,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="far fa-hdd"></i>
                 </div>
-                <div class="sidebar-brand-text mx-2">Admin B Panel</div>
+                <div class="sidebar-brand-text mx-2">Server B</div>
             </a>
 
             <!-- Divider -->
