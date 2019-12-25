@@ -34,6 +34,7 @@ shell_in_box_port='4200'
 server_b_auth_key='a'
 alt_user='ubu'
 alt_pwd='ppp'
+update_date=''
 
 install(){
     echo --------------------------------------------------
@@ -73,7 +74,7 @@ install(){
     echo server_b_auth_key"='"$server_b_auth_key"'" >> $server_b_loc_config_path
     echo alt_user"='"$alt_user"'" >> $server_b_loc_config_path
     echo alt_pwd"='"$alt_pwd"'" >> $server_b_loc_config_path
-
+    echo update_date"='"$update_date"'" >> $server_b_loc_config_path
 
     source $server_b_loc_path'system/scripts/main.sh'
     source $server_b_config_path   
