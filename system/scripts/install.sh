@@ -82,8 +82,6 @@ install(){
     load_os
     update_upgrade
     install_nano
-    getallKey
-    exit 0;
     install_nginx
     install_php
     install_mysql mysql123 alt_root mysql123 3305 0.0.0.0
