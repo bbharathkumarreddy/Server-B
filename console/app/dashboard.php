@@ -107,6 +107,13 @@
 
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
+                    <i class="fa fa-file"></i>
+                    <span>Log Point</span>
+                </a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
                     <i class="fa fa-greater-than"></i>
                     <span>SSH</span>
                 </a>
