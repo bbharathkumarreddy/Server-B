@@ -80,9 +80,9 @@ install(){
 
     load_ip
     load_os
-    exit 0;
     update_upgrade
     install_nano
+    exit 0;
     install_nginx
     install_php
     install_mysql mysql123 alt_root mysql123 3305 0.0.0.0
