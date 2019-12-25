@@ -318,6 +318,7 @@ system_stat_current(){
 
 server_b_file_per(){
     sudo chmod -R 777 $server_b_path
+    sudo chmod -R 777 $server_b_data_path
     sudo chmod -R 777 $site_path
 }
 
