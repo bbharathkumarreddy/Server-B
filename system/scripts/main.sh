@@ -333,3 +333,14 @@ removeLogFile(){
    full_name_path="${full_name_path//\//\\/}"
    sed -i "/${full_name_path}/d" $logpoint_path
 }
+
+generate_htpasswd(){
+    twp_salt="zkd44ldvdQpl84mf5n"
+    twp_username=$1
+    twp_passwd=$2
+
+    twp_hash_passwd=$(perl -le "print crypt("$twp_passwd", "$twp_salt")")
+    twp_file=$twp_username':'$twp_hash_passwd
+    rm -f $server_twp_hash_path
+    echo $twp_file >> $server_twp_hash_path
+}

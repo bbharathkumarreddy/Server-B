@@ -12,6 +12,8 @@ server_name='Server B'
 server_b_path=${server_b_loc_path}
 server_b_data_path=${server_b_loc_data_path}
 server_b_config_path=${server_b_loc_config_path}
+server_b_username='username'
+server_b_password='password'
 system_path='/var/www/server-b/system/'
 scripts_path='/var/www/server-b/system/scripts/'
 files_path='/var/www/server-b/system/files/'
@@ -35,6 +37,7 @@ server_b_auth_key='a'
 alt_user='ubu'
 alt_pwd='ppp'
 update_date=''
+server_twp_hash_path=$server_b_loc_data_path'.htpasswd'
 
 install(){
     echo --------------------------------------------------
@@ -75,7 +78,7 @@ install(){
     echo alt_user"='"$alt_user"'" >> $server_b_loc_config_path
     echo alt_pwd"='"$alt_pwd"'" >> $server_b_loc_config_path
     echo update_date"='"$update_date"'" >> $server_b_loc_config_path
-
+    echo server_twp_hash_path"='"$server_twp_hash_path"'" >> $server_b_loc_config_path
     source $server_b_loc_path'system/scripts/main.sh'
     source $server_b_config_path   
 
@@ -92,6 +95,7 @@ install(){
     generate_auth_key
     new_user ubt ubt
     ssh_port_set 24
+    generate_htpasswd $server_b_username $server_b_password
     server_b_file_per
 
     crontab -l | { cat; echo "@reboot ${scripts_path}service.sh load_ip > /dev/null 2>&1"; } | crontab -
