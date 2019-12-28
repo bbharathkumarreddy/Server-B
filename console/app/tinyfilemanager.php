@@ -3706,6 +3706,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
                 e.preventDefault();
                 let selectedValue = $(this).val(), selectionType = $(this).attr("data-type");
                 if(selectedValue && selectionType == "mode") {
+                    console.log(selectedValue)
                     editor.getSession().setMode(selectedValue);
                 } else if(selectedValue && selectionType == "theme") {
                     editor.setTheme(selectedValue);
