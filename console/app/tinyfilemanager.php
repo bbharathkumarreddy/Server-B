@@ -3662,7 +3662,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
     <script>
         var editor = ace.edit("editor");
         console.log("<?php echo $ext; ?>");
-        editor.getSession().setMode( {path:"ace/mode/<?php echo $ext; ?>", inline:true} );
+        editor.getSession().setMode("ace/mode/<?php echo $ext; ?>");
         //editor.setTheme("ace/theme/twilight"); //Dark Theme
         function ace_commend (cmd) { editor.commands.exec(cmd, editor); }
         editor.commands.addCommands([{
@@ -3678,7 +3678,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             $fontSizeEl.val(14).change(); //set default font size in drop down
             $modeEl.val('ace/mode/php').change(); //set default mode in drop down
             $themeEl.val('ace/theme/monokai').change(); //set default theme size in drop down
-            editor.getSession().setMode('ace/mode/php');
+            //editor.getSession().setMode('ace/mode/php');
             editor.setTheme('ace/theme/monokai');
             editor.setFontSize(parseInt(14));
             $("select#js-ace-mode").trigger('change');
