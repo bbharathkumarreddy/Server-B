@@ -2,6 +2,9 @@
 $server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_name");
 $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
+$server_b_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_b_port");
+$shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
+$app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
