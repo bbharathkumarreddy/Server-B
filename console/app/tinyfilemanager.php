@@ -3677,6 +3677,9 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             $fontSizeEl.val(14).change(); //set default font size in drop down
             $modeEl.val('ace/mode/php').change(); //set default mode in drop down
             $themeEl.val('ace/theme/monokai').change(); //set default theme size in drop down
+            editor.getSession().setMode('php');
+            editor.setTheme('monokai');
+            editor.setFontSize(parseInt(14));
         }
 
         $(function(){
@@ -3701,6 +3704,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             $("select#js-ace-mode, select#js-ace-theme, select#js-ace-fontSize").on("change", function(e){
                 e.preventDefault();
                 let selectedValue = $(this).val(), selectionType = $(this).attr("data-type");
+                console.log(selectedValue)
                 if(selectedValue && selectionType == "mode") {
                     editor.getSession().setMode(selectedValue);
                 } else if(selectedValue && selectionType == "theme") {
