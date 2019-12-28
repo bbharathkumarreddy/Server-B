@@ -3677,7 +3677,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             $fontSizeEl.val(14).change(); //set default font size in drop down
             $modeEl.val('ace/mode/php').change(); //set default mode in drop down
             $themeEl.val('ace/theme/monokai').change(); //set default theme size in drop down
-            editor.getSession().setMode('ace/mode/php');
+            editor.setMode('ace/mode/php');
             editor.setTheme('ace/theme/monokai');
             editor.setFontSize(parseInt(14));
         }
