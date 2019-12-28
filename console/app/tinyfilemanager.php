@@ -16,7 +16,7 @@ define('APP_TITLE', 'Server B File Manager');
 
 // Auth with login/password (set true/false to enable/disable it)
 // Is independent from IP white- and blacklisting
-$use_auth = true;
+$use_auth = false;
 
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
 // Generate secure password hash - https://tinyfilemanager.github.io/docs/pwd.html
