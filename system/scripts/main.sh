@@ -369,7 +369,7 @@ show_legends(){
     echo "  *   Server B SSH Access Port  : ${shell_in_box_access_port}                             "
     echo "  *   Server B SSH Port         : ${shell_in_box_port}                                    "
     echo "  *                                                                                       "
-    echo "  *     Note: Always Block All Server B Ports using firewall for better security          "
+    echo "  *     Note: Protect all Server B Ports using firewall for better security               "
     echo "  *                                                                                       "
     echo "  ----------------------------------------------------------------------------------------"
     echo "                                                                                          "
