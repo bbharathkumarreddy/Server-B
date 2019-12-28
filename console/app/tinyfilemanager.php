@@ -2963,11 +2963,21 @@ function fm_show_nav_path($path)
                 $count = count($exploded);
                 $array = array();
                 $parent = '';
-                for ($i = 1; $i <= $count; $i++) {
-                    $parent = trim($parent . '/' . $exploded[$i-1], '/');
-                    $parent_enc = urlencode($parent);
-                    if(($i == $count) && isset($_GET['edit'])) $array[] = "<a href='?p={$parent_enc}&edit={$file}&env=ace'>" . fm_enc(fm_convert_win($exploded[$i-1])) . "</a>";
-                    else $array[] = "<a href='?p={$parent_enc}'>" . fm_enc(fm_convert_win($exploded[$i-1])) . "</a>";
+                for ($i = 1; $i <= $count; $i++) {                   
+                    
+                    if(($i == $count) && isset($_GET['edit'])) 
+                    {   $parent = trim($parent);
+                        $parent_enc = urlencode($parent);
+                        $link = "?p={$parent_enc}&edit={$file}&env=ace";
+                        
+                    }
+                    else
+                    {   $parent = trim($parent . '/' . $exploded[$i-1], '/');
+                        $parent_enc = urlencode($parent);
+                        $link = "?p={$parent_enc}";
+                    } 
+                    
+                    $array[] = "<a href='{$link}'>" . fm_enc(fm_convert_win($exploded[$i-1])) . "</a>";
                 }
                 $root_url .= $sep . implode($sep, $array);
             }
