@@ -3673,18 +3673,14 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             if(_data && _data.aceMode) { $modeEl.html(optionNode("ace/mode/", _data.aceMode)); }
             if(_data && _data.aceTheme) { var lightTheme = optionNode("ace/theme/", _data.aceTheme.bright), darkTheme = optionNode("ace/theme/", _data.aceTheme.dark); $themeEl.html("<optgroup label=\"Bright\">"+lightTheme+"</optgroup><optgroup label=\"Dark\">"+darkTheme+"</optgroup>");}
             if(_data && _data.fontSize) { $fontSizeEl.html(optionNode("", _data.fontSize)); }
-            
-            console.log(fileExt)
             if(['js','ts','conf','cpp','c','go','vb','bat','py','cs'].includes(fileExt))
             {
                 let formatMapping={js:'javascript',sh:'sh',conf:'text',ts:'typescript',cpp:'c_cpp',c:'c_cpp',go:'golang',vb:'vbscript',bat:'batchfile',py:'python',cs:'csharp'}
                 fileExt = formatMapping[fileExt];
             }
-            console.log(fileExt)
-            
-            $fontSizeEl.val(14).change(); //set default font size in drop down
             $modeEl.val('ace/mode/'+fileExt).change(); //set default mode in drop down
             $themeEl.val('ace/theme/monokai').change(); //set default theme size in drop down
+            $fontSizeEl.val(14).change(); //set default font size in drop down
 
             editor.getSession().setMode('ace/mode/'+fileExt);
             editor.setTheme('ace/theme/monokai');
