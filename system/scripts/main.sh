@@ -335,12 +335,40 @@ removeLogFile(){
 }
 
 generate_htpasswd(){
+    echo -------------------------------------------------
+    echo +++++  GENERATE SERVER B LOGIN CREDENTIALS  +++++
+    echo -------------------------------------------------
     twp_salt="zkd44ldvdQpl84mf5n"
     twp_username=$1
     twp_passwd=$2
-
+    if [ "$twp_username" == "username" ] || [ "$twp_passwd" == "password" ] ; then
+        echo "!!! Error: Default Username or Password is not allowed;"
+        exit;
+    fi
     twp_hash_passwd=$(perl -le "print crypt("$twp_passwd", "$twp_salt")")
     twp_file=$twp_username':'$twp_hash_passwd
     rm -f $server_twp_hash_path
     echo $twp_file >> $server_twp_hash_path
+    service nginx reload;
+    echo -------------------------------------------------
+    echo ++++++ SERVER B LOGIN CREDENTIALS SUCCESS +++++++
+    echo -------------------------------------------------
+}
+
+show_legends(){
+
+    echo  -------------------------------------------------------------------------------------
+    echo "|                       SERVER B STARTED SUCCESSFULLY v2.1                          |"
+    echo  -------------------------------------------------------------------------------------
+    echo "|                                                                                   |"
+    echo "|    Server B Dahsboard: http://${public_ip}:${server_b_port}/app/dashboard.php     |"
+    echo "|    Username          : ${server_b_username}                                       |"
+    echo "|    Password          : ${server_b_password}                                       |"
+    echo "|                                                                                   |"
+    echo "|    Server B Port     : ${server_b_port}                                           |"
+    echo "|    Server B SSH Port : ${shell_in_box_port}                                       |"
+    echo "|                                                                                   |"
+    echo "|    Note: Always Block All Server B Ports using firewall for better security       |"
+    echo  -------------------------------------------------------------------------------------
+
 }
