@@ -126,7 +126,15 @@ install_php(){
     php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
     php_service_name='php'$php_major'.'$php_minor'-fpm'
     php_ini_file="/etc/php/${php_major}.${php_minor}/fpm/php.ini"
+    php_www_conf_file="/etc/php/${php_major}.${php_minor}/fpm/pool.d/www.conf"
+    php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
+    
+    sed -i "s/user = www-data/user = root/g" $php_www_conf_file
+    sed -i "s/group = www-data/group = root/g" $php_www_conf_file
+    sed -i "s//etc/php/7.2/fpm/php-fpm.conf//etc/php/7.2/fpm/php-fpm.conf -R/g" $php_fpm_service_file
 
+    systemctl daemon-reload
+    
     setKey 'php_service' $php_service_name
     setKey 'php_ini' $php_ini_file
 
