@@ -3661,7 +3661,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
     <script>
         var editor = ace.edit("editor");
-        console.log(<?php echo $ext; ?>);
+        console.log("<?php echo $ext; ?>");
         editor.getSession().setMode( {path:"ace/mode/<?php echo $ext; ?>", inline:true} );
         //editor.setTheme("ace/theme/twilight"); //Dark Theme
         function ace_commend (cmd) { editor.commands.exec(cmd, editor); }
