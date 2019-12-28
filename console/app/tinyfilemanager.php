@@ -2954,7 +2954,7 @@ function fm_show_nav_path($path)
             if(isset($_GET['edit']))
             {
                 $file=urlencode($_GET['edit']);
-                $path='/'.$file;
+                $path=$path.'/'.$file;
             }
             $root_url = "<a href='?p='><i class='fa fa-home' aria-hidden='true' title='" . FM_ROOT_PATH . "'></i></a>";
             $sep = '<i class="bread-crumb"> / </i>';
