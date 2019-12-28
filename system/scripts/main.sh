@@ -357,18 +357,18 @@ generate_htpasswd(){
 
 show_legends(){
 
-    echo  -------------------------------------------------------------------------------------
-    echo "|                       SERVER B STARTED SUCCESSFULLY v2.1                          |"
-    echo  -------------------------------------------------------------------------------------
-    echo "|                                                                                   |"
-    echo "|    Server B Dahsboard: http://${public_ip}:${server_b_port}/app/dashboard.php     |"
-    echo "|    Username          : ${server_b_username}                                       |"
-    echo "|    Password          : ${server_b_password}                                       |"
-    echo "|                                                                                   |"
-    echo "|    Server B Port     : ${server_b_port}                                           |"
-    echo "|    Server B SSH Port : ${shell_in_box_port}                                       |"
-    echo "|                                                                                   |"
-    echo "|    Note: Always Block All Server B Ports using firewall for better security       |"
-    echo  -------------------------------------------------------------------------------------
+    echo "  -------------------------------------------------------------------------------------"
+    echo "  |                       SERVER B STARTED SUCCESSFULLY v2.1                          |"
+    echo "  -------------------------------------------------------------------------------------"
+    echo "  |                                                                                    "
+    echo "  |    Server B Dahsboard: http://${public_ip}:${server_b_port}/app/dashboard.php      "
+    echo "  |    Username          : ${server_b_username}                                        "
+    echo "  |    Password          : ${server_b_password}                                        "
+    echo "  |                                                                                    "
+    echo "  |    Server B Port     : ${server_b_port}                                            "
+    echo "  |    Server B SSH Port : ${shell_in_box_port}                                        "
+    echo "  |                                                                                    "
+    echo "  |    Note: Always Block All Server B Ports using firewall for better security        "
+    echo "  -------------------------------------------------------------------------------------"
 
 }
