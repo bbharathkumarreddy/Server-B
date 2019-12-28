@@ -32,7 +32,8 @@ php_service='php7.2-fpm'
 server_b_v='2.1'
 ssh_port='22'
 server_b_port='8886'
-shell_in_box_port='4200'
+shell_in_box_access_port='8887'
+shell_in_box_port='8888'
 server_b_auth_key='a'
 alt_user='ubu'
 alt_pwd='ppp'
@@ -89,7 +90,7 @@ install(){
     install_nginx
     install_php
     install_mysql mysql123 alt_root mysql123 3305 0.0.0.0
-    install_shell_in_a_box 8887
+    install_shell_in_a_box $shell_in_box_port
     install_node_npm
     sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
     generate_auth_key

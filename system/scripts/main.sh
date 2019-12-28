@@ -219,8 +219,8 @@ install_shell_in_a_box(){
     sudo apt-cache search shellinabox
     sudo apt-get install openssl shellinabox -y
     sleep 2
-    sed -i "s/$shell_in_box_port/$1/g" /etc/default/shellinabox
-    sed -i "s/--no-beep/--no-beep   --disable-ssl/g" /etc/default/shellinabox
+    sed -i "s/4200/$1/g" /etc/default/shellinabox
+    sed -i "s/--no-beep/--no-beep   --disable-ssl/g  --localhost-only" /etc/default/shellinabox
     shell_in_box_port=$1
     setKey 'shell_in_box_port' $shell_in_box_port
     sleep 1
