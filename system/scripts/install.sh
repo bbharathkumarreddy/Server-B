@@ -102,6 +102,7 @@ install(){
     addLogFile 'syslog' '/var/log/syslog'
     addLogFile 'authlog' '/var/log/auth.log'
     claer_ram
+    show_legends
 }
 
 install
