@@ -2937,7 +2937,7 @@ class FM_Zipper_Tar
  * Show nav block
  * @param string $path
  */
-function fm_show_nav_path($path)
+function fm_show_nav_path($path2)
 {
     global $lang, $sticky_navbar;
     $isStickyNavBar = $sticky_navbar ? 'fixed-top' : '';
@@ -2950,7 +2950,7 @@ function fm_show_nav_path($path)
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <?php
-            $path = fm_clean_path($path);
+            $path = fm_clean_path($path2);
             $root_url = "<a href='?p='><i class='fa fa-home' aria-hidden='true' title='" . FM_ROOT_PATH . "'></i></a>";
             $sep = '<i class="bread-crumb"> / </i>';
             if ($path != '') {
@@ -2965,7 +2965,7 @@ function fm_show_nav_path($path)
                 }
                 $root_url .= $sep . implode($sep, $array);
             }
-            echo '<div ful_path='.$path.' class="col-xs-6 col-sm-5">' . $root_url . '</div>';
+            echo '<div ful_path='.$path2.' class="col-xs-6 col-sm-5">' . $root_url . '</div>';
             ?>
 
             <div class="col-xs-6 col-sm-7 text-right">
