@@ -3675,8 +3675,11 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
             if(_data && _data.fontSize) { $fontSizeEl.html(optionNode("", _data.fontSize)); }
             if(['js','ts','conf','cpp','c','go','vb','bat','py','cs'].includes(fileExt))
             {
-                let formatMapping={js:'javascript',sh:'sh',conf:'text',ts:'typescript',cpp:'c_cpp',c:'c_cpp',go:'golang',vb:'vbscript',bat:'batchfile',py:'python',cs:'csharp'}
+                let formatMapping={js:'javascript',sh:'sh',conf:'text',ts:'typescript',cpp:'c_cpp',c:'c_cpp',go:'golang',vb:'vbscript',bat:'batchfile',py:'python',cs:'csharp',log:'text'}
                 fileExt = formatMapping[fileExt];
+            }
+            else{
+                fileExt = 'text';
             }
             $modeEl.val('ace/mode/'+fileExt).change(); //set default mode in drop down
             $themeEl.val('ace/theme/monokai').change(); //set default theme size in drop down
