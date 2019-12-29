@@ -28,7 +28,7 @@ $(document).ready(function() {
                 caretPadding: 10,
             },
             legend: {
-                display: false
+                display: true
             },
             cutoutPercentage: 80,
         },
