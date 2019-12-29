@@ -755,21 +755,14 @@ if (isset($_GET['vl'])) {
     if (FM_PATH != '') {
         $path .= '/' . FM_PATH;
     }
-    echo  $path;
+    //echo  $path;
     //exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
-        //header('Content-Description: File Transfer');
-        header('Content-Type: image/jpeg');
-        //header('Content-Disposition: attachment; filename="' . basename($path . '/' . $dl) . '"');
-        //header('Content-Transfer-Encoding: binary');
-        header('Connection: Keep-Alive');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($path . '/' . $dl));
-        //ob_end_clean();
-        readfile($path . '/' . $dl);
-        exit;
+        $file = '/var/www/server-b/console/final.jpg';
+        $type = 'image/jpeg';
+        header('Content-Type:'.$type);
+        header('Content-Length: ' . filesize($file));
+        readfile($file);
     } else {
         fm_set_msg('File not found', 'error');
         fm_redirect(FM_SELF_URL . '?p=' . urlencode(FM_PATH));
