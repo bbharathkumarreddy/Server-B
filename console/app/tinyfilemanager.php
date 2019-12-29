@@ -750,13 +750,13 @@ if (isset($_GET['vl'])) {
     
     $dl = str_replace('/', '', $dl);
     $path = FM_ROOT_PATH;
-    echo  $path;
+    //echo  $path;
     
     if (FM_PATH != '') {
         $path .= '/' . FM_PATH;
     }
     echo  $path;
-    exit;
+    //exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
         //header('Content-Description: File Transfer');
         //header('Content-Type: application/octet-stream');
