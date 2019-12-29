@@ -759,8 +759,8 @@ if (isset($_GET['vl'])) {
     //exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
         $file = $path . '/' . $dl;
-        $type = 'image/jpeg';
-        //header('Content-Type:'.$type);
+        $type = mime_content_type($file);
+        header('Content-Type:'.$type);
         header('Content-Length: ' . filesize($file));
         readfile($file);
     } else {
