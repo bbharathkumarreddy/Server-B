@@ -16,6 +16,7 @@ $(document).ready(function() {
             }],
         },
         options: {
+            responsive: true,
             maintainAspectRatio: false,
             tooltips: {
                 backgroundColor: "rgb(255,255,255)",
