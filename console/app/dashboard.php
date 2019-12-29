@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2">
-                        <canvas id="chart_0"></canvas>
+                        <canvas id="chart_0" style="width: 200px;height:300px;"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <h5 class="mr-2">
