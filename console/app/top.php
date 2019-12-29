@@ -124,7 +124,7 @@ $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fa fa-file-code"></i>
-                    <span>File Manger</span>
+                    <span>File Manager</span>
                 </a>
             </li>
 
@@ -172,7 +172,7 @@ $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
 
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
-                    <i class="fa fa-box-open"></i>
+                    <i class="fa fa-sign-out"></i>
                     <span>Logout</span>
                 </a>
             </li>
