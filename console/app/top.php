@@ -214,7 +214,7 @@ $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
                             </a>
                         </li>
                         <li>
-                            <b><p id="time" style="padding-top: 3px;cursor:pointer;" title="Server Time(PHP)">Server Time</p></b>
+                            <b><p id="time" style="padding-top: 3px;cursor:pointer;" title="~Server Time(PHP)">Server Time</p></b>
                         </li>
                     </ul>
                     <!-- Topbar Navbar -->
