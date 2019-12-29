@@ -29,7 +29,7 @@
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
-                                <i class="fas fa-circle text-success"></i> Memory
+                                <i class="fas fa-circle text-primary"></i> Memory
                             </h5>
                         </div>
                     </div>
