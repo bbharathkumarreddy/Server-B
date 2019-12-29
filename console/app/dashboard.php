@@ -15,15 +15,16 @@
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor</h6>
                 </div>
                 <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2" style="width: 200px;height:300px;">
+                    <div class="chart-pie pt-4 pb-2" style="width: 140px;">
                         <canvas id="chart_0"></canvas>
+                        <div class="mt-4 text-center small">
+                            <h5 class="mr-2">
+                                <i class="fas fa-circle text-success"></i> CPU
+                            </h5>
+                        </div>
+                        <h4 style="position: relative;top:-200px;text-align:center;">80%</h4>
                     </div>
-                    <div class="mt-4 text-center small">
-                        <h5 class="mr-2">
-                            <i class="fas fa-circle text-success"></i> CPU
-                        </h5>
-                    </div>
-                    <h4 style="position: relative;top:-200px;text-align:center;">80%</h4>
+
                 </div>
             </div>
         </div>
