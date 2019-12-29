@@ -10,8 +10,8 @@ $(document).ready(function() {
             labels: ["CPU", "Ideal", ],
             datasets: [{
                 data: [90, 10],
-                backgroundColor: ['#4e73df', '#eaecf4'],
-                hoverBackgroundColor: ['#2858e5', '#eaecf4'],
+                backgroundColor: ['#1cc88a', '#eaecf4'],
+                hoverBackgroundColor: ['#17a673', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
@@ -42,8 +42,8 @@ $(document).ready(function() {
             labels: ["CPU", "Ideal", ],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: ['#1cc88a', '#eaecf4'],
-                hoverBackgroundColor: ['#17a673', '#eaecf4'],
+                backgroundColor: ['#4268d6', '#eaecf4'],
+                hoverBackgroundColor: ['#3763e1', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
