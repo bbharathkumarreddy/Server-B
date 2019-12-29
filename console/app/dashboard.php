@@ -10,12 +10,12 @@
     <!-- Content Row -->
     <div class="row">
         <div class="col-xl-12 col-md-12 mb-12">
-        <div class="card shadow mb-12">
+            <div class="card shadow mb-12">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor</h6>
                 </div>
                 <div class="card-body">
-                <div class="chart-pie pt-4 pb-2">
+                    <div class="chart-pie pt-4 pb-2">
                         <canvas id="chart_0"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
