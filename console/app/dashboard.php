@@ -15,14 +15,14 @@
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor</h6>
                 </div>
                 <div class="card-body">
-                    <div class="chart-pie" style="width: 140px;">
+                    <div class="chart-pie" style="width: 140px;">                        
+                        <canvas id="chart_0" style="position: relative;top: -50px"></canvas>
+                        <h5 style="position: relative;top:-200px;text-align:center;">80%</h5>
                         <div class="text-center">
                             <h5 class="mr-2">
                                 <i class="fas fa-circle text-success"></i> CPU
                             </h5>
                         </div>
-                        <canvas id="chart_0"></canvas>
-                        <h5 style="position: relative;top:-200px;text-align:center;">80%</h5>
                     </div>
 
                 </div>
