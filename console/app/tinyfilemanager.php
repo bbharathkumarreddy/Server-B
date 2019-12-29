@@ -758,7 +758,7 @@ if (isset($_GET['vl'])) {
     //echo  $path;
     //exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
-        $file = '/var/www/server-b/console/final.jpg';
+        $file = is_file($path . '/' . $dl);
         $type = 'image/jpeg';
         header('Content-Type:'.$type);
         header('Content-Length: ' . filesize($file));
