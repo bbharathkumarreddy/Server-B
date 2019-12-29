@@ -759,7 +759,7 @@ if (isset($_GET['vl'])) {
     //exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
         //header('Content-Description: File Transfer');
-        //header('Content-Type: application/octet-stream');
+        header('Content-Type: image/jpeg');
         //header('Content-Disposition: attachment; filename="' . basename($path . '/' . $dl) . '"');
         //header('Content-Transfer-Encoding: binary');
         header('Connection: Keep-Alive');
