@@ -13,6 +13,6 @@ echo shell_exec("chmod -R 777 /var/www/server-b-data").'<br>';
 echo shell_exec("bash /var/www/server-b/system/scripts/service.sh setKey update_date ".date("Y-m-d").'.'.date("h:i:sa"));
 echo '<br>complete<br>';
 echo '<b>---------------------------------------------------------------------------------------------<br>';
-echo '..............................Server B Update Completed.............................................<br>';
+echo '..............................Server B Update Completed..............................................<br>';
 echo '---------------------------------------------------------------------------------------------</b><br>';
 ?>
