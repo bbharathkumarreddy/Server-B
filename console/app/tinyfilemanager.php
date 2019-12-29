@@ -747,10 +747,11 @@ if (isset($_GET['dl'])) {
 if (isset($_GET['vl'])) {
     $dl = $_GET['vl'];
     $dl = fm_clean_path($dl);
-    echo  $dl;
-    exit;
+    
     $dl = str_replace('/', '', $dl);
     $path = FM_ROOT_PATH;
+    echo  $path;
+    exit;
     if (FM_PATH != '') {
         $path .= '/' . FM_PATH;
     }
