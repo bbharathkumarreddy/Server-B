@@ -172,7 +172,7 @@ $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
 
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
-                    <i class="fa fa-sign-out"></i>
+                    <i class="fa fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>
             </li>
