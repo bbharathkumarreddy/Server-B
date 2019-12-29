@@ -18,7 +18,7 @@
                     <div class="chart-pie" style="width: 140px;">                        
                         <canvas id="chart_0" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">80%</h5>
-                        <div class="text-center">
+                        <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
                                 <i class="fas fa-circle text-success"></i> CPU
                             </h5>
