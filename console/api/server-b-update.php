@@ -1,5 +1,5 @@
 <?php
-echo 'git server b update started<br>';
+echo 'Server B Update Started<br>';
 echo shell_exec("cd /var/www/server-b/ && git stash");
 echo shell_exec("cd /var/www/server-b/ && git reset");
 echo shell_exec("cd /var/www/server-b/ && git pull origin dev-z1");
