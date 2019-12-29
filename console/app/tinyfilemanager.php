@@ -1508,9 +1508,9 @@ if (isset($_GET['view'])) {
             }
             if($is_onlineViewer) {
                 if($online_viewer == 'google') {
-                    echo '<iframe src="https://docs.google.com/viewer?embedded=true&hl=en&url=' . fm_enc($file_url) . '" frameborder="no" style="width:100%;min-height:460px"></iframe>';
+                    echo '<iframe src="https://docs.google.com/viewer?embedded=true&hl=en&url=http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].fm_enc('?p='.urlencode(FM_PATH).'&dl='.urlencode($file).'') . '" frameborder="no" style="width:100%;min-height:460px"></iframe>';
                 } else if($online_viewer == 'microsoft') {
-                    echo '<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=' . fm_enc($file_url) . '" frameborder="no" style="width:100%;min-height:460px"></iframe>';
+                    echo '<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=http://' . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].fm_enc('?p='.urlencode(FM_PATH).'&dl='.urlencode($file).'') . '" frameborder="no" style="width:100%;min-height:460px"></iframe>';
                 }
             } elseif ($is_zip) {
                 // ZIP content
