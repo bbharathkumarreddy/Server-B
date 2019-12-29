@@ -760,7 +760,7 @@ if (isset($_GET['vl'])) {
     if ($dl != '' && is_file($path . '/' . $dl)) {
         $file = $path . '/' . $dl;
         $type = 'image/jpeg';
-        header('Content-Type:'.$type);
+        //header('Content-Type:'.$type);
         header('Content-Length: ' . filesize($file));
         readfile($file);
     } else {
