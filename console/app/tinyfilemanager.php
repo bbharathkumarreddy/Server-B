@@ -3678,6 +3678,9 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
                 let formatMapping={js:'javascript',sh:'sh',conf:'text',ts:'typescript',cpp:'c_cpp',c:'c_cpp',go:'golang',vb:'vbscript',bat:'batchfile',py:'python',cs:'csharp',log:'text'}
                 fileExt = formatMapping[fileExt];
             }
+            else if(_data.aceMode[fileExt]){
+                
+            }
             else{
                 fileExt = 'text';
             }
