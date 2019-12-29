@@ -9,7 +9,7 @@ $(document).ready(function() {
         data: {
             labels: ["CPU", "Ideal", ],
             datasets: [{
-                data: [70, 10],
+                data: [90, 10],
                 backgroundColor: ['#1cc88a', '#eaecf4'],
                 hoverBackgroundColor: ['#17a673', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -28,7 +28,7 @@ $(document).ready(function() {
                 caretPadding: 10,
             },
             legend: {
-                display: true
+                display: false
             },
             cutoutPercentage: 80,
         },
