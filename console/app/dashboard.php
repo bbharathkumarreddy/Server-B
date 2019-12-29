@@ -19,10 +19,11 @@
                         <canvas id="chart_0"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
-                        <span class="mr-2">
+                        <h2 class="mr-2">
                             <i class="fas fa-circle text-success"></i> CPU
-                        </span>
+                        </h2>
                     </div>
+                    <h3 style="position: relative;top:-100px;">80%</h3>
                 </div>
             </div>
         </div>
