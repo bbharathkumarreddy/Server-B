@@ -758,16 +758,16 @@ if (isset($_GET['vl'])) {
     echo  $path;
     exit;
     if ($dl != '' && is_file($path . '/' . $dl)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="' . basename($path . '/' . $dl) . '"');
-        header('Content-Transfer-Encoding: binary');
+        //header('Content-Description: File Transfer');
+        //header('Content-Type: application/octet-stream');
+        //header('Content-Disposition: attachment; filename="' . basename($path . '/' . $dl) . '"');
+        //header('Content-Transfer-Encoding: binary');
         header('Connection: Keep-Alive');
         header('Expires: 0');
         header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
         header('Pragma: public');
         header('Content-Length: ' . filesize($path . '/' . $dl));
-        ob_end_clean();
+        //ob_end_clean();
         readfile($path . '/' . $dl);
         exit;
     } else {
