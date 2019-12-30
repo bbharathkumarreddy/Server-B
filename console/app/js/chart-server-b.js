@@ -103,9 +103,9 @@ $(document).ready(function() {
     var chart_3_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["CPU", "Ideal", ],
+            labels: ["Disk", "Free", ],
             datasets: [{
-                data: [30, 70],
+                data: [70, 30],
                 backgroundColor: ['#1cc88a', '#eaecf4'],
                 hoverBackgroundColor: ['#17a673', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -135,11 +135,11 @@ $(document).ready(function() {
     var chart_4_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["CPU", "Ideal", ],
+            labels: ["Ingress", "Egress", ],
             datasets: [{
-                data: [30, 70],
-                backgroundColor: ['#f6c23e', '#eaecf4'],
-                hoverBackgroundColor: ['#f3b515', '#eaecf4'],
+                data: [45, 55],
+                backgroundColor: ['#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#f3b515', '#0aacc3'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },

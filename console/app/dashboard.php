@@ -56,7 +56,7 @@
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
-                                <i class="fas fa-circle" style="color: #f6c23e;"></i> Data Transfer
+                                <i class="fas fa-circle" style="color: #f6c23e;"></i> Transfer
                             </h5>
                         </div>
                     </div>
