@@ -39,7 +39,7 @@ $(document).ready(function() {
     var chart_1_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["CPU", "Ideal", ],
+            labels: ["Used", "Free", ],
             datasets: [{
                 data: [30, 70],
                 backgroundColor: ['#4268d6', '#eaecf4'],
