@@ -1,8 +1,17 @@
 .chart-pie {
-    max-width: 150px !important;
+    max-width: 130px !important;
     margin: auto !important;
 }
 
 .zoom:hover {
     transform: scale(1.5);
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.vl {
+    border-left: 3px #858796 green;
+    height: 120px;
 }

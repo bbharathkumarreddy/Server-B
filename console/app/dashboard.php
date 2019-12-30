@@ -85,6 +85,36 @@
             </div>
         </div>
     </div>
+    <br><br>
+    <div class="row">
+        <div class="col-xl-12 col-md-12 mb-12">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Server Control</h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Start Server">
+                        <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
+                        <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
+                        <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
+                    </div>                    
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
+                        <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
+                        <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
+                        <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <!-- /.container-fluid -->
