@@ -33,6 +33,33 @@
                             </h5>
                         </div>
                     </div>
+                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                        <canvas id="chart_2" style="position: relative;top: -50px"></canvas>
+                        <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                        <div class="text-center" style="position: relative;top: -100px;">
+                            <h5 class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Load
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                        <canvas id="chart_3" style="position: relative;top: -50px"></canvas>
+                        <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                        <div class="text-center" style="position: relative;top: -100px;">
+                            <h5 class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Disk
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                        <canvas id="chart_4" style="position: relative;top: -50px"></canvas>
+                        <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                        <div class="text-center" style="position: relative;top: -100px;">
+                            <h5 class="mr-2">
+                                <i class="fas fa-circle text-primary"></i> Data Transfer
+                            </h5>
+                        </div>
+                    </div>
 
                 </div>
             </div>
