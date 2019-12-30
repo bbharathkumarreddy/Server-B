@@ -2,3 +2,7 @@
     max-width: 150px !important;
     margin: auto !important;
 }
+
+.zoom:hover {
+    transform: scale(1.5);
+}

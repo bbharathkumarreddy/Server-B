@@ -70,12 +70,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2">
+                    <div class="col-xs-3 col-md-2 md-2 zz" title="Clear RAM" style="cursor: pointer;">
                         <div class="chart-pie">
-                            <a><i class="fas fa-memory"></i></a>
-                            <div class="text-center" style="position: relative;top: -100px;">
+                            <canvas id="chart_5" style="position: relative;top: -50px"></canvas>
+                            <h1 class="zoom" style="position: relative;top:-208px;text-align:center;cursor:pointer;" title="Clear RAM"><i class="fas fa-memory"></i></h1>
+                            <div class="text-center" style="position: relative;top: -125px;">
                                 <h5 class="mr-2">
-                                    <i class="fas fa-circle" style="color: #f6c23e;"></i> Clear RAM
+                                    <i class="fas fa-circle text-dark"></i> Clear RAM
                                 </h5>
                             </div>
                         </div>

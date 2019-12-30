@@ -162,4 +162,37 @@ $(document).ready(function() {
             cutoutPercentage: 80,
         },
     });
+
+    var ctx = document.getElementById("chart_5");
+    var chart_5_def = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Clear Ram"],
+            datasets: [{
+                data: [100, 0],
+                backgroundColor: ['#5a5c69', '#5a5c69'],
+                hoverBackgroundColor: ['#383838', '#383838'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 0,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
 });
