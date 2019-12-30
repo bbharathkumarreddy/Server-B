@@ -14,7 +14,7 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor</h6>
                 </div>
-                <div class="card-body">
+                <div class="card-body row">
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_0" style="position: relative;top: -50px"></canvas>
@@ -70,7 +70,16 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-xs-3 col-md-2 md-2">
+                        <div class="chart-pie">
+                            <a><i class="fas fa-memory"></i></a>
+                            <div class="text-center" style="position: relative;top: -100px;">
+                                <h5 class="mr-2">
+                                    <i class="fas fa-circle" style="color: #f6c23e;"></i> Clear RAM
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
