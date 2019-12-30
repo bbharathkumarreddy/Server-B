@@ -117,7 +117,7 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-8 col-md-8 mb-8">
+        <div class="col-xl-7 col-md-7 mb-7">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Services&nbsp;&nbsp;&nbsp;<small><kbd>systemctl service status</kbd></small></h6>
@@ -176,6 +176,35 @@
                             </div>
                         </div>
                         <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 col-md-5 mb-5">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-12 col-md-12 md-12">
+                        <small>
+                            <table border="1px solid #797b85;">
+                                <tr>
+                                    <td class="text-black">Key</td>
+                                    <td class="text-black pl-2">Value</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">server_b_config_path</td>
+                                    <td class="pl-2">/var/www/server-b/system/logpoint.sh</td>
+                                </tr>
+                             
+                                <tr>
+                                    <td class="text-black">server_b_config_path</td>
+                                    <td class="pl-2">/var/www/server-b/system/system/system/logpoint.sh</td>
+                                </tr>
+                                
+                            </table>
+                        </small>
                     </div>
                 </div>
             </div>
