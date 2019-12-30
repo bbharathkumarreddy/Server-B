@@ -38,7 +38,7 @@
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
-                                <i class="fas fa-circle text-primary"></i> Load
+                                <i class="fas fa-circle" style="color:#fd7e14"></i> Load
                             </h5>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
-                                <i class="fas fa-circle text-primary"></i> Disk
+                                <i class="fas fa-circle text-success"></i> Disk
                             </h5>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
                             <h5 class="mr-2">
-                                <i class="fas fa-circle text-primary"></i> Data Transfer
+                                <i class="fas fa-circle" style="color: #f6c23e;"></i> Data Transfer
                             </h5>
                         </div>
                     </div>

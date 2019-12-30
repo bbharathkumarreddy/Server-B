@@ -138,8 +138,8 @@ $(document).ready(function() {
             labels: ["CPU", "Ideal", ],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: ['#4268d6', '#eaecf4'],
-                hoverBackgroundColor: ['#3763e1', '#eaecf4'],
+                backgroundColor: ['#f6c23e', '#eaecf4'],
+                hoverBackgroundColor: ['#f3b515', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
