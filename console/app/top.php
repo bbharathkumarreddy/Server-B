@@ -25,6 +25,7 @@ $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/server-b.css" rel="stylesheet">
     <style>
         .btn-status-success {
             animation: fadeIn 0.5s infinite alternate;

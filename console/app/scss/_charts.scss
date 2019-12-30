@@ -22,8 +22,7 @@
 .chart-pie {
     position: relative;
     height: 15rem;
-    max-width: 150px;
-    margin: auto;
+    width: 100%;
     @include media-breakpoint-up(md) {
         height: calc(20rem - 43px) !important;
     }
