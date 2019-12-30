@@ -15,3 +15,7 @@
     border-left: 3px #858796 green;
     height: 120px;
 }
+
+kbd {
+    background-color: #5a5a5a;
+}

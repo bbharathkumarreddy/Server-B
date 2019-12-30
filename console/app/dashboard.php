@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
                         <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
-                    </div>                    
+                    </div>
                     <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
                         <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
                     </div>
@@ -115,7 +115,73 @@
             </div>
         </div>
     </div>
-
+    <br><br>
+    <div class="row">
+        <div class="col-xl-8 col-md-8 mb-8">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Services&nbsp;&nbsp;&nbsp;<small><kbd>systemctl service status</kbd></small></h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-12 col-md-12 md-12">
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
+                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
+                            <div class="col-xs-3 col-md-3 md-3">
+                                <div>
+                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
+                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
+                            <div class="col-xs-3 col-md-3 md-3">
+                                <div>
+                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
+                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
+                            <div class="col-xs-3 col-md-3 md-3">
+                                <div>
+                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>
+                            <div class="col-xs-6 col-md-6 md-6"><span>Nginx Service<span></div>
+                            <div class="col-xs-3 col-md-3 md-3">
+                                <div>
+                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
+                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
 </div>
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>
