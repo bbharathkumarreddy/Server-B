@@ -15,7 +15,7 @@
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor</h6>
                 </div>
                 <div class="card-body">
-                    <div class="chart-pie" style="width: 140px;float:left;">                        
+                    <div class="char col-xs-2">                        
                         <canvas id="chart_0" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">80%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
@@ -24,7 +24,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                    <div class="chart-pie col-xs-2">                        
                         <canvas id="chart_1" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
@@ -33,7 +33,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                    <div class="chart-pie col-xs-2">                        
                         <canvas id="chart_2" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
@@ -42,7 +42,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                    <div class="chart-pie col-xs-2">                        
                         <canvas id="chart_3" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
@@ -51,7 +51,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="chart-pie ml-4" style="width: 140px;float:left;">                        
+                    <div class="chart-pie col-xs-2">                        
                         <canvas id="chart_4" style="position: relative;top: -50px"></canvas>
                         <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                         <div class="text-center" style="position: relative;top: -100px;">
