@@ -183,6 +183,36 @@
         <div class="col-xl-5 col-md-5 mb-5">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd>uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>lshw</kbd></small></h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-12 col-md-12 md-12">
+                        <small>
+                            <table border="1px solid #797b85;" style="width: 100%;">
+                                <tr>
+                                    <td class="text-black">Server Name</td>
+                                    <td class="pl-2">Ubuntu 17</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Public IP</td>
+                                    <td class="pl-2">10.1.1.6</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Private IP</td>
+                                    <td class="pl-2">10.1.1.6</td>
+                                </tr>                                
+                            </table>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">        
+        <div class="col-xl-5 col-md-5 mb-5">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
                 </div>
                 <div class="card-body row">
