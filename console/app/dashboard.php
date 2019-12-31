@@ -211,7 +211,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Uptime</td>
-                                    <td class="pl-2"><?php shell_exec("awk '{printf("%02d:%02d:%02d",int($1/3600),int($1/3600/60),int($1%60))}' /proc/uptime"); ?></td>
+                                    <td class="pl-2"><?php shell_exec(`awk '{printf("%02d:%02d:%02d",int($1/3600),int($1/3600/60),int($1%60))}' /proc/uptime`); ?></td>
                                 </tr>
                             </table>
                         </small>
