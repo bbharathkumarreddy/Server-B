@@ -200,7 +200,20 @@
                                 <tr>
                                     <td class="text-black">Private IP</td>
                                     <td class="pl-2">10.1.1.6</td>
-                                </tr>                                
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Domain</td>
+                                    <td class="pl-2">10.1.1.6</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Uptime</td>
+                                    <td class="pl-2">10.1.1.6</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Uptime</td>
+                                    <td class="pl-2">awk '{printf("%02d:%02d:%02d",i
+00),int($1/3600/60),int($1%60))}' /proc/uptime</td>
+                                </tr>
                             </table>
                         </small>
                     </div>
