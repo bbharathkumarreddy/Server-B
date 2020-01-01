@@ -25,5 +25,5 @@ kbd {
 }
 
 .noline {
-    text-decoration: none;
+    text-decoration: none !important;
 }
