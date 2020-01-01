@@ -195,7 +195,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Operating System</td>
-                                    <td class="pl-2"><?php echo shell_exec('bash '.$server_b_service.' load_os'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey.' os'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>

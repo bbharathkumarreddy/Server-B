@@ -4,6 +4,7 @@ $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey 
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
 $server_b_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_b_port");
 $server_b_service='/var/www/server-b/system/scripts/service.sh';
+$getKey = 'bash /var/www/server-b/system/scripts/service.sh getKey';
 $shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
 $app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
 ?>
