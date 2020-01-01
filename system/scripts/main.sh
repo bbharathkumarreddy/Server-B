@@ -314,11 +314,11 @@ claer_ram(){
 }
 
 restart(){
-    reboot
+    sudo reboot
 }
 
 shutdown(){
-    shutdown
+    sudo shutdown
 }
 
 system_stat_current(){
