@@ -96,31 +96,31 @@
                     <div class="col-xs-3 col-md-2 md-2 pointer" title="Start Server">
                         <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
                     </div>
-                    <a href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
-                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
+                        <a href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
                             <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
-                        </div>
-                    </a>
-                    <a href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
-                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
+                        <a href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
                             <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
-                        </div>
-                    </a>
-                    <a href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
-                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
+                        <a href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
                             <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
-                        </div>
-                    </a>
-                    <a href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
-                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
+                        <a href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
                             <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
-                        </div>
-                    </a>
-                    <a href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
-                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
+                        </a>
+                    </div>
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
+                        <a href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
                             <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
