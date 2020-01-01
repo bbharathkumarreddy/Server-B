@@ -195,7 +195,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Operating System</td>
-                                    <td class="pl-2"><?php echo shell_exec('. /etc/os-release; echo ${PRETTY_NAME/*, /}'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec('bash '.$server_b_service.' load_os'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>
@@ -219,11 +219,11 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">RAM Size</td>
-                                    <td class="pl-2"><?php echo shell_exec("free -m"); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec(`free -m | awk 'NR==2{printf "%s\n", $2}'`); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
-                                    <td class="pl-2"><?php echo shell_exec('whoami'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec('whomi`); ?></td>
                                 </tr>
                             </table>
                         </small>
