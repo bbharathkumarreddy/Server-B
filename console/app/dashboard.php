@@ -194,6 +194,10 @@
                                     <td class="pl-2">Ubuntu 17</td>
                                 </tr>
                                 <tr>
+                                    <td class="text-black">Opearting System</td>
+                                    <td class="pl-2"><?php echo shell_exec(`. /etc/os-release; echo ${PRETTY_NAME/*, /}`); ?></td>
+                                </tr>
+                                <tr>
                                     <td class="text-black">Public IP</td>
                                     <td class="pl-2">10.1.1.6</td>
                                 </tr>
@@ -207,11 +211,15 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Uptime</td>
-                                    <td class="pl-2">10.1.1.6</td>
+                                    <td class="pl-2"><?php echo shell_exec('uptime -p'); ?></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-black">Uptime</td>
-                                    <td class="pl-2"><?php echo shell_exec('uptime -p'); ?></td>
+                                    <td class="text-black">Disk Size</td>
+                                    <td class="pl-2"><?php echo shell_exec(`df -h | awk '$NF=="/"{printf "%.1f\n", $2}'`); ?>GB</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">RAM Size</td>
+                                    <td class="pl-2"><?php echo shell_exec(`free -m | awk 'NR==2{printf "%s\n", $2}'`); ?>GB</td>
                                 </tr>
                             </table>
                         </small>
