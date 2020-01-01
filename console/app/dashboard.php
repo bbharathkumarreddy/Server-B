@@ -221,6 +221,10 @@
                                     <td class="text-black">RAM Size</td>
                                     <td class="pl-2"><?php echo shell_exec(`free -m | awk 'NR==2{printf "%s\n", $2}'`); ?>GB</td>
                                 </tr>
+                                <tr>
+                                    <td class="text-black">PHP user</td>
+                                    <td class="pl-2"><?php echo shell_exec(`whoami`); ?></td>
+                                </tr>
                             </table>
                         </small>
                     </div>
