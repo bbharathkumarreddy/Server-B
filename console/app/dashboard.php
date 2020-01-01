@@ -240,7 +240,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
                 </div>
                 <div class="card-body row">
-                    <?php $getallKey = shell_exec($service.' getallKey'); ?>
+                    <?php $getallKey = shell_exec($service.' getallKey'); echo $getallKey; ?>
                     <div class="col-xs-12 col-md-12 md-12">
                         <small>
                             <table border="1px solid #797b85;">
