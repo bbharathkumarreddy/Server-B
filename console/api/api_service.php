@@ -4,7 +4,7 @@ if (isset($_GET['o'])) {
     $o = $_GET['o'];
     if ($o == 'shutdown') {
         echo shell_exec($service.' shutdown');
-        echo 'Shuting Down Now';
+        echo 'Server Shuting Down After 1min';
     }
     else if ($o == 'restart') {
         echo shell_exec($service.' restart');
