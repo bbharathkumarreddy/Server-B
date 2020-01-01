@@ -223,7 +223,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
-                                    <td class="pl-2"><?php echo shell_exec('whomi`); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec('whomi'); ?></td>
                                 </tr>
                             </table>
                         </small>
