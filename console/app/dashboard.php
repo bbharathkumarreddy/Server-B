@@ -240,10 +240,6 @@
                     <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
                 </div>
                 <div class="card-body row">
-                    <?php $getallKey = shell_exec($service.' getallKey'); 
-                          $getallKey_split_line = explode("\n",$getallKey);
-                          print_r($getallKey_split_line);
-                    ?>
                     <div class="col-xs-12 col-md-12 md-12">
                         <small>
                             <table border="1px solid #797b85;">
@@ -251,16 +247,17 @@
                                     <td class="text-black">Key</td>
                                     <td class="text-black pl-2">Value</td>
                                 </tr>
-                                <tr>
-                                    <td class="text-black">server_b_config_path</td>
-                                    <td class="pl-2">/var/www/server-b/system/logpoint.sh</td>
-                                </tr>
-                             
-                                <tr>
-                                    <td class="text-black">server_b_config_path</td>
-                                    <td class="pl-2">/var/www/server-b/system/system/system/logpoint.sh</td>
-                                </tr>
-                                
+                                <?php 
+                                    $getallKey = shell_exec($service.' getallKey'); 
+                                    $getallKey_split_line = explode("\n",$getallKey);
+                                    foreach($getallKey_split_line as $key){
+                                        $k = explode('=',$key);
+                                        echo '<tr>
+                                                <td class="text-black">'.$k[0].'</td>
+                                                <td class="pl-2">'.$k[1].'</td>
+                                              </tr>';
+                                        } 
+                                ?>                                
                             </table>
                         </small>
                     </div>
