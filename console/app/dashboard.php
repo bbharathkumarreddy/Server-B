@@ -241,7 +241,7 @@
                 </div>
                 <div class="card-body row">
                     <?php $getallKey = shell_exec($service.' getallKey'); 
-                          $getallKey_split_line = explode('\n',$getallKey);
+                          $getallKey_split_line = explode("\n",$getallKey);
                           print_r($getallKey_split_line);
                     ?>
                     <div class="col-xs-12 col-md-12 md-12">
