@@ -194,8 +194,8 @@
                                     <td class="pl-2">Ubuntu 17</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-black">Opearting System</td>
-                                    <td class="pl-2"><?php echo shell_exec(`. /etc/os-release; echo ${PRETTY_NAME/*, /}`); ?></td>
+                                    <td class="text-black">Operating System</td>
+                                    <td class="pl-2"><?php echo shell_exec('. /etc/os-release; echo ${PRETTY_NAME/*, /}'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>
