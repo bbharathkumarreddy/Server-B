@@ -313,7 +313,7 @@ claer_ram(){
     echo "RAM CLEARED"
 }
 
-reboot(){
+restart(){
     reboot
 }
 

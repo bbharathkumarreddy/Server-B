@@ -96,21 +96,31 @@
                     <div class="col-xs-3 col-md-2 md-2 pointer" title="Start Server">
                         <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
-                        <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
-                    </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
-                        <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
-                    </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
-                        <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
-                    </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
-                        <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
-                    </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
-                        <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
-                    </div>
+                    <a href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
+                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
+                            <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
+                        </div>
+                    </a>
+                    <a href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
+                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
+                            <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
+                        </div>
+                    </a>
+                    <a href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
+                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
+                            <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
+                        </div>
+                    </a>
+                    <a href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
+                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
+                            <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
+                        </div>
+                    </a>
+                    <a href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
+                        <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
+                            <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -191,23 +201,23 @@
                             <table border="1px solid #797b85;" style="width: 100%;">
                                 <tr>
                                     <td class="text-black">Server Name</td>
-                                    <td class="pl-2"><?php echo shell_exec($getKey.' server_name'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey . ' server_name'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Operating System</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_os'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_os'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>
-                                    <td class="pl-2"><?php echo shell_exec($getKey.' public_ip'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey . ' public_ip'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Private IP</td>
-                                    <td class="pl-2"><?php echo shell_exec($getKey.' private_ip'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey . ' private_ip'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Domain</td>
-                                    <td class="pl-2"><?php echo shell_exec($getKey.' domain'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey . ' domain'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Uptime</td>
@@ -215,15 +225,15 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Disk Size</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_disk'); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_disk'); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">RAM Size</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_mem'); ?>MB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_mem'); ?>MB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' whoami'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' whoami'); ?></td>
                                 </tr>
                             </table>
                         </small>
@@ -233,7 +243,7 @@
         </div>
     </div>
     <br><br>
-    <div class="row">        
+    <div class="row">
         <div class="col-xl-5 col-md-5 mb-5">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
@@ -247,17 +257,17 @@
                                     <td class="text-black">Key</td>
                                     <td class="text-black pl-2">Value</td>
                                 </tr>
-                                <?php 
-                                    $getallKey = shell_exec($service.' getallKey'); 
-                                    $getallKey_split_line = explode("\n",$getallKey);
-                                    foreach($getallKey_split_line as $key){
-                                        $k = explode('=',$key);
-                                        echo '<tr>
-                                                <td class="text-black">'.$k[0].'</td>
-                                                <td class="pl-2">'.$k[1].'</td>
+                                <?php
+                                $getallKey = shell_exec($service . ' getallKey');
+                                $getallKey_split_line = explode("\n", $getallKey);
+                                foreach ($getallKey_split_line as $key) {
+                                    $k = explode('=', $key);
+                                    echo '<tr>
+                                                <td class="text-black">' . $k[0] . '</td>
+                                                <td class="pl-2">' . $k[1] . '</td>
                                               </tr>';
-                                        } 
-                                ?>                                
+                                }
+                                ?>
                             </table>
                         </small>
                     </div>

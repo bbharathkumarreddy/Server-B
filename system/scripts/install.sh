@@ -39,6 +39,8 @@ alt_user='ubu'
 alt_pwd='ppp'
 update_date=''
 hosting_link=''
+ping_1_link=''
+ping_2_link=''
 domain=''
 server_twp_hash_path=$server_b_loc_data_path'.htpasswd'
 
