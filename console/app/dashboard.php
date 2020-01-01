@@ -219,7 +219,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">RAM Size</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_mem'); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_mem'); ?>MB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
