@@ -199,15 +199,15 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>
-                                    <td class="pl-2">10.1.1.6</td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey.' public_ip'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Private IP</td>
-                                    <td class="pl-2">10.1.1.6</td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey.' private_ip'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Domain</td>
-                                    <td class="pl-2">10.1.1.6</td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey.' domain'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Uptime</td>
@@ -215,11 +215,11 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Disk Size</td>
-                                    <td class="pl-2"><?php echo shell_exec(`df -h | awk '$NF=="/"{printf "%.1f\n", $2}'`); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_disk_size'); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">RAM Size</td>
-                                    <td class="pl-2"><?php echo shell_exec(`free -m | awk 'NR==2{printf "%s\n", $2}'`); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_ram_size'); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
