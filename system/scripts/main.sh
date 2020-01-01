@@ -35,6 +35,26 @@ setKey(){
     return 1
 }
 
+get_disk(){
+    DISK_TOTAL=$(df -h | awk '$NF=="/"{printf "%.1f\n", $2}')
+    echo $DISK_TOTAL;
+}
+
+get_mem(){
+    MEM_TOTAL=$(free -m | awk 'NR==2{printf "%s\n", $2}')
+    echo $MEM_TOTAL;
+}
+
+get_os(){
+    os=$(. /etc/os-release; echo ${PRETTY_NAME/*, /})
+    echo $os;
+}
+
+get_whoami(){
+    os=$(whoami)
+    echo $os;
+}
+
 load_ip(){
     public_ip=$(curl ifconfig.co)
     private_ip=$(hostname -I)

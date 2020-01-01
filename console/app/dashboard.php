@@ -191,11 +191,11 @@
                             <table border="1px solid #797b85;" style="width: 100%;">
                                 <tr>
                                     <td class="text-black">Server Name</td>
-                                    <td class="pl-2">Ubuntu 17</td>
+                                    <td class="pl-2"><?php echo shell_exec($getKey.' server_name'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Operating System</td>
-                                    <td class="pl-2"><?php echo shell_exec($getKey.' os'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_os'); ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Public IP</td>
@@ -215,15 +215,15 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Disk Size</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_disk_size'); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_disk'); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">RAM Size</td>
-                                    <td class="pl-2"><?php echo shell_exec($service.' get_ram_size'); ?>GB</td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' get_mem'); ?>GB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">PHP user</td>
-                                    <td class="pl-2"><?php echo shell_exec('whomi'); ?></td>
+                                    <td class="pl-2"><?php echo shell_exec($service.' whoami'); ?></td>
                                 </tr>
                             </table>
                         </small>
