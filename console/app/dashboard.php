@@ -139,11 +139,13 @@
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
                             foreach($s as $si){
+                            echo $i;
                                 if(strpos($si, '[ + ]') !== false){
                                     $status_text='Running';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
-                                    $service_name_text=str_replace('[ + ]','',$i);
-                                    echo '<div class="row">
+                                    $service_name_text=str_replace('[ + ]  ','',$i);
+                                    echo 
+                                    '<div class="row">
                                     '.$status_icon.'
                                     <span>Running</span></div>
                                     <div class="col-xs-6 col-md-6 md-6"><span>'.$service_name_text.' Service<span></div>
@@ -159,10 +161,11 @@
                                 <hr>';
                                 }
                                 else if(strpos($si, '[ - ]') !== false){
-                                    $status_text='Stopper';
+                                    $status_text='Stopped';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
-                                    $service_name_text=str_replace('[ - ]','',$i);
-                                    echo '<div class="row">
+                                    $service_name_text=str_replace('[ - ]  ','',$i);
+                                    echo 
+                                    '<div class="row">
                                     '.$status_icon.'
                                     <span>Running</span></div>
                                     <div class="col-xs-6 col-md-6 md-6"><span>'.$service_name_text.' Service<span></div>
