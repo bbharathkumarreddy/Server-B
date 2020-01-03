@@ -30,6 +30,9 @@ if (isset($_GET['o'])) {
         echo shell_exec('sudo service '.$service_name.' status');
         echo '<br>Server B =>'.$service_name.' Service Status';
     }
+    else if ($o == 'system_stat_current') {
+        echo shell_exec($service.' system_stat_current');
+    }
     else{
         echo 'Server - B No Operation found';
     }
