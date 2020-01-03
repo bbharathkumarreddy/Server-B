@@ -159,7 +159,8 @@
                                             <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
                                         </div>
                                     </div>
-                                </div>';
+                                </div>
+                                <hr>';
                             }
                         ?>
                         <div class="row">
