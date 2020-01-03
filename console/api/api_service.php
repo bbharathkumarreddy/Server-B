@@ -32,6 +32,7 @@ if (isset($_GET['o'])) {
     }
     else if ($o == 'system_stat_current') {
         $stat=shell_exec($service.' system_stat_current');
+        echo $stat;
         $stat=explode(',',$stat);
         print_r($stat);
     }
