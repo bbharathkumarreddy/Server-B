@@ -138,7 +138,7 @@
                             //echo shell_exec($service . ' service_status_all');
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
-                            echo $s;
+                            print_r($s);
                             foreach($s as $si){
                             
                                 if(strpos($si, '[ + ]') !== false){
