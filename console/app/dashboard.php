@@ -140,11 +140,11 @@
                             foreach($s as $service_text_each){
                                 if(strpos($service_text_each, '[ + ]') !== false){
                                     $status_text='Running';
-                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Running</span></div>';
+                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
                                     $service_text_each=trim(str_replace('[ + ]',' ',$service_text_each));
                                 }   else if(strpos($service_text_each, '[ - ]') !== false){
                                     $status_text='Stopped';
-                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
+                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
                                     $service_text_each=trim(str_replace('[ - ]',' ',$service_text_each));
                                 }
                                 echo '<div class="row">
@@ -152,68 +152,16 @@
                                     <div class="col-xs-6 col-md-6 md-6"><span>'.$service_text_each.' Service<span></div>
                                     <div class="col-xs-3 col-md-3 md-3">
                                         <div>
-                                            <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
-                                            <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
-                                            <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
-                                            <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_start&service_name='.$service_text_each.'"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
+                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_stop&service_name='.$service_text_each.'"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
+                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_restart&service_name='.$service_text_each.'"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
+                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
                                         </div>
                                     </div>
                                 </div>
                                 <hr>';
                             }
                         ?>
-                        <div class="row">
-                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
-                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
-                            <div class="col-xs-3 col-md-3 md-3">
-                                <div>
-                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
-                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
-                            <div class="col-xs-3 col-md-3 md-3">
-                                <div>
-                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
-                            <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
-                            <div class="col-xs-3 col-md-3 md-3">
-                                <div>
-                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>
-                            <div class="col-xs-6 col-md-6 md-6"><span>Nginx Service<span></div>
-                            <div class="col-xs-3 col-md-3 md-3">
-                                <div>
-                                    <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
-                                    <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
                     </div>
                 </div>
             </div>
