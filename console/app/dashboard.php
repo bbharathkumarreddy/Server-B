@@ -138,7 +138,7 @@
                             //echo shell_exec($service . ' service_status_all');
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
-                            print_r($s);
+                            //print_r($s);
                             foreach($s as $service_text_each){
                                 if(strpos($service_text_each, '[ + ]') !== false){
                                     $status_text='Running';
