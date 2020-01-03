@@ -39,6 +39,7 @@ if (isset($_GET['o'])) {
         $stat_arr = [];
         foreach($stat as $stat_each){
             if($stat_each == ',') continue;
+            else if($stat_each == '') continue;
             $stat_arr[]=$stat_each;
         }
         echo json_encode($stat_arr);
