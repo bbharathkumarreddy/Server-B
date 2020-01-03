@@ -321,6 +321,10 @@ shutdown(){
     sudo shutdown
 }
 
+service_status_all(){
+    sudo service --status-all
+}
+
 system_stat_current(){
     LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $10}')
     LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $11}')

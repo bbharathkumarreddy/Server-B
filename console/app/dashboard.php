@@ -134,6 +134,9 @@
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
+                        <?php
+                            echo shell_exec($service . ' service_status_all');
+                        ?>
                         <div class="row">
                             <div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>
                             <div class="col-xs-6 col-md-6 md-6"><span>Mysql Service<span></div>
