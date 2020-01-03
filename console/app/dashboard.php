@@ -142,13 +142,28 @@
                             foreach($s as $service_text_each){
                                 echo $service_text_each;
                                 if(strpos($service_text_each, '[ + ]') !== false){
-                                    echo 'Runnig';
+                                    $status_text='Running';
+                                    $status_icon='<i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span>';
+                                    $service_name_text=str_replace('  [ + ]  ','',$service_text_each);
                                 }   else if(strpos($service_text_each, '[ - ]') !== false){
-                                    echo 'Stopped';
+                                    $status_text='Stopped';
+                                    $status_icon='<i class="fas fa-circle text-danger"></i>&nbsp;&nbsp<span>Stopped</span>';
+                                    $service_name_text=str_replace('  [ - ]  ','',$service_text_each);
                                 }
-                                else{
-                                    echo 'Error';
-                                }
+                                echo 
+                                '<div class="row">
+                                    <div class="col-xs-3 col-md-3 md-3 pointer">
+                                    '.$status_icon.'
+                                    <div class="col-xs-6 col-md-6 md-6"><span>'.$service_name_text.' Service<span></div>
+                                    <div class="col-xs-3 col-md-3 md-3">
+                                        <div>
+                                            <i class="fas fa-play text-success pointer" title="Start Service"></i> &nbsp; &nbsp;
+                                            <i class="fas fa-stop text-danger pointer" title="Stop Service"></i> &nbsp; &nbsp;
+                                            <i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i> &nbsp; &nbsp;
+                                            <i class="fas fa-info text-primary pointer" title="Service Status"></i> &nbsp; &nbsp;
+                                        </div>
+                                    </div>
+                                </div>';
                                 // if(strpos($service_text_each, '[ + ]') !== false){
                                 //     $status_text='Running';
                                 //     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
