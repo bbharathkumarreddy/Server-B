@@ -143,11 +143,11 @@
                                 if(strpos($service_text_each, '[ + ]') !== false){
                                     $status_text='Running';
                                     $status_icon='<i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span>';
-                                    $service_text_each=str_replace('  [ + ]  ',' ',$service_text_each);
+                                    $service_text_each=str_replace('[ + ]',' ',$service_text_each);
                                 }   else if(strpos($service_text_each, '[ - ]') !== false){
                                     $status_text='Stopped';
                                     $status_icon='<i class="fas fa-circle text-danger"></i>&nbsp;&nbsp<span>Stopped</span>';
-                                    $service_text_each=str_replace('  [ - ]  ',' ',$service_text_each);
+                                    $service_text_each=str_replace('[ - ]',' ',$service_text_each);
                                 }
                                 echo 
                                 '<div class="row">
