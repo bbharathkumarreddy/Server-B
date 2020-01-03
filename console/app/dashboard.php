@@ -135,10 +135,8 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
                         <?php
-                            //echo shell_exec($service . ' service_status_all');
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
-                            //print_r($s);
                             foreach($s as $service_text_each){
                                 if(strpos($service_text_each, '[ + ]') !== false){
                                     $status_text='Running';
