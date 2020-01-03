@@ -31,7 +31,9 @@ if (isset($_GET['o'])) {
         echo '<br>Server B =>'.$service_name.' Service Status';
     }
     else if ($o == 'system_stat_current') {
-        echo shell_exec($service.' system_stat_current');
+        $stat=shell_exec($service.' system_stat_current');
+        $stat=explode(',',$stat);
+        print_r($stat);
     }
     else{
         echo 'Server - B No Operation found';
