@@ -137,12 +137,18 @@
                         <?php
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
+                            $service_count=0;
+                            $service_run_count=0;
+                            $service_stop_count=0;
                             foreach($s as $service_text_each){
+                                $service_count++;
                                 if(strpos($service_text_each, '[ + ]') !== false){
+                                    $service_run_count++;
                                     $status_text='Running';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
                                     $service_text_each=trim(str_replace('[ + ]',' ',$service_text_each));
                                 }   else if(strpos($service_text_each, '[ - ]') !== false){
+                                    $service_stop_count++;
                                     $status_text='Stopped';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
                                     $service_text_each=trim(str_replace('[ - ]',' ',$service_text_each));
@@ -210,6 +216,18 @@
                                 <tr>
                                     <td class="text-black">PHP user</td>
                                     <td class="pl-2"><?php echo shell_exec($service . ' whoami'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Services Count</td>
+                                    <td class="pl-2"><?php echo $service_count?></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Running Services Count</td>
+                                    <td class="pl-2"><?php echo $service_run_count?></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">Stopper user</td>
+                                    <td class="pl-2"><?php echo $service_stop_count?></td>
                                 </tr>
                             </table>
                         </small>
