@@ -32,9 +32,13 @@ if (isset($_GET['o'])) {
     }
     else if ($o == 'system_stat_current') {
         $stat=shell_exec($service.' system_stat_current');
-        echo $stat;
         $stat=explode(',',$stat);
-        print_r($stat);
+        $stat_arr = [];
+        foreach($stat as $stat_each){
+            if($stat_each == ',') continue;
+            $stat_arr[]=$stat_each;
+        }
+        echo json_encode($stat_arr);
     }
     else{
         echo 'Server - B No Operation found';
