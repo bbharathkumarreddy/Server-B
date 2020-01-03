@@ -139,12 +139,12 @@
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
                             print_r($s);
-                            foreach($s as $si){
-                            
-                                if(strpos($si, '[ + ]') !== false){
+                            foreach($s as $service_text_each){
+                                echo $service_text_each;
+                                if(strpos($service_text_each, '[ + ]') !== false){
                                     $status_text='Running';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
-                                    $service_name_text=str_replace('[ + ]  ','',$i);
+                                    $service_name_text=str_replace('  [ + ]  ','',$service_text_each);
                                     echo 
                                     '<div class="row">
                                     '.$status_icon.'
@@ -161,10 +161,10 @@
                                 </div>
                                 <hr>';
                                 }
-                                else if(strpos($si, '[ - ]') !== false){
+                                else if(strpos($service_text_each, '[ - ]') !== false){
                                     $status_text='Stopped';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
-                                    $service_name_text=str_replace('[ - ]  ','',$i);
+                                    $service_name_text=str_replace('  [ - ]  ','',$i);
                                     echo 
                                     '<div class="row">
                                     '.$status_icon.'
