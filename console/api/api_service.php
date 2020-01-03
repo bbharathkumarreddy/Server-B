@@ -35,6 +35,7 @@ if (isset($_GET['o'])) {
         $stat=explode(',',$stat);
         $stat=str_replace('"','',$stat);
         $stat=str_replace("'",'',$stat);
+        $stat=str_replace("\n",'',$stat);
         $stat_arr = [];
         foreach($stat as $stat_each){
             if($stat_each == ',') continue;
