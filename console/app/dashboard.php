@@ -135,11 +135,12 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
                         <?php
-                            echo shell_exec($service . ' service_status_all');
+                            //echo shell_exec($service . ' service_status_all');
                             $s = shell_exec($service . ' service_status_all');
                             $s = explode("\n",$s);
+                            echo $s;
                             foreach($s as $si){
-                            echo $si;
+                            
                                 if(strpos($si, '[ + ]') !== false){
                                     $status_text='Running';
                                     $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
