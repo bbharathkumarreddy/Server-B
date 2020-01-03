@@ -152,10 +152,10 @@
                                     <div class="col-xs-6 col-md-6 md-6"><span>'.$service_text_each.' Service<span></div>
                                     <div class="col-xs-3 col-md-3 md-3">
                                         <div>
-                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_start&service_name='.$service_text_each.'"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
-                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_stop&service_name='.$service_text_each.'"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
-                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_restart&service_name='.$service_text_each.'"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
-                                            <a targer="_blank" href="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
+                                            <a target="_blank" href="'.$api_link .'api_service.php?o=service_start&service_name='.$service_text_each.'"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
+                                            <a target="_blank" href="'.$api_link .'api_service.php?o=service_stop&service_name='.$service_text_each.'"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
+                                            <a target="_blank" href="'.$api_link .'api_service.php?o=service_restart&service_name='.$service_text_each.'"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
+                                            <a target="_blank" href="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
                                         </div>
                                     </div>
                                 </div>
