@@ -327,8 +327,16 @@ service_status_all(){
 
 system_stat_current(){
     LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $10}')
-    LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $11}')
-    LOAD_15=$(top -bn1 | grep load | awk '{printf "%s\n", $12}')
+    if [ $LOAD_1 == "load" ]
+    then
+        LOAD_1=$(top -bn1 | grep load | awk '{printf "%s\n", $12}')
+        LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $13}')
+        LOAD_15=$(top -bn1 | grep load | awk '{printf "%s\n", $14}')
+    else
+        LOAD_5=$(top -bn1 | grep load | awk '{printf "%s\n", $11}')
+        LOAD_15=$(top -bn1 | grep load | awk '{printf "%s\n", $12}')
+    fi
+   
     CPU=$(top -bn1 | grep load | awk '{printf "%.2f\n", $(NF-2)}')
     DISK_USAGE=$(df -h | awk '$NF=="/"{printf "%.1f\n", $3}')
     DISK_TOTAL=$(df -h | awk '$NF=="/"{printf "%.1f\n", $2}')
