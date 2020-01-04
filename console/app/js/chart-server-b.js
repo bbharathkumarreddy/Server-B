@@ -1,8 +1,4 @@
 $(document).ready(function() {
-    $("body").click(function() {
-
-    });
-
     var ctx = document.getElementById("chart_0");
     var chart_0_def = new Chart(ctx, {
         type: 'doughnut',
