@@ -2,7 +2,6 @@ $(document).ready(function() {
     $(".serviceBtn").on("click", function() {
         var url = $(this).attr('link');
         var preText = $(this).attr('pre');
-        var postText = $(this).attr('pre');
         var c = confirm(preText);
         if (c) {
             $.ajax({
@@ -10,7 +9,7 @@ $(document).ready(function() {
                 type: 'GET',
                 dataType: 'text',
                 success: function(data) {
-                    alert(postText);
+                    alert(data);
                 },
                 error: function(request, error) {
                     alert(error);
