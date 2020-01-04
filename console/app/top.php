@@ -84,7 +84,7 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
             </a>
             <hr style="margin-top: -10px;margin-bottom:-5px;width:85%;background-color:white;">
             <a class="sidebar-brand d-flex align-items-center justify-content-center p-0" style="line-height:12px;" href="dashboard.php">
-                <img class="zoom" src="<?php echo $app_link.'/img/Opensource.svg'; ?>" style="width:35px;">
+                <a target="_blank" href="https://opensource.org/"><img class="zoom" src="<?php echo $app_link.'/img/Opensource.svg'; ?>" style="width:35px;"></a>
                 <div class="sidebar-brand-text mx-2" style="margin-top:-10px;"><small style="font-size: 8px;">Simple Server Management</small><br><small style="font-size: 8px;">Open Source Initiative</small></div>                
             </a>
             <!-- Divider -->
