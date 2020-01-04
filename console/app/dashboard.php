@@ -256,6 +256,7 @@
                                 $getallKey_split_line = explode("\n", $getallKey);
                                 foreach ($getallKey_split_line as $key) {
                                     $k = explode('=', $key);
+                                    if($k[0] == '') continue;
                                     echo '<tr>
                                                 <td class="text-black">' . $k[0] . '</td>
                                                 <td class="pl-2">' . $k[1] . '</td>
