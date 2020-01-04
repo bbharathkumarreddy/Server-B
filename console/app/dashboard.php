@@ -161,7 +161,7 @@
                                             <a href="#" class="serviceBtn" pre="Starting Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_start&service_name='.$service_text_each.'"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
                                             <a href="#" class="serviceBtn" pre="Stopping Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_stop&service_name='.$service_text_each.'"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
                                             <a href="#" class="serviceBtn" pre="Restarting Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_restart&service_name='.$service_text_each.'"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
-                                            <a href="#" class="serviceBtn" pre="Fetching Service Status: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
+                                            <a href="#" class="serviceBtn" reload="false" pre="Fetching Service Status: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
                                         </div>
                                     </div>
                                 </div>
