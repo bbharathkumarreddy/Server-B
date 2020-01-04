@@ -5,7 +5,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Server B, 2020 | Last Updated @ <span style="text-transform: uppercase;"><?php echo shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey update_date"); ?></span></span>
+                        <span>Server B - open source initiative, | Last Updated @ <span style="text-transform: uppercase;"><?php echo shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey update_date"); ?></span></span>
                     </div>
                 </div>
             </footer>

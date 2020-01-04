@@ -80,7 +80,7 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="far fa-hdd"></i>
                 </div>
-                <div class="sidebar-brand-text mx-2">Server B</div>
+                <div class="sidebar-brand-text mx-2">Server B<br><small>Simple Server Management Console</small><br><small>open source initiative</small></div>
             </a>
 
             <!-- Divider -->
