@@ -17,8 +17,9 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Simple Server Management">
+    <meta name="author" content="B Bharath Kumar Reddy | Cubepost">
+    <meta name="robots" content="noindex, nofollow">
 
     <title>Server B</title>
 
