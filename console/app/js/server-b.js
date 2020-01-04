@@ -12,11 +12,11 @@ $(document).ready(function() {
                 dataType: 'text',
                 success: function(data) {
                     alert(data);
-                    if (reload) { location.reload(); }
+                    if (reload == 'true') { location.reload(); }
                 },
                 error: function(request, error) {
                     alert(error);
-                    if (reload) { location.reload(); }
+                    if (reload == 'true') { location.reload(); }
                 }
             });
         }
