@@ -28,9 +28,20 @@ $(document).ready(function() {
             dataType: 'JSON',
             success: function(data) {
                 console.log(data);
-                let cpu =
-                    let load_5 =
-                        chart_0_def.data.datasets.data.push(data[1]);
+                let cpu = parseFloat(data[1]) * 100;
+                let load_5 = parseFloat(data[3]) * 100;
+
+                let memory_used = parseInt(data[7]);
+                let memory_total = parseInt(data[8]);
+                let memory_free = memory_total - memory_used;
+                let memory_used_per = ((memory_used / memory_total) * 100).toFixed(0);
+
+                chart_0_def.data.datasets.data.push(cpu, 100 - cpu);
+                chart_1_def.data.datasets.data.push(load_5, 100 - load_5);
+                chart_2_def.data.datasets.data.push(memory_used, memory_total);
+                chart_0_def.update();
+                chart_1_def.update();
+                chart_2_def.update();
             }
         });
     }, 3000);
