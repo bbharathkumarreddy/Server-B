@@ -3,6 +3,7 @@ $(document).ready(function() {
         var url = $(this).attr('link');
         var preText = $(this).attr('pre');
         var reload = $(this).attr('reload');
+        console.log(reload)
         var c = confirm(preText);
         if (c) {
             $.ajax({
