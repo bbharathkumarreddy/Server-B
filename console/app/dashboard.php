@@ -18,7 +18,7 @@
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_0" style="position: relative;top: -50px"></canvas>
-                            <h5 style="position: relative;top:-200px;text-align:center;">80%</h5>
+                            <h5 style="position: relative;top:-200px;text-align:center;"><span id="chart_0_val"><span>%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
                                     <i class="fas fa-circle text-success"></i> CPU
@@ -29,7 +29,7 @@
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_1" style="position: relative;top: -50px"></canvas>
-                            <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                            <h5 style="position: relative;top:-200px;text-align:center;"><span id="chart_1_val"><span>%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
                                     <i class="fas fa-circle" style="color:#fd7e14"></i> Load
@@ -40,7 +40,7 @@
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_2" style="position: relative;top: -50px"></canvas>
-                            <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                            <h5 style="position: relative;top:-200px;text-align:center;"><span id="chart_2_val"><span>%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
                                     <i class="fas fa-circle text-primary"></i> Memory
@@ -52,7 +52,7 @@
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_3" style="position: relative;top: -50px"></canvas>
-                            <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                            <h5 style="position: relative;top:-200px;text-align:center;"><span id="chart_3_val"><span>%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
                                     <i class="fas fa-circle text-success"></i> Disk
@@ -63,7 +63,7 @@
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_4" style="position: relative;top: -50px"></canvas>
-                            <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
+                            <h5 style="position: relative;top:-200px;text-align:center;"><span id="chart_4_val"><span>%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
                                     <i class="fas fa-circle" style="color: #f6c23e;"></i> Transfer
