@@ -13,22 +13,22 @@ if (isset($_GET['o'])) {
     else if ($o == 'service_start') {
         $service_name = $_GET['service_name'];
         echo shell_exec('sudo service '.$service_name.' start');
-        echo '\nServer B =>'.$service_name.' Service Starting';
+        echo '\\nServer B =>'.$service_name.' Service Starting';
     }
     else if ($o == 'service_restart') {
         $service_name = $_GET['service_name'];
         echo shell_exec('sudo service '.$service_name.' restart');
-        echo '\nServer B =>'.$service_name.' Service Restarting';
+        echo '\\nServer B =>'.$service_name.' Service Restarting';
     }
     else if ($o == 'service_stop') {
         $service_name = $_GET['service_name'];
         echo shell_exec('sudo service '.$service_name.' stop');
-        echo '\nServer B =>'.$service_name.' Service Stopping';
+        echo '\\nServer B =>'.$service_name.' Service Stopping';
     }
     else if ($o == 'service_status') {
         $service_name = $_GET['service_name'];
         echo shell_exec('sudo service '.$service_name.' status');
-        echo '\nServer B =>'.$service_name.' Service Status';
+        echo '\\nServer B =>'.$service_name.' Service Status';
     }
     else if ($o == 'system_stat_current') {
         $stat=shell_exec($service.' system_stat_current');
