@@ -82,8 +82,8 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
                 </div>
                 <div class="sidebar-brand-text mx-2">Server B</div>                
             </a>
-            <hr>
-            <a class="sidebar-brand d-flex align-items-center justify-content-center p-0" style="margin-top:-20px;line-height:12px;" href="dashboard.php">
+            <hr style="margin-top: -10px;margin-bottom:-5px;width:85%;background-color:white;">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center p-0" style="line-height:12px;" href="dashboard.php">
                 <img src="<?php echo $app_link.'/img/Opensource.svg'; ?>" style="width:40px;">
                 <div class="sidebar-brand-text mx-2" style="margin-top:-10px;"><small style="font-size: 8px;">Simple Server Management</small><br><small style="font-size: 8px;">Open Source Initiative</small></div>                
             </a>
