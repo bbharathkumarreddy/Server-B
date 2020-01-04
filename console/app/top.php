@@ -80,9 +80,12 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="far fa-hdd"></i>
                 </div>
-                <div class="sidebar-brand-text mx-2">Server B<br><small style="font-size: 8px;">Simple Server Management</small><br><small style="font-size: 8px;">Open Source Initiative</small></div>
+                <div class="sidebar-brand-text mx-2">Server B</div>                
             </a>
-
+            <a class="sidebar-brand d-flex align-items-center justify-content-center p-0" style="margin-top:-20px;line-height:12px;" href="dashboard.php">
+                <img src="<?php echo $app_link.'/img/Opensource-small.png'; ?>">
+                <div class="sidebar-brand-text mx-2"><small style="font-size: 8px;">Simple Server Management</small><br><small style="font-size: 8px;">Open Source Initiative</small></div>                
+            </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
