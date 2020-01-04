@@ -199,8 +199,8 @@ $(document).ready(function() {
             dataType: 'JSON',
             success: function(data) {
                 console.log(data);
-                let cpu = parseFloat(data[1]) * 100;
-                let load_5 = parseFloat(data[3]) * 100;
+                let cpu = (parseFloat(data[1]) * 100).toFixed(0);
+                let load_5 = (parseFloat(data[3]) * 100).toFixed(0);
 
                 let memory_used = parseInt(data[7]);
                 let memory_total = parseInt(data[8]);
