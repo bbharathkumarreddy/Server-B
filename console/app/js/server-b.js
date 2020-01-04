@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
     setTimeout(function() {
         $.ajax({
-            url: app_link + 'api_service.php?o=system_stat_current',
+            url: api_link + 'api_service.php?o=system_stat_current',
             type: 'GET',
             dataType: 'JSON',
             success: function(data) {
