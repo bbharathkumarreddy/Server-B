@@ -35,11 +35,11 @@ $(document).ready(function() {
     var chart_1_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Used", "Free", ],
+            labels: ["Load", "Ideal", ],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: ['#4268d6', '#f8f9fc'],
-                hoverBackgroundColor: ['#3763e1', '#eaecf4'],
+                backgroundColor: ['#fd7e14', '#f8f9fc'],
+                hoverBackgroundColor: ['#da6402', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
@@ -67,11 +67,11 @@ $(document).ready(function() {
     var chart_2_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Load", "Ideal", ],
+            labels: ["Used", "Free", ],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: ['#fd7e14', '#f8f9fc'],
-                hoverBackgroundColor: ['#da6402', '#eaecf4'],
+                backgroundColor: ['#4268d6', '#f8f9fc'],
+                hoverBackgroundColor: ['#3763e1', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },

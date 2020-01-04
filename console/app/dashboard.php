@@ -32,7 +32,7 @@
                             <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
-                                    <i class="fas fa-circle text-primary"></i> Memory
+                                    <i class="fas fa-circle" style="color:#fd7e14"></i> Load
                                 </h5>
                             </div>
                         </div>
@@ -43,11 +43,12 @@
                             <h5 style="position: relative;top:-200px;text-align:center;">30%</h5>
                             <div class="text-center" style="position: relative;top: -100px;">
                                 <h5 class="mr-2">
-                                    <i class="fas fa-circle" style="color:#fd7e14"></i> Load
+                                    <i class="fas fa-circle text-primary"></i> Memory
                                 </h5>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_3" style="position: relative;top: -50px"></canvas>
