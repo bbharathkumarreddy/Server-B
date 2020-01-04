@@ -54,6 +54,8 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
     <script>
     let phpTimeZone="<?php $date = new DateTime(); $timeZone = $date->getTimezone(); echo $timeZone->getName(); ?>";
     let phpTime=parseInt("<?php echo time().'000'; ?>");
+    let api_link="<?php echo $api_link; ?>";
+    let app_link="<?php echo $app_link; ?>";
     function startTime() {
         var serverNow = new Date(phpTime).toLocaleString("en-US", {timeZone: phpTimeZone});
         var e = new Date(serverNow)

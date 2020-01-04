@@ -3,7 +3,6 @@ $(document).ready(function() {
         var url = $(this).attr('link');
         var preText = $(this).attr('pre');
         var reload = $(this).attr('reload');
-        console.log(reload)
         var c = confirm(preText);
         if (c) {
             $.ajax({
@@ -21,4 +20,15 @@ $(document).ready(function() {
             });
         }
     });
+    setTimeout(function() {
+        $.ajax({
+            url: app_link + 'api_service.php?o=system_stat_current',
+            type: 'GET',
+            dataType: 'JSON',
+            success: function(data) {
+                console.log(data);
+
+            }
+        });
+    }, 3000);
 });
