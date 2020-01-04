@@ -5,7 +5,7 @@ $(document).ready(function() {
         data: {
             labels: ["CPU", "Ideal", ],
             datasets: [{
-                data: [90, 10],
+                data: [0, 0],
                 backgroundColor: ['#1cc88a', '#f8f9fc'],
                 hoverBackgroundColor: ['#17a673', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -37,7 +37,7 @@ $(document).ready(function() {
         data: {
             labels: ["Load", "Ideal", ],
             datasets: [{
-                data: [30, 70],
+                data: [0, 0],
                 backgroundColor: ['#fd7e14', '#f8f9fc'],
                 hoverBackgroundColor: ['#da6402', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -69,7 +69,7 @@ $(document).ready(function() {
         data: {
             labels: ["Used", "Free", ],
             datasets: [{
-                data: [30, 70],
+                data: [0, 0],
                 backgroundColor: ['#4268d6', '#f8f9fc'],
                 hoverBackgroundColor: ['#3763e1', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -101,7 +101,7 @@ $(document).ready(function() {
         data: {
             labels: ["Disk", "Free", ],
             datasets: [{
-                data: [70, 30],
+                data: [0, 0],
                 backgroundColor: ['#1cc88a', '#f8f9fc'],
                 hoverBackgroundColor: ['#17a673', '#eaecf4'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -133,7 +133,7 @@ $(document).ready(function() {
         data: {
             labels: ["Ingress", "Egress", ],
             datasets: [{
-                data: [45, 55],
+                data: [0, 0],
                 backgroundColor: ['#f6c23e', '#36b9cc'],
                 hoverBackgroundColor: ['#f3b515', '#0aacc3'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
