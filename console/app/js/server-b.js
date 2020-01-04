@@ -20,7 +20,7 @@ $(document).ready(function() {
             });
         }
     });
-    setTimeout(function() {
+    setInterval(function() {
         $.ajax({
             url: api_link + 'api_service.php?o=system_stat_current',
             type: 'GET',
