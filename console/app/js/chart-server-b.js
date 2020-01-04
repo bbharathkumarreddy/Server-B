@@ -217,7 +217,7 @@ $(document).ready(function() {
 
                 $('#chart_0_val').html(cpu);
                 $('#chart_1_val').html(load_5);
-                $('#chart_3_val').html(memory_used_per);
+                $('#chart_2_val').html(memory_used_per);
             }
         });
     }, 3000);
