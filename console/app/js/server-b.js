@@ -10,9 +10,11 @@ $(document).ready(function() {
                 dataType: 'text',
                 success: function(data) {
                     alert(data);
+                    location.reload();
                 },
                 error: function(request, error) {
                     alert(error);
+                    location.reload();
                 }
             });
         }
