@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="">';
+                                <hr class="mt-0">';
                         }
                         ?>
                     </div>
