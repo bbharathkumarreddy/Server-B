@@ -48,6 +48,12 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' clear_ram');
         echo '\n Server B =>RAM Cleared';
     }
+    else if ($o == 'add_log_point') {
+        $file_name=$_GET['file_name'];
+        $file_path=$_GET['file_path'];
+        echo shell_exec($service.' addLogFile '.$file_name.' '.$file_path);
+        echo '\n Server B =>File Added';
+    }
     else{
         echo 'Server - B No Operation found';
     }

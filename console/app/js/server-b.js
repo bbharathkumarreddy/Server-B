@@ -22,16 +22,32 @@ $(document).ready(function() {
     });
 
     $("#clear_ram").on("click", function() {
-
         $.ajax({
             url: api_link + 'api_service.php?o=clear_ram',
             type: 'GET',
             dataType: 'text',
             success: function(data) {
                 alert('RAM Cleared');
-
             }
         });
+    });
 
+    $("#add_file_confirm").on("click", function() {
+        var file_name = $('#file_name').val();
+        var file_path = $('#file_path').val();
+        if (file_name == '' || file_path == '') {
+            alert('File Name or File Path is mandatory');
+            return false;
+        }
+        $.ajax({
+            url: api_link + 'api_service.php?o=add_log_point&file_name=' + file_name + '&file_path=' + file_path,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('File added to File Log Point');
+                location.reload();
+                $('#logpoint_modal').modal('hide');
+            }
+        });
     });
 });
