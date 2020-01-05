@@ -307,7 +307,7 @@
                             <p class="mb-0">' . $c.'.  '.$getLogFileEach[0] . '</p>
                         </div>
                         <div class="col-xl-8 col-md-8 mb-8 mb-0">
-                            <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&env=ace&edit=' . $file_name . '">
+                            <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
                                 <p class="mb-0">' . $getLogFileEach[1] . '</p>
                             </a>
                         </div>
