@@ -304,12 +304,13 @@
                         $c=$index+1;
                         echo '<div class="row">
                         <div class="col-xl-4 col-md-4 mb-4 mb-0">
-                            <p class="mb-0">' . $c.'.  '.$getLogFileEach[0] . '</p>
+                            <p class="mb-0">' .$c.'.  '.$getLogFileEach[0]. '</p>
                         </div>
                         <div class="col-xl-8 col-md-8 mb-8 mb-0">
                             <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
                                 <p class="mb-0">' . $getLogFileEach[1] . '</p>
                             </a>
+                            <p class="fr remove_file_point" file_name="'.$getLogFileEach[0].'" ><i class="fas fa-close fa-sm text-white-50"></i></p>
                         </div>
                     </div>
                     <hr class="mt-10">';
