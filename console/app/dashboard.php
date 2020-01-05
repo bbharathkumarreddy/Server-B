@@ -287,8 +287,17 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Log Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
                 </div>
+                <?php
+                $getLogFile = shell_exec($service . ' getLogFile');
+                echo $getLogFile;
+                $getLogFileSplit = explode("\n", $getLogFile);
+                foreach ($getLogFileSplit as $getLogFileLine) {
+                    $getLogFileEach = explode(" ", $getLogFileLine);
+                    print_r($getLogFileEach);
+                }
+                ?>
                 <div class="card-body">
-                    
+
                 </div>
             </div>
 
