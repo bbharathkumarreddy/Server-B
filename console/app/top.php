@@ -21,6 +21,7 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
     <meta name="description" content="Simple Server Management">
     <meta name="author" content="B Bharath Kumar Reddy | Cubepost">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex">
 
     <title>Server B</title>
 

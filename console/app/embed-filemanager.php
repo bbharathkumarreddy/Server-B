@@ -3084,7 +3084,6 @@ global $lang, $root_url, $favicon_path;
     <meta name="author" content="CCP Programmers">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex">
-    <link rel="icon" href="<?php echo fm_enc($favicon_path) ?>" type="image/png">
     <title><?php echo fm_enc(APP_TITLE) ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
@@ -3154,7 +3153,6 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
     <meta name="author" content="CCP Programmers">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex">
-    <link rel="icon" href="<?php echo fm_enc($favicon_path) ?>" type="image/png">
     <title><?php echo fm_enc(APP_TITLE) ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
