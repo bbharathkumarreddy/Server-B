@@ -310,7 +310,7 @@
                             <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
                                 <p class="mb-0">' . $getLogFileEach[1] . '</p>
                             </a>
-                            <p class="fr remove_file_point" file_name="'.$getLogFileEach[0].'" ><i class="fas fa-close fa-sm text-white-50"></i></p>
+                            <i class="fas fa-close text-danger fr remove_file_point" file_name="'.$getLogFileEach[0].'"></i>
                         </div>
                     </div>
                     <hr class="mt-10">';
