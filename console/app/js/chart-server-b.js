@@ -133,7 +133,7 @@ $(document).ready(function() {
         data: {
             labels: ["Ingress MB", "Egress MB", ],
             datasets: [{
-                data: [0, 100],
+                data: [50, 50],
                 backgroundColor: ['#f6c23e', '#36b9cc'],
                 hoverBackgroundColor: ['#f3b515', '#0aacc3'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -212,8 +212,8 @@ $(document).ready(function() {
                 let disk_free = disk_total - disk_used;
                 let disk_used_per = ((disk_used / disk_total) * 100).toFixed(0);
 
-                let ingress = parseFloat(data[9]).toFixed(0); // ingress
-                let egress = parseFloat(data[9]).toFixed(0); // ingress
+                let ingress = (parseFloat(data[9]) / 1000).toFixed(0); // ingress
+                let egress = (parseFloat(data[9]) / 1000).toFixed(0); // ingress
 
 
                 chart_0_def.data.datasets[0].data = [cpu, 100 - cpu];
