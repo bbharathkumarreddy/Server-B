@@ -151,13 +151,13 @@
                             } else if (strpos($service_text_each, '[ - ]') !== false) {
                                 $service_stop_count++;
                                 $status_text = 'Stopped';
-                                $status_icon = '<div class="col-xs-3 col-md-3 md-3 pointer ht-20"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
+                                $status_icon = '<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
                                 $service_text_each = trim(str_replace('[ - ]', ' ', $service_text_each));
                             }
                             echo '<div class="row">
                                    ' . $status_icon . '
-                                    <div class="col-xs-6 col-md-6 md-6 ht-20"><span>' . $service_text_each . ' Service<span></div>
-                                    <div class="col-xs-3 col-md-3 md-3 ht-20">
+                                    <div class="col-xs-6 col-md-6 md-6"><span>' . $service_text_each . ' Service<span></div>
+                                    <div class="col-xs-3 col-md-3 md-3">
                                         <div>
                                             <a href="#" class="serviceBtn" reload=true pre="Starting Service: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_start&service_name=' . $service_text_each . '"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
                                             <a href="#" class="serviceBtn" reload=true pre="Stopping Service: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_stop&service_name=' . $service_text_each . '"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="mt-0">';
+                                <hr class="">';
                         }
                         ?>
                     </div>
