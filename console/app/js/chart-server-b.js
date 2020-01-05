@@ -207,18 +207,28 @@ $(document).ready(function() {
                 let memory_free = memory_total - memory_used;
                 let memory_used_per = ((memory_used / memory_total) * 100).toFixed(0);
 
+                let disk_total = parseFloat(data[6]).toFixed(0);
+                let disk_used = parseFloat(data[5]).toFixed(0);
+                let disk_free = disk_total - disk_used;
+                let disk_used_per = ((disk_used / disk_total) * 100).toFixed(0);
+
                 chart_0_def.data.datasets[0].data = [cpu, 100 - cpu];
                 chart_1_def.data.datasets[0].data = [load_5, 100 - load_5];
-                chart_2_def.data.datasets[0].data = [memory_used, memory_total];
+                chart_2_def.data.datasets[0].data = [memory_used, memory_free];
+                chart_3_def.data.datasets[0].data = [disk_used, disk_free];
+
 
                 chart_0_def.update();
                 chart_1_def.update();
                 chart_2_def.update();
+                chart_3_def.update();
+
 
                 $('#chart_0_val').html(cpu);
                 $('#chart_1_val').html(load_5);
                 $('#chart_2_val').html(memory_used_per);
+                $('#chart_3_val').html(disk_used_per);
             }
         });
-    }, 3000);
+    }, 30000);
 });
