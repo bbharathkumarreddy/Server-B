@@ -3,7 +3,7 @@ $(document).ready(function() {
     var chart_0_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["CPU", "Ideal", ],
+            labels: ["CPU (%)", "Ideal (%)", ],
             datasets: [{
                 data: [0, 100],
                 backgroundColor: ['#1cc88a', '#f8f9fc'],
@@ -35,7 +35,7 @@ $(document).ready(function() {
     var chart_1_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Load", "Ideal", ],
+            labels: ["Load (%)", "Ideal (%)", ],
             datasets: [{
                 data: [0, 100],
                 backgroundColor: ['#fd7e14', '#f8f9fc'],
@@ -67,7 +67,7 @@ $(document).ready(function() {
     var chart_2_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Used", "Free", ],
+            labels: ["Used (MB)", "Free (MB)", ],
             datasets: [{
                 data: [0, 100],
                 backgroundColor: ['#4268d6', '#f8f9fc'],
@@ -99,7 +99,7 @@ $(document).ready(function() {
     var chart_3_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Disk", "Free", ],
+            labels: ["Disk (GB)", "Free (GB)", ],
             datasets: [{
                 data: [0, 100],
                 backgroundColor: ['#1cc88a', '#f8f9fc'],
@@ -131,7 +131,7 @@ $(document).ready(function() {
     var chart_4_def = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ["Ingress", "Egress", ],
+            labels: ["Ingress MB", "Egress MB", ],
             datasets: [{
                 data: [0, 100],
                 backgroundColor: ['#f6c23e', '#36b9cc'],
