@@ -313,7 +313,7 @@
                             
                         </div>
                         <div class="col-xl-1 col-md-1 mb-1 mb-0">
-                            <i class="fas fa-times text-danger fr remove_file_point" file_name="'.$getLogFileEach[0].'"></i>
+                            <i class="pointer fas fa-times text-danger fr remove_file_point" file_name="'.$getLogFileEach[0].'"></i>
                         </div>
                     </div>
                     <hr class="mt-10">';

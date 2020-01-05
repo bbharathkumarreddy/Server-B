@@ -33,8 +33,8 @@ $(document).ready(function() {
     });
 
     $("#add_file_confirm").on("click", function() {
-        var file_name = $('#file_name').val();
-        var file_path = $('#file_path').val();
+        var file_name = $('#file_name').val().replace(/ /g, "_");
+        var file_path = $('#file_path').val().replace(/ /g, "_");
         if (file_name == '' || file_path == '') {
             alert('File Name or File Path is mandatory');
             return false;
