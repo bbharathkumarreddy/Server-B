@@ -213,7 +213,7 @@ $(document).ready(function() {
                 let disk_used_per = ((disk_used / disk_total) * 100).toFixed(0);
 
                 let ingress = (parseFloat(data[9]) / 1000).toFixed(0); // ingress
-                let egress = (parseFloat(data[9]) / 1000).toFixed(0); // ingress
+                let egress = (parseFloat(data[10]) / 1000).toFixed(0); // ingress
 
 
                 chart_0_def.data.datasets[0].data = [cpu, 100 - cpu];
