@@ -3006,7 +3006,7 @@ function fm_show_nav_path($path)
             echo '<div class="col-xs-6 col-sm-5">' . $root_url .'</div>';
             ?>
 
-            <div class="col-xs-6 col-sm-7 text-right">
+            <div class="col-xs-6 col-sm-7 text-right" style="padding: 0px;">
                 <ul class="navbar-nav mr-auto float-right">
                     <?php if (!FM_READONLY): ?>
                     <li class="nav-item mr-2">
@@ -3182,6 +3182,7 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
         }
         .navbar-brand {
             font-weight: bold;
+             margin:0px;
         }
         .nav-item.avatar a {
             cursor: pointer;
