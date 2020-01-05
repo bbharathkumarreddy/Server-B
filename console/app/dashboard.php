@@ -329,7 +329,7 @@
                 <div class="card-body">
                     <?php
                     $crontab_list = shell_exec($service . ' get_crontab_list');
-                    $crontab_list_each = explode("\n", $crontab_list);
+                    $crontab_list_each = explode("\r\n", $crontab_list);
                     foreach ($crontab_list_each as $cron) {
                         echo '<div class="row">
                         <div class="col-xl-12 col-md-12 mb-12 mb-0">
