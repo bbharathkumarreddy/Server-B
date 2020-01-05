@@ -25,6 +25,7 @@ site_path='/var/www/site/'
 logpoint_path='/var/www/server-b/system/logpoint.sh'
 time_zone='Etc/UTC'
 os='Ubuntu'
+dashboard_refresh='5000'
 public_ip='2401:4900:1b34:ec76:cd6e:7894:666:219c'
 private_ip='192.168.56.1'
 php_ini='/etc/php/7.2/cli/php.ini'
@@ -71,6 +72,7 @@ install(){
     echo logpoint_path"='"$logpoint_path"'" >> $server_b_loc_config_path
     echo time_zone"='"$time_zone"'" >> $server_b_loc_config_path
     echo os"='"$os"'" >> $server_b_loc_config_path
+    echo dashboard_refresh"='"$dashboard_refresh"'" >> $server_b_loc_config_path
     echo public_ip"='"$public_ip"'" >> $server_b_loc_config_path
     echo private_ip"='"$private_ip"'" >> $server_b_loc_config_path
     echo php_ini"='"$php_ini"'" >> $server_b_loc_config_path

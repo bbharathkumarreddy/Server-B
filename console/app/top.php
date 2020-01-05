@@ -3,6 +3,7 @@ $server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey
 $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
 $server_b_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_b_port");
+$dashboard_refresh=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey dashboard_refresh");
 $service='bash /var/www/server-b/system/scripts/service.sh';
 $getKey = 'bash /var/www/server-b/system/scripts/service.sh getKey';
 $shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
@@ -57,6 +58,8 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
     let api_link=`<?php echo $api_link; ?>`;
     api_link=api_link.replace("\n", "").trim();
     let app_link=`<?php echo $app_link; ?>`;
+    let dashboard_refresh=`<?php echo $dashboard_refresh; ?>`;
+    if(dashboard_refresh == '' || dashboard_refresh < 1000) dashboard_refresh = 10000;
     app_link=app_link.replace("\n", "").trim();
     function startTime() {
         var serverNow = new Date(phpTime).toLocaleString("en-US", {timeZone: phpTimeZone});
