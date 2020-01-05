@@ -230,5 +230,5 @@ $(document).ready(function() {
                 $('#chart_3_val').html(disk_used_per);
             }
         });
-    }, 30000);
+    }, 3000);
 });
