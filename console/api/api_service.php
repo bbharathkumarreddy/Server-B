@@ -45,9 +45,8 @@ if (isset($_GET['o'])) {
         echo json_encode($stat_arr);
     }
     else if ($o == 'clear_ram') {
-        $service_name = $_GET['service_name'];
-        echo shell_exec('sudo service '.$service_name.' stop');
-        echo '\n Server B =>'.$service_name.' Service Stopping';
+        echo shell_exec($service.' clear_ram');
+        echo '\n Server B =>RAM Cleared';
     }
     else{
         echo 'Server - B No Operation found';
