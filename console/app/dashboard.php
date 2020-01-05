@@ -255,7 +255,7 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
                         <small>
-                            <table border="1px solid #797b85;">
+                            <table border="1px solid #797b85;" style="width: 100%;">
                                 <tr>
                                     <td class="text-black">Key</td>
                                     <td class="text-black pl-2">Value</td>
