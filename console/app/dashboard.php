@@ -287,35 +287,34 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Log Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
                 </div>
-                <?php
-                $getLogFile = shell_exec($service . ' getLogFile');
-                $getLogFileSplit = explode("\n", $getLogFile);
-                foreach ($getLogFileSplit as $getLogFileLine) {
-                    if ($getLogFileLine == "") continue;
-                    $getLogFileEach = explode(" ", $getLogFileLine);
-                    $file_link=explode('/',$getLogFileEach[1]);
-                    $link_length=sizeof($file_link);
-                    $file_identifier=$getLogFileEach[0];
-                    $file_path_full=$getLogFileEach[1];
-                    $file_name=$file_link[$link_length-1];
-                    array_pop($file_link);
-                    $file_path=str_replace('/'.$file_name,'',$file_path_full);
-                    echo '<div class="card-body">
-                    <div class="row">
+                <div class="card-body">
+                    <?php
+                    $getLogFile = shell_exec($service . ' getLogFile');
+                    $getLogFileSplit = explode("\n", $getLogFile);
+                    foreach ($getLogFileSplit as $getLogFileLine) {
+                        if ($getLogFileLine == "") continue;
+                        $getLogFileEach = explode(" ", $getLogFileLine);
+                        $file_link = explode('/', $getLogFileEach[1]);
+                        $link_length = sizeof($file_link);
+                        $file_identifier = $getLogFileEach[0];
+                        $file_path_full = $getLogFileEach[1];
+                        $file_name = $file_link[$link_length - 1];
+                        array_pop($file_link);
+                        $file_path = str_replace('/' . $file_name, '', $file_path_full);
+                        echo '<div class="row">
                         <div class="col-xl-4 col-md-4 mb-4 mb-0">
-                            <p class="mb-0">'.$getLogFileEach[0].'</p>
+                            <p class="mb-0">' . $getLogFileEach[0] . '</p>
                         </div>
                         <div class="col-xl-8 col-md-8 mb-8 mb-0">
-                            <a class="noline" target="_blank" href="'.$app_link.'file-manager.php?p='.$file_path.'&env=ace&edit='.$file_name.'">
-                                <p class="mb-0">'.$getLogFileEach[1].'</p>
+                            <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&env=ace&edit=' . $file_name . '">
+                                <p class="mb-0">' . $getLogFileEach[1] . '</p>
                             </a>
                         </div>
                     </div>
-                    <hr class="mt-10">
-                </div>';
-                }
-                ?>
-               
+                    <hr class="mt-10">';
+                    }
+                    ?>
+                </div>
             </div>
 
         </div>
