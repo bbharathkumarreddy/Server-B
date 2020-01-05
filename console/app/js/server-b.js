@@ -53,6 +53,7 @@ $(document).ready(function() {
 
     $(document).on("click", ".remove_file_point", function() {
         var file_name = $(this).attr('file_name')
+        if (!confirm('Do you want to log point file: ' + file_name)) return 0;
         if (file_name == '') {
             alert('File Name or File Path is mandatory');
             return false;
