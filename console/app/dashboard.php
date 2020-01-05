@@ -230,6 +230,14 @@
                                     <td class="text-black">Stopper Services Count</td>
                                     <td class="pl-2"><?php echo $service_stop_count?></td>
                                 </tr>
+                                <tr>
+                                    <td class="text-black">CPU Speed</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_speed'); ?> GHz</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">CPU Cores</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_cores'); ?></td>
+                                </tr>
                             </table>
                         </small>
                     </div>

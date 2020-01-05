@@ -55,6 +55,16 @@ get_whoami(){
     echo $os;
 }
 
+get_cpu_speed(){
+    cpu_speed=$(lscpu | awk '/CPU MHz/ {print $3/1000}')
+    echo $cpu_speed;
+}
+
+get_cpu_cores(){
+    cores=$(nproc --all)
+    echo $cores;
+}
+
 load_ip(){
     public_ip=$(curl ifconfig.co)
     private_ip=$(hostname -I)
