@@ -292,6 +292,8 @@
                 echo $getLogFile;
                 $getLogFileSplit = explode("\n", $getLogFile);
                 foreach ($getLogFileSplit as $getLogFileLine) {
+                    if($getLogFileLine == "") continue;
+                    
                     $getLogFileEach = explode(" ", $getLogFileLine);
                     print_r($getLogFileEach);
                 }
