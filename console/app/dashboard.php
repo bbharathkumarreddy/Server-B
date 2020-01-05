@@ -285,7 +285,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">File Log & Config Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">File Log & Config Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
@@ -317,7 +317,6 @@
                     ?>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
