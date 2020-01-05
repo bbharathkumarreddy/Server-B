@@ -198,7 +198,7 @@ $(document).ready(function() {
 
     chart_update();
 
-    chart_update() {
+    function chart_update() {
         $.ajax({
             url: api_link + 'api_service.php?o=system_stat_current',
             type: 'GET',
