@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-xl-12 col-md-12 mb-12">
-            <iframe style="width:100%;height:800px;" src="<?php echo 'http://' . $public_ip . ':' . $shell_in_box_access_port; ?>"></iframe>
+            <iframe style="width:100%;height:593px;" src="<?php echo 'http://' . $public_ip . ':' . $shell_in_box_access_port; ?>"></iframe>
         </div>
     </div>
 
