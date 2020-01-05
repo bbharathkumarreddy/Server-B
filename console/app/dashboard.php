@@ -285,7 +285,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">File Log & Config Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">File Log & Config Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point"  data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
@@ -320,5 +320,29 @@
         </div>
     </div>
 </div>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logpoint_modal" tabindex="-1" role="dialog" aria-labelledby="logpoint_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add File</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>File Name: <input id="file_name" type="text" placeholder="foo-bar" ></p>
+            <p>File Path: &nbsp;&nbsp;<input id="file_path" type="text" placeholder="/var/www/foo-bar.log" ></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" type="button" id="add_file_confirm">Add File</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>
