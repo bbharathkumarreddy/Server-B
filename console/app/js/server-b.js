@@ -50,4 +50,21 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(document).on("click", ".remove_file_point", function() {
+        var file_name = $(this).attr('file_name')
+        if (file_name == '') {
+            alert('File Name or File Path is mandatory');
+            return false;
+        }
+        $.ajax({
+            url: api_link + 'api_service.php?o=remove_log_point&file_name=' + file_name,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('File removed from File Log Point');
+                location.reload();
+            }
+        });
+    });
 });

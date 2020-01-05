@@ -54,6 +54,11 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' addLogFile '.$file_name.' '.$file_path);
         echo '\n Server B =>File Added';
     }
+    else if ($o == 'remove_log_point') {
+        $file_name=$_GET['file_name'];
+        echo shell_exec($service.' removeLogFile '.$file_name);
+        echo '\n Server B =>File Added';
+    }
     else{
         echo 'Server - B No Operation found';
     }
