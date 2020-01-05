@@ -188,11 +188,17 @@ $(document).ready(function() {
                 display: false
             },
             cutoutPercentage: 80,
-        },
+        }
     });
 
     //"'${TIMESTAMP}','${CPU}','${LOAD_1}','${LOAD_5}','${LOAD_15}','${DISK_USAGE}','${DISK_TOTAL}','${MEM_USAGE}','${MEM_TOTAL}','${NET_RECEIVED}','${NET_TRANSMITTED}','${NET_TOTAL}'"
     setInterval(function() {
+        chart_update();
+    }, dashboard_refresh);
+
+    chart_update();
+
+    chart_update() {
         $.ajax({
             url: api_link + 'api_service.php?o=system_stat_current',
             type: 'GET',
@@ -236,5 +242,5 @@ $(document).ready(function() {
 
             }
         });
-    }, dashboard_refresh);
+    }
 });
