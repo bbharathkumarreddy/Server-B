@@ -1,0 +1,245 @@
+/**
+ * Copyright 2014 Bogdan Ghervan
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  padding-top: 70px;
+}
+.panel-crontab {
+    margin-top: 25px;
+}
+.panel-crontab > .table {
+    margin-top: 10px;
+}
+.well-empty-crontab {
+    margin-top: 25px;
+    text-align: center;
+}
+.empty-search {
+    padding: 15px;
+}
+.job-add {
+    margin-top: 20px;
+}
+.table-crontab > tbody > tr > td:nth-child(2) {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+.table-crontab > thead > tr > th:nth-child(1) {
+    width: 15%;
+}
+.table-crontab > thead > tr > th:nth-child(2) {
+    width: 73%;
+}
+.table-crontab > thead > tr > th:nth-child(3) {
+    width: 12%;
+}
+.table-crontab .actions {
+	min-width: 95px;
+}
+
+/* Inactive style for paused cron jobs */
+.table > tbody > tr.inactive > td,
+.table-hover > tbody > tr.inactive:hover > td,
+.touch .table-hover > tbody > tr.inactive:hover > td {
+    background-color: #f5f5f5;
+}
+
+.alert .error-output {
+    display: block;
+    margin-top: 10px;
+}
+.alert .action-items {
+}
+.alert .action-items .btn {
+	margin-top: 20px;
+}
+/* Exception that resembles the Bootstrap "Crontab is empty" well */
+.alert-exception {
+	margin-top: 25px;
+	text-align: center;
+	padding: 19px;
+}
+.alert-exception > p + p {
+	margin-top: 10px;
+}
+.alert-exception > p {
+	margin: 0 0 10px;
+}
+
+mark, .mark {
+    padding: 0.2em 0;
+}
+
+/* Align data and search field's edges */
+.panel-crontab > .table > thead > tr > th:first-child,
+.panel-crontab > .table > tbody > tr > th:first-child,
+.panel-crontab > .table > tfoot > tr > th:first-child,
+.panel-crontab > .table > thead > tr > td:first-child,
+.panel-crontab > .table > tbody > tr > td:first-child,
+.panel-crontab > .table > tfoot > tr > td:first-child {
+    padding-left: 15px;
+}
+
+.panel-crontab > .table > thead > tr > th:last-child,
+.panel-crontab > .table > tbody > tr > th:last-child,
+.panel-crontab > .table > tfoot > tr > th:last-child,
+.panel-crontab > .table > thead > tr > td:last-child,
+.panel-crontab > .table > tbody > tr > td:last-child,
+.panel-crontab > .table > tfoot > tr > td:last-child {
+    padding-right: 15px;
+}
+
+/* Add Job form: Simple */
+.job-add-form {
+    margin-top: 30px;
+}
+.job-add-form .row + .row {
+    margin-top: 25px;
+}
+.job-add-form .legend {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.job-add-form .hint {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.job-add-form .command {
+    resize: vertical;
+    height: 70px;
+    min-height: 70px;
+}
+.job-add-form .input-hour,
+.job-add-form .input-minute,
+.job-add-form .input-day,
+.job-add-form .input-step {
+    width: 45px;
+    display: inline-block;
+    /* Hide spinner specific to number inputs on Firefox */
+    -moz-appearance: textfield;
+}
+/* Hide spinner specific to number inputs on WebKit browsers */
+.job-add-form input[type=number]::-webkit-inner-spin-button,
+.job-add-form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Pick time section */
+.radio-time + .radio-time {
+    margin-top: 15px;
+}
+.job-add-form .radio-specific-time {
+    margin-top: 0;
+}
+.job-add-form .specific-time {
+    margin: 10px 0 10px 25px;
+}
+.job-add-form .radio-every-hour input[type="radio"] {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+}
+.job-add-form .radio-every-hour span {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.job-add-form .radio-every-minute input[type="radio"] {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+}
+.job-add-form .radio-every-minute span {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.job-add-form .radio-every-hour .input-step,
+.job-add-form .radio-every-hour .input-minute,
+.job-add-form .radio-every-minute .input-step {
+    margin: 0 5px;
+}
+
+/* Repeat section */
+.job-add-form .fieldset-yearly .input-day {
+    margin-left: 10px;
+}
+
+/* Nested button groups */
+.btn-group > .btn-group {
+    clear: both;
+    margin-left: 0px !important;
+}
+    .btn-group > .btn-group:not(:first-child) > .btn {
+        margin-top: -1px;
+    }
+    /* Top left corner */
+    .btn-group > .btn-group:first-child > .btn:first-child {
+        border-top-left-radius: 1;
+        border-bottom-left-radius: 0;
+    }
+    /* Top right corner */
+    .btn-group > .btn-group:first-child > .btn:last-child {
+        border-top-right-radius: 1;
+        border-bottom-right-radius: 0;
+    }
+    /* Bottom left corner */
+    .btn-group > .btn-group:last-child > .btn:first-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 1;
+    }
+    /* Bottom right corner */
+    .btn-group > .btn-group:last-child > .btn:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 1;
+    }
+
+.job-add-form .repeat {
+    width: 100px;
+}
+.job-add-form .month {
+    width: 150px;
+}
+.btn-group-day-picker .btn {
+    width: 42px;
+}
+
+/* Add Job form: Advanced */
+.job-add-form .section-expression {
+    margin-top: 25px;
+}
+.job-add-form .expression-part {
+    width: 100%;
+    padding-left: 20px;
+}
+.job-add-form .expression-part .input-group-addon {
+    width: 110px;
+    text-align: left;
+}
+.expression-part + .expression-part {
+    margin-top: 15px;
+}
+.job-add-form .error-container {
+	list-style-type: none;
+	margin-top: 5px;
+	padding-left: 0;
+	color: #a94442; /* danger style */
+}

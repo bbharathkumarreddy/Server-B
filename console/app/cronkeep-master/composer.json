@@ -1,0 +1,44 @@
+{
+    "name": "cronkeep/cronkeep",
+    "description": "Web-based crontab manager",
+    "keywords": ["crontab", "cron"],
+    "type": "project",
+    "homepage": "http://www.cronkeep.com",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Bogdan Ghervan",
+            "email": "bogdan.ghervan@gmail.com",
+            "homepage": "https://www.linkedin.com/in/bogdanghervan",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "hello@cronkeep.com",
+        "issues": "https://github.com/cronkeep/cronkeep/issues",
+        "wiki" : "https://github.com/cronkeep/cronkeep/wiki",
+        "source": "https://github.com/cronkeep/cronkeep"
+    },
+    "require": {
+        "php": ">=5.3.23",
+        "slim/slim": "2.4.3",
+        "symfony/process": "2.5.2",
+        "dogancelik/slim-json": "dev-master",
+        "zendframework/zend-form": "2.3.1",
+        "zendframework/zend-servicemanager": "2.3.1",
+        "zendframework/zend-view": "2.3.1",
+        "zendframework/zend-i18n": "2.3.1",
+        "zendframework/zend-escaper": "2.3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "models\\": "src/application/models/",
+            "services\\": "src/application/services/",
+            "forms\\": "src/application/forms/",
+            "library\\": "src/library/"
+        }
+    },
+    "config": {
+        "vendor-dir": "src/vendor"
+    }
+}
