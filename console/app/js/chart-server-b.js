@@ -213,8 +213,8 @@ $(document).ready(function() {
                 let memory_free = memory_total - memory_used;
                 let memory_used_per = ((memory_used / memory_total) * 100).toFixed(0);
 
-                let disk_total = parseFloat(data[6]).toFixed(0);
-                let disk_used = parseFloat(data[5]).toFixed(0);
+                let disk_total = parseFloat(data[6]).toFixed(1);
+                let disk_used = parseFloat(data[5]).toFixed(1);
                 let disk_free = disk_total - disk_used;
                 let disk_used_per = ((disk_used / disk_total) * 100).toFixed(0);
 
