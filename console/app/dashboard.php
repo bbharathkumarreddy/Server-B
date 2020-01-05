@@ -289,17 +289,33 @@
                 </div>
                 <?php
                 $getLogFile = shell_exec($service . ' getLogFile');
-                echo $getLogFile;
                 $getLogFileSplit = explode("\n", $getLogFile);
                 foreach ($getLogFileSplit as $getLogFileLine) {
-                    if($getLogFileLine == "") continue;
+                    if ($getLogFileLine == "") continue;
                     $getLogFileEach = explode(" ", $getLogFileLine);
-                    print_r($getLogFileEach);
+                    $file_link=explode('/',$getLogFileEach[1]);
+                    $link_length=sizeof($file_link);
+                    $file_identifier=$getLogFileEach[0];
+                    $file_path_full=$getLogFileEach[1];
+                    $file_name=$file_link[$link_length-1];
+                    array_pop($file_link);
+                    $file_path=str_replace('/'.$file_name,'',$file_path_full);
+                    echo '<div class="card-body">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-4">
+                            <p>'.$getLogFileEach[0].'</p>
+                        </div>
+                        <div class="col-xl-8 col-md-8 mb-8">
+                            <a class="noline" target="_blank" href="'.$app_link.'file-manager.php?p='.$file_path.'&env=ace&edit='.$file_name.'">
+                                <p>'.$getLogFileEach[1].'</p>
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="mt-0">
+                </div>';
                 }
                 ?>
-                <div class="card-body">
-
-                </div>
+               
             </div>
 
         </div>
