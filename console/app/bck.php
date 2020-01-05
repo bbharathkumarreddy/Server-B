@@ -11,7 +11,7 @@
     <!-- Content Row -->
     <div class="row">
         <div class="col-xl-12 col-md-12 mb-12">
-            <iframe style="width:100%;height:1000px;" src="<?php echo 'http://'.$public_ip.':'.$server_b_port.'/app/tinyfilemanager.php'; ?>"></iframe>
+            <iframe style="width:100%;height:1000px;" src="<?php echo 'http://'.$public_ip.':'.$server_b_port.'/app/embed-filemanager.php'; ?>"></iframe>
         </div>
         <div class="col-xl-12 col-md-12 mb-12">
             <iframe style="width:100%;height:600px;" src="<?php echo 'http://'.$public_ip.':'.$shell_in_box_access_port; ?>"></iframe>
