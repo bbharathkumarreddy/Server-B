@@ -214,7 +214,7 @@ $(document).ready(function() {
 
                 let ingress = (parseFloat(data[9]) / 1000).toFixed(0); // ingress
                 let egress = (parseFloat(data[10]) / 1000).toFixed(0); // ingress
-
+                let data_ratio = (egress / ingress).toFixed(0);
 
                 chart_0_def.data.datasets[0].data = [cpu, 100 - cpu];
                 chart_1_def.data.datasets[0].data = [load_5, 100 - load_5];
@@ -232,6 +232,7 @@ $(document).ready(function() {
                 $('#chart_1_val').html(load_5);
                 $('#chart_2_val').html(memory_used_per);
                 $('#chart_3_val').html(disk_used_per);
+                $('#chart_4_val').html(data_ratio);
 
             }
         });
