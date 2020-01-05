@@ -12,7 +12,7 @@
         <div class="col-xl-12 col-md-12 mb-12">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small><small class="fr">Refresh Time:<?php echo $dashboard_refresh/1000; ?>s</small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small><small class="fr">Refresh Time:<?php echo $dashboard_refresh / 1000; ?>s</small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-3 col-md-2 md-2">
@@ -266,7 +266,7 @@
                                 foreach ($getallKey_split_line as $key) {
                                     $k = explode('=', $key);
                                     if ($k[0] == '') continue;
-                                    $k[1]=str_replace("'",'',$k[1]);
+                                    $k[1] = str_replace("'", '', $k[1]);
                                     echo '<tr>
                                                 <td class="text-black">' . $k[0] . '</td>
                                                 <td class="pl-2">' . $k[1] . '</td>
@@ -281,6 +281,19 @@
         </div>
     </div>
     <br><br>
+    <div class="row">
+        <div class="col-xl-12 col-md-12 mb-12">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Log Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
+                </div>
+                <div class="card-body">
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>

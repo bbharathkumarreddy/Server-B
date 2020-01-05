@@ -383,6 +383,10 @@ addLogFile(){
     echo $1 $2 >> $logpoint_path
 }
 
+getLogFile(){
+    cat $logpoint_path
+}
+
 removeLogFile(){
    full_name_path=$1
    full_name_path="${full_name_path//\//\\/}"

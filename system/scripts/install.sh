@@ -22,7 +22,7 @@ console_path='/var/www/server-b/console/'
 app_path='/var/www/server-b/console/app/'
 api_path='/var/www/server-b/console/api/'
 site_path='/var/www/site/'
-logpoint_path='/var/www/server-b/system/logpoint.sh'
+logpoint_path='/var/www/server-b-data/logpoint.sh'
 time_zone='Etc/UTC'
 os='Ubuntu'
 dashboard_refresh='5000'
@@ -89,7 +89,7 @@ install(){
     echo hosting_link"='"$hosting_link"'" >> $server_b_loc_config_path
     echo domain"='"$domain"'" >> $server_b_loc_config_path
     source $server_b_loc_path'system/scripts/main.sh'
-    source $server_b_config_path   
+    source $server_b_config_path
 
     load_ip
     load_os
