@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-xs-3 col-md-2 md-2">
                         <div class="chart-pie">
                             <canvas id="chart_3" style="position: relative;top: -50px"></canvas>
@@ -136,38 +136,38 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
                         <?php
-                            $s = shell_exec($service . ' service_status_all');
-                            $s = explode("\n",$s);
-                            $service_count=0;
-                            $service_run_count=0;
-                            $service_stop_count=0;
-                            foreach($s as $service_text_each){
-                                $service_count++;
-                                if(strpos($service_text_each, '[ + ]') !== false){
-                                    $service_run_count++;
-                                    $status_text='Running';
-                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
-                                    $service_text_each=trim(str_replace('[ + ]',' ',$service_text_each));
-                                }   else if(strpos($service_text_each, '[ - ]') !== false){
-                                    $service_stop_count++;
-                                    $status_text='Stopped';
-                                    $status_icon='<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
-                                    $service_text_each=trim(str_replace('[ - ]',' ',$service_text_each));
-                                }
-                                echo '<div class="row">
-                                   '.$status_icon.'
-                                    <div class="col-xs-6 col-md-6 md-6"><span>'.$service_text_each.' Service<span></div>
+                        $s = shell_exec($service . ' service_status_all');
+                        $s = explode("\n", $s);
+                        $service_count = 0;
+                        $service_run_count = 0;
+                        $service_stop_count = 0;
+                        foreach ($s as $service_text_each) {
+                            $service_count++;
+                            if (strpos($service_text_each, '[ + ]') !== false) {
+                                $service_run_count++;
+                                $status_text = 'Running';
+                                $status_icon = '<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-success"></i>&nbsp;&nbsp;<span>Running</span></div>';
+                                $service_text_each = trim(str_replace('[ + ]', ' ', $service_text_each));
+                            } else if (strpos($service_text_each, '[ - ]') !== false) {
+                                $service_stop_count++;
+                                $status_text = 'Stopped';
+                                $status_icon = '<div class="col-xs-3 col-md-3 md-3 pointer"><i class="fas fa-circle text-danger"></i>&nbsp;&nbsp;<span>Stopped</span></div>';
+                                $service_text_each = trim(str_replace('[ - ]', ' ', $service_text_each));
+                            }
+                            echo '<div class="row">
+                                   ' . $status_icon . '
+                                    <div class="col-xs-6 col-md-6 md-6"><span>' . $service_text_each . ' Service<span></div>
                                     <div class="col-xs-3 col-md-3 md-3">
                                         <div>
-                                            <a href="#" class="serviceBtn" reload=true pre="Starting Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_start&service_name='.$service_text_each.'"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
-                                            <a href="#" class="serviceBtn" reload=true pre="Stopping Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_stop&service_name='.$service_text_each.'"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
-                                            <a href="#" class="serviceBtn" reload=true pre="Restarting Service: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_restart&service_name='.$service_text_each.'"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
-                                            <a href="#" class="serviceBtn" reload=false pre="Fetching Service Status: '.$service_text_each.'" link="'.$api_link .'api_service.php?o=service_status&service_name='.$service_text_each.'"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
+                                            <a href="#" class="serviceBtn" reload=true pre="Starting Service: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_start&service_name=' . $service_text_each . '"><i class="fas fa-play text-success pointer" title="Start Service"></i></a> &nbsp; &nbsp;
+                                            <a href="#" class="serviceBtn" reload=true pre="Stopping Service: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_stop&service_name=' . $service_text_each . '"><i class="fas fa-stop text-danger pointer" title="Stop Service"></i></a> &nbsp; &nbsp;
+                                            <a href="#" class="serviceBtn" reload=true pre="Restarting Service: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_restart&service_name=' . $service_text_each . '"><i class="fas fa-redo-alt text-info pointer" title="Restart Service"></i></a> &nbsp; &nbsp;
+                                            <a href="#" class="serviceBtn" reload=false pre="Fetching Service Status: ' . $service_text_each . '" link="' . $api_link . 'api_service.php?o=service_status&service_name=' . $service_text_each . '"><i class="fas fa-info text-primary pointer" title="Service Status"></i></a> &nbsp; &nbsp;
                                         </div>
                                     </div>
                                 </div>
                                 <hr class="mt-0">';
-                            }
+                        }
                         ?>
                     </div>
                 </div>
@@ -206,12 +206,11 @@
                                     <td class="text-black">Uptime</td>
                                     <td class="pl-2"><?php echo shell_exec('uptime -p'); ?></td>
                                 </tr>
-                                
- <tr>
-                                    <td class="text-black">CPU Speed</td>
-                                    <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_speed'); ?> GHz</td>
-                                </tr>                               
- <tr>
+                                <tr>
+                                    <td class="text-black">CPU</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_info'); ?></td>
+                                </tr>
+                                <tr>
                                     <td class="text-black">CPU Speed</td>
                                     <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_speed'); ?> GHz</td>
                                 </tr>
@@ -233,15 +232,15 @@
                                 </tr>
                                 <tr>
                                     <td class="text-black">Services Count</td>
-                                    <td class="pl-2"><?php echo $service_count?></td>
+                                    <td class="pl-2"><?php echo $service_count ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Running Services Count</td>
-                                    <td class="pl-2"><?php echo $service_run_count?></td>
+                                    <td class="pl-2"><?php echo $service_run_count ?></td>
                                 </tr>
                                 <tr>
                                     <td class="text-black">Stopper Services Count</td>
-                                    <td class="pl-2"><?php echo $service_stop_count?></td>
+                                    <td class="pl-2"><?php echo $service_stop_count ?></td>
                                 </tr>
                             </table>
                         </small>
@@ -266,7 +265,7 @@
                                 $getallKey_split_line = explode("\n", $getallKey);
                                 foreach ($getallKey_split_line as $key) {
                                     $k = explode('=', $key);
-                                    if($k[0] == '') continue;
+                                    if ($k[0] == '') continue;
                                     echo '<tr>
                                                 <td class="text-black">' . $k[0] . '</td>
                                                 <td class="pl-2">' . $k[1] . '</td>
