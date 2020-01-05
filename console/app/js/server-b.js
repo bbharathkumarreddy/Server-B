@@ -20,4 +20,18 @@ $(document).ready(function() {
             });
         }
     });
+
+    $("#clear_ram").on("click", function() {
+
+        $.ajax({
+            url: api_link + 'api_service.php?o=clear_ram',
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('RAM Cleared');
+
+            }
+        });
+
+    });
 });

@@ -306,7 +306,7 @@ del_user(){
     echo 'User Deleted :'$1
 }
 
-claer_ram(){
+clear_ram(){
     sync; echo 1 > /proc/sys/vm/drop_caches
     sync; echo 2 > /proc/sys/vm/drop_caches
     sync; echo 3 > /proc/sys/vm/drop_caches

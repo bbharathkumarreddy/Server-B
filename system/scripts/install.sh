@@ -108,7 +108,7 @@ install(){
     crontab -l | { cat; echo "@reboot ${scripts_path}service.sh load_ip > /dev/null 2>&1"; } | crontab -
     addLogFile 'syslog' '/var/log/syslog'
     addLogFile 'authlog' '/var/log/auth.log'
-    claer_ram
+    clear_ram
     show_legends
 }
 

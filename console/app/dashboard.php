@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 zz" title="Clear RAM" style="cursor: pointer;">
+                    <div id="clear_ram" class="col-xs-3 col-md-2 md-2 zz" title="Clear RAM" style="cursor: pointer;">
                         <div class="chart-pie">
                             <canvas id="chart_5" style="position: relative;top: -50px"></canvas>
                             <h1 class="zoom" style="position: relative;top:-208px;text-align:center;cursor:pointer;" title="Clear RAM"><i class="fas fa-memory"></i></h1>
