@@ -160,7 +160,7 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#cron_manager">
                     <i class="fa fa-tasks"></i>
                     <span>Cron Manager</span>
                 </a>

@@ -285,13 +285,13 @@
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point"  data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
                     $getLogFile = shell_exec($service . ' getLogFile');
                     $getLogFileSplit = explode("\n", $getLogFile);
-                    foreach ($getLogFileSplit as $index=>$getLogFileLine) {
+                    foreach ($getLogFileSplit as $index => $getLogFileLine) {
                         if ($getLogFileLine == "") continue;
                         $getLogFileEach = explode(" ", $getLogFileLine);
                         $file_link = explode('/', $getLogFileEach[1]);
@@ -301,10 +301,10 @@
                         $file_name = $file_link[$link_length - 1];
                         array_pop($file_link);
                         $file_path = str_replace('/' . $file_name, '', $file_path_full);
-                        $c=$index+1;
+                        $c = $index + 1;
                         echo '<div class="row">
                         <div class="col-xl-4 col-md-4 mb-4 mb-0">
-                            <p class="mb-0">' .$c.'.  '.$getLogFileEach[0]. '</p>
+                            <p class="mb-0">' . $c . '.  ' . $getLogFileEach[0] . '</p>
                         </div>
                         <div class="col-xl-8 col-md-8 mb-8 mb-0">
                             <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
@@ -320,29 +320,53 @@
         </div>
     </div>
     <br><br>
+    <div class="row">
+        <div class="col-xl-12 col-md-12 mb-12" id="cron_manager">
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_cron" data-toggle="modal" data-target="#cron_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add Cron</a></h6>
+                </div>
+                <div class="card-body">
+                    <?php
+                    $crontab_list = shell_exec($service . ' get_crontab_list');
+                    $crontab_list_each = explode("\n", $crontab_list);
+                    foreach ($crontab_list_each as $cron) {
+                        echo '<div class="row">
+                        <div class="col-xl-12 col-md-12 mb-12 mb-0">
+                            <p class="mb-0">' . $cron . '</p>
+                        </div>
+                    </div>
+                    <hr class="mt-10">';
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
 </div>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logpoint_modal" tabindex="-1" role="dialog" aria-labelledby="logpoint_modal" aria-hidden="true">
+<!-- Logout Modal-->
+<div class="modal fade" id="logpoint_modal" tabindex="-1" role="dialog" aria-labelledby="logpoint_modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add File</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add File</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>File Name: <input id="file_name" type="text" placeholder="foo-bar"></p>
+                <p>File Path: &nbsp;&nbsp;<input id="file_path" type="text" placeholder="/var/www/foo-bar.log"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" type="button" id="add_file_confirm">Add File</button>
+            </div>
         </div>
-        <div class="modal-body">
-            <p>File Name: <input id="file_name" type="text" placeholder="foo-bar" ></p>
-            <p>File Path: &nbsp;&nbsp;<input id="file_path" type="text" placeholder="/var/www/foo-bar.log" ></p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-success" type="button" id="add_file_confirm">Add File</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
 <!-- /.container-fluid -->
