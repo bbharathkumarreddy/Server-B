@@ -206,7 +206,12 @@
                                     <td class="text-black">Uptime</td>
                                     <td class="pl-2"><?php echo shell_exec('uptime -p'); ?></td>
                                 </tr>
-                                <tr>
+                                
+ <tr>
+                                    <td class="text-black">CPU Speed</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_speed'); ?> GHz</td>
+                                </tr>                               
+ <tr>
                                     <td class="text-black">CPU Speed</td>
                                     <td class="pl-2"><?php echo shell_exec($service . ' get_cpu_speed'); ?> GHz</td>
                                 </tr>

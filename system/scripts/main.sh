@@ -55,6 +55,11 @@ get_whoami(){
     echo $os;
 }
 
+get_cpu_info(){
+    cpu_info=$(lscpu | grep "Model name"  | awk '{print $3" "$4" "$5" "$6" "$7" "$8}')
+    echo $cpu_info;
+}
+
 get_cpu_speed(){
     cpu_speed=$(lscpu | awk '/CPU MHz/ {print $3/1000}')
     echo $cpu_speed;
