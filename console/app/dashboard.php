@@ -12,7 +12,7 @@
         <div class="col-xl-12 col-md-12 mb-12">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small><small>Refresh Time:<?php echo $dashboard_refresh/1000; ?>s</small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-3 col-md-2 md-2">
