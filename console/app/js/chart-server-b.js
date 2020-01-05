@@ -212,22 +212,27 @@ $(document).ready(function() {
                 let disk_free = disk_total - disk_used;
                 let disk_used_per = ((disk_used / disk_total) * 100).toFixed(0);
 
+                let ingress = parseFloat(data[9]).toFixed(0); // ingress
+                let egress = parseFloat(data[9]).toFixed(0); // ingress
+
+
                 chart_0_def.data.datasets[0].data = [cpu, 100 - cpu];
                 chart_1_def.data.datasets[0].data = [load_5, 100 - load_5];
                 chart_2_def.data.datasets[0].data = [memory_used, memory_free];
                 chart_3_def.data.datasets[0].data = [disk_used, disk_free];
-
+                chart_4_def.data.datasets[0].data = [ingress, egress];
 
                 chart_0_def.update();
                 chart_1_def.update();
                 chart_2_def.update();
                 chart_3_def.update();
-
+                chart_4_def.update();
 
                 $('#chart_0_val').html(cpu);
                 $('#chart_1_val').html(load_5);
                 $('#chart_2_val').html(memory_used_per);
                 $('#chart_3_val').html(disk_used_per);
+
             }
         });
     }, 3000);
