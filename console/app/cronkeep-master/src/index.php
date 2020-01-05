@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 use \models\Crontab;
 use \models\Crontab\Exception;
 use \models\SystemUser;
