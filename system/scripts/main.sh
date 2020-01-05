@@ -1,5 +1,6 @@
 #!/bin/bash
 config_path='/var/www/server-b-data/config.sh'
+logpoint_path='/var/www/server-b-data/logpoint.sh'
 source $config_path
 
 #sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
