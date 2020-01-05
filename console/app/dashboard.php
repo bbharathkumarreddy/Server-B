@@ -306,14 +306,10 @@
                         <div class="col-xl-4 col-md-4 mb-4 mb-0">
                             <p class="mb-0">' .$c.'.  '.$getLogFileEach[0]. '</p>
                         </div>
-                        <div class="col-xl-7 col-md-7 mb-7 mb-0">
+                        <div class="col-xl-8 col-md-8 mb-8 mb-0">
                             <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
                                 <p class="mb-0">' . $getLogFileEach[1] . '</p>
-                            </a>
-                            
-                        </div>
-                        <div class="col-xl-1 col-md-1 mb-1 mb-0">
-                            <i class="pointer fas fa-times text-danger fr remove_file_point" file_name="'.$getLogFileEach[0].'"></i>
+                            </a>                            
                         </div>
                     </div>
                     <hr class="mt-10">';
