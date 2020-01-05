@@ -118,77 +118,77 @@ $api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
             </li>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-desktop"></i>
                     <span>Website</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#services">
                     <i class="fa fa-chess-board"></i>
                     <span>Services</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>file-manager.php">
                     <i class="fa fa-file-code"></i>
                     <span>File Manager</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#log_point">
                     <i class="fa fa-file"></i>
                     <span>Log Point</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>ssh.php">
                     <i class="fa fa-greater-than"></i>
                     <span>SSH</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-tasks"></i>
                     <span>Cron Manager</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-code-branch"></i>
                     <span>GIT Setup</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#config">
                     <i class="fa fa-cog"></i>
                     <span>Config</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-box-open"></i>
                     <span>Setup</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
                     <i class="fa fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>

@@ -9,7 +9,7 @@
 
     <!-- Content Row -->
     <div class="row">
-        <div class="col-xl-12 col-md-12 mb-12">
+        <div class="col-xl-12 col-md-12 mb-12" id="server_moniter">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small><small class="fr">Refresh Time:<?php echo $dashboard_refresh / 1000; ?>s</small></h6>
@@ -88,7 +88,7 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-12 col-md-12 mb-12">
+        <div class="col-xl-12 col-md-12 mb-12" id="server_control">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
@@ -129,7 +129,7 @@
     <br><br>
     <div class="row">
         <div class="col-xl-7 col-md-7 mb-7">
-            <div class="card shadow mb-12">
+            <div class="card shadow mb-12" id="services">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Services&nbsp;&nbsp;&nbsp;<small><kbd>systemctl service status</kbd></small></h6>
                 </div>
@@ -178,7 +178,7 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd>uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>lshw</kbd></small></h6>
                 </div>
-                <div class="card-body row">
+                <div class="card-body row" id="info">
                     <div class="col-xs-12 col-md-12 md-12">
                         <small>
                             <table border="1px solid #797b85;" style="width: 100%;">
@@ -248,7 +248,7 @@
                 </div>
             </div>
             <br>
-            <div class="card shadow mb-12">
+            <div class="card shadow mb-12" id="config">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
                 </div>
@@ -282,7 +282,7 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-12 col-md-12 mb-12" id="logpoint">
+        <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Log Point &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
