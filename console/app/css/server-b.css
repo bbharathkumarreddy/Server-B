@@ -43,3 +43,11 @@ kbd {
 .ht-35 {
     height: 35px !important;
 }
+
+.fl {
+    float: left !important;
+}
+
+.fr {
+    float: right !important;
+}
