@@ -77,7 +77,7 @@ $(document).ready(function() {
             return false;
         }
         $.ajax({
-            url: api_link + 'api_service.php?o=add_cron&cron_string=' + cron_string_string,
+            url: api_link + 'api_service.php?o=add_cron&cron_string=' + btoa(cron_string_string),
             type: 'GET',
             dataType: 'text',
             success: function(data) {

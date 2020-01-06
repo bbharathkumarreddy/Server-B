@@ -60,7 +60,7 @@ if (isset($_GET['o'])) {
         echo '\n Server B =>File Added';
     }
     else if ($o == 'add_cron') {
-        $cron_string=$_GET['cron_string'];
+        $cron_string=base64_decode($_GET['cron_string']);
         $cron_string=str_replace('&','\&',$cron_string);
         echo $cron_string;
         echo shell_exec("echo '".$cron_string."' >> /var/www/server-b-data/cron");
