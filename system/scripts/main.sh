@@ -65,8 +65,9 @@ get_cron_file(){
 
 add_cron(){
     cron_script=$1;
-    echo ${cron_script} >> $cron_file
-    crontab $cron_file
+    echo ${cron_script}
+    #echo ${cron_script} >> $cron_file
+    #crontab $cron_file
 }
 
 set_cron_file(){
