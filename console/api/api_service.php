@@ -62,7 +62,7 @@ if (isset($_GET['o'])) {
     else if ($o == 'add_cron') {
         $cron_string=$_GET['cron_string'];
         echo shell_exec('echo "'.$cron_string.'" >> /var/www/server-b-data/cron');
-        //echo shell_exec('crontab /var/www/server-b-data/cron');
+        echo shell_exec('crontab /var/www/server-b-data/cron');
         echo '\n Server B =>Cron Added Successully';
     }
     else{
