@@ -59,6 +59,7 @@ get_crontab_list(){
 
 get_cron_file(){
     crontab -l >> $cron_file
+    rm -rf $cron_file
     cat $cron_file
 }
 
