@@ -82,7 +82,8 @@ $(document).ready(function() {
             dataType: 'text',
             success: function(data) {
                 alert('Cron Added Successfully');
-                //location.reload();
+                $('#cron_string_string').val('');
+                location.reload();
                 $('#add_cron_modal').modal('hide');
             }
         });
