@@ -261,7 +261,7 @@
                                     <td class="text-black pl-2">Value</td>
                                 </tr>
                                 <?php
-                                $getallKey = shell_exec($service . ' getallKey');
+                                $getallKey = shell_exec($service . ' get_cron_file');
                                 $getallKey_split_line = explode("\n", $getallKey);
                                 foreach ($getallKey_split_line as $key) {
                                     $k = explode('=', $key);

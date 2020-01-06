@@ -58,6 +58,7 @@ get_crontab_list(){
 
 get_cron_file(){
     crontab -l >> $cron_file
+    cat $cron_file
 }
 
 set_cron_file(){
