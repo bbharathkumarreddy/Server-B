@@ -82,7 +82,7 @@ $(document).ready(function() {
             dataType: 'text',
             success: function(data) {
                 alert('Cron Added Successfully');
-                location.reload();
+                //location.reload();
             }
         });
     });

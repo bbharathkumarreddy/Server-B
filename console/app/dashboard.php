@@ -382,7 +382,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Cron String: <input id="cron_string_string" type="text" placeholder="@reboot /var/foo-bar test > /dev/null 2>&1"></p>
+                <p>Cron String
+                    <br><input id="cron_string_string" type="text" placeholder="@reboot /var/foo-bar test > /dev/null 2>&1" style="width:100%;">
+                </p>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
