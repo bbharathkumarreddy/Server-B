@@ -56,6 +56,14 @@ get_crontab_list(){
     echo $crontab_list;
 }
 
+get_cron_file(){
+    crontab -l >> $cron_file
+}
+
+set_cron_file(){
+    crontab $cron_file
+}
+
 get_whoami(){
     os=$(whoami)
     echo $os;
