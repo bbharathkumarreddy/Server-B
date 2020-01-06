@@ -261,10 +261,8 @@
                                     <td class="text-black pl-2">Value</td>
                                 </tr>
                                 <?php
-                                $get_cron_file = shell_exec($service . ' get_cron_file');
-                                echo $get_cron_each;
-                                $get_cron_each = explode("\n", $get_cron_file);
-                                print_r($get_cron_each);
+                                $getallKey = shell_exec($service . ' getallKey');
+                                $getallKey_split_line = explode("\n", $getallKey);
                                 foreach ($getallKey_split_line as $key) {
                                     $k = explode('=', $key);
                                     if ($k[0] == '') continue;
@@ -330,12 +328,15 @@
                 </div>
                 <div class="card-body">
                     <?php
-                    $crontab_list = shell_exec($service . ' get_crontab_list');
-                    $crontab_list_each = explode("\r\n", $crontab_list);
-                    foreach ($crontab_list_each as $cron) {
+                    $get_cron_file = shell_exec($service . ' get_cron_file');
+                    $get_cron_each = explode("\n", $get_cron_file);
+                    foreach ($get_cron_each as $key) {                                    
+                        if ($key == '') continue;
                         echo '<div class="row">
                         <div class="col-xl-12 col-md-12 mb-12 mb-0">
-                            <p class="mb-0">' . $cron . '</p>
+                            <a class="noline" >
+                                <p class="mb-0">' . $key . '</p>
+                            </a>                            
                         </div>
                     </div>
                     <hr class="mt-10">';
