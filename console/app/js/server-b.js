@@ -83,6 +83,7 @@ $(document).ready(function() {
             success: function(data) {
                 alert('Cron Added Successfully');
                 //location.reload();
+                $('#add_cron_modal').modal('hide');
             }
         });
     });
