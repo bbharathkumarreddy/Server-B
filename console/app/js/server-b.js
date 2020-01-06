@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $(document).on("click", "#add_cron_confirm", function() {
-        var cron_string_string = $(this).attr('cron_string_string')
+        var cron_string_string = $('#cron_string_string').val();
         if (!confirm('Do you want to add cron string \n' + cron_string_string)) return 0;
         if (cron_string_string == '') {
             alert('Cron String is mandatory');
