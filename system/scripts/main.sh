@@ -52,7 +52,7 @@ get_os(){
 }
 
 get_crontab_list(){
-    crontab_list=$(crontab -l)
+    crontab_list=$(crontab -e)
     echo $crontab_list;
 }
 
