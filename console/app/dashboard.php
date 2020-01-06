@@ -262,7 +262,7 @@
                                 </tr>
                                 <?php
                                 $get_cron_file = shell_exec($service . ' get_cron_file');
-                                
+                                echo $get_cron_each;
                                 $get_cron_each = explode("\n", $get_cron_file);
                                 print_r($get_cron_each);
                                 foreach ($getallKey_split_line as $key) {
