@@ -84,7 +84,7 @@ $(document).ready(function() {
                 alert('Cron Added Successfully');
                 $('#cron_string_string').val('');
                 $('#add_cron_modal').modal('hide');
-                location.reload();
+                //location.reload();
             }
         });
     });
