@@ -68,4 +68,22 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(document).on("click", "#add_cron_confirm", function() {
+        var cron_string_string = $(this).attr('cron_string_string')
+        if (!confirm('Do you want to add cron string \n' + cron_string_string)) return 0;
+        if (cron_string_string == '') {
+            alert('Cron String is mandatory');
+            return false;
+        }
+        $.ajax({
+            url: api_link + 'api_service.php?o=add_cron&cron_string=' + cron_string_string,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('Cron Added Successfully');
+                location.reload();
+            }
+        });
+    });
 });

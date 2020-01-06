@@ -324,7 +324,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="cron_manager">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_cron" data-toggle="modal" data-target="#cron_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add Cron</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_cron" data-toggle="modal" data-target="#add_cron_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add Cron</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
@@ -349,7 +349,7 @@
     <br><br>
 </div>
 
-<!-- Logout Modal-->
+<!-- Logpoint Modal-->
 <div class="modal fade" id="logpoint_modal" tabindex="-1" role="dialog" aria-labelledby="logpoint_modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -366,6 +366,27 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <button class="btn btn-success" type="button" id="add_file_confirm">Add File</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cron Modal-->
+<div class="modal fade" id="add_cron_modal" tabindex="-1" role="dialog" aria-labelledby="add_cron_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Cron</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Cron String: <input id="cron_string_string" type="text" placeholder="foo-bar"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" type="button" id="add_cron_confirm">Add Cron</button>
             </div>
         </div>
     </div>

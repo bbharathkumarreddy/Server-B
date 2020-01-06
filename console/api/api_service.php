@@ -59,6 +59,11 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' removeLogFile '.$file_name);
         echo '\n Server B =>File Added';
     }
+    else if ($o == 'add_cron') {
+        $cron_string=$_GET['cron_string'];
+        echo shell_exec($service.' add_cron '.$cron_string);
+        echo '\n Server B =>Cron Added Successully';
+    }
     else{
         echo 'Server - B No Operation found';
     }

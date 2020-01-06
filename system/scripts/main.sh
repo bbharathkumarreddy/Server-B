@@ -63,6 +63,12 @@ get_cron_file(){
     cat $cron_file
 }
 
+add_cron(){
+    cron_script=$1;
+    crontab -l | { cat; echo "${cron_script}"; } | crontab -
+    get_cron_file
+}
+
 set_cron_file(){
     crontab $cron_file
 }
