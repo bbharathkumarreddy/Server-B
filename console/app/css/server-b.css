@@ -48,6 +48,10 @@ kbd {
     margin-left: 10px !important;
 }
 
+.mt-min4 {
+    margin-top: -4px;
+}
+
 .ht-20 {
     height: 20px !important;
 }

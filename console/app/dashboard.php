@@ -126,7 +126,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="mt-0">';
+                                <hr class="mt-min4">';
                         }
                         ?>
                     </div>
