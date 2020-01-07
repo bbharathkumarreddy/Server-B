@@ -94,30 +94,32 @@
                     <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
                 </div>
                 <div class="card-body row">
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Start Server">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Start Server">
                         <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Shutdown Server">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Shutdown Server">
                         <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
                             <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Restart Server">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Restart Server">
                         <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
                             <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 1 Link from config">
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 1 Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
                             <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Ping 2 Link from config">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 2 Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
                             <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
                         </a>
                     </div>
-                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Hosting Link from config">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Hosting Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
                             <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
                         </a>
@@ -129,10 +131,16 @@
             <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr">&nbsp;&nbsp;enable</p>
+                    <?php 
+                    $ufw_status = shell_exec('sudo ufw status');
+                    if(!strpos($ufw_status,'inactive') !== false) $ufw_status='checked="true"';
+                    else $ufw_status='';
+                    ?>
                         <label class="switch fr">
-                            <input type="checkbox" style="" id="ufw_status_switch">
+                            <input type="checkbox" style="" id="ufw_status_switch" <?php echo $ufw_status; ?> >
                             <span class="slider round"></span>
-                        </label><p class="text-success fr">disable&nbsp;&nbsp;</p>
+                        </label>
+                        <p class="text-success fr">disable&nbsp;&nbsp;</p>
                     </h6>
                 </div>
                 <div class="card-body row">
