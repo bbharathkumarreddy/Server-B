@@ -227,6 +227,10 @@
                                     <td class="pl-2"><?php echo shell_exec($service . ' get_disk'); ?>GB</td>
                                 </tr>
                                 <tr>
+                                    <td class="text-black">MAC Adddress</td>
+                                    <td class="pl-2"><?php echo shell_exec($service . ' get_mac_address'); ?></td>
+                                </tr>
+                                <tr>
                                     <td class="text-black">PHP user</td>
                                     <td class="pl-2"><?php echo shell_exec($service . ' whoami'); ?></td>
                                 </tr>
@@ -285,7 +289,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a><small><a target="_blank" href="<?php echo $app_file_manager_link.'p='.$server_b_data.'&env=ace&edit=logpoint.sh'; ?>" class="fr noline mr-10 mt-10">Raw Listing File</a></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config File) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a><small><a target="_blank" href="<?php echo $app_file_manager_link.'p='.$server_b_data.'&env=ace&edit=logpoint.sh'; ?>" class="fr noline mr-10 mt-10">Raw Listing File</a></small></h6>
                 </div>
                 <div class="card-body">
                     <?php

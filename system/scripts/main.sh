@@ -48,6 +48,10 @@ get_mem(){
     echo $MEM_TOTAL;
 }
 
+get_mac_address(){
+    cat '/sys/class/net/*/address'
+}
+
 get_os(){
     os=$(. /etc/os-release; echo ${PRETTY_NAME/*, /})
     echo $os;
