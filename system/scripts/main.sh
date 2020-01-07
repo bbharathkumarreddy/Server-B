@@ -49,7 +49,7 @@ get_mem(){
 }
 
 get_mac_address(){
-    cat '/sys/class/net/*/address'
+    cat /sys/class/net/*/address
 }
 
 get_os(){
