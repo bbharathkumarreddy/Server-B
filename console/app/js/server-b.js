@@ -93,7 +93,7 @@ $(document).ready(function() {
             dataType: 'text',
             success: function(data) {
                 alert('Ubuntu Firewall Updated');
-                location.reload();
+                //location.reload();
             }
         });
     });
