@@ -98,7 +98,7 @@ $(document).ready(function() {
         });
     });
 
-    $(document).on("click", "#ufw_id_close", function() {
+    $(document).on("click", ".ufw_id_close", function() {
         let ufw_id = $(this).attr('ufw_id');
         if (!confirm('Do you want to delete UFW Firewall Rule ID:' + ufw_id)) return 0;
         $.ajax({
