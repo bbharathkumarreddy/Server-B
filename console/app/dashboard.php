@@ -324,7 +324,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="cron_manager">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a>&nbsp;&nbsp;&nbsp;<a href="<?php echo $app_link.'file-manager.php?p='.$server_b_data.'&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="update_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a><a href="<?php echo $app_link.'file-manager.php?p='.$server_b_data.'&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="update_cron_file">&nbsp;&nbsp;&nbsp;<i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
