@@ -56,6 +56,7 @@ get_os(){
 get_cron_file(){
     rm -rf $cron_file
     crontab -l >> $cron_file
+    crontab -l >> $temp_cron
     cat $cron_file
 }
 
