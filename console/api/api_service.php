@@ -66,7 +66,7 @@ if (isset($_GET['o'])) {
     else if ($o == 'publish_cron_file') {
         if($_GET['status'] == true) $status = 'enable';
         else if($_GET['status'] == false) $status = 'disable';
-        echo shell_exec('ufw --force '+$status);
+        echo shell_exec('sudo ufw --force '+$status);
         echo '\n Server B =>ufw firewall Successully';
     }
     else{
