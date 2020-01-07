@@ -63,8 +63,8 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' publish_cron_file');
         echo '\n Server B =>Cron Added Successully';
     }
-    else if ($o == 'update_ufw_status') {
-        if($_GET['status'] == true) $status = 'enable';
+    else if ($o == 'update_ufw_status') { 
+        if(strval($_GET['status']) == 'true') $status = 'enable';
         else $status = 'disable';
         echo $status;
         echo shell_exec('sudo ufw --force '.$status);
