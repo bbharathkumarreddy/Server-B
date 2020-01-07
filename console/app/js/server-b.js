@@ -81,4 +81,20 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(document).on("change", "#ufw_status_switch", function() {
+        let ufw_status = $('#ufw_status_switch').is(":checked");
+        let message = 'Do you want disable ubuntu firewall.';
+        if (ufw_status) message = 'Do you want enable ubuntu firewall.';
+        if (!confirm(message)) return 0;
+        $.ajax({
+            url: api_link + 'api_service.php?o=ufw_status&status=' + ufw_status,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('Ubuntu Firewall Updated');
+                location.reload();
+            }
+        });
+    });
 });

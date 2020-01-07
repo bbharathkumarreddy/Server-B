@@ -63,6 +63,12 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' publish_cron_file');
         echo '\n Server B =>Cron Added Successully';
     }
+    else if ($o == 'publish_cron_file') {
+        if($_GET['status'] == true) $status = 'enable';
+        else if($_GET['status'] == false) $status = 'disable';
+        echo shell_exec('ufw --force '+$status);
+        echo '\n Server B =>ufw firewall Successully';
+    }
     else{
         echo 'Server - B No Operation found';
     }
