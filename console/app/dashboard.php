@@ -147,8 +147,16 @@
                     <div class="col-xs-3 col-md-2 md-2 pointer">
                         <?php
                         if ($ufw_status != '') {
-                            $ufw_status_arr = explode("\n",$ufw_status_string);
-                            print_r($ufw_status_arr);   
+                            $ufw_status_arr = explode("\n", $ufw_status_string);
+                            foreach ($ufw_status_arr as $li) {
+                                if ($li[0] != '[') continue;
+                                echo '<div class="row">
+                                <div class="col-xs-12 col-md-12 md-12 ht-35 pointer">
+                                ' . $li . '
+                                </div>
+                                </div>
+                                <hr class="mt-0">';
+                            }
                         }
                         ?>
                     </div>
