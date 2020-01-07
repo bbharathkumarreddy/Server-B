@@ -66,6 +66,7 @@ if (isset($_GET['o'])) {
     else if ($o == 'update_ufw_status') {
         if($_GET['status'] == true) $status = 'enable';
         else $status = 'disable';
+        echo $status;
         echo shell_exec('sudo ufw --force '.$status);
         echo '\n Server B =>ufw firewall Successully';
     }else if ($o == 'remove_ufw_rule') {
