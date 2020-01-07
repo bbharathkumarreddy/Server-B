@@ -213,12 +213,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col-xl-5 col-md-5 mb-5">
-            <div class="card shadow mb-12">
+            <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd>uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>lshw</kbd></small></h6>
                 </div>
@@ -296,7 +291,7 @@
                 </div>
             </div>
             <br>
-            <div class="card shadow mb-12" id="config">
+            <div class="card shadow" id="config">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
                 </div>
@@ -326,6 +321,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-xl-5 col-md-5 mb-5">
+
         </div>
     </div>
     <br><br>
