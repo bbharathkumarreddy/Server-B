@@ -210,7 +210,7 @@
                                     }
                                     else{
                                         echo '<tr>
-                                            <td><b>UFW Disabled</b></td>
+                                            <td><b>UFW Firewall Disabled</b></td>
                                         </tr>';
                                     }
                                     ?>
