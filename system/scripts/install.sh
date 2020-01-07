@@ -37,6 +37,7 @@ shell_in_box_access_port='8887'
 shell_in_box_port='8888'
 server_b_auth_key='a'
 cron_file='/var/www/server-b-data/cron'
+temp_cron='/var/www/server-b-data/cron_temp'
 alt_user='ubu'
 alt_pwd='ppp'
 update_date=''
@@ -90,6 +91,7 @@ install(){
     echo hosting_link"='"$hosting_link"'" >> $server_b_loc_config_path
     echo domain"='"$domain"'" >> $server_b_loc_config_path
     echo cron_file"='"$cron_file"'" >> $server_b_loc_config_path
+    echo temp_cron"='"$temp_cron"'" >> $server_b_loc_config_path
     source $server_b_loc_path'system/scripts/main.sh'
     source $server_b_config_path
 
