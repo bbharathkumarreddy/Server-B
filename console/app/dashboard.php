@@ -129,9 +129,10 @@
             <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ufw enable</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ufw disable</kbd></small>
-                        <div class="custom-control custom-switch fr">
-                            <input type="checkbox" class="custom-control-input" id="ufw_status_switch">
-                        </div>
+                        <label class="switch fr">
+                            <input type="checkbox" style="" id="ufw_status_switch">
+                            <span class="slider round"></span>
+                        </label>
                     </h6>
                 </div>
                 <div class="card-body row">
