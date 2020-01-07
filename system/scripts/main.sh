@@ -63,6 +63,8 @@ get_cron_file(){
 
 publish_cron_file(){
     crontab $temp_cron
+    rm -rf $cron_file
+    rm -rf $temp_cron
     crontab -l >> $cron_file
     crontab -l >> $temp_cron
     echo 'cron published'
