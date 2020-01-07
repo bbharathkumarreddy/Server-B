@@ -68,6 +68,10 @@ if (isset($_GET['o'])) {
         else if($_GET['status'] == false) $status = 'disable';
         echo shell_exec('sudo ufw --force '.$status);
         echo '\n Server B =>ufw firewall Successully';
+    }else if ($o == 'remove_ufw_rule') {
+        $ufw_id= $_GET['id'];
+        echo shell_exec('sudo ufw delete '.$ufw_id);
+        echo '\n Server B =>ufw firewall updated Successully';
     }
     else{
         echo 'Server - B No Operation found';
