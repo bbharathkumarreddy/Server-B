@@ -60,6 +60,7 @@ get_cron_file(){
 
 publish_cron_file(){
     crontab ${cron_file}
+    echo 'cron published'
 }
 
 get_whoami(){
