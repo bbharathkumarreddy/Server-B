@@ -174,7 +174,7 @@
             <br>
             <div class="card shadow" id="ufw_firewall">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
+                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall <small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
                         <?php
                         $ufw_status_string = shell_exec('ufw status numbered');
                         if (!strpos($ufw_status_string, 'inactive') !== false) $ufw_status = 'checked="true"';
@@ -199,12 +199,19 @@
                                             if ($li[0] != '[') continue;
                                             $ufw_single = explode(']', $li);
                                             $ufw_no = $ufw_single[0] . ']';
+                                            $ufw_ext_no = str_replace('[','',$ufw_no);
+                                            $ufw_id = trim(str_replace(']','',$ufw_ext_no));
                                             $ufw_each = $ufw_single[1];
                                             echo '<tr>
                                                 <td class="text-black">' . $ufw_no . '</td>
-                                                <td class="pl-2">' . $ufw_each . '</td>
+                                                <td class="pl-2">' . $ufw_each . '<span title="Delete Rule" class="ufw_id_close fr" ufw_id="'.$ufw_id.'" >x</span></td>
                                              </tr>';
                                         }
+                                    }
+                                    else{
+                                        echo '<tr>
+                                            <td><b>UFW Disabled</b></td>
+                                        </tr>'
                                     }
                                     ?>
                                 </table>
@@ -213,6 +220,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd>uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>lshw</kbd></small></h6>
