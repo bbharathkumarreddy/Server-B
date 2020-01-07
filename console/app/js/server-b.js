@@ -77,7 +77,7 @@ $(document).ready(function() {
             dataType: 'text',
             success: function(data) {
                 alert('Cron Published Successfully');
-                //location.reload();
+                location.reload();
             }
         });
     });
