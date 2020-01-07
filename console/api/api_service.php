@@ -59,10 +59,8 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' removeLogFile '.$file_name);
         echo '\n Server B =>File Added';
     }
-    else if ($o == 'add_cron') {
-        $cron_string=base64_decode($_GET['cron_string']);
-        echo shell_exec("echo '".$cron_string."' >> /var/www/server-b-data/cron");
-        echo shell_exec('crontab /var/www/server-b-data/cron');
+    else if ($o == 'publish_cron_file') {
+        echo shell_exec($service.' publish_cron_file');
         echo '\n Server B =>Cron Added Successully';
     }
     else{

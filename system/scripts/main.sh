@@ -52,24 +52,14 @@ get_os(){
     echo $os;
 }
 
-get_crontab_list(){
-    crontab_list=$(crontab -e)
-    echo $crontab_list;
-}
-
 get_cron_file(){
     rm -rf $cron_file
     crontab -l >> $cron_file
     cat $cron_file
 }
 
-add_cron(){
-    cron_script=$1;
-    echo $cron_script >> $cron_file
-}
-
-set_cron_file(){
-    crontab $cron_file
+publish_cron_file(){
+    crontab ${cron_file}
 }
 
 get_whoami(){
