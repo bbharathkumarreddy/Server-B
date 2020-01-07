@@ -128,11 +128,11 @@
         <div class="col-xl-6 col-md-6 mb-6" id="ufw_firewall">
             <div class="card shadow">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;enable&nbsp;
+                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr">disable</p>
                         <label class="switch fr">
                             <input type="checkbox" style="" id="ufw_status_switch">
                             <span class="slider round"></span>
-                        </label>disable
+                        </label><p class="text-success fr">enable</p>
                     </h6>
                 </div>
                 <div class="card-body row">
