@@ -136,37 +136,37 @@
         <div class="col-xl-5 col-md-5 mb-5">
             <div class="card shadow" id="server_control">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Start Server">
-                        <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
+                        <h6><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h6>
                     </div>
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Shutdown Server">
                         <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
-                            <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
+                            <h6><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h6>
                         </a>
                     </div>
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Restart Server">
                         <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
-                            <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
+                            <h6><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h6>
                         </a>
                     </div>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 1 Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
-                            <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
+                            <h6><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h6>
                         </a>
                     </div>
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 2 Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
-                            <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
+                            <h6><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h6>
                         </a>
                     </div>
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Hosting Link from config">
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
-                            <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
+                            <h6><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h6>
                         </a>
                     </div>
                 </div>
