@@ -130,35 +130,42 @@
         <div class="col-xl-6 col-md-6 mb-6" id="ufw_firewall">
             <div class="card shadow">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr">&nbsp;&nbsp;enable</p>
+                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
                         <?php
                         $ufw_status_string = shell_exec('ufw status numbered');
                         if (!strpos($ufw_status_string, 'inactive') !== false) $ufw_status = 'checked="true"';
                         else $ufw_status = '';
                         ?>
-                        <label class="switch fr">
+                        <label class="switch fr m-0">
                             <input type="checkbox" style="" id="ufw_status_switch" <?php echo $ufw_status; ?>>
                             <span class="slider round"></span>
                         </label>
-                        <p class="text-success fr">disable&nbsp;&nbsp;</p>
+                        <p class="text-success fr m-0">disable&nbsp;&nbsp;</p>
                     </h6>
                 </div>
                 <div class="card-body row">
-                    <div class="col-xs-3 col-md-2 md-2 pointer">
-                        <?php
-                        if ($ufw_status != '') {
-                            $ufw_status_arr = explode("\n", $ufw_status_string);
-                            foreach ($ufw_status_arr as $li) {
-                                if ($li[0] != '[') continue;
-                                echo '<div class="row">
-                                <div class="col-xs-12 col-md-12 md-12 ht-35 pointer">
-                                ' . $li . '
-                                </div>
-                                </div>
-                                <hr class="mt-0">';
-                            }
-                        }
-                        ?>
+                    <div class="col-xs-12 col-md-12 md-12 pointer">
+                        <div class="col-xs-12 col-md-12 md-12">
+                            <small>
+                                <table border="1px solid #797b85;" style="width: 100%;">
+                                <?php
+                                if ($ufw_status != '') {
+                                    $ufw_status_arr = explode("\n", $ufw_status_string);
+                                    foreach ($ufw_status_arr as $li) {
+                                        if ($li[0] != '[') continue;
+                                        $ufw_single = explode(']',$li);
+                                        $ufw_no = $ufw_single[0].']';
+                                        $ufw_each = $ufw_single[1];
+                                        echo '<tr>
+                                                <td class="text-black">'.$ufw_no.'</td>
+                                                <td class="pl-2">'.$ufw_each.'</td>
+                                             </tr>';
+                                        }
+                                }
+                                ?>
+                                </table>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
