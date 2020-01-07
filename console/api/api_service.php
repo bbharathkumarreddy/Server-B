@@ -70,7 +70,7 @@ if (isset($_GET['o'])) {
         echo '\n Server B =>ufw firewall Successully';
     }else if ($o == 'remove_ufw_rule') {
         $ufw_id= $_GET['id'];
-        echo shell_exec('sudo ufw delete '.$ufw_id);
+        echo shell_exec('sudo ufw --force delete '.$ufw_id);
         echo '\n Server B =>ufw firewall updated Successully';
     }
     else{
