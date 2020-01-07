@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $(document).on("click", "#publish_cron_file", function() {
-        if (!confirm('Do you want to update cron from file')) return 0;
+        if (!confirm('Do you want to publish cron')) return 0;
         $.ajax({
             url: api_link + 'api_service.php?o=publish_cron_file',
             type: 'GET',
