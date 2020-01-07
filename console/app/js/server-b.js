@@ -100,7 +100,8 @@ $(document).ready(function() {
 
     $(document).on("click", ".ufw_id_close", function() {
         let ufw_id = $(this).attr('ufw_id');
-        if (!confirm('Do you want to delete UFW Firewall Rule ID:' + ufw_id)) return 0;
+        let value = $(this).attr('value');
+        if (!confirm('Do you want to delete UFW Firewall Rule ID:' + ufw_id + '\n' + value)) return 0;
         $.ajax({
             url: api_link + 'api_service.php?o=remove_ufw_rule&id=' + ufw_id,
             type: 'GET',

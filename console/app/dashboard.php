@@ -204,7 +204,7 @@
                                             $ufw_each = $ufw_single[1];
                                             echo '<tr>
                                                 <td class="text-black">' . $ufw_no . '</td>
-                                                <td class="pl-2">' . $ufw_each . '<span title="Delete Rule" class="ufw_id_close fr fs-15 text-danger" ufw_id="'.$ufw_id.'" >x</span></td>
+                                                <td class="pl-2">' . $ufw_each . '<span title="Delete Rule" class="ufw_id_close fr fs-15 text-danger" value="' . $ufw_each . '" ufw_id="'.$ufw_id.'" >x</span></td>
                                              </tr>';
                                         }
                                     }
