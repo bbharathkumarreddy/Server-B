@@ -325,12 +325,6 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-5 col-md-5 mb-5">
-
-        </div>
-    </div>
-    <br><br>
-    <div class="row">
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
