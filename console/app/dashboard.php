@@ -88,8 +88,8 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-12 col-md-12 mb-12" id="server_control">
-            <div class="card shadow mb-12">
+        <div class="col-xl-6 col-md-6 mb-6" id="server_control">
+            <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
                 </div>
@@ -121,6 +121,22 @@
                         <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
                             <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-6 mb-6" id="ufw_firewall">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ufw enable</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ufw disable</kbd></small>
+                        <div class="custom-control custom-switch fr">
+                            <input type="checkbox" class="custom-control-input" id="ufw_status_switch">
+                        </div>
+                    </h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-3 col-md-2 md-2 pointer" title="Start Server">
+
                     </div>
                 </div>
             </div>
@@ -289,7 +305,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="log_point">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config File) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a><small><a target="_blank" href="<?php echo $app_file_manager_link.'p='.$server_b_data.'&env=ace&edit=logpoint.sh'; ?>" class="fr noline mr-10 mt-10">Raw Listing File</a></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Easy Access Point (Log & Config File) &nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getLogFile</kbd></small>&nbsp;&nbsp;&nbsp;<a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal"><i class="fas fa-plus fa-sm text-white-50"></i> Add File</a><small><a target="_blank" href="<?php echo $app_file_manager_link . 'p=' . $server_b_data . '&env=ace&edit=logpoint.sh'; ?>" class="fr noline mr-10 mt-10">Raw Listing File</a></small></h6>
                 </div>
                 <div class="card-body">
                     <?php
@@ -328,13 +344,13 @@
         <div class="col-xl-12 col-md-12 mb-12" id="cron_manager">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a><a href="<?php echo $app_file_manager_link.'p='.$server_b_data.'&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-10" id="update_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a><a href="<?php echo $app_file_manager_link . 'p=' . $server_b_data . '&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-10" id="update_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
                     $get_cron_file = shell_exec($service . ' get_cron_file');
                     $get_cron_each = explode("\n", $get_cron_file);
-                    foreach ($get_cron_each as $key) {                                    
+                    foreach ($get_cron_each as $key) {
                         if ($key == '') continue;
                         echo '<div class="row">
                         <div class="col-xl-12 col-md-12 mb-12 mb-0">
