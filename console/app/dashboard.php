@@ -88,91 +88,6 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-xl-6 col-md-6 mb-6" id="server_control">
-            <div class="card shadow">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
-                </div>
-                <div class="card-body row">
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Start Server">
-                        <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
-                    </div>
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Shutdown Server">
-                        <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
-                            <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
-                        </a>
-                    </div>
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Restart Server">
-                        <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
-                            <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="card-body row">
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 1 Link from config">
-                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
-                            <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
-                        </a>
-                    </div>
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 2 Link from config">
-                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
-                            <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
-                        </a>
-                    </div>
-                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Hosting Link from config">
-                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
-                            <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-6 col-md-6 mb-6" id="ufw_firewall">
-            <div class="card shadow">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
-                        <?php
-                        $ufw_status_string = shell_exec('ufw status numbered');
-                        if (!strpos($ufw_status_string, 'inactive') !== false) $ufw_status = 'checked="true"';
-                        else $ufw_status = '';
-                        ?>
-                        <label class="switch fr m-0">
-                            <input type="checkbox" style="" id="ufw_status_switch" <?php echo $ufw_status; ?>>
-                            <span class="slider round"></span>
-                        </label>
-                        <p class="text-success fr m-0">disable&nbsp;&nbsp;</p>
-                    </h6>
-                </div>
-                <div class="card-body row">
-                    <div class="col-xs-12 col-md-12 md-12 pointer">
-                        <div class="col-xs-12 col-md-12 md-12">
-                            <small>
-                                <table border="1px solid #797b85;" style="width: 100%;">
-                                <?php
-                                if ($ufw_status != '') {
-                                    $ufw_status_arr = explode("\n", $ufw_status_string);
-                                    foreach ($ufw_status_arr as $li) {
-                                        if ($li[0] != '[') continue;
-                                        $ufw_single = explode(']',$li);
-                                        $ufw_no = $ufw_single[0].']';
-                                        $ufw_each = $ufw_single[1];
-                                        echo '<tr>
-                                                <td class="text-black">'.$ufw_no.'</td>
-                                                <td class="pl-2">'.$ufw_each.'</td>
-                                             </tr>';
-                                        }
-                                }
-                                ?>
-                                </table>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <div class="row">
         <div class="col-xl-7 col-md-7 mb-7">
             <div class="card shadow mb-12" id="services">
                 <div class="card-header py-3">
@@ -218,6 +133,90 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-5 col-md-5 mb-5">
+            <div class="card shadow" id="server_control">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping 127.0.0.1</kbd></small></h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Start Server">
+                        <h5><i class="fas fa-play text-success"></i>&nbsp;&nbsp;<span>Start</span></h5>
+                    </div>
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Shutdown Server">
+                        <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=shutdown'; ?>">
+                            <h5><i class="fas fa-stop text-danger"></i>&nbsp;&nbsp;<span>Shutdown</span></h5>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Restart Server">
+                        <a class="noline" target="_blank" href="<?php echo $api_link . 'api_service.php?o=restart'; ?>">
+                            <h5><i class="fas fa-redo-alt text-info"></i>&nbsp;&nbsp;<span>Restart</span></h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 1 Link from config">
+                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_1_link'); ?>">
+                            <h5><i class="fas fa-table-tennis text-success"></i>&nbsp;&nbsp;<span>Ping 1</span></h5>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Ping 2 Link from config">
+                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' ping_2_link'); ?>">
+                            <h5><i class="fas fa-table-tennis text-dark"></i>&nbsp;&nbsp;<span>Ping 2</span></h5>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-md-4 md-4 pointer" title="Hosting Link from config">
+                        <a class="noline" target="_blank" href="<?php echo shell_exec($getKey . ' hosting_link'); ?>">
+                            <h5><i class="fas fa-server text-primary"></i>&nbsp;&nbsp;<span>Hosting</span></h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card shadow" id="ufw_firewall">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall &nbsp;&nbsp;&nbsp;<small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
+                        <?php
+                        $ufw_status_string = shell_exec('ufw status numbered');
+                        if (!strpos($ufw_status_string, 'inactive') !== false) $ufw_status = 'checked="true"';
+                        else $ufw_status = '';
+                        ?>
+                        <label class="switch fr m-0">
+                            <input type="checkbox" style="" id="ufw_status_switch" <?php echo $ufw_status; ?>>
+                            <span class="slider round"></span>
+                        </label>
+                        <p class="text-success fr m-0">disable&nbsp;&nbsp;</p>
+                    </h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-12 col-md-12 md-12 pointer">
+                        <div class="col-xs-12 col-md-12 md-12">
+                            <small>
+                                <table border="1px solid #797b85;" style="width: 100%;">
+                                    <?php
+                                    if ($ufw_status != '') {
+                                        $ufw_status_arr = explode("\n", $ufw_status_string);
+                                        foreach ($ufw_status_arr as $li) {
+                                            if ($li[0] != '[') continue;
+                                            $ufw_single = explode(']', $li);
+                                            $ufw_no = $ufw_single[0] . ']';
+                                            $ufw_each = $ufw_single[1];
+                                            echo '<tr>
+                                                <td class="text-black">' . $ufw_no . '</td>
+                                                <td class="pl-2">' . $ufw_each . '</td>
+                                             </tr>';
+                                        }
+                                    }
+                                    ?>
+                                </table>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
         <div class="col-xl-5 col-md-5 mb-5">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
