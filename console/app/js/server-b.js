@@ -88,7 +88,7 @@ $(document).ready(function() {
         if (ufw_status) message = 'Do you want enable ubuntu firewall.';
         if (!confirm(message)) return 0;
         $.ajax({
-            url: api_link + 'api_service.php?o=ufw_status&status=' + ufw_status,
+            url: api_link + 'api_service.php?o=update_ufw_status&status=' + ufw_status,
             type: 'GET',
             dataType: 'text',
             success: function(data) {
