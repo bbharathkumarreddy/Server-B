@@ -211,7 +211,7 @@
                                     else{
                                         echo '<tr>
                                             <td><b>UFW Disabled</b></td>
-                                        </tr>'
+                                        </tr>';
                                     }
                                     ?>
                                 </table>
