@@ -195,7 +195,7 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12 pointer">
                         <div class="col-xs-12 col-md-12 md-12">
-                        <a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_ufw_rule_modal" data-toggle="modal" data-target="#add_ufw_rule_modal" style="zoom: 0.7;"><i class="fas fa-plus fa-sm text-white-50"></i> Add Rule</a>
+                            <a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_ufw_rule_open_btn" data-toggle="modal" data-target="#add_ufw_rule_modal" style="zoom: 0.7;"><i class="fas fa-plus fa-sm text-white-50"></i> Add Rule</a>
                             <small>
                                 <table border="1px solid #797b85;" style="width: 100%;">
                                     <?php
@@ -438,11 +438,17 @@
                 </button>
             </div>
             <div class="modal-body">
-                
+               
+                <select id="ufw_inp_rule" style="height: 31px;">
+                    <option value="allow" selected>Allow</option>
+                    <option value="deny">Deny</option>
+                </select>
+                <input type="text" id="ufw_inp_ip" value="" placeholder="IP Address / Subnet">
+                <input type="number" id="ufw_inp_port" value="" placeholder="Port" min="1" max="65536">
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <button class="btn btn-success" type="button" id="add_file_confirm">Add Rule</button>
+                <button class="btn btn-success" type="button" id="add_ufw_confirm">Add Rule</button>
             </div>
         </div>
     </div>

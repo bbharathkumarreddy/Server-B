@@ -73,6 +73,13 @@ if (isset($_GET['o'])) {
         echo shell_exec('sudo ufw --force delete '.$ufw_id);
         echo '\n Server B =>ufw firewall updated Successully';
     }
+    else if ($o == 'add_ufw_rule') {
+        $ufw_string= $_GET['rule'];
+        $bash_string = 'sudo ufw --force '.$ufw_string;
+        echo $bash_string;
+        echo shell_exec($bash_string);
+        echo '\n Server B =>ufw firewall updated Successully';
+    }
     else{
         echo 'Server - B No Operation found';
     }

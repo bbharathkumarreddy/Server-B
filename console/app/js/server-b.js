@@ -112,4 +112,27 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(document).on("click", "#add_ufw_confirm", function() {
+        let ufw_inp_rule = $.trim($('#ufw_inp_rule').val());
+        let ufw_inp_ip = $.trim($('#ufw_inp_ip').val());
+        let ufw_inp_port = $.trim($('#ufw_inp_port').val());
+        if (ufw_inp_ip == '' && ufw_inp_port == '') { alert('IP address or Port is mandatory'); return 0; }
+        if (!confirm('Do you want to Add UFW Firewall Rule ')) return 0;
+
+        let ufw_string = ufw_inp_rule;
+        if (ufw_inp_ip != '' && ufw_inp_port == '') ufw_string = ufw_string + ' from ' + ufw_inp_ip;
+        if (ufw_inp_ip == '' && ufw_inp_port != '') ufw_string = ufw_string + ' ' + ufw_inp_port;
+        if (ufw_inp_ip != '' && ufw_inp_port != '') ufw_string = ufw_string + ' ' + ufw_inp_ip + ' to any port ' + ufw_inp_port;
+
+        $.ajax({
+            url: api_link + 'api_service.php?o=add_ufw_rule&rule=' + ufw_string,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                alert('UFW Ubuntu Firewall Updated');
+                //location.reload();
+            }
+        });
+    });
 });
