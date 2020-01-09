@@ -196,6 +196,7 @@
                     <div class="col-xs-12 col-md-12 md-12 pointer">
                         <div class="col-xs-12 col-md-12 md-12">
                             <a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_ufw_rule_open_btn" data-toggle="modal" data-target="#add_ufw_rule_modal" style="zoom: 0.7;"><i class="fas fa-plus fa-sm text-white-50"></i> Add Rule</a>
+                            <br>
                             <small>
                                 <table border="1px solid #797b85;" style="width: 100%;">
                                     <?php
