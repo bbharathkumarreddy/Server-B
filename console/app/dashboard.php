@@ -3,14 +3,15 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-0">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a href="<?php echo $app_link; ?>file-manager.php" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa fa-file-code fa-sm text-white-50"></i> File Manager</a>
-    
-        <a href="<?php echo $app_link; ?>ssh.php" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa fa-greater-than fa-sm text-white-50"></i> SSH</a>
-    
     </div>
-
+    <div class="row mb-4">
+        <div class="col-xl-12 col-md-12 mb-12 fr">
+            <a href="<?php echo $app_link; ?>file-manager.php" class="btn btn-sm btn-info shadow-sm fr"><i class="fa fa-file-code fa-sm text-white-50"></i> File Manager</a>
+            <a href="<?php echo $app_link; ?>ssh.php" class="btn btn-sm btn-success shadow-sm fr mr-10"><i class="fas fa fa-greater-than fa-sm text-white-50"></i> SSH</a>
+        </div>
+    </div>
     <!-- Content Row -->
     <div class="row">
         <div class="col-xl-12 col-md-12 mb-12" id="server_moniter">
@@ -203,16 +204,15 @@
                                             if ($li[0] != '[') continue;
                                             $ufw_single = explode(']', $li);
                                             $ufw_no = $ufw_single[0] . ']';
-                                            $ufw_ext_no = str_replace('[','',$ufw_no);
-                                            $ufw_id = trim(str_replace(']','',$ufw_ext_no));
+                                            $ufw_ext_no = str_replace('[', '', $ufw_no);
+                                            $ufw_id = trim(str_replace(']', '', $ufw_ext_no));
                                             $ufw_each = $ufw_single[1];
                                             echo '<tr>
                                                 <td class="text-black">' . $ufw_no . '</td>
-                                                <td class="pl-2">' . $ufw_each . '<span title="Delete Rule" class="ufw_id_close fr fs-15 text-danger" value="' . $ufw_each . '" ufw_id="'.$ufw_id.'" >x</span></td>
+                                                <td class="pl-2">' . $ufw_each . '<span title="Delete Rule" class="ufw_id_close fr fs-15 text-danger" value="' . $ufw_each . '" ufw_id="' . $ufw_id . '" >x</span></td>
                                              </tr>';
                                         }
-                                    }
-                                    else{
+                                    } else {
                                         echo '<tr>
                                             <td><b>UFW Firewall Disabled</b></td>
                                         </tr>';
