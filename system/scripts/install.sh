@@ -95,6 +95,11 @@ install(){
     source $server_b_loc_path'system/scripts/main.sh'
     source $server_b_config_path
 
+    ufw allow $server_b_port
+    ufw allow $shell_in_box_access_port
+    ufw allow $ssh_port
+    ufw allow 80
+    ufw allow 443
     load_ip
     load_os
     update_upgrade
