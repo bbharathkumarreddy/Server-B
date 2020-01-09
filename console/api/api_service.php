@@ -75,7 +75,7 @@ if (isset($_GET['o'])) {
     }
     else if ($o == 'add_ufw_rule') {
         $ufw_string= $_GET['rule'];
-        $bash_string = 'sudo ufw --force '.$ufw_string;
+        $bash_string = 'sudo ufw '.$ufw_string;
         echo $bash_string;
         echo shell_exec($bash_string);
         echo '\n Server B =>ufw firewall updated Successully';
