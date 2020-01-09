@@ -195,7 +195,7 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12 pointer">
                         <div class="col-xs-12 col-md-12 md-12">
-                        <a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_log_point" data-toggle="modal" data-target="#logpoint_modal" style="zoom: 0.7;"><i class="fas fa-plus fa-sm text-white-50"></i> Add Rule</a>
+                        <a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="add_ufw_rule_modal" data-toggle="modal" data-target="#add_ufw_rule_modal" style="zoom: 0.7;"><i class="fas fa-plus fa-sm text-white-50"></i> Add Rule</a>
                             <small>
                                 <table border="1px solid #797b85;" style="width: 100%;">
                                     <?php
@@ -427,6 +427,26 @@
     </div>
 </div>
 
+<!-- UFW RULE Modal-->
+<div class="modal fade" id="add_ufw_rule_modal" tabindex="-1" role="dialog" aria-labelledby="add_ufw_rule_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">UFW Firewall Rule</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" type="button" id="add_file_confirm">Add Rule</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>
