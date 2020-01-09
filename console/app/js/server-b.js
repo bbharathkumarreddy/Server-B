@@ -123,7 +123,7 @@ $(document).ready(function() {
         let ufw_string = ufw_inp_rule;
         if (ufw_inp_ip != '' && ufw_inp_port == '') ufw_string = ufw_string + ' from ' + ufw_inp_ip;
         if (ufw_inp_ip == '' && ufw_inp_port != '') ufw_string = ufw_string + ' ' + ufw_inp_port;
-        if (ufw_inp_ip != '' && ufw_inp_port != '') ufw_string = ufw_string + ' ' + ufw_inp_ip + ' to any port ' + ufw_inp_port;
+        if (ufw_inp_ip != '' && ufw_inp_port != '') ufw_string = ufw_string + ' from ' + ufw_inp_ip + ' to any port ' + ufw_inp_port;
 
         $.ajax({
             url: api_link + 'api_service.php?o=add_ufw_rule&rule=' + ufw_string,
