@@ -131,7 +131,7 @@ $(document).ready(function() {
             dataType: 'text',
             success: function(data) {
                 alert('UFW Ubuntu Firewall Updated');
-                //location.reload();
+                location.reload();
             }
         });
     });
