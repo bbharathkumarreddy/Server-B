@@ -32,7 +32,7 @@
                         </div>
                         <div>
                             <p class="text-dark mb-0">Get amount of free RAM space in server</p>
-                            <h6><small><kbd class="exe">free</kbd></small><small><kbd class="exe">free -m</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
+                            <h6><small><kbd class="exe">free</kbd></small><small>&nbsp;&nbsp;&nbsp;<kbd class="exe">free -m</kbd></small></h6>
                             <hr>
                         </div>
                     </div>
