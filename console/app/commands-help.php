@@ -22,7 +22,17 @@
                         </div>
                         <div>
                             <p class="text-dark mb-0">Creates a folder</p>
-                            <h6><small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>htop</kbd></small></h6>
+                            <h6><small><kbd>mkdir /foo/bar/name</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0">Creates a empty file</p>
+                            <h6><small><kbd>touch /foo/bar/name</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0">Get amount of free RAM space in server</p>
+                            <h6><small><kbd class="exe">free</kbd></small><small><kbd class="exe">free -m</kbd></small>&nbsp;&nbsp;&nbsp;</h6>
                             <hr>
                         </div>
                     </div>

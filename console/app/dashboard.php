@@ -17,7 +17,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="server_moniter">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>free -m</kbd></small><small class="fr">Refresh Time:<?php echo $dashboard_refresh / 1000; ?>s</small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><a href="#" class="btn btn-circle btn-sm btn-status-success"></a> Server Monitor &nbsp;&nbsp;&nbsp;<small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">free -m</kbd></small><small class="fr">Refresh Time:<?php echo $dashboard_refresh / 1000; ?>s</small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-3 col-md-2 md-2">
@@ -96,7 +96,7 @@
         <div class="col-xl-7 col-md-7 mb-7">
             <div class="card shadow mb-12" id="services">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Services&nbsp;&nbsp;&nbsp;<small><kbd>systemctl service status</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Services&nbsp;&nbsp;&nbsp;<small><kbd class="exe">systemctl service status</kbd></small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
@@ -141,7 +141,7 @@
         <div class="col-xl-5 col-md-5 mb-5">
             <div class="card shadow" id="server_control">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd>shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>reboot now</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Server Control &nbsp;&nbsp;&nbsp;<small><kbd class="exe">shutdown -h now</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">reboot now</kbd></small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-4 col-md-4 md-4 pointer" title="Start Server">
@@ -179,7 +179,7 @@
             <br>
             <div class="card shadow" id="ufw_firewall">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall <small><kbd>ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
+                    <h6 class="m-0 font-weight-bold text-primary">UFW Firewall <small><kbd class="exe">ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<p class="text-success fr m-0">&nbsp;&nbsp;enable</p>
                         <?php
                         $ufw_status_string = shell_exec('ufw status numbered');
                         if (!strpos($ufw_status_string, 'inactive') !== false) $ufw_status = 'checked="true"';
@@ -228,7 +228,7 @@
             <br>
             <div class="card shadow">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd>uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>lshw</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd class="exe">uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">lshw</kbd></small></h6>
                 </div>
                 <div class="card-body row" id="info">
                     <div class="col-xs-12 col-md-12 md-12">
@@ -306,7 +306,7 @@
             <br>
             <div class="card shadow" id="config">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd>bash $server_b getallKey</kbd></small></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Config&nbsp;&nbsp;&nbsp;<small><kbd class="exe">bash $server_b getallKey</kbd></small></h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
@@ -380,7 +380,7 @@
         <div class="col-xl-12 col-md-12 mb-12" id="cron_manager">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd>crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a><a href="<?php echo $app_file_manager_link . 'p=' . $server_b_data . '&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-10" id="update_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Cron Manager&nbsp;&nbsp;&nbsp;<small><kbd class="exe">crontab -l</kbd></small><a href="#" class="fr d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="publish_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 2 Publish Cron File</a><a href="<?php echo $app_file_manager_link . 'p=' . $server_b_data . '&env=ace&edit=temp_cron'; ?>" target="_blank" class="fr d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-10" id="update_cron_file"><i class="fas fa-plus fa-sm text-white-50"></i> Step 1 Update Cron File</a></h6>
                 </div>
                 <div class="card-body">
                     <?php
