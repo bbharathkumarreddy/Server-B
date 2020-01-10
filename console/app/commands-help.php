@@ -16,7 +16,7 @@
                 <div class="card-body row">
                     <div class="col-xl-12 col-md-12 mb-12">
                         <p class="text-dark mb-0">Gives current process info</p>
-                        <h6><small><kbd cmd="top">top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>htop</kbd></small></h6>
+                        <h6><small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>htop</kbd></small></h6>
                         <hr>
                     </div>
                     
