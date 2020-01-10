@@ -10,8 +10,15 @@ $(document).ready(function() {
                 type: 'GET',
                 dataType: 'text',
                 success: function(data) {
-                    alert(data);
-                    if (reload == 'true') { location.reload(); }
+                    if (reload == 'false') {
+                        $('#info_modal').modal('show');
+                        if (data == '') data = '<h5>🚀 No data to show</h5>';
+                        $('#info_modal_body').html(data);
+                        return 0;
+                    } else {
+                        alert(data);
+                        location.reload();
+                    }
                 },
                 error: function(request, error) {
                     alert(error);

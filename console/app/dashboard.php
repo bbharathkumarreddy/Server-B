@@ -457,7 +457,7 @@
 <!-- Info Modal-->
 <div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="info_modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content bg-gray-100">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Information</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
