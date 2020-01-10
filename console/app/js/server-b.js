@@ -8,7 +8,7 @@ $(document).ready(function() {
             $.ajax({
                 url,
                 type: 'GET',
-                dataType: 'text',
+                dataType: 'html',
                 success: function(data) {
                     if (reload == 'false') {
                         $('#info_modal').modal('show');
@@ -150,7 +150,7 @@ $(document).ready(function() {
         $.ajax({
             url: api_link + 'api_service.php?o=cmd_exe&cmd=' + btoa(cmd),
             type: 'GET',
-            dataType: 'text',
+            dataType: 'html',
             success: function(data) {
                 $('#info_modal').modal('show');
                 if (data == '') data = '<h5>🚀 No data to show</h5>';
