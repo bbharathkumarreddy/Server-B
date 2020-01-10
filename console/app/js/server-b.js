@@ -137,7 +137,7 @@ $(document).ready(function() {
     });
 
     $(document).on("click", "kbd", function() {
-        let cmd = $(this).attr('cmd');
+        let cmd = $(this).text();
         if (cmd == '') { alert('Command is empty'); return 0; }
         if (!confirm('Do you want to execute:' + cmd)) return 0;
         $.ajax({
