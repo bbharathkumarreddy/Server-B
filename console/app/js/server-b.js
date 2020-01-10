@@ -13,7 +13,7 @@ $(document).ready(function() {
                     if (reload == 'false') {
                         $('#info_modal').modal('show');
                         if (data == '') data = '<h5>🚀 No data to show</h5>';
-                        $('#info_modal_body').html(data);
+                        $('#info_modal_body').text(data);
                         return 0;
                     } else {
                         alert(data);
