@@ -16,12 +16,17 @@
     height: 120px;
 }
 
+.bg-white {
+    background-color: white !important;
+}
+
 .text-black {
     color: black;
 }
 
 kbd {
     background-color: #5a5a5a;
+    cursor: pointer !important;
 }
 
 .noline {

