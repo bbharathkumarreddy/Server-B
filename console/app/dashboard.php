@@ -475,3 +475,5 @@
 
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>
+
+<script src="js/chart-server-b.js"></script>
