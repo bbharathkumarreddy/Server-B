@@ -145,6 +145,8 @@ $(document).ready(function() {
 
     $(document).on("click", "kbd", function() {
         let cmd = $(this).text();
+        let hasClass = $(this).hasClass('exe');
+        if (!hasClass) { alert('Not a executable command from server-b consle.') }
         if (cmd == '') { alert('Command is empty'); return 0; }
         if (!confirm('Do you want to execute:' + cmd)) return 0;
         $.ajax({

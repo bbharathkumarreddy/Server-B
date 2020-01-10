@@ -15,11 +15,18 @@
                 </div>
                 <div class="card-body row">
                     <div class="col-xl-12 col-md-12 mb-12">
-                        <p class="text-dark mb-0">Gives current process info</p>
-                        <h6><small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>htop</kbd></small></h6>
-                        <hr>
+                        <div>
+                            <p class="text-dark mb-0">Gives current process info</p>
+                            <h6><small><kbd class="exe">top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">htop</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0">Creates a folder</p>
+                            <h6><small><kbd>top</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>htop</kbd></small></h6>
+                            <hr>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -37,9 +44,9 @@
                 </button>
             </div>
             <div class="modal-body">
-               <div id="info_modal_body" class="bg-white" style="width: 100%;height:100%;">
+                <div id="info_modal_body" class="bg-white" style="width: 100%;height:100%;">
 
-               </div>                
+                </div>
             </div>
         </div>
     </div>
