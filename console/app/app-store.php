@@ -19,20 +19,6 @@
                     <h6 class="m-0 font-weight-bold text-primary">Installed Apps</h6>
                 </div>
                 <div class="card-body row ma">
-                    <div class="app-card-success">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
-                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -76,6 +62,20 @@
                         </div>
                     </div>
                     <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-danger card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
