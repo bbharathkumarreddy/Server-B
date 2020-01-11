@@ -9,7 +9,7 @@
     <div class="row mb-4">
         <div class="col-xl-12 col-md-12 mb-12 fr">
             <a href="<?php echo $app_link; ?>file-manager.php" class="btn btn-sm btn-info shadow-sm fr"><i class="fa fa-file-code fa-sm text-white-50"></i> File Manager</a>
-            <a href="<?php echo $app_link; ?>ssh.php" class="btn btn-sm btn-success shadow-sm fr mr-10"><i class="fas fa fa-greater-than fa-sm text-white-50"></i> SSH</a>
+            <a href="<?php echo $app_link; ?>dashboard.php" class="btn btn-sm btn-success shadow-sm fr mr-10"><i class="fa fa-tachometer-alt fa-sm text-white-50"></i> Dashboard</a>
         </div>
     </div>
     <div class="row">
