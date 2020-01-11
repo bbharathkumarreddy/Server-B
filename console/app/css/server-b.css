@@ -93,6 +93,18 @@ kbd {
     padding: 5px !important;
 }
 
+.border-top-success {
+    border-top: 2px solid #1cc88a;
+}
+
+.border-top-info {
+    border-top: 2px solid #36b9cc;
+}
+
+.border-top-danger {
+    border-top: 2px solid #e74a3b;
+}
+
 
 /* The switch - the box around the slider */
 
