@@ -65,7 +65,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/postgres.png'; ?>">
+                                    <img style="width:31px;" src="<?php echo $app_link . '/img/postgres.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Postgres</div>
