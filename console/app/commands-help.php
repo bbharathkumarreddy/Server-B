@@ -61,6 +61,11 @@
                             <hr>
                         </div>
                         <div>
+                            <p class="text-dark mb-0"><b>crontab</b> run on a regular schedule, and also the name of the command used to manage that list</p>
+                            <h6><small><kbd>crontab</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">crontab -l</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
                             <p class="text-dark mb-0"><b>cp</b> copy a file or directory from one folder to another</p>
                             <h6><small><kbd>cp</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>foo.txt bar.txt</kbd></small></h6>
                             <hr>
@@ -113,6 +118,16 @@
                         <div>
                             <p class="text-dark mb-0"><b>ifconfig</b> is a system administration utility in Unix-like operating systems for network interface configuration</p>
                             <h6><small><kbd class="exe">ifconfig</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0"><b>ping</b> is a computer network administration software utility used to test the reachability of a host on an Internet Protocol network</p>
+                            <h6><small><kbd>ping</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ping &#60;ip address/domain&#62;</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0"><b>nslookup</b> is a network administration command-line tool  for querying the Domain Name System (DNS) to obtain domain name or IP address mapping, or other DNS records</p>
+                            <h6><small><kbd>nslookup</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>nslookup &#60;fqdn&#62;</kbd></small></h6>
                             <hr>
                         </div>
                         <div>
