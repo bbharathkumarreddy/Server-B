@@ -19,8 +19,8 @@
                     <h6 class="m-0 font-weight-bold text-primary">Installed Apps</h6>
                 </div>
                 <div class="card-body row">
-                    <div class="card py-2 pointer">
-                        <div class="card-body">
+                    <div class="card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-5">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
                                     <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">

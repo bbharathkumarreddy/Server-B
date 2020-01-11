@@ -89,6 +89,10 @@ kbd {
     font-size: 15px !important;
 }
 
+p-5 {
+    padding: 5px !important;
+}
+
 
 /* The switch - the box around the slider */
 
