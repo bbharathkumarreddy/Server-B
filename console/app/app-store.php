@@ -135,7 +135,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/mongodb.png'; ?>">
+                                    <img style="width:44px;" src="<?php echo $app_link . '/img/mongodb.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">MongoDB</div>
@@ -149,7 +149,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/wordpress.png'; ?>">
+                                    <img style="width:25px;" src="<?php echo $app_link . '/img/wordpress.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Wordpress</div>
