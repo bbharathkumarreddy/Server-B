@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr style="width: 100%;">
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </div> 
-                    <hr>
+                    <hr style="width: 100%;">
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -175,7 +175,7 @@
                             </div>
                         </div>
                     </div> 
-                    <hr>          
+                    <hr style="width: 100%;">          
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <hr style="width: 100%;">
                     <div class="app-card-danger card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
