@@ -37,6 +37,21 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
+                                    <img style="width:32px;" src="<?php echo $app_link . '/img/apache.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Apache</div>
+                                    <i class="fas fa-download text-success" title="Install Apache"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Apache"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
                                     <img style="width:55px;" src="<?php echo $app_link . '/img/php.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
@@ -51,16 +66,45 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:36px;" src="<?php echo $app_link . '/img/shellinabox.png'; ?>">
+                                    <img style="width:42px;" src="<?php echo $app_link . '/img/nodejs.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Shell Box</div>
-                                    <i class="fas fa-download text-success" title="Install Shell in a Box"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Shell in a Box"></i>
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Node JS</div>
+                                    <i class="fas fa-download text-success" title="Install Node JS"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Node JS"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:50px;" src="<?php echo $app_link . '/img/python.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Python</div>
+                                    <i class="fas fa-download text-success" title="Install Python"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Python"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:48px;" src="<?php echo $app_link . '/img/golang.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Go lang</div>
+                                    <i class="fas fa-download text-success" title="Install Go lang"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Go lang"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <hr>
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -93,104 +137,6 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:42px;" src="<?php echo $app_link . '/img/nodejs.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Node JS</div>
-                                    <i class="fas fa-download text-success" title="Install Node JS"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Node JS"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-danger card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:52px;" src="<?php echo $app_link . '/img/npm.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">NPM</div>
-                                    <i class="fas fa-download text-success" title="Install NPM"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall NPM"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:50px;" src="<?php echo $app_link . '/img/python.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Python</div>
-                                    <i class="fas fa-download text-success" title="Install Python"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Python"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:48px;" src="<?php echo $app_link . '/img/golang.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Go lang</div>
-                                    <i class="fas fa-download text-success" title="Install Go lang"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Go lang"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:32px;" src="<?php echo $app_link . '/img/apache.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Apache</div>
-                                    <i class="fas fa-download text-success" title="Install Apache"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Apache"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:44px;" src="<?php echo $app_link . '/img/jupyter.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Jupyter</div>
-                                    <i class="fas fa-download text-success" title="Install Jupyter"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Jupyter"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/redis.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Redis</div>
-                                    <i class="fas fa-download text-success" title="Install Redis"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Redis"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-                     <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
                                     <img style="width:44px;" src="<?php echo $app_link . '/img/mongodb.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
@@ -215,6 +161,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/redis.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Redis</div>
+                                    <i class="fas fa-download text-success" title="Install Redis"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Redis"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <hr>          
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -267,6 +228,49 @@
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Drupal</div>
                                     <i class="fas fa-download text-success" title="Install Drupal"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <i class="fas fa-trash-alt text-danger" title="Unistall Drupal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="app-card-danger card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:52px;" src="<?php echo $app_link . '/img/npm.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">NPM</div>
+                                    <i class="fas fa-download text-success" title="Install NPM"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall NPM"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:44px;" src="<?php echo $app_link . '/img/jupyter.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Jupyter</div>
+                                    <i class="fas fa-download text-success" title="Install Jupyter"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Jupyter"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:36px;" src="<?php echo $app_link . '/img/shellinabox.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Shell Box</div>
+                                    <i class="fas fa-download text-success" title="Install Shell in a Box"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Shell in a Box"></i>
                                 </div>
                             </div>
                         </div>
