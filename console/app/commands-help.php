@@ -11,7 +11,7 @@
         <div class="col-xl-12 col-md-12 mb-12">
             <div class="card shadow mb-12" id="services">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Frequently Used</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Frequently Used Commands</h6>
                 </div>
                 <div class="card-body row">
                     <div class="col-xl-12 col-md-12 mb-12">
