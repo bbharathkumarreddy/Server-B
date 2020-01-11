@@ -125,6 +125,15 @@ kbd {
     padding: 5px !important;
 }
 
+.app-card-success {
+    width: 150px !important;
+    height: 85px !important;
+    border-top: 2px solid #1cc88a;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
 .border-top-success {
     border-top: 2px solid #1cc88a;
 }
