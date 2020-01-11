@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
-                                    <i class="fas fa-play text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
                                 </div>
 
