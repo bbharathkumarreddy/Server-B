@@ -51,7 +51,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:40px;" src="<?php echo $app_link . '/img/shellinabox.png'; ?>">
+                                    <img style="width:36px;" src="<?php echo $app_link . '/img/shellinabox.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Shell Box</div>
