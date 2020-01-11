@@ -65,6 +65,20 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/postgres.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Postgres</div>
+                                    <i class="fas fa-download text-success" title="Install Postgres"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Postgres"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
                                     <img style="width:42px;" src="<?php echo $app_link . '/img/nodejs.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
