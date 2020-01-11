@@ -3,7 +3,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-0">
         <h1 class="h3 mb-0 text-gray-800">SSH</h1>
     </div>
     <div class="row mb-4">
