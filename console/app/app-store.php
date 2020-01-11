@@ -19,7 +19,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Installed Apps</h6>
                 </div>
                 <div class="card-body row ma">
-                    <div class="app-card-success" style="width: 150px;height:85px;">
+                    <div class="app-card-success border-top-success card py-2 pointer ml-15 mb-20" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-card-success">
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
