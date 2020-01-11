@@ -22,13 +22,15 @@
                     <div class="card py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:50px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
                                 <div class="col mr-2">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1">Nginx</div>
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    <i class="fas fa-play fa-1x text-success"></i>
+                                    <i class="fas fa-trash-alt fa-1x text-danger"></i>
                                 </div>
-                                <div class="col-auto">
-                                    <img style="width:50px;" src="<?php echo $app_link.'/img/nginx.png'; ?>" >
-                                </div>
+
                             </div>
                         </div>
                     </div>
