@@ -121,6 +121,20 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/golang.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Go lang</div>
+                                    <i class="fas fa-download text-success" title="Install Go lang"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Go lang"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
                                     <img style="width:32px;" src="<?php echo $app_link . '/img/apache.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
