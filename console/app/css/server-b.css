@@ -29,6 +29,18 @@ kbd {
     cursor: pointer !important;
 }
 
+.tr {
+    text-align: right !important;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left !important;
+}
+
 .noline {
     text-decoration: none !important;
 }
