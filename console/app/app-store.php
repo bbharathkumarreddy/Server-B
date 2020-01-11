@@ -18,7 +18,7 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Installed Apps</h6>
                 </div>
-                <div class="card-body row">
+                <div class="card-body row ma">
                     <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">

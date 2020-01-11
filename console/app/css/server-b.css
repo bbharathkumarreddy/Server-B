@@ -69,6 +69,10 @@ kbd {
     margin-top: -4px;
 }
 
+.ma {
+    margin: auto;
+}
+
 .ht-20 {
     height: 20px !important;
 }
