@@ -183,9 +183,9 @@ $server_b_data='/var/www/server-b-data';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>software-setup.php">
                     <i class="fa fa-box-open"></i>
-                    <span>Setup</span>
+                    <span>Software Setup</span>
                 </a>
             </li>
 
