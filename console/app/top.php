@@ -169,13 +169,6 @@ $server_b_data='/var/www/server-b-data';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
-                    <i class="fa fa-code-branch"></i>
-                    <span>GIT Setup</span>
-                </a>
-            </li>
-
-            <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#config">
                     <i class="fa fa-cog"></i>
                     <span>Config</span>
@@ -183,11 +176,19 @@ $server_b_data='/var/www/server-b-data';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>software-setup.php">
+                <a class="nav-link" href="<?php echo $app_link; ?>app-store.php">
                     <i class="fa fa-box-open"></i>
-                    <span>Software Setup</span>
+                    <span>App Store</span>
                 </a>
             </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="<?php echo $app_link; ?>commands-help.php">
+                    <i class="fa fa-question"></i>
+                    <span>Help Commands</span>
+                </a>
+            </li>
+
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
