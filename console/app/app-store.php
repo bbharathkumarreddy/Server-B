@@ -163,7 +163,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/magento.png'; ?>">
+                                    <img style="width:32px;" src="<?php echo $app_link . '/img/magento.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Magento</div>
