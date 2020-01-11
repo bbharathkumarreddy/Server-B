@@ -65,7 +65,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nodejs.png'; ?>">
+                                    <img style="width:42px;" src="<?php echo $app_link . '/img/nodejs.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Node JS</div>
@@ -79,7 +79,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/npm.png'; ?>">
+                                    <img style="width:52px;" src="<?php echo $app_link . '/img/npm.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">NPM</div>
@@ -107,7 +107,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/jupyter.png'; ?>">
+                                    <img style="width:44px;" src="<?php echo $app_link . '/img/jupyter.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Jupyter</div>
@@ -177,7 +177,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/joomla.png'; ?>">
+                                    <img style="width:50px;" src="<?php echo $app_link . '/img/joomla.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Joomla</div>
@@ -191,7 +191,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/drupal.png'; ?>">
+                                    <img style="width:42px;" src="<?php echo $app_link . '/img/drupal.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Drupal</div>
