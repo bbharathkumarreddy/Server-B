@@ -101,6 +101,16 @@
                             <hr>
                         </div>
                         <div>
+                            <p class="text-dark mb-0"><b>date</b> command is used to display the system date and time.</p>
+                            <h6><small><kbd class="exe">date</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>date +%T</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0"><b>tty</b> (TeleTYpewriter) is a command in Unix and Unix-like operating systems to print the file name of the terminal connected to standard input</p>
+                            <h6><small><kbd class="exe">tty</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
                             <p class="text-dark mb-0"><b>chown</b> enables users to change the ownership of a file or directory</p>
                             <h6><small><kbd>chown</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>chmod 770 /foo/bar</kbd></small></h6>
                             <hr>
@@ -142,7 +152,12 @@
                         </div>
                         <div>
                             <p class="text-dark mb-0"><b>echo </b> output a specific text to the terminal console</p>
-                            <h6><small><kbd>echo </kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>echo &#60;script&#62;</kbd></small></h6>
+                            <h6><small><kbd>echo</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>echo &#60;script&#62;</kbd></small></h6>
+                            <hr>
+                        </div>
+                        <div>
+                            <p class="text-dark mb-0"><b>ufw </b> ,uncomplicated firewall is a frontend for managing firewall rules in Arch Linux, Debian or Ubuntu</p>
+                            <h6><small><kbd class="exe">ufw status</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd>ufw allow &#60;rule&#62;</kbd></small></h6>
                             <hr>
                         </div>
                         <div>
