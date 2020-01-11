@@ -364,7 +364,7 @@
                         </div>
                         <div class="col-xl-8 col-md-8 mb-8 mb-0">
                             <a class="noline" target="_blank" href="' . $app_link . 'file-manager.php?p=' . $file_path . '&view=' . $file_name . '">
-                                <p class="mb-0">' . $getLogFileEach[1] . '</p>
+                                <p class="mb-0">' . $getLogFileEach[1] . '</p><i class="fas fa-link fa-sm text-white-50"></i>
                             </a>                            
                         </div>
                     </div>
