@@ -30,7 +30,104 @@
                                     <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
                                 </div>
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top-success card py-2 pointer" style="width: 150px;height:85px;">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/nginx.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Nginx</div>
+                                    <i class="fas fa-download text-success" title="Install Nginx"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Nginx"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
