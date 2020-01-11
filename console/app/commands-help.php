@@ -106,7 +106,7 @@
                             <hr>
                         </div>
                         <div>
-                            <p class="text-dark mb-0"><b>tty</b> (TeleTYpewriter) is a command in Unix and Unix-like operating systems to print the file name of the terminal connected to standard input</p>
+                            <p class="text-dark mb-0"><b>tty</b> (TeleTYpewriter) is a used to print the file name of the terminal connected to standard input</p>
                             <h6><small><kbd class="exe">tty</kbd></small></h6>
                             <hr>
                         </div>
