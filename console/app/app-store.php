@@ -55,8 +55,8 @@
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Shell Box</div>
-                                    <i class="fas fa-download text-success" title="Install Shell Box"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Shell Box"></i>
+                                    <i class="fas fa-download text-success" title="Install Shell in a Box"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Shell in a Box"></i>
                                 </div>
                             </div>
                         </div>
