@@ -107,6 +107,20 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
+                                    <img style="width:55px;" src="<?php echo $app_link . '/img/apache.png'; ?>">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="text- font-weight-bold text-dark text-uppercase mb-1 tc">Apache</div>
+                                    <i class="fas fa-download text-success" title="Install Apache"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall Apache"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
                                     <img style="width:44px;" src="<?php echo $app_link . '/img/jupyter.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
