@@ -121,7 +121,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/python.png'; ?>">
+                                    <img style="width:50px;" src="<?php echo $app_link . '/img/python.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Python</div>
@@ -135,7 +135,7 @@
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:55px;" src="<?php echo $app_link . '/img/golang.png'; ?>">
+                                    <img style="width:48px;" src="<?php echo $app_link . '/img/golang.png'; ?>">
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Go lang</div>
