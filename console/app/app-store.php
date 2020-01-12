@@ -41,8 +41,8 @@
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">'.$app_list[$each]['display'].'</div>
-                                    <i class="fas fa-download text-success install_app" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Install '.$app_list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger delete_app" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Unistall '.$app_list[$each]['name'].'"></i>
+                                    <i class="fas fa-download text-success app_install" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Install '.$app_list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger app_delete" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Unistall '.$app_list[$each]['name'].'"></i>
                                 </div>
                             </div>
                         </div>
