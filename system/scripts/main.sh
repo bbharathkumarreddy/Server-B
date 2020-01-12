@@ -5,8 +5,6 @@ cron_file='/var/www/server-b-data/cron'
 temp_cron='/var/www/server-b-data/temp_cron'
 source $config_path
 
-#sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone -b dev-z1 https://bbharathkumarreddy:bvsschool2019@github.com/bbharathkumarreddy/server-b.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
-
 #/etc/ssh/sshd_config
 #/etc/php/7.2/fpm/php.ini
 #/etc/nginx/sites-enabled/default

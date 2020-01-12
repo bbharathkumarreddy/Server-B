@@ -2,6 +2,8 @@
 Simple Server Management <br>
 Open Source Initiative
 <br>
+<code>sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh
+</code>
 <hr>
 <h2>Dashboard | Moniter</h2>
 <p align="center">
