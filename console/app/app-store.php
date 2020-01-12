@@ -45,7 +45,7 @@
                         print_r($p);echo '<br>';
                         echo 'value=>'.strpos($p, $list[$each]['name']);
                         $css = 'app-card-danger';
-                        if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
+                        if (strpos($p, $list[$each]['name']) != '') $css = 'app-card-success';
 
                         if($list[$each]['name'] == 'elasticsearch') $list[$each]['name'] = 'Els.Search';
                         echo '<div class="'.$list[$each]['css'].' card">
