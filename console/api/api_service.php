@@ -105,7 +105,7 @@ if (isset($_GET['o'])) {
             $scr = $app_list[$app_name]['uninstall_script_'.$i];
             if($scr != '') print_r(shell_exec($scr));            
         }
-        echo 'Installation complete:'.$_GET['name'];
+        echo 'Deletion complete:'.$_GET['name'];
     }
     else{
         echo 'Server - B No Operation found';
