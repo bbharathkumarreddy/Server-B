@@ -19,6 +19,10 @@
                     <h6 class="m-0 font-weight-bold text-primary">Apps</h6>
                 </div>
                 <div class="card-body row ma">
+                    <?php
+                        $p = shell_exec('dpkg --get-selections | grep nginx');
+                        echo strpos($p, 'nginx');
+                    ?>
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
