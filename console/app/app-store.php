@@ -20,41 +20,29 @@
                 </div>
                 <div class="card-body row ma">
                     <?php
-                    $list =  array(
-                        "nginx" => array("name" => "nginx", "img" => "nginx.png", "width" => "55", "protect"=>true, "status" => true),
-                        "php" => array("name" => "php", "img" => "php.png", "width" => "55", "protect"=>true, "status" => true),
-                        "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false),
-                        "nodejs" => array("name" => "nodejs", "img" => "nodejs.png", "width" => "42", "protect"=>true, "status" => true),
-                        "python" => array("name" => "python", "img" => "python.png", "width" => "50", "protect"=>true, "status" => true),
-                        "golang" => array("name" => "golang", "img" => "golang.png", "width" => "48", "protect"=>true, "status" => true),
-                        "mysql" => array("name" => "mysql", "img" => "mysql.png", "width" => "55", "protect"=>true, "status" => true),
-                        "postgres" => array("name" => "postgres", "img" => "postgres.png", "width" => "31", "protect"=>true, "status" => true),
-                        "mongodb" => array("name" => "mongodb", "img" => "mongodb.png", "width" => "44", "protect"=>true, "status" => true),
-                        "elasticsearch" => array("name" => "elasticsearch", "display"=>"Els.Search", "img" => "elasticsearch.png", "width" => "29", "protect"=>true, "status" => true),
-                        "redis" => array("name" => "redis", "img" => "redis.png", "width" => "38", "protect"=>true, "status" => true),
-                        "npm" => array("name" => "npm", "img" => "npm.png", "width" => "54", "protect"=>true, "status" => true),
-                        "jupyter" => array("name" => "jupyter",  "img" => "jupyter.png", "width" => "44", "protect"=>true, "status" => true),
-                        "shellbox" => array("name" => "shellinabox", "display"=>"shellbox", "img" => "shellinabox.png", "width" => "36", "protect"=>true, "status" => true)
-                    );
-                    $base_list =  array("nginx","php","apache","nodejs","python","golang","mysql","postgres","mongodb","elasticsearch","redis","npm","jupyter","shellbox");
-
+                    include('../api/app_list.php');
                     foreach($base_list as $each){
                         if($each == "") { echo '<hr style="width: 100%;">'; continue; }
                         
-                        $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
+                        $p = shell_exec('dpkg --get-selections | grep '.$app_list[$each]['name']);
                         $css = 'app-card-danger';
-                        if (trim(strpos($p, $list[$each]['name'])) != '') $css = 'app-card-success';
-                        if($list[$each]['display']) $list[$each]['name'] = $list[$each]['display'];
+                        $disp_show = 'block';
+                        if (trim(strpos($p, $app_list[$each]['name'])) != '') $css = 'app-card-success';
+                        
+                        if(!isset($app_list[$each]['display'])) $app_list[$each]['display'] = $app_list[$each]['name'];
+                    
+
+                        if($app_list[$each]['protect'] == true) $disp_show = 'none';
                         echo '<div class="'.$css.' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <img style="width:'.$list[$each]['width'].'px;" src="'. $app_link.'/img/'.$list[$each]['img'].'">
+                                    <img style="width:'.$app_list[$each]['width'].'px;" src="'. $app_link.'/img/'.$app_list[$each]['img'].'">
                                 </div>
                                 <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">'.$list[$each]['name'].'</div>
-                                    <i class="fas fa-download text-success" title="Install '.$list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall '.$list[$each]['name'].'"></i>
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">'.$app_list[$each]['display'].'</div>
+                                    <i class="fas fa-download text-success install_app" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Install '.$app_list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger delete_app" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Unistall '.$app_list[$each]['name'].'"></i>
                                 </div>
                             </div>
                         </div>

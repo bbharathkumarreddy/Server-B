@@ -68,7 +68,8 @@ if (isset($_GET['o'])) {
         else $status = 'disable';
         echo shell_exec('sudo ufw --force '.$status);
         echo '\n Server B =>ufw firewall Successully';
-    }else if ($o == 'remove_ufw_rule') {
+    }
+    else if ($o == 'remove_ufw_rule') {
         $ufw_id= $_GET['id'];
         echo shell_exec('sudo ufw --force delete '.$ufw_id);
         echo '\n Server B =>ufw firewall updated Successully';
@@ -79,9 +80,32 @@ if (isset($_GET['o'])) {
         echo $bash_string;
         echo shell_exec($bash_string);
         echo '\n Server B =>ufw firewall updated Successully';
-    } else if ($o == 'cmd_exe') {
+    }
+    else if ($o == 'cmd_exe') {
         $cmd_exe= base64_decode($_GET['cmd']);
         print_r(shell_exec($cmd_exe));
+    }
+    else if ($o == 'app_install') {
+        $app_name = $_GET['name'];
+        include('./app_list.php');
+        if(!isset($app_list[$app_name])) {  echo 'App not found'; exit(); }
+        for($i=1;$i<6;$i++){
+            $scr = $app_list[$app_name]['script_'.$i];
+            if($scr != '') print_r(shell_exec($scr));            
+        }
+        echo 'Installation complete:'.$_GET['name'];
+        
+    }
+    else if ($o == 'app_delete') {
+        $app_name = $_GET['name'];
+        include('./app_list.php');
+        if(!isset($app_list[$app_name])) {  echo 'App not found'; exit(); }
+        if($app_list[$app_name]['protect'] == true) {  echo 'Cannot delete protected apps'; exit(); }
+        for($i=1;$i<4;$i++){
+            $scr = $app_list[$app_name]['uninstall_script_'.$i];
+            if($scr != '') print_r(shell_exec($scr));            
+        }
+        echo 'Installation complete:'.$_GET['name'];
     }
     else{
         echo 'Server - B No Operation found';
