@@ -175,63 +175,6 @@
                             </div>
                         </div>
                     </div> 
-                    <hr style="width: 100%;">          
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:25px;" src="<?php echo $app_link . '/img/wordpress.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Wordpress</div>
-                                    <i class="fas fa-download text-success" title="Install Wordpress"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Wordpress"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:32px;" src="<?php echo $app_link . '/img/magento.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Magento</div>
-                                    <i class="fas fa-download text-success" title="Install Magento"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Magento"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:50px;" src="<?php echo $app_link . '/img/joomla.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Joomla</div>
-                                    <i class="fas fa-download text-success" title="Install Joomla"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Joomla"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-card-success card">
-                        <div class="card-body p-05">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <img style="width:42px;" src="<?php echo $app_link . '/img/drupal.png'; ?>">
-                                </div>
-                                <div class="col mr-2 tc">
-                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">Drupal</div>
-                                    <i class="fas fa-download text-success" title="Install Drupal"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger" title="Unistall Drupal"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <hr style="width: 100%;">
                     <div class="app-card-danger card">
                         <div class="card-body p-05">
