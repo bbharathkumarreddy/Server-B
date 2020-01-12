@@ -161,4 +161,36 @@ $(document).ready(function() {
         });
     });
 
+    $(document).on("click", ".app_install", function() {
+        let app_name = $(this).attr('app_name');
+        if (app_name == '') { alert('App is not selected'); return 0; }
+        if (!confirm('Do you want to install app: ' + app_name)) return 0;
+        $.ajax({
+            url: api_link + 'api_service.php?o=app_install&name=' + app_name,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                $('#info_modal').modal('show');
+                if (data == '') data = '<h5>🚀 No data to show</h5>';
+                $('#info_modal_body').html(data);
+            }
+        });
+    });
+
+    $(document).on("click", ".app_install", function() {
+        let app_name = $(this).attr('app_name');
+        if (app_name == '') { alert('App is not selected'); return 0; }
+        if (!confirm('Do you want to delete app: ' + app_name)) return 0;
+        $.ajax({
+            url: api_link + 'api_service.php?o=app_delete&name=' + app_name,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                $('#info_modal').modal('show');
+                if (data == '') data = '<h5>🚀 No data to show</h5>';
+                $('#info_modal_body').html(data);
+            }
+        });
+    });
+
 });
