@@ -32,7 +32,7 @@
                         if(!isset($app_list[$each]['display'])) $app_list[$each]['display'] = $app_list[$each]['name'];
                     
 
-                        if($app_list[$each]['protect'] == true) $disp_show = 'display="none"';
+                        if($app_list[$each]['protect'] == true) $disp_show = 'style="display:none"';
                         echo '<div class="'.$css.' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
