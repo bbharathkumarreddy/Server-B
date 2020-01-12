@@ -20,8 +20,15 @@
                 </div>
                 <div class="card-body row ma">
                     <?php
-                        $p = shell_exec('dpkg --get-selections | grep nginxxxx');
-                        echo strpos($p, 'nginx');
+                    $list =  array(
+                        array("name" => "nginx", "img" => "nginx.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
+                    );
+                    print_r($list);
+                    $p = shell_exec('dpkg --get-selections | grep nginx');
+                    $s = 'app-card-danger';
+                    if (strpos($p, 'nginx') !== false) $s = 'app-card-success';
                     ?>
                     <div class="app-card-success card">
                         <div class="card-body p-05">
@@ -107,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <hr style="width: 100%;">
                     <div class="app-card-success card">
                         <div class="card-body p-05">
@@ -178,7 +185,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <hr style="width: 100%;">
                     <div class="app-card-danger card">
                         <div class="card-body p-05">
@@ -193,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
