@@ -23,9 +23,20 @@
                     $list =  array(
                         "nginx" => array("name" => "nginx", "img" => "nginx.png", "width" => "55", "css" => "app-card-success", "status" => true),
                         "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
-                        "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
+                        "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false),
+                        "nodejs" => array("name" => "nodejs", "img" => "nodejs.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "python" => array("name" => "python", "img" => "python.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "golang" => array("name" => "golang", "img" => "golang.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "mysql" => array("name" => "mysql", "img" => "mysql.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "postgres" => array("name" => "postgres", "img" => "postgres.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "mongodb" => array("name" => "mongodb", "img" => "mongodb.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "elasticsearch" => array("name" => "elasticsearch", "img" => "elasticsearch.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "redis" => array("name" => "redis", "img" => "redis.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "npm" => array("name" => "npm", "img" => "npm.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "jupyter" => array("name" => "jupyter", "img" => "jupyter.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "shellbox" => array("name" => "shellbox", "img" => "shellinabox.png", "width" => "55", "css" => "app-card-success", "status" => true)
                     );
-                    $base_list =  array("nginx","php","apache");
+                    $base_list =  array("nginx","php","apache","nodejs","python","golang","mysql","postgres","mongodb","elasticsearch","redis","npm","jupyter","shellbox");
 
                     foreach($base_list as $each){
                         if($each == "") { echo '<hr style="width: 100%;">'; continue; }
