@@ -28,7 +28,7 @@
                     $base_list =  array("nginx","","php","","apache");
 
                     foreach($base_list as $each){
-                        if($each == "") echo '<hr style="width: 100%;">'; continue;
+                        if($each == "") { echo '<hr style="width: 100%;">'; continue; }
                         
                         $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
                         $css = 'app-card-danger';
