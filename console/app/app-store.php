@@ -21,9 +21,9 @@
                 <div class="card-body row ma">
                     <?php
                     $list =  array(
-                        array("name" => "nginx", "img" => "nginx.png", "width" => "55", "css" => "app-card-success", "status" => true),
-                        array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
-                        array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
+                        "nginx" => array("name" => "nginx", "img" => "nginx.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
+                        "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
                     );
                     print_r($list);
                     $p = shell_exec('dpkg --get-selections | grep nginx');
