@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body row ma">
                     <?php
-                        $p = shell_exec('dpkg --get-selections | grep nginx');
+                        $p = shell_exec('dpkg --get-selections | grep nginxxxx');
                         echo strpos($p, 'nginx');
                     ?>
                     <div class="app-card-success card">
