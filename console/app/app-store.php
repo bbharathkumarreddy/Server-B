@@ -26,13 +26,13 @@
                         
                         $p = shell_exec('dpkg --get-selections | grep '.$app_list[$each]['name']);
                         $css = 'app-card-danger';
-                        $disp_show = 'block';
+                        $disp_show = '';
                         if (trim(strpos($p, $app_list[$each]['name'])) != '') $css = 'app-card-success';
                         
                         if(!isset($app_list[$each]['display'])) $app_list[$each]['display'] = $app_list[$each]['name'];
                     
 
-                        if($app_list[$each]['protect'] == true) $disp_show = 'none';
+                        if($app_list[$each]['protect'] == true) $disp_show = 'display="none"';
                         echo '<div class="'.$css.' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
@@ -41,8 +41,8 @@
                                 </div>
                                 <div class="col mr-2 tc">
                                     <div class="font-weight-bold text-dark text-uppercase mb-1 tc">'.$app_list[$each]['display'].'</div>
-                                    <i class="fas fa-download text-success app_install" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Install '.$app_list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <i class="fas fa-trash-alt text-danger app_delete" app_name="'.$app_list[$each]['name'].'" style="display:'.$disp_show.';" title="Unistall '.$app_list[$each]['name'].'"></i>
+                                    <i class="fas fa-download text-success app_install" app_name="'.$app_list[$each]['name'].'" '.$disp_show.' title="Install '.$app_list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger app_delete" app_name="'.$app_list[$each]['name'].'" '.$disp_show.' title="Unistall '.$app_list[$each]['name'].'"></i>
                                 </div>
                             </div>
                         </div>
