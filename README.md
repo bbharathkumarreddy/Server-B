@@ -1,9 +1,10 @@
 <h1>SERVER B</h1>
 Simple Server Management <br>
 Open Source Initiative
-<p>Copy and Run the Below Command</p>
 <br>
-```sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh```
+<h6>Copy and Run the Below Command</h6>
+<br>
+<code>sudo apt-get install git -y && sudo mkdir -p /var/www && sudo mkdir -p /var/www/server-b && sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/ && sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <hr>
 <h2>Dashboard | Moniter</h2>
 <p align="center">
