@@ -25,7 +25,7 @@
                         "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
                         "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
                     );
-                    $base_list =  array("nginx","","php","","apache");
+                    $base_list =  array("nginx","php","apache");
 
                     foreach($base_list as $each){
                         if($each == "") { echo '<hr style="width: 100%;">'; continue; }
