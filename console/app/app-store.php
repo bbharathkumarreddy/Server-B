@@ -25,11 +25,31 @@
                         "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
                         "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
                     );
+                    $base_list =  array("nginx","php","apache");
                     print_r($list);
-                    $p = shell_exec('dpkg --get-selections | grep nginx');
-                    $s = 'app-card-danger';
-                    if (strpos($p, 'nginx') !== false) $s = 'app-card-success';
+                    foreach($base_list as $each){
+                        $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
+                        $css = 'app-card-danger';
+                        if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
+
+                        echo '<div class="app-card-success card">
+                        <div class="card-body p-05">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <img style="width:'.$list[$each]['width'].'px;" src="'. $app_link.'/img/'.$list[$each]['img'].'">
+                                </div>
+                                <div class="col mr-2 tc">
+                                    <div class="font-weight-bold text-dark text-uppercase mb-1 tc">'.$list[$each]['name'].'</div>
+                                    <i class="fas fa-download text-success" title="Install '.$list[$each]['name'].'"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i class="fas fa-trash-alt text-danger" title="Unistall '.$list[$each]['name'].'"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+                    }
                     ?>
+                    <hr style="width: 100%;">
+                    <hr style="width: 100%;">
                     <div class="app-card-success card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
