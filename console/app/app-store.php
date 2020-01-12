@@ -25,9 +25,11 @@
                         "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
                         "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
                     );
-                    $base_list =  array("nginx","php","apache");
-                    print_r($list);
+                    $base_list =  array("nginx","php","","apache");
+
                     foreach($base_list as $each){
+                        if($each == "") echo '<hr style="width: 100%;">'; continue;
+                        
                         $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
                         $css = 'app-card-danger';
                         if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
@@ -48,7 +50,7 @@
                     </div>';
                     }
                     ?>
-                    <hr style="width: 100%;">
+                    
                     <hr style="width: 100%;">
                     <div class="app-card-success card">
                         <div class="card-body p-05">
