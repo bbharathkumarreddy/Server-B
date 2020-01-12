@@ -25,7 +25,7 @@
                         "php" => array("name" => "php", "img" => "php.png", "width" => "55", "css" => "app-card-success", "status" => true),
                         "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false)
                     );
-                    $base_list =  array("nginx","php","","apache");
+                    $base_list =  array("nginx","","php","","apache");
 
                     foreach($base_list as $each){
                         if($each == "") echo '<hr style="width: 100%;">'; continue;
@@ -34,7 +34,7 @@
                         $css = 'app-card-danger';
                         if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
 
-                        echo '<div class="app-card-success card">
+                        echo '<div class="'.$list[$each]['css'].' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
