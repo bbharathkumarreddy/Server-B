@@ -91,6 +91,7 @@ if (isset($_GET['o'])) {
         if(!isset($app_list[$app_name])) {  echo 'App not found'; exit(); }
         for($i=1;$i<6;$i++){
             $scr = $app_list[$app_name]['script_'.$i];
+            if($i==1 && $scr == '') { echo 'No install scripts to execute; Exiting'; exit(); }
             if($scr != '') print_r(shell_exec($scr));            
         }
         echo 'Installation complete:'.$_GET['name'];
@@ -103,6 +104,7 @@ if (isset($_GET['o'])) {
         if($app_list[$app_name]['protect'] == true) {  echo 'Cannot delete protected apps'; exit(); }
         for($i=1;$i<4;$i++){
             $scr = $app_list[$app_name]['uninstall_script_'.$i];
+            if($i==1 && $scr == '') { echo 'No deletion scripts to execute; Exiting'; exit(); }
             if($scr != '') print_r(shell_exec($scr));            
         }
         echo 'Deletion complete:'.$_GET['name'];
