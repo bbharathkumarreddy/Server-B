@@ -53,7 +53,25 @@
             </div>
         </div>
     </div>
+</div>
 
+<!-- Info Modal-->
+<div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="info_modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-gray-100">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               <div id="info_modal_body" class="bg-white" style="width: 100%;height:100%;">
+
+               </div>                
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /.container-fluid -->
 <?php include('bottom.php'); ?>
