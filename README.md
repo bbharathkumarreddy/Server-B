@@ -1,2 +1,4 @@
 # server-b
-The server b on your server
+
+Simple Server Management <br>
+Open Source Initiative
