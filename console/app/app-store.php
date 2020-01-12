@@ -45,6 +45,7 @@
                         $css = 'app-card-danger';
                         if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
 
+                        if($list[$each]['name'] == 'elasticsearch') $list[$each]['name'] = 'Els.Search';
                         echo '<div class="'.$list[$each]['css'].' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
