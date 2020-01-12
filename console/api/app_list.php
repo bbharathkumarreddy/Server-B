@@ -1,4 +1,5 @@
 <?php
+    // all scripts should contain forced flags if geting confirmation y/n from user to run automatically;
     $app_list =  array(
         "nginx" =>  array("name" => "nginx",  "img" => "nginx.png",  "width" => "55", "protect"=>true, "status" => true, "script_1"=>"","script_2"=>"","script_3"=>"","script_4"=>"","script_5"=>"","uninstall_script_1"=>"","uninstall_script_2"=>"","uninstall_script_3"=>""),
         "php" =>    array("name" => "php",    "img" => "php.png",    "width" => "55", "protect"=>true, "status" => true, "script_1"=>"","script_2"=>"","script_3"=>"","script_4"=>"","script_5"=>"","uninstall_script_1"=>"","uninstall_script_2"=>"","uninstall_script_3"=>""),
