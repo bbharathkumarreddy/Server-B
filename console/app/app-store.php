@@ -42,6 +42,7 @@
                         if($each == "") { echo '<hr style="width: 100%;">'; continue; }
                         
                         $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
+                        print_r($p);echo '<br>';
                         $css = 'app-card-danger';
                         if (strpos($p, $list[$each]['name']) !== false) $css = 'app-card-success';
 
