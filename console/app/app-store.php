@@ -30,11 +30,11 @@
                         "mysql" => array("name" => "mysql", "img" => "mysql.png", "width" => "55", "status" => true),
                         "postgres" => array("name" => "postgres", "img" => "postgres.png", "width" => "31", "status" => true),
                         "mongodb" => array("name" => "mongodb", "img" => "mongodb.png", "width" => "44", "status" => true),
-                        "elasticsearch" => array("name" => "elasticsearch", "img" => "elasticsearch.png", "width" => "29", "status" => true),
+                        "elasticsearch" => array("name" => "elasticsearch", "display"=>"Els.Search", "img" => "elasticsearch.png", "width" => "29", "status" => true),
                         "redis" => array("name" => "redis", "img" => "redis.png", "width" => "38", "status" => true),
                         "npm" => array("name" => "npm", "img" => "npm.png", "width" => "54", "status" => true),
-                        "jupyter" => array("name" => "jupyter", "img" => "jupyter.png", "width" => "44", "status" => true),
-                        "shellbox" => array("name" => "shellbox", "img" => "shellinabox.png", "width" => "36", "status" => true)
+                        "jupyter" => array("name" => "jupyter",  "img" => "jupyter.png", "width" => "44", "status" => true),
+                        "shellbox" => array("name" => "shellinabox", "display"=>"shellbox", "img" => "shellinabox.png", "width" => "36", "status" => true)
                     );
                     $base_list =  array("nginx","php","apache","nodejs","python","golang","mysql","postgres","mongodb","elasticsearch","redis","npm","jupyter","shellbox");
 
@@ -44,7 +44,7 @@
                         $p = shell_exec('dpkg --get-selections | grep '.$list[$each]['name']);
                         $css = 'app-card-danger';
                         if (trim(strpos($p, $list[$each]['name'])) != '') $css = 'app-card-success';
-                        if($list[$each]['name'] == 'elasticsearch') $list[$each]['name'] = 'Els.Search';
+                        if($list[$each]['display']) $list[$each]['name'] = $list[$each]['display'];
                         echo '<div class="'.$css.' card">
                         <div class="card-body p-05">
                             <div class="row no-gutters align-items-center">
