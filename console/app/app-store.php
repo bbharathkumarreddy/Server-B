@@ -21,20 +21,20 @@
                 <div class="card-body row ma">
                     <?php
                     $list =  array(
-                        "nginx" => array("name" => "nginx", "img" => "nginx.png", "width" => "55", "status" => true),
-                        "php" => array("name" => "php", "img" => "php.png", "width" => "55", "status" => true),
+                        "nginx" => array("name" => "nginx", "img" => "nginx.png", "width" => "55", "protect"=>true, "status" => true),
+                        "php" => array("name" => "php", "img" => "php.png", "width" => "55", "protect"=>true, "status" => true),
                         "apache" => array("name" => "apache", "img" => "apache.png", "width" => "32", "css" => "app-card-danger", "status" => false),
-                        "nodejs" => array("name" => "nodejs", "img" => "nodejs.png", "width" => "42", "status" => true),
-                        "python" => array("name" => "python", "img" => "python.png", "width" => "50", "status" => true),
-                        "golang" => array("name" => "golang", "img" => "golang.png", "width" => "48", "status" => true),
-                        "mysql" => array("name" => "mysql", "img" => "mysql.png", "width" => "55", "status" => true),
-                        "postgres" => array("name" => "postgres", "img" => "postgres.png", "width" => "31", "status" => true),
-                        "mongodb" => array("name" => "mongodb", "img" => "mongodb.png", "width" => "44", "status" => true),
-                        "elasticsearch" => array("name" => "elasticsearch", "display"=>"Els.Search", "img" => "elasticsearch.png", "width" => "29", "status" => true),
-                        "redis" => array("name" => "redis", "img" => "redis.png", "width" => "38", "status" => true),
-                        "npm" => array("name" => "npm", "img" => "npm.png", "width" => "54", "status" => true),
-                        "jupyter" => array("name" => "jupyter",  "img" => "jupyter.png", "width" => "44", "status" => true),
-                        "shellbox" => array("name" => "shellinabox", "display"=>"shellbox", "img" => "shellinabox.png", "width" => "36", "status" => true)
+                        "nodejs" => array("name" => "nodejs", "img" => "nodejs.png", "width" => "42", "protect"=>true, "status" => true),
+                        "python" => array("name" => "python", "img" => "python.png", "width" => "50", "protect"=>true, "status" => true),
+                        "golang" => array("name" => "golang", "img" => "golang.png", "width" => "48", "protect"=>true, "status" => true),
+                        "mysql" => array("name" => "mysql", "img" => "mysql.png", "width" => "55", "protect"=>true, "status" => true),
+                        "postgres" => array("name" => "postgres", "img" => "postgres.png", "width" => "31", "protect"=>true, "status" => true),
+                        "mongodb" => array("name" => "mongodb", "img" => "mongodb.png", "width" => "44", "protect"=>true, "status" => true),
+                        "elasticsearch" => array("name" => "elasticsearch", "display"=>"Els.Search", "img" => "elasticsearch.png", "width" => "29", "protect"=>true, "status" => true),
+                        "redis" => array("name" => "redis", "img" => "redis.png", "width" => "38", "protect"=>true, "status" => true),
+                        "npm" => array("name" => "npm", "img" => "npm.png", "width" => "54", "protect"=>true, "status" => true),
+                        "jupyter" => array("name" => "jupyter",  "img" => "jupyter.png", "width" => "44", "protect"=>true, "status" => true),
+                        "shellbox" => array("name" => "shellinabox", "display"=>"shellbox", "img" => "shellinabox.png", "width" => "36", "protect"=>true, "status" => true)
                     );
                     $base_list =  array("nginx","php","apache","nodejs","python","golang","mysql","postgres","mongodb","elasticsearch","redis","npm","jupyter","shellbox");
 
