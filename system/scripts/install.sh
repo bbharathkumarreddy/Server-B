@@ -95,6 +95,7 @@ install(){
     source $server_b_loc_path'system/scripts/main.sh'
     source $server_b_config_path
 
+    sudo apt-get install git-core curl build-essential openssl libssl-dev -y
     ufw allow $server_b_port
     ufw allow $shell_in_box_access_port
     ufw allow $ssh_port
