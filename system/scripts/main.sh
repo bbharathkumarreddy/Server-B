@@ -195,7 +195,7 @@ install_php(){
     setKey 'php_service' $php_service_name
     setKey 'php_ini' $php_ini_file
 
-    sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
+    #sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
     sudo cp $php_ini_file $backup_path'php.ini.bck'
     sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' $php_ini_file
     sudo service $php_service_name reload
@@ -219,20 +219,20 @@ install_mysql(){
     sleep 3
 
     root_password=$1
-    alt_user=$2
-    alt_pwd=$3
+    mysql_alt_user=$2
+    mysql_alt_pwd=$3
     mysql_port=$4
     mysql_bind_address=$5
 
     mysql  -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '"$root_password"'";
-    mysql -uroot -p$root_password -e "CREATE USER '$alt_user'@'localhost' IDENTIFIED BY '"$alt_pwd"'";
-    mysql -uroot -p$root_password -e "CREATE USER '$alt_user'@'%' IDENTIFIED BY '"$alt_pwd"'";
+    mysql -uroot -p$root_password -e "CREATE USER '$mysql_alt_user'@'localhost' IDENTIFIED BY '"$mysql_alt_pwd"'";
+    mysql -uroot -p$root_password -e "CREATE USER '$mysql_alt_user'@'%' IDENTIFIED BY '"$mysql_alt_pwd"'";
     mysql -uroot -p$root_password -e "flush privileges";
     mysql -uroot -p$root_password -e "SELECT user,authentication_string,plugin,host FROM mysql.user;";
 
     setKey 'mysql_root_password' $root_password
-    setKey 'mysql_alt_user' $alt_user
-    setKey 'mysql_alt_password' $alt_pwd
+    setKey 'mysql_mysql_alt_user' $mysql_alt_user
+    setKey 'mysql_alt_password' $mysql_alt_pwd
 
 
     sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf $backup_path'mysqld.cnf.bck'
@@ -331,8 +331,8 @@ new_user(){
     new_pwd=$2
     echo "${new_user}    ALL=(ALL:ALL) ALL" >> /etc/sudoers
     sudo useradd -p $(openssl passwd -1 $new_user) $new_pwd
-    setKey 'alt_user' $new_user
-    setKey 'alt_pwd' $new_pwd
+    setKey 'mysql_alt_user' $new_user
+    setKey 'mysql_alt_pwd' $new_pwd
 }
 
 del_user(){
