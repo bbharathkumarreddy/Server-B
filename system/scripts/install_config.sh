@@ -26,7 +26,6 @@ hosting_link=''
 ping_1_link=''
 ping_2_link=''
 domain=''
-
 #Note: Don't Change below variables unless required
 server_b_main_path='/var/www/server-b/'
 server_b_data_path='/var/www/server-b-data/'
