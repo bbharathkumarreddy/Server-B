@@ -3,7 +3,6 @@ Simple Server Management <br>
 Open Source Initiative
 <br>
 <h5>Copy and Run Below Commands</h5>
-<br>
 <h5>Step 1</h5>
 <code>sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
 <h5>Step 2</h5>
