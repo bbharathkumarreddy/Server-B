@@ -226,6 +226,39 @@
                 </div>
             </div>
             <br>
+            <div class="card shadow" id="ufw_firewall">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Top Ports</p>
+                    </h6>
+                </div>
+                <div class="card-body row">
+                    <div class="col-xs-12 col-md-12 md-12 pointer">
+                        <div class="col-xs-12 col-md-12 md-12">
+                            <div>
+                                <p>SSH Port <button disabled="" class="fr d-sm-inline-block btn btn-sm btn-success shadow-sm mb-2 ml-10 port_update" port_id="1" port_mode="ssh" style="zoom: 0.7;margin-top:2px;"><i class="fas fa-check fa-sm text-white-50"></i> Change</button>
+                                    <input disabled="" min="1" max="65535" type="number" class="fr fs-13 port_value" style="width: 80px;" port_id="1" port_mode="ssh" value=<?php echo shell_exec($getKey . ' ssh_port'); ?>></p>
+                            </div>
+                            <div>
+                                <p>MySQL Port <button disabled="" class="fr d-sm-inline-block btn btn-sm btn-success shadow-sm mb-2 ml-10 port_update" port_id="2" port_mode="mysql" style="zoom: 0.7;margin-top:2px;"><i class="fas fa-check fa-sm text-white-50"></i> Change</button>
+                                    <input disabled="" min="1" max="65535" type="number" class="fr fs-13 port_value" style="width: 80px;" port_id="2" port_mode="mysql" value=<?php echo shell_exec($getKey . ' mysql_port'); ?>></p>
+                            </div>
+                            <div>
+                                <p>Server-B Port <button disabled="" class="fr d-sm-inline-block btn btn-sm btn-success shadow-sm mb-2 ml-10 port_update" port_id="3" port_mode="server-b" style="zoom: 0.7;margin-top:2px;"><i class="fas fa-check fa-sm text-white-50"></i> Change</button>
+                                    <input disabled="" min="1" max="65535" type="number" class="fr fs-13 port_value" style="width: 80px;" port_id="3" port_mode="server-b" value=<?php echo shell_exec($getKey . ' server_b_port'); ?>></p>
+                            </div>
+                            <div>
+                                <p>Server-B Shell Port<button disabled="" class="fr d-sm-inline-block btn btn-sm btn-success shadow-sm mb-2 ml-10 port_update" port_id="4" port_mode="server-b-shell" style="zoom: 0.7;margin-top:2px;"><i class="fas fa-check fa-sm text-white-50"></i> Change</button>
+                                    <input disabled="" min="1" max="65535" type="number" class="fr fs-13 port_value" style="width: 80px;" port_id="4" port_mode="server-b-shell" value=<?php echo shell_exec($getKey . ' shell_in_box_port'); ?>></p>
+                            </div>
+                            <div>
+                                <p>Server-B Shell Access Port<button disabled="" class="fr d-sm-inline-block btn btn-sm btn-success shadow-sm mb-2 ml-10 port_update" port_id="5" port_mode="server-b-shell-access" style="zoom: 0.7;margin-top:2px;"><i class="fas fa-check fa-sm text-white-50"></i> Change</button>
+                                    <input disabled="" min="1" max="65535" type="number" class="fr fs-13 port_value" style="width: 80px;" port_id="5" port_mode="server-b-shell-access" value=<?php echo shell_exec($getKey . ' shell_in_box_access_port'); ?>></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
             <div class="card shadow">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Server Info&nbsp;&nbsp;&nbsp;<small><kbd class="exe">uname -a</kbd></small>&nbsp;&nbsp;&nbsp;<small><kbd class="exe">lshw</kbd></small></h6>
@@ -438,7 +471,7 @@
                 </button>
             </div>
             <div class="modal-body">
-               
+
                 <select id="ufw_inp_rule" style="height: 31px;">
                     <option value="allow" selected>Allow</option>
                     <option value="deny">Deny</option>
@@ -465,9 +498,9 @@
                 </button>
             </div>
             <div class="modal-body">
-               <div id="info_modal_body" class="bg-white" style="width: 100%;height:100%;">
+                <div id="info_modal_body" class="bg-white" style="width: 100%;height:100%;">
 
-               </div>                
+                </div>
             </div>
         </div>
     </div>

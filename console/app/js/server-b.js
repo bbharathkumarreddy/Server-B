@@ -193,4 +193,24 @@ $(document).ready(function() {
         });
     });
 
+    $(document).on("click", ".port_update", function() {
+        return 0;
+        let port_id = $(this).attr('port_id');
+        let port_mode = $('.port_value[port_id="' + port_id + '"]').attr('port_mode');
+        let port_value = $('.port_value[port_id="' + port_id + '"]').val();
+        if (port_mode == '' || port_id == '') { alert('Port Mode not selected'); return 0; }
+        if (port_value == '') { alert('Port is not selected'); return 0; }
+        if (!confirm('Do you want to change ' + port_mode + ' port : ' + port_value)) return 0;
+        $.ajax({
+            url: api_link + 'api_service.php?o=change_port&port_mode=' + port_mode + '&port_value=' + port_value,
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                $('#info_modal').modal('show');
+                if (data == '') data = '<h5>🚀 No data to show</h5>';
+                $('#info_modal_body').html(data);
+            }
+        });
+    });
+
 });
