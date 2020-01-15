@@ -85,6 +85,15 @@ if (isset($_GET['o'])) {
         $cmd_exe= base64_decode($_GET['cmd']);
         print_r(shell_exec($cmd_exe));
     }
+    else if ($o == 'change_port') {
+        $port_mode= $_GET['port_mode'];
+        $port_value= $_GET['port_value'];
+        if(!is_int($port_value)) { echo 'Port is not numberic'; exit; }
+        if($port_mode == 'ssh') shell_exec($service.' ssh_port_set '.$port_value);
+        if($port_mode == 'mysql') shell_exec($service.' config_mysql '.$port_value.' 0.0.0.0');
+        else { echo 'Updation of '.$port_mode.' Port is not supported'; exit; }
+        print_r(shell_exec($cmd_exe));
+    }
     else if ($o == 'app_install') {
         $app_name = $_GET['name'];
         include('./app_list.php');

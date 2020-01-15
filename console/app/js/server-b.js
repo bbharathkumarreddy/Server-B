@@ -194,7 +194,6 @@ $(document).ready(function() {
     });
 
     $(document).on("click", ".port_update", function() {
-        return 0;
         let port_id = $(this).attr('port_id');
         let port_mode = $('.port_value[port_id="' + port_id + '"]').attr('port_mode');
         let port_value = $('.port_value[port_id="' + port_id + '"]').val();
