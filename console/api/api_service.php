@@ -90,9 +90,8 @@ if (isset($_GET['o'])) {
         $port_value= $_GET['port_value'];
         if($port_value < 1 && $port_value > 65535) { echo 'Port is not numberic or out of range'; exit; }
         if($port_mode == 'ssh') print_r(shell_exec($service.' ssh_port_set '.$port_value));
-        if($port_mode == 'mysql') print_r(shell_exec($service.' config_mysql '.$port_value.' 0.0.0.0'));
+        else if($port_mode == 'mysql') print_r(shell_exec($service.' config_mysql '.$port_value.' 0.0.0.0'));
         else { echo 'Updation of '.$port_mode.' Port is not supported'; exit; }
-        print_r(shell_exec($cmd_exe));
     }
     else if ($o == 'app_install') {
         $app_name = $_GET['name'];
