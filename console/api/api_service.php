@@ -89,7 +89,7 @@ if (isset($_GET['o'])) {
         $port_mode= $_GET['port_mode'];
         $port_value= $_GET['port_value'];
         echo $port_value;print_r(is_int($port_value));exit;
-        if($port_value > 0 && $port_value < 65536) { echo 'Port is not numberic'; exit; }
+        if($port_value < 1 && $port_value > 65535) { echo 'Port is not numberic'; exit; }
         if($port_mode == 'ssh') shell_exec($service.' ssh_port_set '.$port_value);
         if($port_mode == 'mysql') shell_exec($service.' config_mysql '.$port_value.' 0.0.0.0');
         else { echo 'Updation of '.$port_mode.' Port is not supported'; exit; }
