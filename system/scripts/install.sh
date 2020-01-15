@@ -39,6 +39,7 @@ install(){
     echo server_b_port"='"$server_b_port"'" >> $server_b_config_path
     echo shell_in_box_port"='"$shell_in_box_port"'" >> $server_b_config_path
     echo server_b_auth_key"='"$server_b_auth_key"'" >> $server_b_config_path
+    echo mysql_port"='"$mysql_port"'" >> $server_b_config_path
     echo mysql_alt_user"='"$mysql_alt_user"'" >> $server_b_config_path
     echo mysql_alt_pwd"='"$mysql_alt_pwd"'" >> $server_b_config_path
     echo update_date"='"$update_date"'" >> $server_b_config_path
