@@ -92,7 +92,6 @@ if (isset($_GET['o'])) {
         if($port_mode == 'ssh') $cmd=$service.' ssh_port_set '.$port_value;
         else if($port_mode == 'mysql') $cmd=$service.' config_mysql '.$port_value.' 0.0.0.0';
         else { echo 'Updation of '.$port_mode.' Port is not supported'; exit; }
-        echo $cmd;
         print_r(shell_exec($cmd));
     }
     else if ($o == 'app_install') {
