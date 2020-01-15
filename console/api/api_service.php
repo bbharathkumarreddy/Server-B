@@ -88,6 +88,7 @@ if (isset($_GET['o'])) {
     else if ($o == 'change_port') {
         $port_mode= $_GET['port_mode'];
         $port_value= $_GET['port_value'];
+        echo $port_value;echo is_int($port_value);
         if(!is_int($port_value)) { echo 'Port is not numberic'; exit; }
         if($port_mode == 'ssh') shell_exec($service.' ssh_port_set '.$port_value);
         if($port_mode == 'mysql') shell_exec($service.' config_mysql '.$port_value.' 0.0.0.0');
