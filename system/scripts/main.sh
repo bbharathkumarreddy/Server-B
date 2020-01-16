@@ -188,7 +188,7 @@ install_php(){
     
     sed -i "s/user = www-data/user = root/g" $php_www_conf_file
     sed -i "s/group = www-data/group = root/g" $php_www_conf_file
-    sed -i "s//etc/php/7.2/fpm/php-fpm.conf//etc/php/7.2/fpm/php-fpm.conf -R/g" $php_fpm_service_file
+    sed -i "s/\/etc\/php\/7.2\/fpm\/php-fpm.conf/\/etc\/php\/7.2\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
 
     systemctl daemon-reload
     
@@ -198,7 +198,8 @@ install_php(){
     #sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
     sudo cp $php_ini_file $backup_path'php.ini.bck'
     sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' $php_ini_file
-    sudo service $php_service_name reload
+    sudo service $php_service_name stop
+    sudo service $php_service_name start
 
     new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" $php_ini_file | tail -1 | grep -o '"[^"]\+"');
     echo "PHP New Current Timezone = ${new_php_timezone_string}"
