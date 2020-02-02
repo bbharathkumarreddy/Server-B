@@ -1,6 +1,7 @@
 <h1>SERVER B <small></small></h1>
 <br>
-Simple Server Management
+Simple Server Management - <small>Web Console</small>
+<br>
 Open Source Initiative
 <br>
 <small><b>Supported OS: Ubuntu 14.04 & above</b></small>
