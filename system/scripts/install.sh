@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source '/var/www/server-b/system/scripts/install_config.sh'
-
+# config_path /var/www/server-b-data/config.sh
 install(){
     echo --------------------------------------------------
     echo ++++++++  Server B Installation Started  +++++++++
@@ -41,6 +41,7 @@ install(){
     echo shell_in_box_port"='"$shell_in_box_port"'" >> $server_b_config_path
     echo server_b_auth_key"='"$server_b_auth_key"'" >> $server_b_config_path
     echo mysql_port"='"$mysql_port"'" >> $server_b_config_path
+    echo mysql_password"='"$mysql_password"'" >> $server_b_config_path
     echo mysql_alt_user"='"$mysql_alt_user"'" >> $server_b_config_path
     echo mysql_alt_pwd"='"$mysql_alt_pwd"'" >> $server_b_config_path
     echo update_date"='"$update_date"'" >> $server_b_config_path
@@ -64,7 +65,7 @@ install(){
     install_nano
     install_nginx
     install_php
-    install_mysql $mysql_password $mysql_alt_user $mysql_alt_password $mysql_port 0.0.0.0
+    install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
     install_shell_in_a_box $shell_in_box_port
     install_node_npm
     sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
