@@ -6,8 +6,8 @@ Open Source Initiative
 <br>
 <small><b>Supported OS: Ubuntu 14.04 & above</b></small>
 <br>
-<h5>Step 1</h5>
 <h5>Copy and Run Below Commands</h5>
+<h5>Step 1</h5>
 <code>sudo apt install git || sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
 <br>
 <h5>Step 2</h5>
