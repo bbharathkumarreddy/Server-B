@@ -5,14 +5,15 @@ Open Source Initiative
 <br>
 <small><b>Supported OS: Ubuntu 14.04 & above</b></small>
 <br>
-<h5>Copy and Run Below Commands</h5>
 <h5>Step 1</h5>
-<code>sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
-<p><small>Prerequisite: git; To install git <code>sudo apt install git</code></small></p>
+<h5>Copy and Run Below Commands</h5>
+<code>sudo apt install git || sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
+<br>
 <h5>Step 2</h5>
 <p><small>Note: Change install_config.sh file before installing</small></p>
 <code>vi /var/www/server-b/system/scripts/install_config.sh</code>
-<small>Save file and quit pressing Esc key, type :x and hit Enter key</small>
+<br>
+<small>To save file in vi mode use Esc key and type :x and hit Enter key</small>
 <h5>Step 3</h5>
 <code>sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <hr>
