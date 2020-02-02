@@ -22,7 +22,7 @@ Open Source Initiative
 <code>sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <br>
 <br>
-<p><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; user is responsbile for any actions running server b</p>
+<p><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</p>
 <hr>
 <h2>Dashboard | Moniter</h2>
 <p align="center">
