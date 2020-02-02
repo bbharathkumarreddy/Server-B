@@ -8,7 +8,7 @@ Open Source Initiative
 <br>
 <h5>Copy and Run Below Commands</h5>
 <h5>Step 1</h5>
-<code>sudo apt install git-core || sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
+<code>sudo apt update -y && sudo apt-get install git && sudo git clone https://github.com/bbharathkumarreddy/Server-B.git /var/www/server-b/</code>
 <br>
 <h5>Step 2</h5>
 <p><small>Note: Change install_config.sh file before installing</small></p>
