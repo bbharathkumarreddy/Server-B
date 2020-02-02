@@ -141,7 +141,6 @@ install_nginx(){
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
     sudo service nginx reload reload
-    
     addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
     addLogFile 'nginx_error_log' 'nginx_error_log /var/log/nginx/error.log'
 
@@ -186,9 +185,10 @@ install_php(){
     php_www_conf_file="/etc/php/${php_major}.${php_minor}/fpm/pool.d/www.conf"
     php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
     
+    sed -i "s/php7.2-fpm.sock/php${php_major}.${php_minor}-fpm.sock/g" $php_www_conf_file
     sed -i "s/user = www-data/user = root/g" $php_www_conf_file
     sed -i "s/group = www-data/group = root/g" $php_www_conf_file
-    sed -i "s/\/etc\/php\/7.2\/fpm\/php-fpm.conf/\/etc\/php\/7.2\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
+    sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
 
     systemctl daemon-reload
     
@@ -198,6 +198,7 @@ install_php(){
     #sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
     sudo cp $php_ini_file $backup_path'php.ini.bck'
     sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' $php_ini_file
+    sudo service nginx reload reload
     sudo service $php_service_name stop
     sudo service $php_service_name start
 
@@ -286,7 +287,7 @@ install_shell_in_a_box(){
     sudo apt-get install openssl shellinabox -y
     sleep 2
     sed -i "s/4200/$1/g" /etc/default/shellinabox
-    sed -i "s/--no-beep/--no-beep   --disable-ssl/g  --localhost-only" /etc/default/shellinabox
+    sed -i "s/--no-beep/--no-beep   --disable-ssl  --localhost-only/g" /etc/default/shellinabox
     shell_in_box_port=$1
     setKey 'shell_in_box_port' $shell_in_box_port
     sleep 1
