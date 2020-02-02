@@ -185,7 +185,7 @@ install_php(){
     php_www_conf_file="/etc/php/${php_major}.${php_minor}/fpm/pool.d/www.conf"
     php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
     
-    sed -i "s/php${php_major}.${php_minor}-fpm.sock/php${php_major}.${php_minor}-fpm.sock/g" $php_www_conf_file
+    sed -i "s/php7.0-fpm.sock/php${php_major}.${php_minor}-fpm.sock/g" /etc/nginx/sites-enabled/default
     sed -i "s/user = www-data/user = root/g" $php_www_conf_file
     sed -i "s/group = www-data/group = root/g" $php_www_conf_file
     sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
