@@ -51,12 +51,12 @@ install(){
     source $server_b_main_path'system/scripts/main.sh'
     source $server_b_config_path
 
-    sudo apt-get install git-core curl build-essential openssl libssl-dev -y
-    ufw allow $server_b_port
-    ufw allow $shell_in_box_access_port
-    ufw allow $ssh_port
-    ufw allow 80
-    ufw allow 443
+    sudo apt-get install git-core curl build-essential openssl libssl-dev ufw -y
+    sudo ufw allow $server_b_port
+    sudo ufw allow $shell_in_box_access_port
+    sudo ufw allow $ssh_port
+    sudo ufw allow 80
+    sudo ufw allow 443
     load_ip
     load_os
     update_upgrade
