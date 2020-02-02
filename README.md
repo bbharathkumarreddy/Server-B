@@ -15,7 +15,7 @@ Open Source Initiative
 <br>
 <h5>Step 3</h5>
 <p><small>Note: Change install_config.sh file before installing</small></p>
-<code>vi /var/www/server-b/system/scripts/install_config.sh</code>
+<code>sudo vi /var/www/server-b/system/scripts/install_config.sh</code>
 <br>
 <small>To save file in vi mode use Esc key and type :x and hit Enter key</small>
 <h5>Step 4</h5>
