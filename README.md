@@ -58,3 +58,8 @@ Open Source Initiative
 <p align="center">
   <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-07.png?raw=true">
 </p>
+<h2>Animated</h2>
+<p align="center">
+  <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
+</p>
+
