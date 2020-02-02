@@ -23,7 +23,6 @@ Open Source Initiative
 <br>
 <br>
 <p><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; user is responsbile for any actions running server b</p>
-<br>
 <hr>
 <h2>Dashboard | Moniter</h2>
 <p align="center">
