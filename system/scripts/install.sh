@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source '/var/www/server-b/system/scripts/install_config.sh'
-
+# config_path /var/www/server-b-data/config.sh
 install(){
     echo --------------------------------------------------
     echo ++++++++  Server B Installation Started  +++++++++
