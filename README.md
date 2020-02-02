@@ -21,6 +21,7 @@ Open Source Initiative
 <h5>Step 4</h5>
 <code>sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <br>
+<br>
 <p><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; user is responsbile for any actions running server b</p>
 <br>
 <hr>
