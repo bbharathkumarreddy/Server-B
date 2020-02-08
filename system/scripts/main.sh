@@ -97,6 +97,8 @@ load_ip(){
     private_ip=$(hostname -I)
     setKey 'public_ip' $public_ip
     setKey 'private_ip' $private_ip
+    echo 'Public IP => '$public_ip
+    echo 'Private IP => '$private_ip
 }
 
 load_os(){
@@ -321,7 +323,7 @@ generate_auth_key(){
     echo -------------------------------------------------
     echo +++++++++  GENERATE AUTH STARTED  +++++++++++++++
     echo -------------------------------------------------
-    auth_key=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 50 ; echo '');
+    auth_key=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20 ; echo '');
     echo "Note: This is the auth key, cannot be viewed again but can generate a new key. Please copy and store securely. Used for GIT Integrations & APIs."
     echo $auth_key
     setKey 'server_b_auth_key' $auth_key
@@ -457,12 +459,21 @@ show_legends(){
     echo "  *   Username                  : ${server_b_username}                                    "
     echo "  *   Password                  : ${server_b_password}                                    "
     echo "  *                                                                                       "
+    echo "  *   Server B Shell            : http://${public_ip}:${server_b_port}/app/ssh.php        "
+    echo "  *   Shell Username            : ${shell_in_a_box_username}                              "
+    echo "  *   Shell Password            : ${shell_in_a_box_password}                              "
+    echo "  *                                                                                       "
+    echo "  *        Note: Shell web page credentials are same as server b;                         "
+    echo "  *        Note: shell credentials are used only inside shell box;                        "           
+    echo "  *                                                                                       "
     echo "  *   Server B Port             : ${server_b_port}                                        "
     echo "  *   Server B SSH Access Port  : ${shell_in_box_access_port}                             "
     echo "  *   Server B SSH Port         : ${shell_in_box_port}                                    "
     echo "  *                                                                                       "
-    echo "  *     Note: Protect all Server B Ports using firewall for better security               "
+    echo "  *        Note: Protect all Server B Ports using firewall for better security            "
     echo "  *                                                                                       "
+    echo "  *   Server B Auth Key         : ${server_b_auth_key}                                    "
+    echo "  *                                                                                       "    
     echo "  ----------------------------------------------------------------------------------------"
     echo "                                                                                          "
     echo "  ----------------------------------------------------------------------------------------"

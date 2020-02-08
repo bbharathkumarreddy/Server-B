@@ -37,6 +37,8 @@ install(){
     echo ssh_port"='"$ssh_port"'" >> $server_b_config_path
     echo server_b_port"='"$server_b_port"'" >> $server_b_config_path
     echo shell_in_box_access_port"='"$shell_in_box_access_port"'" >> $server_b_config_path
+    echo shell_in_a_box_username"='"$shell_in_a_box_username"'" >> $server_b_config_path
+    echo shell_in_a_box_password"='"$shell_in_a_box_password"'" >> $server_b_config_path
     echo shell_in_box_port"='"$shell_in_box_port"'" >> $server_b_config_path
     echo server_b_auth_key"='"$server_b_auth_key"'" >> $server_b_config_path
     echo mysql_port"='"$mysql_port"'" >> $server_b_config_path
