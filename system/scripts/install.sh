@@ -75,7 +75,7 @@ install(){
     fi
     sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
     generate_auth_key
-    new_user ubt ubt
+    new_user $shell_in_a_box_username $shell_in_a_box_password
     ssh_port_set 24
     generate_htpasswd $server_b_username $server_b_password
     server_b_file_per
