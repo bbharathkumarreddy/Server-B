@@ -15,6 +15,8 @@ install(){
 
     echo server_name"='"$server_name"'" >> $server_b_config_path
     echo server_b_path"='"$server_b_path"'" >> $server_b_config_path
+    echo server_b_username"='"$server_b_username"'" >> $server_b_config_path
+    echo server_b_password"='"$server_b_password"'" >> $server_b_config_path
     echo server_b_data_path"='"$server_b_data_path"'" >> $server_b_config_path
     echo server_b_config_path"='"$server_b_config_path"'" >> $server_b_config_path
     echo system_path"='"$system_path"'" >> $server_b_config_path
