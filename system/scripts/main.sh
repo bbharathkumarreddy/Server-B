@@ -222,7 +222,7 @@ install_mysql(){
     export DEBIAN_FRONTEND="noninteractive"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $root_password"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $root_password"
-    sudo apt-get install -y mysql-server
+    sudo apt-get install mysql-server -y
     sleep 3
 
     root_password=$1
