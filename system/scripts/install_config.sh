@@ -19,6 +19,8 @@ site_path='/var/www/site/'
 time_zone='Etc/UTC'
 # Note: change ssh_port for security reasons (Must connect to new port after restart)
 ssh_port='22'
+shell_in_a_box_username='new_username'
+shell_in_a_box_password='new_password'
 server_b_port='8886'
 shell_in_box_access_port='8887'
 shell_in_box_port='8888'

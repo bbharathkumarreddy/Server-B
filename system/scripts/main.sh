@@ -336,6 +336,10 @@ new_user(){
     echo -------------------------------------------------
     new_user=$1
     new_pwd=$2
+    if [ "$new_user" == "new_username" ] || [ "$new_password" == "new_password" ] ; then
+        echo "!!! Error: Default Username or Password is not allowed; Change shell_in_a_box_username and shell_in_a_box_password in install_config.sh"
+        exit;
+    fi
     echo "${new_user}    ALL=(ALL:ALL) ALL" >> /etc/sudoers
     sudo useradd -p $(openssl passwd -1 $new_user) $new_pwd
     setKey 'mysql_alt_user' $new_user
@@ -430,7 +434,7 @@ generate_htpasswd(){
     twp_username=$1
     twp_passwd=$2
     if [ "$twp_username" == "username" ] || [ "$twp_passwd" == "password" ] ; then
-        echo "!!! Error: Default Username or Password is not allowed;"
+        echo "!!! Error: Default Username or Password is not allowed; Change server_b_username and server_b_password in install_config.sh"
         exit;
     fi
     twp_hash_passwd=$(perl -le "print crypt("$twp_passwd", "$twp_salt")")
