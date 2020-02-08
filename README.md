@@ -28,8 +28,11 @@ Open Source Initiative
   <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
 </p>
 <hr>
-<h5>Server B - command</h5>
+<h5>Server B - commands</h5>
 <br>
 <p>Show Legends</p>
 <code>bash /var/www/server-b/system/scripts/service.sh show_legends</code>
+<br>
+<p>Get MAC Address</p>
+<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code>
 <br>
