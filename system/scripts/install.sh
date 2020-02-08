@@ -12,7 +12,6 @@ install(){
     #sudo mkdir -p $site_path'node'
     #sudo mkdir -p $site_path'static'
     #sudo mkdir -p $site_path'cert'
-    server_b_file_per
 
     echo server_name"='"$server_name"'" >> $server_b_config_path
     echo server_b_path"='"$server_b_path"'" >> $server_b_config_path
@@ -53,6 +52,7 @@ install(){
     source $server_b_main_path'system/scripts/main.sh'
     source $server_b_config_path
 
+    server_b_file_per
     sudo apt-get install git-core curl build-essential openssl libssl-dev ufw -y
     sudo ufw allow $server_b_port
     sudo ufw allow $shell_in_box_access_port
@@ -65,14 +65,13 @@ install(){
     install_nano
     install_nginx
     install_php
-    if["$install_mysql"  == "true"]
-    then
-        install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
+    
+    if [ "$install_mysql" = 'true' ]; then
+    install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
     fi
     install_shell_in_a_box $shell_in_box_port
-    if["$install_node_js"  == "true"]
-    then
-        install_node_npm
+    if [ "$install_node_js" = 'true' ]; then
+    install_node_npm
     fi
     sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
     generate_auth_key
