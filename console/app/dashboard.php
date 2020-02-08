@@ -186,7 +186,7 @@
                         else $ufw_status = '';
                         ?>
                         <label class="switch fr m-0">
-                            <input type="checkbox" style="" id="ufw_status_switch" <?php echo $ufw_status; ?>>
+                            <input type="checkbox" id="ufw_status_switch" <?php echo $ufw_status; ?>>
                             <span class="slider round"></span>
                         </label>
                         <p class="text-success fr m-0">disable&nbsp;&nbsp;</p>

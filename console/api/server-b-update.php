@@ -5,7 +5,7 @@ echo '--------------------------------------------------------------------------
 echo shell_exec("cd /var/www/server-b/ && git stash").'<br>';
 echo shell_exec("cd /var/www/server-b/ && git reset").'<br>';
 echo '<br><b>Info:</b>';
-echo shell_exec("cd /var/www/server-b/ && git pull origin dev-z1");
+echo shell_exec("cd /var/www/server-b/ && git pull origin master");
 echo '<br>';
 echo shell_exec("bash /var/www/server-b/bash/scripts/update-formation.sh").'<br>';
 echo shell_exec("chmod -R 777 /var/www/server-b");
