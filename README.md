@@ -28,7 +28,7 @@ Open Source Initiative
   <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
 </p>
 <hr>
-<h4>Server B - commands</h4>
+<h4>Server B - General Shell Commands</h4>
 <p>Show Legends<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
 <p>Get MAC Address<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
 <p>Get IP Addresses<code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
