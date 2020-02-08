@@ -65,9 +65,15 @@ install(){
     install_nano
     install_nginx
     install_php
-    install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
+    if["$install_mysql"  == "true"]
+    then
+        install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
+    fi
     install_shell_in_a_box $shell_in_box_port
-    install_node_npm
+    if["$install_node_js"  == "true"]
+    then
+        install_node_npm
+    fi
     sudo cp /etc/ssh/sshd_config $backup_path'sshd_config_bck'
     generate_auth_key
     new_user ubt ubt
