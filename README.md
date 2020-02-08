@@ -27,4 +27,9 @@ Open Source Initiative
 <p align="center">
   <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
 </p>
-
+<hr>
+<h5>Server B - command</h5>
+<br>
+<p>Show Legends</p>
+<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code>
+<br>
