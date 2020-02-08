@@ -30,9 +30,9 @@ Open Source Initiative
 <hr>
 <h5>Server B - commands</h5>
 <br>
-<p>Show Legends</p>
-<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code>
+<p>Show Legends
+<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
 <br>
-<p>Get MAC Address</p>
-<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code>
+<p>Get MAC Address
+<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
 <br>
