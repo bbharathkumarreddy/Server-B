@@ -29,10 +29,9 @@ Open Source Initiative
 </p>
 <hr>
 <h5>Server B - commands</h5>
-<br>
-<p>Show Legends
-<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
-<br>
-<p>Get MAC Address
-<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
-<br>
+<p>Show Legends<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
+<p>Get MAC Address<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
+<p>Get IP Addresses<code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
+<p>Update - Upgrade Ubuntu<code>bash /var/www/server-b/system/scripts/service.sh update_upgrade</code></p>
+<p>Get Total Disk Space<code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
+<p>Get Total RAM Size<code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>

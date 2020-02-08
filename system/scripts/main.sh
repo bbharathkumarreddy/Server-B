@@ -97,6 +97,8 @@ load_ip(){
     private_ip=$(hostname -I)
     setKey 'public_ip' $public_ip
     setKey 'private_ip' $private_ip
+    echo 'Public IP => '$public_ip
+    echo 'Private IP => '$private_ip
 }
 
 load_os(){
