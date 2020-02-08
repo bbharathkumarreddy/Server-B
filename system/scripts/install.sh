@@ -50,6 +50,8 @@ install(){
     echo update_date"='"$update_date"'" >> $server_b_config_path
     echo server_twp_hash_path"='"$server_twp_hash_path"'" >> $server_b_config_path
     echo hosting_link"='"$hosting_link"'" >> $server_b_config_path
+    echo ping_1_link"='"$ping_1_link"'" >> $server_b_config_path
+    echo ping_2_link"='"$ping_2_link"'" >> $server_b_config_path
     echo domain"='"$domain"'" >> $server_b_config_path
     echo cron_file"='"$cron_file"'" >> $server_b_config_path
     echo temp_cron"='"$temp_cron"'" >> $server_b_config_path
