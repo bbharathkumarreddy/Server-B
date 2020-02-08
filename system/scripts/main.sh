@@ -217,7 +217,8 @@ install_mysql(){
     echo -------------------------------------------------
 
     sudo apt update -y
-    sudo apt install mysql-server -y
+    export DEBIAN_FRONTEND="noninteractive"
+    sudo apt-get install mysql-server -y
     sleep 3
 
     root_password=$1
