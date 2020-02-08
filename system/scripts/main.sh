@@ -197,7 +197,9 @@ install_php(){
 
     #sudo cp $files_path'php_info.php' $site_path'php/php_info.php'
     sudo cp $php_ini_file $backup_path'php.ini.bck'
-    sudo sed -i 's,^date.timezone =.*$,date.timezone = "'$time_zone'",' $php_ini_file
+    php_timezone="${time_zone//\//\\/}"
+    sudo sed -i "s/^;date.timezone =$/date.timezone = \"$php_timezone\"/" $php_ini_file
+    sudo sed -i "s/^date.timezone =.*$/date.timezone = \"$php_timezone\"/" $php_ini_file
     sudo service nginx reload reload
     sudo service $php_service_name stop
     sudo service $php_service_name start
