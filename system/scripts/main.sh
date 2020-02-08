@@ -220,7 +220,9 @@ install_mysql(){
 
     sudo apt update -y
     export DEBIAN_FRONTEND="noninteractive"
-    sudo apt-get install mysql-server -y
+    sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $root_password"
+    sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $root_password"
+    sudo apt-get install -y mysql-server
     sleep 3
 
     root_password=$1
@@ -229,7 +231,7 @@ install_mysql(){
     mysql_port=$4
     mysql_bind_address=$5
 
-    mysql  -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '"$root_password"'";
+    #mysql  -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '"$root_password"'";
     mysql -uroot -p$root_password -e "CREATE USER '$mysql_alt_user'@'localhost' IDENTIFIED BY '"$mysql_alt_pwd"'";
     mysql -uroot -p$root_password -e "CREATE USER '$mysql_alt_user'@'%' IDENTIFIED BY '"$mysql_alt_pwd"'";
     mysql -uroot -p$root_password -e "flush privileges";
