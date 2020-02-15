@@ -3,9 +3,16 @@ print_r($_SERVER);
 $server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_name");
 $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
+if(strpos($_SERVER['HTTP_HOST'], ':') !== false){
+    echo 'Contains Port';
+    $_SERVER['HTTP_HOST'] = explode(':',$_SERVER['HTTP_HOST']);   
+    $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_HOST'][0];
+}
 if (filter_var($_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP)) {
+    echo 'IP';
     $public_server_b_access = $public_ip;
 } else {
+    echo 'NOT IP';
     $public_server_b_domain=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_server_b_domain");
     if($public_server_b_domain == '' || $public_server_b_domain == ' '){
         echo 'Update Server B Console Domain to access Server B using domain name;<br><a href="https://github.com/bbharathkumarreddy/Server-B">Refer: https://github.com/bbharathkumarreddy/Server-B</a>';
