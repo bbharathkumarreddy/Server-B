@@ -138,7 +138,7 @@ install_nginx(){
     
     echo "Nginx Timezone setting complete"
     timedatectl status | grep "Time zone"
-
+    sudo openssl req -x509 -nodes -days 5475 -newkey rsa:2048 -keyout /etc/nginx/server-b-cert.key -out /etc/nginx/server-b-cert.crt -subj "/OU=Server B Panel"
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
