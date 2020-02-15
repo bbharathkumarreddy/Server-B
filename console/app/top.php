@@ -2,15 +2,18 @@
 $server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_name");
 $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
+$public_server_b_domain=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_server_b_domain");
+$public_server_b_access = $public_ip;
+if(isset($public_server_b_domain) && $public_server_b_domain != '') $public_server_b_access = $public_server_b_domain;
 $server_b_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_b_port");
 $dashboard_refresh=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey dashboard_refresh");
 $service='bash /var/www/server-b/system/scripts/service.sh';
 $getKey = 'bash /var/www/server-b/system/scripts/service.sh getKey';
 $shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
-$app_link='https://'.$public_ip.':'.$server_b_port.'/app/';
-$app_file_manager_link='https://'.$public_ip.':'.$server_b_port.'/app/file-manager.php?';
-$api_link='https://'.$public_ip.':'.$server_b_port.'/api/';
 $server_b_data='/var/www/server-b-data';
+$app_link='https://'.$public_server_b_access.':'.$server_b_port.'/app/';
+$app_file_manager_link='https://'.$public_server_b_access.':'.$server_b_port.'/app/file-manager.php?';
+$api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
 ?>
 <!DOCTYPE html>
 <html lang="en">

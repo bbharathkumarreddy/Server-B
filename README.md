@@ -35,3 +35,4 @@ Open Source Initiative
 <p>Update - Upgrade Ubuntu<code>bash /var/www/server-b/system/scripts/service.sh update_upgrade</code></p>
 <p>Get Total Disk Space<code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
 <p>Get Total RAM Size<code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
+<p>Update Server B Console Domain<code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
