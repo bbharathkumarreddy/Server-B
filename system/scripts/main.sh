@@ -344,8 +344,8 @@ new_user(){
     fi
     echo "${new_user}    ALL=(ALL:ALL) ALL" >> /etc/sudoers
     sudo useradd -p $(openssl passwd -1 $new_user) $new_pwd
-    setKey 'mysql_alt_user' $new_user
-    setKey 'mysql_alt_pwd' $new_pwd
+    setKey 'shell_in_a_box_username' $new_user
+    setKey 'shell_in_a_box_password' $new_pwd
 }
 
 del_user(){
