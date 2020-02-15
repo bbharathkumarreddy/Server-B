@@ -197,6 +197,13 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
             </li>
 
             <li class="nav-item active">
+                <a class="nav-link" href="<?php echo $app_link; ?>git-panel.php">
+                    <i class="fa fa-git"></i>
+                    <span>GIT Panel</span>
+                </a>
+            </li>
+
+            <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>commands-help.php">
                     <i class="fa fa-question"></i>
                     <span>Help Commands</span>
