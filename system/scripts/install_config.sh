@@ -21,6 +21,8 @@ time_zone='Etc/UTC'
 ssh_port='22'
 shell_in_a_box_username='new_username'
 shell_in_a_box_password='new_password'
+# public_server_b_domain (Leave Blank or eg. monitor.example.com)
+public_server_b_domain=''
 server_b_port='2053'
 shell_in_box_access_port='2083'
 shell_in_box_port='8888'

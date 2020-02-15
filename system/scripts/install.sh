@@ -38,6 +38,7 @@ install(){
     echo server_b_v"='"$server_b_v"'" >> $server_b_config_path
     echo ssh_port"='"$ssh_port"'" >> $server_b_config_path
     echo server_b_port"='"$server_b_port"'" >> $server_b_config_path
+    echo public_server_b_domain"='"$public_server_b_domain"'" >> $server_b_config_path
     echo shell_in_box_access_port"='"$shell_in_box_access_port"'" >> $server_b_config_path
     echo shell_in_a_box_username"='"$shell_in_a_box_username"'" >> $server_b_config_path
     echo shell_in_a_box_password"='"$shell_in_a_box_password"'" >> $server_b_config_path
