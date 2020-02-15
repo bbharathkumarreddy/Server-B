@@ -459,7 +459,7 @@ show_legends(){
     echo "  *   Username                  : ${server_b_username}                                    "
     echo "  *   Password                  : ${server_b_password}                                    "
     echo "  *                                                                                       "
-    echo "  *   Server B Shell            : http://${public_ip}:${shell_in_box_access_port}/app/ssh.php        "
+    echo "  *   Server B Shell            : http://${public_ip}:${server_b_port}/app/ssh.php        "
     echo "  *   Shell Username            : ${shell_in_a_box_username}                              "
     echo "  *   Shell Password            : ${shell_in_a_box_password}                              "
     echo "  *                                                                                       "
