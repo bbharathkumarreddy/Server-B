@@ -14,7 +14,11 @@ if (filter_var($_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP)) {
 } else {
     echo 'NOT IP';
     $public_server_b_domain=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_server_b_domain");
+    echo 'public_server_b_domain';
     print_r($public_server_b_domain);
+    echo '<br>';
+    echo 'Update Server B Console Domain to access Server B using domain name;<br><a href="https://github.com/bbharathkumarreddy/Server-B">Refer: https://github.com/bbharathkumarreddy/Server-B</a>';
+        exit;
     if($public_server_b_domain == '' || $public_server_b_domain == ' '){
         echo 'Update Server B Console Domain to access Server B using domain name;<br><a href="https://github.com/bbharathkumarreddy/Server-B">Refer: https://github.com/bbharathkumarreddy/Server-B</a>';
         exit;
