@@ -7,9 +7,9 @@ $dashboard_refresh=shell_exec("bash /var/www/server-b/system/scripts/service.sh 
 $service='bash /var/www/server-b/system/scripts/service.sh';
 $getKey = 'bash /var/www/server-b/system/scripts/service.sh getKey';
 $shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
-$app_link='http://'.$public_ip.':'.$server_b_port.'/app/';
-$app_file_manager_link='http://'.$public_ip.':'.$server_b_port.'/app/file-manager.php?';
-$api_link='http://'.$public_ip.':'.$server_b_port.'/api/';
+$app_link='https://'.$public_ip.':'.$server_b_port.'/app/';
+$app_file_manager_link='https://'.$public_ip.':'.$server_b_port.'/app/file-manager.php?';
+$api_link='https://'.$public_ip.':'.$server_b_port.'/api/';
 $server_b_data='/var/www/server-b-data';
 ?>
 <!DOCTYPE html>
