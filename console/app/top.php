@@ -7,12 +7,14 @@ if (filter_var($_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP)) {
     $public_server_b_access = $public_ip;
 } else {
     $public_server_b_domain=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_server_b_domain");
-    if($public_server_b_domain == ''){
+    if($public_server_b_domain == '' || $public_server_b_domain == ' '){
         echo 'Update Server B Console Domain to access Server B using domain name;<br><a href="https://github.com/bbharathkumarreddy/Server-B">Refer: https://github.com/bbharathkumarreddy/Server-B</a>';
         exit;
-    } else $public_server_b_access = $public_ip;
+    } else { 
+        $public_server_b_access = $public_ip;
+    }
 }
-if(isset($public_server_b_domain) && $public_server_b_domain != '') $public_server_b_access = $public_server_b_domain;
+if(isset($public_server_b_domain) && $public_server_b_domain != '' || $public_server_b_domain != ' ') $public_server_b_access = $public_server_b_domain;
 $server_b_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_b_port");
 $dashboard_refresh=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey dashboard_refresh");
 $service='bash /var/www/server-b/system/scripts/service.sh';
