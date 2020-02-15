@@ -255,7 +255,7 @@ install_mysql(){
     sleep 2
     service mysql start
     sleep 1
-
+    addLogFile "mysql_conf" "/etc/mysql/mysql.conf.d/mysqld.cnf"
     config_mysql $mysql_port $mysql_bind_address
 
     echo -------------------------------------------------
