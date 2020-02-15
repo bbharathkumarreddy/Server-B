@@ -143,7 +143,10 @@ install_nginx(){
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
     sudo service nginx reload reload
+
+    addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
     addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
+    addLogFile 'nginx_server_block' '/etc/nginx/sites-enabled/default'
     addLogFile 'nginx_error_log' 'nginx_error_log /var/log/nginx/error.log'
 
     echo -------------------------------------------------
@@ -210,6 +213,9 @@ install_php(){
     echo "PHP New Current Timezone = ${new_php_timezone_string}"
 
     addLogFile "php_log" "/var/log/${php_service_name}.log"
+    addLogFile "php_ini" ${php_ini_file}
+    addLogFile "php_www_conf_file" ${php_www_conf_file}
+    
     echo -------------------------------------------------
     echo xxxxxxxxxx  PHP INSTALL COMPLETED     xxxxxxxxxxx
     echo -------------------------------------------------
