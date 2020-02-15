@@ -1,4 +1,5 @@
 <?php
+echo $_SERVER['HTTP_HOST'];
 $server_name=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey server_name");
 $private_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey private_ip");
 $public_ip=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey public_ip");
