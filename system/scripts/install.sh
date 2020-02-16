@@ -8,6 +8,11 @@ install(){
     echo --------------------------------------------------
     sudo mkdir -p $server_b_data_path
     sudo mkdir -p $site_path
+    sudo touch ${server_b_data_path}'git_before_script.sh'
+    sudo touch ${server_b_data_path}'git_after_script.sh'
+    sudo touch ${server_b_data_path}'reboot.sh'
+    sudo touch ${server_b_data_path}'general.sh'
+    sudo touch ${server_b_data_path}'git_trigger_history.txt'
     #sudo mkdir -p $site_path'php'
     #sudo mkdir -p $site_path'node'
     #sudo mkdir -p $site_path'static'
@@ -54,6 +59,10 @@ install(){
     echo ping_1_link"='"$ping_1_link"'" >> $server_b_config_path
     echo ping_2_link"='"$ping_2_link"'" >> $server_b_config_path
     echo domain"='"$domain"'" >> $server_b_config_path
+    echo git_folder_path"='"$git_folder_path"'" >> $server_b_config_path
+    echo git_url"='"$git_url"'" >> $server_b_config_path
+    echo git_ip_list"='"$git_ip_list"'" >> $server_b_config_path
+    echo git_trigger_enable"='"$git_trigger_enable"'" >> $server_b_config_path
     echo cron_file"='"$cron_file"'" >> $server_b_config_path
     echo temp_cron"='"$temp_cron"'" >> $server_b_config_path
     source $server_b_main_path'system/scripts/main.sh'
@@ -88,6 +97,7 @@ install(){
     server_b_file_per
 
     crontab -l | { cat; echo "@reboot ${scripts_path}service.sh load_ip > /dev/null 2>&1"; } | crontab -
+    crontab -l | { cat; echo "@reboot /var/www/server-b-data/reboot.sh load_ip > /dev/null 2>&1"; } | crontab -
     addLogFile 'syslog' '/var/log/syslog'
     addLogFile 'authlog' '/var/log/auth.log'
     clear_ram

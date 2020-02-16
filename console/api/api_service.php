@@ -85,6 +85,70 @@ if (isset($_GET['o'])) {
         $cmd_exe= base64_decode($_GET['cmd']);
         print_r(shell_exec($cmd_exe));
     }
+    else if ($o == 'git_process') {
+        if(!isset($_GET['mode'])){
+            echo 'Invalid Git Button'; exit;
+        }
+        $git_folder_path = trim(shell_exec($service.' getKey git_folder_path'));
+        $git_url = trim(shell_exec($service.' getKey git_url'));
+        if($git_folder_path == '' || $git_url == '') echo 'Git folder and Git url is not configured';
+        if($_GET['mode'] == 'status') { 
+            $a = (shell_exec('cd '.$git_folder_path.' && git status')); 
+            if($a == '') echo 'No such file or directory or git repository pulled';
+            else print_r($a);
+            exit; 
+        }
+        else if($_GET['mode'] == 'stash') { 
+            $a = (shell_exec('cd '.$git_folder_path.' && git stash')); exit;
+            if($a == '') echo 'No such file or directory or git repository pulled';
+            else print_r($a);
+            exit;     
+        }
+        else if($_GET['mode'] == 'reset') { 
+            $a = (shell_exec('cd '.$git_folder_path.' && git reset')); exit; 
+            if($a == '') echo 'No such file or directory or git repository pulled';
+            else print_r($a);
+            exit; 
+        }
+        else if($_GET['mode'] == 'git_trigger_enable') { 
+            $a = shell_exec($service.' setKey git_trigger_enable enable');
+            print_r($a);
+            exit; 
+        }
+        else if($_GET['mode'] == 'git_trigger_disable') { 
+            $a = shell_exec($service.' setKey git_trigger_enable disable');
+            print_r($a);
+            exit; 
+        }
+        else {
+            print_r('Invalid Git Function');
+            exit;    
+        }
+    }
+    else if($o == 'script_play') {
+        if(!isset($_GET['type'])) {
+            echo 'script type not defined'; exit; 
+        }
+        if($_GET['type'] == 'general') $type = 'general.sh';
+        else if($_GET['type'] == 'reboot') $type = 'reboot.sh';
+        else {  echo 'Invalid script type'; exit;  }
+        $a = shell_exec('sudo bash /var/www/server-b-data/'.$type);
+        print_r($a);
+        exit; 
+    }
+    else if ($o == 'git_save') {
+        if(!isset($_GET['folder_path']) || trim($_GET['folder_path']) == '' || !isset($_GET['git_url']) || trim($_GET['git_url']) == '')
+        {
+            echo 'Git Folder Path and Git url is mandatory'; exit;
+        }
+        $folder_path = trim($_GET['folder_path']);
+        $git_url = trim($_GET['git_url']);
+        $ip_list = trim($_GET['ip_list']);
+        echo shell_exec($service.' setKey git_folder_path '.$folder_path);
+        echo shell_exec($service.' setKey git_url '.$git_url);
+        echo shell_exec($service.' setKey git_ip_list '.$ip_list);
+        echo 'Git Saved Successfully';
+    }
     else if ($o == 'change_port') {
         $port_mode= $_GET['port_mode'];
         $port_value= $_GET['port_value'];

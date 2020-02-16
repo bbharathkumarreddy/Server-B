@@ -118,15 +118,14 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
                 <div class="col-12">
                     <div class="card bg-success text-white shadow">
                         <div class="card-body">
-
-                            <small>Server</small><br> &nbsp;
+                            <small>Server <small class="fr">Auto Fetch Mode</small></small><br> &nbsp;
                             <b><?php echo $server_name; ?></b> &nbsp;
                             <b></b>
                             <br>
-                            <small>Public IP</small><br> &nbsp;
+                            <small>Public IP<br> &nbsp;
                             <b><?php echo $public_ip; ?></b>
                             <br>
-                            <small>Private IP</small><br> &nbsp;
+                            <small>Private IP<br> &nbsp;
                             <b><?php echo $private_ip; ?></b>
                         </div>
                     </div>
@@ -198,7 +197,7 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>git-panel.php">
-                    <i class="fa fa-git"></i>
+                    <i class="fa fa-code-branch"></i>
                     <span>GIT Panel</span>
                 </a>
             </li>
