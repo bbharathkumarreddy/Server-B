@@ -122,10 +122,10 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
                             <b><?php echo $server_name; ?></b> &nbsp;
                             <b></b>
                             <br>
-                            <small>Public IP<br> &nbsp;
+                            <small>Public IP</small><br> &nbsp;
                             <b><?php echo $public_ip; ?></b>
                             <br>
-                            <small>Private IP<br> &nbsp;
+                            <small>Private IP</small><br> &nbsp;
                             <b><?php echo $private_ip; ?></b>
                         </div>
                     </div>
