@@ -198,7 +198,7 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>scripts.php">
                     <i class="fa fa-file"></i>
-                    <span>Scripts</span>
+                    <span>Scripts Panel</span>
                 </a>
             </li>
 
