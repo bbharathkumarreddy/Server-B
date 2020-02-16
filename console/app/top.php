@@ -196,6 +196,13 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
             </li>
 
             <li class="nav-item active">
+                <a class="nav-link" href="<?php echo $app_link; ?>scripts.php">
+                    <i class="fa fa-file"></i>
+                    <span>Scripts</span>
+                </a>
+            </li>
+
+            <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>git-panel.php">
                     <i class="fa fa-code-branch"></i>
                     <span>GIT Panel</span>
