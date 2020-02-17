@@ -12,8 +12,9 @@ if(!isset($_GET['key']) || (isset($_GET['key']) && $_GET['key'] == '')){
 }
 $git_ip_list = trim(shell_exec($service.' getKey git_ip_list'));
 if($git_ip_list != '')
-{
-    if(!ip_match($git_ip_list)){
+{   
+    $ip = ip_get();
+    if(!cidr_match($ip, $git_ip_list)){
         header("HTTP/1.0 403 Access Denied");
         die(json_encode(array('message'=>'Access Denied'))); 
     }
@@ -29,9 +30,8 @@ if($server_b_auth_key == ''){
     die(json_encode(array('message'=>'Unauthorized')));
 }
 
-function ip_match($git_ip_list)
-{
-    
+function ip_get()
+{    
     if(isset($_SERVER['HTTP_CF_CONNECTING_IP'])){
         $ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
     }elseif(!empty($_SERVER['HTTP_CLIENT_IP'])){
@@ -41,8 +41,9 @@ function ip_match($git_ip_list)
     }else{
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-    return cidr_match($ip, $git_ip_list);
+    return $ip;
 } 
+
 function cidr_match($ip_check, $git_ip_list)
 {   $git_ip_list_ar = explode(',',$git_ip_list);
     $allow = false;
@@ -79,9 +80,10 @@ function cidr_match($ip_check, $git_ip_list)
     if(!$allow) history_write(array('failed'=>'IP Access Denied by rule for => '.$ip_check.' ;'));
     return $allow;
 }
-history_write(array('allowed'=>'true;'));
+history_write(array('allowed'=>'true'));
 function history_write($message){
     $message['time']=date("Y-m-d h:i:sa", time());
+    $message['trigger-ip']=ip_get();
     $fp = fopen('/var/www/server-b-data/git_trigger_history.txt', 'w');
     fwrite($fp,json_encode(array($message,$_GET,$_POST,json_decode(file_get_contents('php://input')))));
     fclose($fp);
