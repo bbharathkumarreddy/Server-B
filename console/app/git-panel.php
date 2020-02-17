@@ -33,8 +33,9 @@
                     <div class="col-xs-12 col-md-12 md-12">
                         <?php
                             $public_server_b_domain = trim(shell_exec($getKey . ' public_server_b_domain'));
+                            $server_b_auth_key = trim(shell_exec($getKey . ' server_b_auth_key'));
                             if($public_server_b_domain == '') $public_server_b_domain = trim(shell_exec($getKey . ' public_ip'));
-                            $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.trim(shell_exec($getKey . ' public_server_b_domain')).':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.trim(shell_exec($getKey . ' server_b_auth_key'));
+                            $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.trim(shell_exec($getKey . ' public_server_b_domain')).':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.$server_b_auth_key;
                         ?>
                         <div class="alert alert-danger <?php echo $alert_show; ?>" >
                             <strong>Attention!</strong> Git Triggers is disabled; Git Trigger webhook url works once enabled;
@@ -49,6 +50,8 @@
                         <h6>Folder<br><b><span><?php echo shell_exec($getKey . ' git_folder_path'); ?></span></b></h6>
                         <br>
                         <h6>Git Trigger Webhook Url (Used for Github / Bitbucket)<br><a target="_blank" href="<?php echo $git_trigger_link; ?>"><b><span><?php echo $git_trigger_link; ?></span></b></a></h6>
+                        <br>
+                        <h6>Secret (Optinal -> Used for Github / Bitbucket)<br><a href="javascript:;"><b><span><?php echo $server_b_auth_key; ?></span></b></a></h6>
                         <br>
                         <p>Git Trigger History<a target="_blank"  class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&view=git_trigger_history.txt"> <small>View <i class="fa fa-file"></i></small></a>
                         <br>
@@ -77,6 +80,9 @@
                         <p>Git Url <span class="text-danger">*</span>
                         <br>
                         <input id="git_url" type="text" placeholder="https://username:password@github.com/username/repo-name" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_url'); ?>"></p>
+                        <p>Git Branch <small>(Optional -> Default "master" Branch)</small>
+                        <br>
+                        <input id="git_branch" type="text" placeholder="master" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_branch'); ?>"></p>
                         <p>IP / CIDR (Whitelist)
                         <br>
                         <textarea id="ip_list" placeholder="10.2.2.2/28,172.63.65.5/32" rows="3" cols="10" style="width: 500px;"><?php echo shell_exec($getKey . ' git_ip_list'); ?></textarea>
@@ -159,8 +165,9 @@
             let folder_path = $('#folder_path').val();
             let git_url = $('#git_url').val();
             let ip_list = $('#ip_list').val();
+            let git_branch = $('#git_branch').val();
             $.ajax({
-                url: api_link + 'api_service.php?o=git_save&folder_path=' + folder_path + '&git_url=' + git_url + '&ip_list=' + ip_list,
+                url: api_link + 'api_service.php?o=git_save&folder_path=' + folder_path + '&git_url=' + git_url + '&ip_list=' + ip_list + '&git_branch=' + git_branch,
                 type: 'GET',
                 dataType: 'text',
                 success: function(data) {
