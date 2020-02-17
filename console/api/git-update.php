@@ -86,8 +86,11 @@ function history_write($message){
     fwrite($fp,json_encode(array($message,$_GET,$_POST,json_decode(file_get_contents('php://input')))));
     fclose($fp);
 }
-echo 'Success';exit;
+
 echo shell_exec($service.' getKey git_folder_path');
+echo shell_exec($service.' getKey git_url');
+echo shell_exec($service.' getKey git_branch');
+echo 'Success';exit;
 echo '<b>---------------------------------------------------------------------------------------------<br>';
 echo '.............................Server Update Started....................................................<br>';
 echo '---------------------------------------------------------------------------------------------</b><br>';

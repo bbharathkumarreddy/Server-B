@@ -143,10 +143,13 @@ if (isset($_GET['o'])) {
         }
         $folder_path = trim($_GET['folder_path']);
         $git_url = trim($_GET['git_url']);
+        $git_branch = trim($_GET['git_branch']);
+        if($git_branch == '') $git_branch = 'master';
         $ip_list = trim($_GET['ip_list']);
         echo shell_exec($service.' setKey git_folder_path '.$folder_path);
         echo shell_exec($service.' setKey git_url '.$git_url);
         echo shell_exec($service.' setKey git_ip_list '.$ip_list);
+        echo shell_exec($service.' setKey git_branch '.$git_branch);
         echo 'Git Saved Successfully';
     }
     else if ($o == 'change_port') {

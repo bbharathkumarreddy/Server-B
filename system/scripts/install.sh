@@ -63,6 +63,7 @@ install(){
     echo git_url"='"$git_url"'" >> $server_b_config_path
     echo git_ip_list"='"$git_ip_list"'" >> $server_b_config_path
     echo git_trigger_enable"='"$git_trigger_enable"'" >> $server_b_config_path
+    echo git_branch"='"$git_branch"'" >> $server_b_config_path
     echo cron_file"='"$cron_file"'" >> $server_b_config_path
     echo temp_cron"='"$temp_cron"'" >> $server_b_config_path
     source $server_b_main_path'system/scripts/main.sh'
