@@ -51,7 +51,7 @@
                         <br>
                         <h6>Git Trigger Webhook Url (Used for Github / Bitbucket)<br><a target="_blank" href="<?php echo $git_trigger_link; ?>"><b><span><?php echo $git_trigger_link; ?></span></b></a></h6>
                         <br>
-                        <h6>Secret (Optinal -> Used for Github / Bitbucket)<br><a href="javascript:;"><b><span><?php echo $server_b_auth_key; ?></span></b></a></h6>
+                        <h6>Secret (Optional -> Used for Github / Bitbucket)<br><a href="javascript:;"><b><span><?php echo $server_b_auth_key; ?></span></b></a></h6>
                         <br>
                         <p>Git Trigger History<a target="_blank"  class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&view=git_trigger_history.txt"> <small>View <i class="fa fa-file"></i></small></a>
                         <br>
