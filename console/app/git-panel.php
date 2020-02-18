@@ -77,7 +77,7 @@
                     <div class="col-xs-12 col-md-12 md-12">
                         <p>Folder Path <span class="text-danger">*</span>
                         <br><input id="folder_path" type="text" placeholder="/var/www/html" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_folder_path'); ?>"></p>
-                        <p>GIT Repository <span class="text-danger">*</span><small>(GIT Remote URL)</small>
+                        <p>GIT Repository <span class="text-danger">*</span> <small>(GIT Remote URL)</small>
                         <br>
                         <input id="git_repo" type="text" placeholder="https://github.com/username/great-project.git" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_repo'); ?>"></p>
                         <p><span>GIT Username</span><span style="margin-left:167px;">GIT Password</span>
