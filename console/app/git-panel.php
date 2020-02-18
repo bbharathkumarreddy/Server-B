@@ -77,9 +77,13 @@
                     <div class="col-xs-12 col-md-12 md-12">
                         <p>Folder Path <span class="text-danger">*</span>
                         <br><input id="folder_path" type="text" placeholder="/var/www/html" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_folder_path'); ?>"></p>
-                        <p>GIT Url <span class="text-danger">*</span>
+                        <p>GIT Repository <span class="text-danger">*</span><small>(GIT Remote URL)</small>
                         <br>
-                        <input id="git_url" type="text" placeholder="https://username:password@github.com/username/repo-name" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_url'); ?>"></p>
+                        <input id="git_repo" type="text" placeholder="https://github.com/username/great-project.git" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_repo'); ?>"></p>
+                        <p><span>GIT Username</span><span style="margin-left:167px;">GIT Password</span>
+                        <br>
+                        <input id="git_username" type="text" placeholder="username" style="width:230px;" value="<?php echo shell_exec($getKey . ' git_username'); ?>"><input id="git_password" type="text" placeholder="password" style="margin-left:40px;width:230px;" value="<?php echo shell_exec($getKey . ' git_password'); ?>"></p>
+                        </p>
                         <p>GIT Branch <small>(Optional -> Default "master" Branch)</small>
                         <br>
                         <input id="git_branch" type="text" placeholder="master" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_branch'); ?>"></p>
@@ -138,10 +142,10 @@
 <script>
     $(document).ready(function(){
         let temp_git_folder_path = '<?php echo trim(shell_exec($getKey . ' git_folder_path')); ?>';
-        let temp_git_url = '<?php echo trim(shell_exec($getKey . ' git_url')); ?>';
+        let temp_git_repo = '<?php echo trim(shell_exec($getKey . ' git_repo')); ?>';
         $('.git_btn').click(function(){
-            if(temp_git_folder_path == '' || temp_git_url == '') { 
-                alert('Git Folder or Git Url is not configured');
+            if(temp_git_folder_path == '' || temp_git_repo == '') { 
+                alert('GIT Folder Path or GIT Repository is not configured');
                 return 0;
             }
             let mode = $(this).attr('git');
@@ -163,11 +167,13 @@
         });
         $("#git_save").click(function(){
             let folder_path = $('#folder_path').val();
-            let git_url = $('#git_url').val();
+            let git_repo = $('#git_repo').val();
+            let git_username = $('#git_username').val();
+            let git_password = $('#git_password').val();
             let ip_list = $('#ip_list').val();
             let git_branch = $('#git_branch').val();
             $.ajax({
-                url: api_link + 'api_service.php?o=git_save&folder_path=' + folder_path + '&git_url=' + git_url + '&ip_list=' + ip_list + '&git_branch=' + git_branch,
+                url: api_link + 'api_service.php?o=git_save&folder_path=' + folder_path + '&git_repo=' + window.btoa(git_repo) + '&ip_list=' + ip_list + '&git_branch=' + git_branch + '&git_username=' + window.btoa(git_username) + '&git_password=' + window.btoa(git_password),
                 type: 'GET',
                 dataType: 'text',
                 success: function(data) {

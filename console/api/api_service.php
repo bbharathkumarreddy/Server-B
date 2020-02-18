@@ -90,8 +90,8 @@ if (isset($_GET['o'])) {
             echo 'Invalid Git Button'; exit;
         }
         $git_folder_path = trim(shell_exec($service.' getKey git_folder_path'));
-        $git_url = trim(shell_exec($service.' getKey git_url'));
-        if($git_folder_path == '' || $git_url == '') echo 'Git folder and Git url is not configured';
+        $git_repo = trim(shell_exec($service.' getKey git_repo'));
+        if($git_folder_path == '' || $git_repo == '') echo 'GIT folder path and GIT Repository is not configured';
         if($_GET['mode'] == 'status') { 
             $a = (shell_exec('cd '.$git_folder_path.' && git status')); 
             if($a == '') echo 'No such file or directory or git repository pulled';
@@ -137,17 +137,21 @@ if (isset($_GET['o'])) {
         exit; 
     }
     else if ($o == 'git_save') {
-        if(!isset($_GET['folder_path']) || trim($_GET['folder_path']) == '' || !isset($_GET['git_url']) || trim($_GET['git_url']) == '')
+        if(!isset($_GET['folder_path']) || trim($_GET['folder_path']) == '' || !isset($_GET['git_repo']) || trim($_GET['git_repo']) == '')
         {
-            echo 'Git Folder Path and Git url is mandatory'; exit;
+            echo 'GIT Folder Path and GIT Repository is mandatory'; exit;
         }
         $folder_path = trim($_GET['folder_path']);
-        $git_url = trim($_GET['git_url']);
+        $git_repo = trim(base64_decode($_GET['git_repo']));
+        $git_username = trim(base64_decode($_GET['git_username']));
+        $git_password = trim(base64_decode($_GET['git_password']));
         $git_branch = trim($_GET['git_branch']);
         if($git_branch == '') $git_branch = 'master';
         $ip_list = trim($_GET['ip_list']);
         echo shell_exec($service.' setKey git_folder_path '.$folder_path);
-        echo shell_exec($service.' setKey git_url '.$git_url);
+        echo shell_exec($service.' setKey git_repo '.$git_repo);
+        echo shell_exec($service.' setKey git_username '.$git_username);
+        echo shell_exec($service.' setKey git_password '.$git_password);
         echo shell_exec($service.' setKey git_ip_list '.$ip_list);
         echo shell_exec($service.' setKey git_branch '.$git_branch);
         echo 'Git Saved Successfully';

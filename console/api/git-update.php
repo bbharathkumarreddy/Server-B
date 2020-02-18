@@ -89,26 +89,36 @@ function history_write($message){
     fclose($fp);
 }
 
-echo shell_exec($service.' getKey git_folder_path');
-echo shell_exec($service.' getKey git_url');
-echo shell_exec($service.' getKey git_branch');
-echo 'Success';exit;
+$git_folder_path=trim(shell_exec($service.' getKey git_folder_path'));
+$git_repo=trim(shell_exec($service.' getKey git_repo'));
+$git_username=urlencode(trim(shell_exec($service.' getKey git_username')));
+$git_password=urlencode(trim(shell_exec($service.' getKey git_password')));
+$git_repo_parse=parse_url($git_repo);
+$git_url=$git_repo_parse['scheme'].'://'.$git_username.':'.$git_password.'@'.$git_repo_parse['host'].$git_repo_parse['path'];
+$git_branch=trim(shell_exec($service.' getKey git_branch'));
+$resp_0 = exec('mkdir -p '.$git_folder_path.' 2>&1');
+$resp = exec('cd '.$git_folder_path.' && git status 2>&1');
 echo '<b>---------------------------------------------------------------------------------------------<br>';
-echo '.............................Server Update Started....................................................<br>';
+echo '...........................  Server Update Started GIT Trigger  ..................................<br>';
 echo '---------------------------------------------------------------------------------------------</b><br>';
-echo shell_exec("cd /var/www/html/ && git stash").'<br>';
-echo shell_exec("cd /var/www/html/ && git reset").'<br>';
-echo '<br><b>Info:</b>';
-
+echo 'Trigger Started<br><br>';
+echo '<b>Repository</b> => '.$git_repo.'<br><br>';
+if(strpos($resp, 'Not a git repository') !== false){
+    $cmd  = 'git clone -b '.$git_branch.' '.$git_url.' '.$git_folder_path.' 2>&1';
+    echo exec($cmd);
+    echo '<br><b>Info: Created git clone in '.$git_folder_path.'</b>';
+} else {
+    echo exec("bash /var/www/server-b-data/git_before_script.sh 2>&1").'<br>';
+    echo exec("cd ".$git_folder_path." && git stash 2>&1").'<br>';
+    echo exec("cd ".$git_folder_path." && git reset 2>&1").'<br>';
+    echo '<br><b>Info:</b>';
+    echo exec("cd ".$git_folder_path." && git pull origin ".$git_branch."  2>&1");
+    echo exec("bash /var/www/server-b-data/git_after_script.sh  2>&1").'<br>';
+}
 echo '<br>';
-echo shell_exec("bash /var/www/html/bash/scripts/git_before_script.sh").'<br>';
-echo shell_exec("cd /var/www/html/ && git pull origin master");
-echo shell_exec("bash /var/www/html/bash/scripts/git_after_script.sh").'<br>';
-echo shell_exec("chmod -R 777 /var/www/html");
-echo shell_exec("chmod -R 777 /var/www/html-data").'<br>';
-echo shell_exec("bash /var/www/html/system/scripts/service.sh setKey update_date ".date("Y-m-d").'.'.date("h:i:sa"));
-echo '<br>complete<br>';
+
+echo '<br>Completed<br>';
 echo '<b>---------------------------------------------------------------------------------------------<br>';
-echo '..............................Server Update Completed..............................................<br>';
+echo '...........................  Server Update Completed  GIT Trigger  ............................<br>';
 echo '---------------------------------------------------------------------------------------------</b><br>';
 ?>
