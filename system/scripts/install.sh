@@ -60,7 +60,9 @@ install(){
     echo ping_2_link"='"$ping_2_link"'" >> $server_b_config_path
     echo domain"='"$domain"'" >> $server_b_config_path
     echo git_folder_path"='"$git_folder_path"'" >> $server_b_config_path
-    echo git_url"='"$git_url"'" >> $server_b_config_path
+    echo git_repo"='"$git_repo"'" >> $server_b_config_path
+    echo git_username"='"$git_username"'" >> $server_b_config_path
+    echo git_password"='"$git_password"'" >> $server_b_config_path
     echo git_ip_list"='"$git_ip_list"'" >> $server_b_config_path
     echo git_trigger_enable"='"$git_trigger_enable"'" >> $server_b_config_path
     echo git_branch"='"$git_branch"'" >> $server_b_config_path
