@@ -1,4 +1,4 @@
-<h1>SERVER B <small></small></h1>
+<h1>SERVER B <img style="float:right;" src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-icon.png?raw=true"></h1>
 <p><a href="https://github.com/bbharathkumarreddy/Server-B/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?label=open%20source%20license&color=success"></a>&nbsp;&nbsp;&nbsp;
 <a href="#contributors---hall-of-fame"><img alt="GitHub" src="https://img.shields.io/badge/contributors-Hall%20of%20Fame-brightgreen"></a>&nbsp;&nbsp;&nbsp;
 <a href="#"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/bbharathkumarreddy/server-b"></a></p>
