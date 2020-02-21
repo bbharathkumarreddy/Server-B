@@ -221,6 +221,22 @@ install_php(){
     echo -------------------------------------------------
 }
 
+php_root_restart(){
+
+    php_major=`php -r 'echo PHP_MAJOR_VERSION;'`
+    php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
+    php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
+    sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
+    php_service_name='php'$php_major'.'$php_minor'-fpm'
+    
+    systemctl daemon-reload
+    sudo service $php_service_name stop
+    sudo service $php_service_name start
+
+    echo "php root load successful => $php_service_name";
+
+}
+
 install_mysql(){
     echo -------------------------------------------------
     echo +++++++++  MYSQL INSTALL STARTED    +++++++++++++
