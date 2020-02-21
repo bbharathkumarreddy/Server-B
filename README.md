@@ -45,12 +45,12 @@ Open Source Initiative
 <code>service php7.0-fpm restart</code></p>
 <hr>
 <h3>Contributors - Hall of Fame</h3>
-<p>
-<a><p>🏅 Bharath Kumar Reddy<br><a href="https://github.com/bbharathkumarreddy" target="_blank">&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/bbharathkumarreddy</small></sup></a></p></a>
 
-<a><p>🏅 Prasanthmani<br><a href="https://github.com/prasathmani" target="_blank">&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/prasathmani</small></sup></a></p></a>
+<a><p>🏅 Bharath Kumar Reddy<br><a href="https://github.com/bbharathkumarreddy" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/bbharathkumarreddy</small></sup></a></p></a>
 
-<a><p>🏅 KLuka<br><a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></p></a>
+<a><p>🏅 Prasanthmani<br><a href="https://github.com/prasathmani" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/prasathmani</small></sup></a></p></a>
+
+<a><p>🏅 KLuka<br><a href="https://github.com/KLuka" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/KLuka</small></sup></a></p></a>
 <br>
 🏅	🥈  🥉
 <b>Contributors - Welcome</b>
