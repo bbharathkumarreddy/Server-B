@@ -152,6 +152,7 @@ install_nginx(){
     sudo service nginx reload
     write_log 'nginx service restarted'
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
+    addLogFile 'server_b_logs' '/var/log/server-b/server-b.log'
     addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
     addLogFile 'nginx_server_block' '/etc/nginx/sites-enabled/default'
     addLogFile 'nginx_error_log' 'nginx_error_log /var/log/nginx/error.log'

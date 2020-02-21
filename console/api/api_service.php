@@ -12,21 +12,25 @@ if (isset($_GET['o'])) {
     }
     else if ($o == 'service_start') {
         $service_name = $_GET['service_name'];
+        shell_exec($service." write_log service_start ".$service_name);
         echo shell_exec('sudo service '.$service_name.' start');
         echo '\n Server B =>'.$service_name.' Service Starting';
     }
     else if ($o == 'service_restart') {
         $service_name = $_GET['service_name'];
+        shell_exec($service." write_log service_restart ".$service_name);
         echo shell_exec('sudo service '.$service_name.' restart');
         echo '\n Server B =>'.$service_name.' Service Restarting';
     }
     else if ($o == 'service_stop') {
         $service_name = $_GET['service_name'];
+        shell_exec($service." write_log service_stop ".$service_name);
         echo shell_exec('sudo service '.$service_name.' stop');
         echo '\n Server B =>'.$service_name.' Service Stopping';
     }
     else if ($o == 'service_status') {
         $service_name = $_GET['service_name'];
+        shell_exec($service." write_log get_service_info ".$service_name);
         echo shell_exec('sudo service '.$service_name.' status');
         echo '\n Server B =>'.$service_name.' Service Status';
     }
@@ -70,9 +74,9 @@ if (isset($_GET['o'])) {
         echo '\n Server B =>ufw firewall Successully';
     }
     else if ($o == 'remove_ufw_rule') {
-        echo shell_exec($service." write_log 'ufw file rule removed'");
         $ufw_id= $_GET['id'];
         echo shell_exec('sudo ufw --force delete '.$ufw_id);
+        shell_exec($service." write_log ufw file rule removed");
         echo '\n Server B =>ufw firewall updated Successully';
     }
     else if ($o == 'add_ufw_rule') {
@@ -80,6 +84,7 @@ if (isset($_GET['o'])) {
         $bash_string = 'sudo ufw '.$ufw_string;
         echo $bash_string;
         echo shell_exec($bash_string);
+        shell_exec($service." write_log ufw file rule added");
         echo '\n Server B =>ufw firewall updated Successully';
     }
     else if ($o == 'cmd_exe') {
@@ -100,23 +105,27 @@ if (isset($_GET['o'])) {
             exit; 
         }
         else if($_GET['mode'] == 'stash') { 
+            shell_exec($service." write_log git stash cmd");
             $a = (shell_exec('cd '.$git_folder_path.' && git stash')); exit;
             if($a == '') echo 'No such file or directory or git repository pulled';
             else print_r($a);
             exit;     
         }
         else if($_GET['mode'] == 'reset') { 
+            shell_exec($service." write_log git reset cmd");
             $a = (shell_exec('cd '.$git_folder_path.' && git reset')); exit; 
             if($a == '') echo 'No such file or directory or git repository pulled';
             else print_r($a);
             exit; 
         }
         else if($_GET['mode'] == 'git_trigger_enable') { 
+            shell_exec($service." write_log git triggers enabled");
             $a = shell_exec($service.' setKey git_trigger_enable enable');
             print_r($a);
             exit; 
         }
-        else if($_GET['mode'] == 'git_trigger_disable') { 
+        else if($_GET['mode'] == 'git_trigger_disable') {
+            shell_exec($service." write_log git triggers disabled");
             $a = shell_exec($service.' setKey git_trigger_enable disable');
             print_r($a);
             exit; 
@@ -130,6 +139,7 @@ if (isset($_GET['o'])) {
         if(!isset($_GET['type'])) {
             echo 'script type not defined'; exit; 
         }
+        shell_exec($service." write_log script_play initated ".$type."");
         if($_GET['type'] == 'general') $type = 'general.sh';
         else if($_GET['type'] == 'reboot') $type = 'reboot.sh';
         else {  echo 'Invalid script type'; exit;  }
@@ -142,6 +152,7 @@ if (isset($_GET['o'])) {
         {
             echo 'GIT Folder Path and GIT Repository is mandatory'; exit;
         }
+        shell_exec($service." write_log git config save initiated");
         $folder_path = trim($_GET['folder_path']);
         $git_repo = trim(base64_decode($_GET['git_repo']));
         $git_username = trim(base64_decode($_GET['git_username']));
@@ -160,6 +171,8 @@ if (isset($_GET['o'])) {
     else if ($o == 'change_port') {
         $port_mode= $_GET['port_mode'];
         $port_value= $_GET['port_value'];
+        shell_exec($service." write_log port change initiated => ".$port_mode." : ".$port_value."");
+        
         if($port_value < 1 && $port_value > 65535) { echo 'Port is not numberic or out of range'; exit; }
         if($port_mode == 'ssh') $cmd=$service.' ssh_port_set '.$port_value;
         else if($port_mode == 'mysql') $cmd=$service.' config_mysql '.$port_value.' 0.0.0.0';
@@ -168,6 +181,7 @@ if (isset($_GET['o'])) {
     }
     else if ($o == 'app_install') {
         $app_name = $_GET['name'];
+        shell_exec($service." write_log app install started => ".$app_name."");
         include('./app_list.php');
         if(!isset($app_list[$app_name])) {  echo 'App not found'; exit(); }
         for($i=1;$i<6;$i++){
@@ -181,6 +195,7 @@ if (isset($_GET['o'])) {
     else if ($o == 'app_delete') {
         $app_name = $_GET['name'];
         include('./app_list.php');
+        shell_exec($service." write_log app delete started => ".$app_name."");
         if(!isset($app_list[$app_name])) {  echo 'App not found'; exit(); }
         if($app_list[$app_name]['protect'] == true) {  echo 'Cannot delete protected apps'; exit(); }
         for($i=1;$i<4;$i++){
