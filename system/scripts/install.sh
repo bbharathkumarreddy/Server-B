@@ -13,11 +13,15 @@ install(){
     sudo touch ${server_b_data_path}'reboot.sh'
     sudo touch ${server_b_data_path}'general.sh'
     sudo touch ${server_b_data_path}'git_trigger_history.txt'
+    sudo mkdir -p '/var/log/server-b'
+    sudo touch '/var/log/server-b/server-b.log'
+    write_log 'Welcome to Server B'
+    write_log 'Server B Installation Started'
     #sudo mkdir -p $site_path'php'
     #sudo mkdir -p $site_path'node'
     #sudo mkdir -p $site_path'static'
     #sudo mkdir -p $site_path'cert'
-
+    write_log 'Created Config File'
     echo server_name"='"$server_name"'" >> $server_b_config_path
     echo server_b_path"='"$server_b_path"'" >> $server_b_config_path
     echo server_b_username"='"$server_b_username"'" >> $server_b_config_path
@@ -73,6 +77,7 @@ install(){
 
     server_b_file_per
     sudo apt-get install git-core curl build-essential openssl libssl-dev ufw -y
+    write_log 'created ufw default values'
     sudo ufw allow $server_b_port
     sudo ufw allow $shell_in_box_access_port
     sudo ufw allow $ssh_port
