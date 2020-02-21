@@ -27,7 +27,7 @@ Open Source Initiative
 <br>
 <br>
 <hr>
-<h4>Server B - General Shell Commands</h4>
+### Server B - General Shell Commands
 <p>Show Legends<br><code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
 <p>Get MAC Address<br><code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
 <p>Get IP Addresses<br><code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
@@ -36,7 +36,7 @@ Open Source Initiative
 <p>Get Total RAM Size<br><code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
 <p>Update Server B Console Domain<br><code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
 <hr>
-<h4>Server B - Troubleshoot</h4>
+### <h4>Server B - Troubleshoot</h4>
 <p>Nginx / PHP Service error | 502 bad gateway<br>
 <code>bash /var/www/server-b/system/scripts/service.sh php_nginx_root_restart</code></p>
 <p>Restart Nginx<br>
