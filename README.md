@@ -48,11 +48,11 @@ Open Source Initiative
 <hr>
 <h3>Contributors - Hall of Fame</h3>
 
-<a><p>🏅 Bharath Kumar Reddy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bbharathkumarreddy" target="_blank"><sup><small>https://github.com/bbharathkumarreddy</small></sup></a></p></a>
+<a>🏅 Bharath Kumar Reddy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bbharathkumarreddy" target="_blank"><sup><small>https://github.com/bbharathkumarreddy</small></sup></a></a>
 
-<a><p>🏅 Prasanthmani<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/prasathmani" target="_blank"><sup><small>https://github.com/prasathmani</small></sup></a></p></a>
+<a>🏅 Prasanthmani<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/prasathmani" target="_blank"><sup><small>https://github.com/prasathmani</small></sup></a></a>
 
-<a><p>🏅 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></p></a>
+<a>🏅 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></a>
 <br>
 <b>Contributors - Welcome </b>🏅	🥈  🥉
 <p>Contributors - Features, Bug Fixes will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
