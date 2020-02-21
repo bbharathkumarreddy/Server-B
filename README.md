@@ -35,8 +35,12 @@ Open Source Initiative
 <p>Update - Upgrade Ubuntu<code>bash /var/www/server-b/system/scripts/service.sh update_upgrade</code></p>
 <p>Get Total Disk Space<code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
 <p>Get Total RAM Size<code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
-<p>Update Server B Console Domain<code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
+<p>Update Server B Console Domain<br><code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
 <hr>
 <h4>Server B - Troubleshoot</h4>
-<p>Php Service not starting / 502 Bad gateway<br>
-<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
+<p>Nginx / PHP Service error | 502 bad gateway<br>
+<code>bash /var/www/server-b/system/scripts/service.sh php_nginx_root_restart</code></p>
+<p>Restart Nginx<br>
+<code>service nginx restart</code></p>
+<p>Restart PHP <small>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</small><br>
+<code>service php7.0-fpm restart</code></p>
