@@ -36,3 +36,7 @@ Open Source Initiative
 <p>Get Total Disk Space<code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
 <p>Get Total RAM Size<code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
 <p>Update Server B Console Domain<code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
+<hr>
+<h4>Server B - Troubleshoot</h4>
+<p>Php Service not starting / 502 Bad gateway<br>
+<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
