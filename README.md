@@ -6,6 +6,10 @@ Open Source Initiative
 <br>
 <small><b>Supported OS: Ubuntu 14.04 & above</b></small>
 <br>
+<p align="center">
+  <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
+</p>
+<hr>
 <h5>Copy and Run Below Commands</h5>
 <h5>Step 1</h5>
 <code>sudo apt update -y && sudo apt-get install git vim -y</code>
@@ -22,11 +26,6 @@ Open Source Initiative
 <code>sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <br>
 <br>
-<p><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</p>
-<hr>
-<p align="center">
-  <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
-</p>
 <hr>
 <h4>Server B - General Shell Commands</h4>
 <p>Show Legends<br><code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
@@ -44,3 +43,5 @@ Open Source Initiative
 <code>service nginx restart</code></p>
 <p>Restart PHP <b>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</b><br>
 <code>service php7.0-fpm restart</code></p>
+<hr>
+<p><b><sup><sup><small>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</sup></sup></small></p>
