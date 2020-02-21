@@ -1,5 +1,6 @@
 <h1>SERVER B <small></small></h1>
 <img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?label=open%20source%20license&color=success">
+<img alt="GitHub" src="https://img.shields.io/badge/contributor-Hall%20of%20Fame-brightgreen">
 Simple Server Management - <small>Web Console</small>
 <br>
 Open Source Initiative
