@@ -45,9 +45,15 @@ Open Source Initiative
 <code>service php7.0-fpm restart</code></p>
 <hr>
 <h3>Contributors - Hall of Fame</h3>
-<a><p>Bharath Kumar Reddy</p></a>
-<a href="https://github.com/bbharathkumarreddy" target="_blank"><sup><small>https://github.com/bbharathkumarreddy</small></sup></a>
-<a><p>Prasanthmani</p></a>
-<a href="https://github.com/prasathmani" target="_blank"><sup><small>https://github.com/prasathmani</small></sup></a>
+<p>
+<a><p>🏅 Bharath Kumar Reddy<br><a href="https://github.com/bbharathkumarreddy" target="_blank"><sup><small>https://github.com/bbharathkumarreddy</small></sup></a></p></a>
+
+<a><p>🏅 Prasanthmani<br><a href="https://github.com/prasathmani" target="_blank"><sup><small>https://github.com/prasathmani</small></sup></a></p></a>
+
+<a><p>🏅 KLuka<br><a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></p></a>
+<br>
+🏅	🥈  🥉
+<sup>Contributors - Welcome<sup>
+<p>Contributors - Feature, Bug Fixes, Issue Repoports will awarded a place in server-b hall of fame and a digital certificate for contribution.<p>
 <br>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
