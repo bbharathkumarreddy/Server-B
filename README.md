@@ -52,8 +52,7 @@ Open Source Initiative
 
 <a><p>🏅 KLuka<br><a href="https://github.com/KLuka" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><small>https://github.com/KLuka</small></sup></a></p></a>
 <br>
-🏅	🥈  🥉
-<b>Contributors - Welcome</b>
+<b>Contributors - Welcome </b>🏅	🥈  🥉
 <p>Contributors - Feature, Bug Fixes, Issue Repoports will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
 <br>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
