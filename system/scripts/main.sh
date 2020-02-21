@@ -56,7 +56,6 @@ get_os(){
 }
 
 get_cron_file(){
-    write_log 'cron file loaded'
     rm -rf $cron_file
     rm -rf $temp_cron
     crontab -l >> $cron_file
