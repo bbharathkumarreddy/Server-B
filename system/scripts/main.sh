@@ -142,7 +142,7 @@ install_nginx(){
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
-    sudo service nginx reload reload
+    sudo service nginx reload
 
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
     addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
@@ -221,7 +221,7 @@ install_php(){
     echo -------------------------------------------------
 }
 
-php_root_restart(){
+php_nginx_root_restart(){
 
     php_major=`php -r 'echo PHP_MAJOR_VERSION;'`
     php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
@@ -232,8 +232,10 @@ php_root_restart(){
     systemctl daemon-reload
     sudo service $php_service_name stop
     sudo service $php_service_name start
+    sudo service nginx stop
+    sudo service nginx start
 
-    echo "php root load successful => $php_service_name";
+    echo "php nginx root restart successful";
 
 }
 
