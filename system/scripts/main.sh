@@ -221,7 +221,7 @@ install_php(){
     echo -------------------------------------------------
 }
 
-root_php(){
+php_root_restart(){
 
     php_major=`php -r 'echo PHP_MAJOR_VERSION;'`
     php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
