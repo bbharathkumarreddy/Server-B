@@ -1,5 +1,6 @@
 <h1>SERVER B <small></small></h1>
 <br>
+![GitHub](https://img.shields.io/github/license/bbharathkumarreddy/server-b?style=plastic)
 Simple Server Management - <small>Web Console</small>
 <br>
 Open Source Initiative
