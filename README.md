@@ -1,6 +1,6 @@
 <h1>SERVER B <small></small></h1>
-<img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?label=open%20source%20license&color=success">
-<img alt="GitHub" src="https://img.shields.io/badge/contributor-Hall%20of%20Fame-brightgreen">
+<p><a href="https://github.com/bbharathkumarreddy/Server-B/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?label=open%20source%20license&color=success"></a>
+<a href=#contributors---hall-of-fame"><img alt="GitHub" src="https://img.shields.io/badge/contributors-Hall%20of%20Fame-brightgreen"></a></p>
 Simple Server Management - <small>Web Console</small>
 <br>
 Open Source Initiative
