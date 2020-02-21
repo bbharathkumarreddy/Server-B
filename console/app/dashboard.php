@@ -131,7 +131,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="mt-min4">';
+                                <hr class="hr-service">';
                         }
                         ?>
                     </div>
