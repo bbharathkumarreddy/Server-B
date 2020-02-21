@@ -43,7 +43,7 @@ Open Source Initiative
 <code>bash /var/www/server-b/system/scripts/service.sh php_nginx_root_restart</code></p>
 <p>Restart Nginx<br>
 <code>service nginx restart</code></p>
-<p>Restart PHP <b>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</b><br>
+<p>Restart PHP <b><sup><small>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</small></sup></b><br>
 <code>service php7.0-fpm restart</code></p>
 <hr>
 <h3>Contributors - Hall of Fame</h3>
@@ -54,7 +54,8 @@ Open Source Initiative
 
 <a>🏅 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></a>
 <br>
+<br>
 <b>Contributors - Welcome </b>🏅	🥈  🥉
-<p>Contributors - Features, Bug Fixes will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
+<p>Features, Bug Fixes will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
 <br>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
