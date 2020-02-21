@@ -93,8 +93,9 @@ kbd {
     margin-left: 20px !important;
 }
 
-.mt-min4 {
-    margin-top: -4px;
+.hr-service {
+    margin-top: 0px;
+    margin-bottom: 4px;
 }
 
 .ma {
