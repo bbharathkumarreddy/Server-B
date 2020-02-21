@@ -56,6 +56,6 @@ Open Source Initiative
 <br>
 <br>
 <b>Contributors - Welcome </b>🏅	🥈  🥉
-<p>Contributors - Features, Bug Fixes will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
+<p>Features, Bug Fixes will awarded a place in server-b hall of fame and a digital certificate for contribution.</p>
 <br>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
