@@ -504,8 +504,7 @@ generate_htpasswd(){
 }
 
 write_log(){
-    log=$1;
-    echo `date`' - '$log >> '/var/log/server-b/server-b.log'
+    echo `date`' - '$1 $2 $3 $4 $5 $6 $7 $8 $9 $10 >> '/var/log/server-b/server-b.log'
 }
 
 show_legends(){
