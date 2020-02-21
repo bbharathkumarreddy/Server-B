@@ -5,7 +5,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright (c) 2020 Server B - open source initiative | Last Updated @ <span style="text-transform: uppercase;"><?php echo shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey update_date"); ?></span></span><span><a target="_blank" href="<?php echo $api_link; ?>server-b-update.php" class="noline">Update Now</a></span>
+            <span>Copyright (c) 2020 <a target="_blank" href="https://bbharathkumarreddy.github.io/Server-B/">Server B</a> - open source initiative | Last Updated @ <span style="text-transform: uppercase;"><?php echo shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey update_date"); ?></span></span><span><a target="_blank" href="<?php echo $api_link; ?>server-b-update.php" class="noline">Update Now</a></span>
         </div>
     </div>
 </footer>
