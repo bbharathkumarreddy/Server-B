@@ -56,6 +56,7 @@ get_os(){
 }
 
 get_cron_file(){
+    write_log 'cron file loaded'
     rm -rf $cron_file
     rm -rf $temp_cron
     crontab -l >> $cron_file
@@ -64,6 +65,7 @@ get_cron_file(){
 }
 
 publish_cron_file(){
+    write_log 'cron file published'
     crontab $temp_cron
     rm -rf $cron_file
     rm -rf $temp_cron
@@ -110,8 +112,10 @@ update_upgrade(){
     echo -------------------------------------------------
     echo +++++++  Update and Upgrade Started      ++++++++
     echo -------------------------------------------------
+    write_log 'Update and Upgrade started - ubuntu'
     sudo apt update -y
     sudo apt upgrade -y
+    write_log 'Update and Upgrade completed - ubuntu'
     echo -------------------------------------------------
     echo xxxxxx   Update and Upgrade Completed    xxxxxxxx
     echo -------------------------------------------------
@@ -121,6 +125,7 @@ install_nano(){
     echo -------------------------------------------------
     echo ++++++  Nano Editor Install Started      ++++++++
     echo -------------------------------------------------
+    write_log 'nano editor installed'
     sudo apt install nano -y
     echo -------------------------------------------------
     echo xxxxxx   Nano Editor Install Completed    xxxxxxx
@@ -131,6 +136,7 @@ install_nginx(){
     echo -------------------------------------------------
     echo +++++++++  NGINX INSTALL STARTED  +++++++++++++++
     echo -------------------------------------------------
+    write_log 'NGINX INSTALL STARTED'
     sudo apt install nginx -y
     nginx -v
     sleep 3
@@ -138,17 +144,19 @@ install_nginx(){
     
     echo "Nginx Timezone setting complete"
     timedatectl status | grep "Time zone"
+    write_log 'nginx timezone set'
     sudo openssl req -x509 -nodes -days 5475 -newkey rsa:2048 -keyout /etc/nginx/server-b-cert.key -out /etc/nginx/server-b-cert.crt -subj "/OU=Server B Panel"
+    write_log 'openssl certificate created'
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
     sudo service nginx reload
-
+    write_log 'nginx service restarted'
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
     addLogFile 'nginx_access_log' '/var/log/nginx/access.log'
     addLogFile 'nginx_server_block' '/etc/nginx/sites-enabled/default'
     addLogFile 'nginx_error_log' 'nginx_error_log /var/log/nginx/error.log'
-
+    write_log 'NGINX INSTALL COMPLETED'
     echo -------------------------------------------------
     echo xxxxxxxx  NGINX INSTALL COMPLETED     xxxxxxxxxxx
     echo -------------------------------------------------
@@ -158,6 +166,7 @@ install_node_npm(){
     echo -------------------------------------------------
     echo +++++++++  NODE NPM INSTALL STARTED  ++++++++++++
     echo -------------------------------------------------
+    write_log 'NODE NPM INSTALL STARTED'
     sudo apt install nodejs -y
     sudo apt install npm -y
     echo "Node version"
@@ -169,7 +178,7 @@ install_node_npm(){
     sudo npm install -g express
     sudo npm install -g pm2
     sudo npm install -g mysql2
-
+    write_log 'NODE AND NPM MODULES INSTALL COMPLETED'
     echo -------------------------------------------------
     echo ++++ NODE AND NPM MODULES INSTALL COMPLETED  ++++             
     echo -------------------------------------------------
@@ -179,6 +188,7 @@ install_php(){
     echo -------------------------------------------------
     echo +++++++++++  PHP INSTALL STARTED  +++++++++++++++
     echo -------------------------------------------------
+    write_log 'PHP INSTALL STARTED'
     sleep 3
     sudo apt install php-fpm php-mysql -y
     echo "PHP Version"
@@ -194,9 +204,9 @@ install_php(){
     sed -i "s/user = www-data/user = root/g" $php_www_conf_file
     sed -i "s/group = www-data/group = root/g" $php_www_conf_file
     sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
-
+    write_log 'php root user updated'
     systemctl daemon-reload
-    
+    write_log 'systemctl daemon reload'
     setKey 'php_service' $php_service_name
     setKey 'php_ini' $php_ini_file
 
@@ -208,33 +218,35 @@ install_php(){
     sudo service nginx reload reload
     sudo service $php_service_name stop
     sudo service $php_service_name start
-
+    write_log 'nginx restarted'
     new_php_timezone_string=$(sudo grep  "\bdate.timezone\b" $php_ini_file | tail -1 | grep -o '"[^"]\+"');
     echo "PHP New Current Timezone = ${new_php_timezone_string}"
 
     addLogFile "php_log" "/var/log/${php_service_name}.log"
     addLogFile "php_ini" ${php_ini_file}
     addLogFile "php_www_conf_file" ${php_www_conf_file}
-    
+    write_log 'php log files added'
+    write_log 'PHP INSTALL COMPLETED'
     echo -------------------------------------------------
     echo xxxxxxxxxx  PHP INSTALL COMPLETED     xxxxxxxxxxx
     echo -------------------------------------------------
 }
 
 php_nginx_root_restart(){
-
+    write_log 'php_nginx_root_restart initiated'
     php_major=`php -r 'echo PHP_MAJOR_VERSION;'`
     php_minor=`php -r 'echo PHP_MINOR_VERSION;'`
     php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
     sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
     php_service_name='php'$php_major'.'$php_minor'-fpm'
-    
+    write_log 'php_nginx_root_restart done'
     systemctl daemon-reload
+    write_log 'systemctl daemon reloded'
     sudo service $php_service_name stop
     sudo service $php_service_name start
     sudo service nginx stop
     sudo service nginx start
-
+    write_log 'php_nginx_root_restart restart successful'
     echo "php nginx root restart successful";
 
 }
@@ -243,7 +255,7 @@ install_mysql(){
     echo -------------------------------------------------
     echo +++++++++  MYSQL INSTALL STARTED    +++++++++++++
     echo -------------------------------------------------
-
+    write_log 'MYSQL INSTALL STARTED'
     sudo apt update -y
     export DEBIAN_FRONTEND="noninteractive"
     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $root_password"
@@ -262,7 +274,7 @@ install_mysql(){
     mysql -uroot -p$root_password -e "CREATE USER '$mysql_alt_user'@'%' IDENTIFIED BY '"$mysql_alt_pwd"'";
     mysql -uroot -p$root_password -e "flush privileges";
     mysql -uroot -p$root_password -e "SELECT user,authentication_string,plugin,host FROM mysql.user;";
-
+    write_log 'mysql user created'
     setKey 'mysql_root_password' $root_password
     setKey 'mysql_mysql_alt_user' $mysql_alt_user
     setKey 'mysql_alt_password' $mysql_alt_pwd
@@ -270,12 +282,14 @@ install_mysql(){
 
     sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf $backup_path'mysqld.cnf.bck'
     service mysql stop
+    write_log 'mysql server stopped'
     sleep 2
     service mysql start
+    write_log 'mysql server started'
     sleep 1
     addLogFile "mysql_conf" "/etc/mysql/mysql.conf.d/mysqld.cnf"
     config_mysql $mysql_port $mysql_bind_address
-
+    write_log 'mysql bind address done'
     echo -------------------------------------------------
     echo ++++++++++   MYSQL INSTALL COMPLETE   +++++++++++             
     echo -------------------------------------------------
@@ -299,8 +313,10 @@ config_mysql(){
 
     echo 'Note: MySQL service restarts in new configuration => Port:'$mysql_port' AND bind to address:'$mysql_bind_address
     service mysql stop
+    write_log 'mysql server stopped'
     sleep 2
     service mysql start
+    write_log 'mysql server started'
     sleep 1
 
     echo -------------------------------------------------
@@ -314,6 +330,7 @@ install_shell_in_a_box(){
     echo -------------------------------------------------
     echo ++++++++++++  SHELL IN A BOX    +++++++++++++++++
     echo -------------------------------------------------
+    write_log 'SHELL IN A BOX installation started'
     sudo apt-cache search shellinabox
     sudo apt-get install openssl shellinabox -y
     sleep 2
@@ -323,21 +340,25 @@ install_shell_in_a_box(){
     setKey 'shell_in_box_port' $shell_in_box_port
     sleep 1
     sudo service shellinabox stop
+    write_log 'SHELL IN A BOX service stopped'
     sleep 1
     sudo service shellinabox start
+    write_log 'SHELL IN A BOX service started'
+    write_log 'SHELL IN A BOX installation completed'
 }
 
 ssh_port_set(){
     echo -------------------------------------------------
     echo ++++++++++++  SSH PORT SETINGS  +++++++++++++++++
     echo -------------------------------------------------
-    
+    write_log 'ssh port setting initiated'
     ssh_port_string=$(sudo grep "\bPort\b" /etc/ssh/sshd_config)
     ssh_port=$(cat /etc/ssh/sshd_config | grep 'Port ' | grep -oE [0-9] | tr -d '\n')
     new_ssh_port=$1
     sed -i "s/${ssh_port_string}/Port ${1}/g" /etc/ssh/sshd_config
     setKey 'ssh_port' $new_ssh_port
     echo 'Note: Restart Server After all installation or process is completed to start the ssh in new port'
+    write_log "ssh port setting completed to port => ${new_ssh_port}"
     echo -------------------------------------------------
     echo xxxxxx   SSH PORT CONFIG COMPLETE        xxxxxxxx
     echo -------------------------------------------------
@@ -347,6 +368,7 @@ generate_auth_key(){
     echo -------------------------------------------------
     echo +++++++++  GENERATE AUTH STARTED  +++++++++++++++
     echo -------------------------------------------------
+    write_log 'generate auth key command initaited'
     auth_key=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20 ; echo '');
     echo "Note: This is the auth key, cannot be viewed again but can generate a new key. Please copy and store securely. Used for GIT Integrations & APIs."
     echo $auth_key
@@ -368,6 +390,7 @@ new_user(){
     fi
     echo "${new_user}    ALL=(ALL:ALL) ALL" >> /etc/sudoers
     sudo useradd -p $(openssl passwd -1 $new_user) $new_pwd
+    write_log "new user => ${new_user} created"
     setKey 'shell_in_a_box_username' $new_user
     setKey 'shell_in_a_box_password' $new_pwd
 }
@@ -376,6 +399,7 @@ del_user(){
     echo -------------------------------------------------
     echo ++++++++++++++  DELETING USER ++++++++++++++++++
     echo -------------------------------------------------
+    write_log "user delete => $1 created"
     userdel -f -r $1
     echo 'User Deleted :'$1
 }
@@ -384,14 +408,17 @@ clear_ram(){
     sync; echo 1 > /proc/sys/vm/drop_caches
     sync; echo 2 > /proc/sys/vm/drop_caches
     sync; echo 3 > /proc/sys/vm/drop_caches
+    write_log "RAM CLEAR INITIATED"
     echo "RAM CLEARED"
 }
 
 restart(){
+    write_log "Reboot Initiated"
     sudo reboot
 }
 
 shutdown(){
+    write_log "shutdown Initiated"
     sudo shutdown
 }
 
@@ -431,12 +458,14 @@ system_stat_current(){
 }
 
 server_b_file_per(){
+    write_log "file permission changed"
     sudo chmod -R 777 $server_b_path
     sudo chmod -R 777 $server_b_data_path
     sudo chmod -R 777 $site_path
 }
 
 addLogFile(){
+    write_log "log file added => $1"
     name=$1
     location=$2
     echo $1 $2 >> $logpoint_path
@@ -456,6 +485,7 @@ generate_htpasswd(){
     echo -------------------------------------------------
     echo +++++  GENERATE SERVER B LOGIN CREDENTIALS  +++++
     echo -------------------------------------------------
+    write_log "Server B login credentials created"
     twp_salt="zkd44ldvdQpl84mf5n"
     twp_username=$1
     twp_passwd=$2
@@ -468,9 +498,15 @@ generate_htpasswd(){
     rm -f $server_twp_hash_path
     echo $twp_file >> $server_twp_hash_path
     service nginx reload;
+    write_log "nginx service reloaded"
     echo -------------------------------------------------
     echo ++++++ SERVER B LOGIN CREDENTIALS SUCCESS +++++++
     echo -------------------------------------------------
+}
+
+write_log(){
+    $log=$1;
+    echo `date`' - '$log >> '/var/log/server-b/server-b.log'
 }
 
 show_legends(){
