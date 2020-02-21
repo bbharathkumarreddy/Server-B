@@ -505,7 +505,7 @@ generate_htpasswd(){
 }
 
 write_log(){
-    $log=$1;
+    log=$1;
     echo `date`' - '$log >> '/var/log/server-b/server-b.log'
 }
 
