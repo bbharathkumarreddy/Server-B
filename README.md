@@ -43,7 +43,7 @@ Open Source Initiative
 <code>bash /var/www/server-b/system/scripts/service.sh php_nginx_root_restart</code></p>
 <p>Restart Nginx<br>
 <code>service nginx restart</code></p>
-<p>Restart PHP <b>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</b><br>
+<p>Restart PHP <b><sup><small>php&lt;major-version&gt;&lt;minor-version&gt;-fpm</small></sup></b><br>
 <code>service php7.0-fpm restart</code></p>
 <hr>
 <h3>Contributors - Hall of Fame</h3>
