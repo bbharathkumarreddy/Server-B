@@ -29,12 +29,12 @@ Open Source Initiative
 </p>
 <hr>
 <h4>Server B - General Shell Commands</h4>
-<p>Show Legends<code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
-<p>Get MAC Address<code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
-<p>Get IP Addresses<code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
-<p>Update - Upgrade Ubuntu<code>bash /var/www/server-b/system/scripts/service.sh update_upgrade</code></p>
-<p>Get Total Disk Space<code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
-<p>Get Total RAM Size<code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
+<p>Show Legends<br><code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
+<p>Get MAC Address<br><code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
+<p>Get IP Addresses<br><code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
+<p>Update - Upgrade Ubuntu<br><code>bash /var/www/server-b/system/scripts/service.sh update_upgrade</code></p>
+<p>Get Total Disk Space<br><code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
+<p>Get Total RAM Size<br><code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
 <p>Update Server B Console Domain<br><code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
 <hr>
 <h4>Server B - Troubleshoot</h4>
