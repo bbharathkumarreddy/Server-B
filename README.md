@@ -1,5 +1,5 @@
 <h1>SERVER B <small></small></h1>
-<img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?style=plastic&color=success">
+<img alt="GitHub" src="https://img.shields.io/github/license/bbharathkumarreddy/server-b?label=open source license&message=MIT&style=plastic&color=success">
 Simple Server Management - <small>Web Console</small>
 <br>
 Open Source Initiative
