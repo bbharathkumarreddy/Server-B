@@ -217,16 +217,24 @@ $(document).ready(function() {
         let s = window.open(shell_in_box_link + '/logout', '_blank');
         setTimeout(function() {
             s.close();
-        }, 2000);
+        }, 1000);
         $.ajax({
-            url: '/logout',
-            headers: {
-                'Authorization': 'Basic Logout',
-            },
+            url: '/api/logout',
             type: 'GET',
             dataType: 'text',
             success: function(data) {
-                window.location.replace('/dashboard');
+
+            }
+        });
+        $.ajax({
+            url: '/app/logout',
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+
+            },
+            error: function(data) {
+                location.reload();
             }
         });
     });
