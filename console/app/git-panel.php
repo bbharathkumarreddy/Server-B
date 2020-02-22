@@ -84,7 +84,7 @@
                         <p>GIT Repository <span class="text-danger">*</span> <small>(GIT Remote URL)</small>
                         <br>
                         <input id="git_repo" type="text" placeholder="https://github.com/username/great-project.git" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_repo'); ?>"></p>
-                        <p><span>GIT Username <span class="text-danger">*</span></span><span style="margin-left:167px;">GIT Password <span class="text-danger">*</span></span>
+                        <p><span>GIT Username <span class="text-danger">*</span></span><span style="margin-left:157px;">GIT Password <span class="text-danger">*</span></span>
                         <br>
                         <input id="git_username" type="text" placeholder="username" style="width:230px;" value="<?php echo shell_exec($getKey . ' git_username'); ?>"><input id="git_password" type="text" placeholder="password" style="margin-left:40px;width:230px;" value="<?php echo shell_exec($getKey . ' git_password'); ?>"></p>
                         </p>
