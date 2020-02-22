@@ -33,9 +33,13 @@
                     <div class="col-xs-12 col-md-12 md-12">
                         <?php
                             $public_server_b_domain = trim(shell_exec($getKey . ' public_server_b_domain'));
+                            $public_ip = trim(shell_exec($getKey . ' public_ip'));
                             $server_b_auth_key = trim(shell_exec($getKey . ' server_b_auth_key'));
-                            if($public_server_b_domain == '') $public_server_b_domain = trim(shell_exec($getKey . ' public_ip'));
-                            $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.trim(shell_exec($getKey . ' public_server_b_domain')).':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.$server_b_auth_key;
+                            
+                            if($public_server_b_domain == '') $public_server_b_access = $public_server_b_domain;
+                            else $public_server_b_access = $public_ip;
+                            
+                            $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.$public_server_b_access.':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.$server_b_auth_key;
                         ?>
                         <div class="alert alert-danger <?php echo $alert_show; ?>" >
                             <strong>Attention!</strong> GIT Triggers is disabled; GIT Trigger webhook url works once enabled;
