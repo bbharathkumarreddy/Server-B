@@ -36,7 +36,7 @@
                             $public_ip = trim(shell_exec($getKey . ' public_ip'));
                             $server_b_auth_key = trim(shell_exec($getKey . ' server_b_auth_key'));
                             
-                            if($public_server_b_domain == '') $public_server_b_access = $public_server_b_domain;
+                            if($public_server_b_domain != '') $public_server_b_access = $public_server_b_domain;
                             else $public_server_b_access = $public_ip;
                             
                             $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.$public_server_b_access.':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.$server_b_auth_key;
