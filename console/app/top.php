@@ -143,13 +143,6 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
-                    <i class="fa fa-desktop"></i>
-                    <span>Website</span>
-                </a>
-            </li>
-
-            <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#services">
                     <i class="fa fa-chess-board"></i>
                     <span>Services</span>
