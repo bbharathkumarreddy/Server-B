@@ -215,9 +215,6 @@ $(document).ready(function() {
     $(document).on("click", "#logout_btn", function() {
         if (!confirm('Do you want to logout, Enable Popups to logout.')) return 0;
         let s = window.open(shell_in_box_link + '/logout', '_blank');
-        setTimeout(function() {
-            s.close();
-        }, 1000);
         $.ajax({
             url: '/api/logout',
             type: 'GET',
@@ -234,6 +231,7 @@ $(document).ready(function() {
 
             },
             error: function(data) {
+                s.close();
                 location.reload();
             }
         });
