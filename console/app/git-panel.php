@@ -84,17 +84,17 @@
                         <p>GIT Repository <span class="text-danger">*</span> <small>(GIT Remote URL)</small>
                         <br>
                         <input id="git_repo" type="text" placeholder="https://github.com/username/great-project.git" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_repo'); ?>"></p>
-                        <p><span>GIT Username</span><span style="margin-left:167px;">GIT Password</span>
+                        <p><span>GIT Username <span class="text-danger">*</span></span><span style="margin-left:167px;">GIT Password <span class="text-danger">*</span></span>
                         <br>
                         <input id="git_username" type="text" placeholder="username" style="width:230px;" value="<?php echo shell_exec($getKey . ' git_username'); ?>"><input id="git_password" type="text" placeholder="password" style="margin-left:40px;width:230px;" value="<?php echo shell_exec($getKey . ' git_password'); ?>"></p>
                         </p>
                         <p>GIT Branch <small>(Optional -> Default "master" Branch)</small>
                         <br>
                         <input id="git_branch" type="text" placeholder="master" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_branch'); ?>"></p>
-                        <p>IP / CIDR List (Whitelist)
+                        <p>IP / CIDR List <small>(Optional -> Whitelist)</small>
                         <br>
                         <textarea id="ip_list" placeholder="10.2.2.2/28,172.63.65.5/32" rows="3" cols="10" style="width: 500px;"><?php echo shell_exec($getKey . ' git_ip_list'); ?></textarea>
-                        <p>Before Update Script <small>(Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_before_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <p>Before Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_before_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         <textarea id="before_script" readonly="" placeholder="Click on edit button and save file" rows="10" cols="10" style="width: 500px;font-size:14px;color:darkgrey;"><?php
                             $before_script = file_get_contents('/var/www/server-b-data/git_before_script.sh');
@@ -103,7 +103,7 @@
                             ?>
                         </textarea>
                         <br>
-                        <p>After Update Script <small>(Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_after_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <p>After Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_after_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         <textarea id="after_script" readonly="" placeholder="Click on edit button and save file" rows="10" cols="10" style="width: 500px;font-size:14px;color:darkgrey;"><?php
                             $after_script = file_get_contents('/var/www/server-b-data/git_after_script.sh');
