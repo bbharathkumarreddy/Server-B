@@ -22,8 +22,10 @@ $service='bash /var/www/server-b/system/scripts/service.sh';
 $getKey = 'bash /var/www/server-b/system/scripts/service.sh getKey';
 $shell_in_box_access_port=shell_exec("bash /var/www/server-b/system/scripts/service.sh getKey shell_in_box_access_port");
 $server_b_data='/var/www/server-b-data';
+$logout_link='https://'.$public_server_b_access.':'.$server_b_port.'/logout';
 $app_link='https://'.$public_server_b_access.':'.$server_b_port.'/app/';
 $app_file_manager_link='https://'.$public_server_b_access.':'.$server_b_port.'/app/file-manager.php?';
+$shell_in_box_link='https://'.$public_server_b_access.':'.$shell_in_box_access_port;
 $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
 ?>
 <!DOCTYPE html>
@@ -75,6 +77,7 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
     let api_link=`<?php echo $api_link; ?>`;
     api_link=api_link.replace("\n", "").trim();
     let app_link=`<?php echo $app_link; ?>`;
+    let shell_in_box_link=`<?php echo $shell_in_box_link; ?>`;
     let dashboard_refresh=`<?php echo $dashboard_refresh; ?>`;
     if(dashboard_refresh == '' || dashboard_refresh < 1000) dashboard_refresh = 10000;
     app_link=app_link.replace("\n", "").trim();
@@ -218,7 +221,7 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
 
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php">
+                <a class="nav-link" href="javascript:;" id="logout_btn">
                     <i class="fa fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </a>

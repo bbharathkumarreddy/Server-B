@@ -212,4 +212,23 @@ $(document).ready(function() {
         });
     });
 
+    $(document).on("click", "#logout_btn", function() {
+        if (!confirm('Do you want to logout, Enable Popups to logout.')) return 0;
+        let s = window.open(shell_in_box_link + '/logout', '_blank');
+        setTimeout(function() {
+            s.close();
+        }, 2000);
+        $.ajax({
+            url: '/logout',
+            headers: {
+                'Authorization': 'Basic Logout',
+            },
+            type: 'GET',
+            dataType: 'text',
+            success: function(data) {
+                window.location.replace('/dashboard');
+            }
+        });
+    });
+
 });
