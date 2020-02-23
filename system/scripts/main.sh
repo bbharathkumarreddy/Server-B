@@ -148,7 +148,7 @@ install_nginx(){
     write_log 'openssl certificate created'
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
-    sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
+    sudo cp $files_path'server-b-nginx.conf' /etc/nginx/sites-enabled/server-b-nginx.conf
     sudo service nginx reload
     write_log 'nginx service restarted'
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
