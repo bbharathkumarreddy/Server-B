@@ -29,7 +29,7 @@ setKey(){
     else
         value=$2
         if [ $value == "setKey0" ]; then
-            $value='';
+            value='';
         fi
         echo $value
         value="${value//\//\\/}"
