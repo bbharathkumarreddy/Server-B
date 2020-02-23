@@ -8,8 +8,6 @@ install(){
     echo --------------------------------------------------
     sudo mkdir -p $server_b_data_path
     sudo mkdir -p $site_path
-    sudo touch ${server_b_data_path}'git_before_script.sh'
-    sudo touch ${server_b_data_path}'git_after_script.sh'
     sudo touch ${server_b_data_path}'reboot.sh'
     sudo touch ${server_b_data_path}'general.sh'
     sudo touch ${server_b_data_path}'git_trigger_history.txt'

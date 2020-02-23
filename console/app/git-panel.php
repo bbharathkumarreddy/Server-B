@@ -15,6 +15,7 @@
     <!-- Content Row -->
     <?php
         $git_trigger_enable = trim(shell_exec($getKey . ' git_trigger_enable'));
+        $git_folder_path = trim(shell_exec($getKey . ' git_folder_path'));
         if ($git_trigger_enable == 'enable') { $git_trigger_checkbox = 'checked="true"'; $alert_show = 'disp-none'; }
         else { $git_trigger_checkbox = ''; $alert_show = ''; }
      ?>
@@ -80,33 +81,54 @@
                 <div class="card-body row">
                     <div class="col-xs-12 col-md-12 md-12">
                         <p>Folder Path <span class="text-danger">*</span>
-                        <br><input id="folder_path" type="text" placeholder="/var/www/html" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_folder_path'); ?>"></p>
+                        <br><input id="folder_path" type="text" placeholder="/var/www/html" style="width:500px;" value="<?php echo $git_folder_path; ?>"></p>
                         <p>GIT Repository <span class="text-danger">*</span> <small>(GIT Remote URL)</small>
                         <br>
                         <input id="git_repo" type="text" placeholder="https://github.com/username/great-project.git" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_repo'); ?>"></p>
                         <p><span>GIT Username <span class="text-danger">*</span></span><span style="margin-left:157px;">GIT Password <span class="text-danger">*</span></span>
                         <br>
-                        <input id="git_username" type="text" placeholder="username" style="width:230px;" value="<?php echo shell_exec($getKey . ' git_username'); ?>"><input id="git_password" type="text" placeholder="password" style="margin-left:40px;width:230px;" value="<?php echo shell_exec($getKey . ' git_password'); ?>"></p>
+                        <input id="git_username" type="text" placeholder="username" style="width:230px;" value="<?php echo trim(shell_exec($getKey . ' git_username')); ?>"><input id="git_password" type="text" placeholder="password" style="margin-left:40px;width:230px;" value="<?php echo shell_exec($getKey . ' git_password'); ?>"></p>
                         </p>
                         <p>GIT Branch <small>(Optional -> Default "master" Branch)</small>
                         <br>
-                        <input id="git_branch" type="text" placeholder="master" style="width:500px;" value="<?php echo shell_exec($getKey . ' git_branch'); ?>"></p>
+                        <input id="git_branch" type="text" placeholder="master" style="width:500px;" value="<?php echo trim(shell_exec($getKey . ' git_branch')); ?>"></p>
                         <p>IP / CIDR List <small>(Optional -> Whitelist)</small>
                         <br>
-                        <textarea id="ip_list" placeholder="10.2.2.2/28,172.63.65.5/32" rows="3" cols="10" style="width: 500px;"><?php echo shell_exec($getKey . ' git_ip_list'); ?></textarea>
-                        <p>Before Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_before_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <textarea id="ip_list" placeholder="10.2.2.2/28,172.63.65.5/32" rows="3" cols="10" style="width: 500px;"><?php echo trim(shell_exec($getKey . ' git_ip_list')); ?></textarea>
+                        <p>Auto Deployment Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=<?php echo $git_folder_path; ?>&edit=deployment.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <br>
+                        <small>Deployment scirpt runs once in git clone process.<br>
+                        <b>deployment.sh</b> file should be present in your root git repository for auto deployment scripts to run
+                        </small>
                         <br>
                         <textarea id="before_script" readonly="" placeholder="Click on edit button and save file" rows="10" cols="10" style="width: 500px;font-size:14px;color:darkgrey;"><?php
-                            $before_script = file_get_contents('/var/www/server-b-data/git_before_script.sh');
+                            $before_script = file_get_contents($git_folder_path.'/deployment.sh');
                             if($before_script == '') echo 'Click on edit button and save file';
                             else echo $before_script;
                             ?>
                         </textarea>
                         <br>
-                        <p>After Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=var/www/server-b-data&edit=git_after_script.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <p>Before Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=<?php echo $git_folder_path; ?>&edit=before_update.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <br>
+                        <small>Before Update Script runs every time before git update or pull process triggers.<br>
+                        <b>before_update.sh</b> file should be present in your root git repository for before git update process to run.
+                        </small>
+                        <br>
+                        <textarea id="before_script" readonly="" placeholder="Click on edit button and save file" rows="10" cols="10" style="width: 500px;font-size:14px;color:darkgrey;"><?php
+                            $before_script = file_get_contents($git_folder_path.'/before_update.sh');
+                            if($before_script == '') echo 'Click on edit button and save file';
+                            else echo $before_script;
+                            ?>
+                        </textarea>
+                        <br>
+                        <p>After Update Script <small>(Optional -> Shell Script Only)</small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=<?php echo $git_folder_path; ?>&edit=after_update.sh&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <br>
+                        <small>After Update Script runs every time after git update or pull process triggers.<br>
+                        <b>after_update.sh</b> file should be present in your root git repository for after git update process to run.
+                        </small>
                         <br>
                         <textarea id="after_script" readonly="" placeholder="Click on edit button and save file" rows="10" cols="10" style="width: 500px;font-size:14px;color:darkgrey;"><?php
-                            $after_script = file_get_contents('/var/www/server-b-data/git_after_script.sh');
+                            $after_script = file_get_contents($git_folder_path.'/after_update.sh');
                             if($after_script == '') echo 'Click on edit button and save file';
                             else echo $after_script;
                             ?>

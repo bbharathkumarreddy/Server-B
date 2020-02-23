@@ -99,6 +99,7 @@ if (isset($_GET['o'])) {
         $git_folder_path = trim(shell_exec($service.' getKey git_folder_path'));
         $git_repo = trim(shell_exec($service.' getKey git_repo'));
         if($git_folder_path == '' || $git_repo == '') echo 'GIT folder path and GIT Repository is not configured';
+        if(substr($git_folder_path, -1)  == '/') substr_replace($git_folder_path ,"",-1);
         if($_GET['mode'] == 'status') { 
             $a = (shell_exec('cd '.$git_folder_path.' && git status')); 
             if($a == '') echo 'No such file or directory or git repository pulled';

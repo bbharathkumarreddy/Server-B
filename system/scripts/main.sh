@@ -148,7 +148,7 @@ install_nginx(){
     write_log 'openssl certificate created'
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
-    sudo cp $files_path'nginx.conf' /etc/nginx/sites-enabled/default
+    sudo cp $files_path'server-b-nginx.conf' /etc/nginx/sites-enabled/server-b-nginx.conf
     sudo service nginx reload
     write_log 'nginx service restarted'
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
@@ -200,7 +200,7 @@ install_php(){
     php_www_conf_file="/etc/php/${php_major}.${php_minor}/fpm/pool.d/www.conf"
     php_fpm_service_file="/lib/systemd/system/php${php_major}.${php_minor}-fpm.service"
     
-    sed -i "s/php7.0-fpm.sock/php${php_major}.${php_minor}-fpm.sock/g" /etc/nginx/sites-enabled/default
+    sed -i "s/php7.0-fpm.sock/php${php_major}.${php_minor}-fpm.sock/g" /etc/nginx/sites-enabled/server-b-nginx.conf
     sed -i "s/user = www-data/user = root/g" $php_www_conf_file
     sed -i "s/group = www-data/group = root/g" $php_www_conf_file
     sed -i "s/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf/\/etc\/php\/${php_major}.${php_minor}\/fpm\/php-fpm.conf -R/g" $php_fpm_service_file
