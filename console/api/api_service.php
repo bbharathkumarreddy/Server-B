@@ -161,6 +161,8 @@ if (isset($_GET['o'])) {
         $git_password = trim(base64_decode($_GET['git_password']));
         $git_branch = trim($_GET['git_branch']);
         if($git_branch == '') $git_branch = 'master';
+        $ip_list = trim($_GET['ip_list']);
+        echo '<br>'.$service.' setKey git_ip_list '.$ip_list.'<br>';
         echo shell_exec($service.' setKey git_folder_path '.$folder_path);
         echo shell_exec($service.' setKey git_repo '.$git_repo);
         echo shell_exec($service.' setKey git_username '.$git_username);
