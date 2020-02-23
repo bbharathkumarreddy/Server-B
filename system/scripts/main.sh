@@ -22,16 +22,17 @@ getKey(){
 
 setKey(){
     key=$1
-    if [ $2 == "setKey0" ]; then
-        return 1
-    fi
     value=value="${!1}"
     if [ -z "$value" ]
     then
         echo $key"='"$2"'" >> $config_path
     else
-        echo $2
-        value="${2//\//\\/}"
+        value=$2
+        if [ $value == "setKey0" ]; then
+            $value='';
+        fi
+        echo $value
+        value="${value//\//\\/}"
         sed -i "s/^$1=.*/$1='$value'/" $config_path
         echo $value
     fi
