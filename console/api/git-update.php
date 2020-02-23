@@ -103,7 +103,7 @@ echo '...........................  Server Update Started GIT Trigger  ..........
 echo '---------------------------------------------------------------------------------------------</b><br>';
 echo 'Trigger Started<br><br>';
 echo '<b>Repository</b> => '.$git_repo.'<br><br>';
-if(strpos($resp, 'Not a git repository') !== false){
+if(strpos($resp, 'ot a git repository') !== false){
     $cmd  = 'git clone -b '.$git_branch.' '.$git_url.' '.$git_folder_path.' 2>&1';
     echo exec($cmd);
     echo '<br><b>Info: Created git clone in '.$git_folder_path.'</b>';
