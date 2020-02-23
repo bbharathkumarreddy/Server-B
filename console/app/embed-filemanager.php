@@ -392,6 +392,7 @@ if (isset($_POST['ajax']) && !FM_READONLY) {
         $file_path = $path . '/' . $file;
         
         $writedata = $_POST['content'];
+        $writedata = str_replace("\r", '', $writedata);
         $fd = fopen($file_path, "w");
         @fwrite($fd, $writedata);
         fclose($fd);
