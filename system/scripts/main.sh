@@ -22,7 +22,7 @@ getKey(){
 
 setKey(){
     key=$1
-    if [ $key!="setKey0" ]; then
+    if [ "$key" != "setKey0" ]; then
         value=value="${!1}"
         if [ -z "$value" ]
         then
