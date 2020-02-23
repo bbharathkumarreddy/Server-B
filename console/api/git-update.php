@@ -108,25 +108,25 @@ if(strpos($resp, 'ot a git repository') !== false){
     echo exec($cmd);
     echo '<br><b>Info: Created git clone in '.$git_folder_path.'</b>';
     if (file_exists($git_folder_path.'/deployment.sh')) {
-        echo "====== Auto Deployment Script Found & Started ======<br>";
+        echo "<br>====== Auto Deployment Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/deployment.sh');
-        echo "====== Auto Deployment Completed ======<br>";
+        echo "<br>====== Auto Deployment Completed ======<br>";
     }
     
 } else {
     if (file_exists($git_folder_path.'/before_update.sh')) {
-        echo "====== Auto Before Update Script Found & Started ======<br>";
+        echo "<br>====== Auto Before Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/before_update.sh 2>&1').'<br>';
-        echo "====== Auto Before Update Completed ======<br>";
+        echo "<br>====== Auto Before Update Completed ======<br>";
     } 
     echo exec("cd ".$git_folder_path." && git stash 2>&1").'<br>';
     echo exec("cd ".$git_folder_path." && git reset 2>&1").'<br>';
     echo '<br><b>Info:</b>';
     echo exec("cd ".$git_folder_path." && git pull origin ".$git_branch."  2>&1");
     if (file_exists($git_folder_path.'/after_update.sh')) {
-        echo "====== Auto After Update Script Found & Started ======<br>";
+        echo "<br>====== Auto After Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/after_update.sh 2>&1').'<br>';
-        echo "====== Auto After Update Completed ======<br>";
+        echo "<br>====== Auto After Update Completed ======<br>";
     }
 }
 echo '<br>';
