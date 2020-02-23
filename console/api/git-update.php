@@ -124,9 +124,9 @@ if(strpos($resp, 'ot a git repository') !== false){
     echo '<br><b>Info:</b>';
     echo exec("cd ".$git_folder_path." && git pull origin ".$git_branch."  2>&1");
     if (file_exists($git_folder_path.'/after_update.sh')) {
-        echo "====== Auto After Update Script Found & Started ======";
+        echo "====== Auto After Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/after_update.sh 2>&1').'<br>';
-        echo "====== Auto After Update Completed ======";
+        echo "====== Auto After Update Completed ======<br>";
     }
 }
 echo '<br>';
