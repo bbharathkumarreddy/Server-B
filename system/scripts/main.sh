@@ -22,7 +22,13 @@ getKey(){
 
 setKey(){
     key=$1
+    if [ $key == "setKey0" ]; then
+        return 1
+    fi
     value=value="${!1}"
+    if [ $value == "setKey0" ]; then
+        return 1
+    fi
     if [ -z "$value" ]
     then
         echo $key"='"$2"'" >> $config_path
