@@ -15,8 +15,7 @@ Open Source Initiative
 
   <h4>Easy GIT Integration</h4>
   <ul>
-    <li>Integrate GitHub, BitBucket, Gitlab etc in one step</li>
-    <li>GIT Trigger Webhook Url and secret built in</li>
+    <li>Integrate GitHub, BitBucket, Gitlab etc in one step with auto generated <b>GIT Webhook Trigger URL</b></li>
     <li>Auto-deployment and <b>built in build process</b> with optional support for deployment script, before trigger script and after trigger script <small><b>deployment.sh, before_update.sh, after_update.sh</b> in root folder of repository respectively</small></li>
     <li>IP Restriction with IPs and CIDR comma seperated list supported for git trigger</li>
   </ul>
@@ -27,10 +26,24 @@ Open Source Initiative
     <li>Multi Language support and themes</li>
   </ul>
 
-  <h4>Web Metrics and Control Panel</h4>
+  <h4>Dashboard | Metrics</h4>
   <ul>
-    <li>Server crtical metrics in dashboard</li>
-    <li>One Click RAM Clear facility</li>
+    <li>Server crtical metrics in dashboard and one click RAM Clear</li>
+    <li>Stop - Start - Status for all services and server</li>
+    <li>Ubuntu Firewall Management (UFW Control)</li>
+    <li>Easy Logs and Config access links</li>
+    <li>Cron setup and manage</li>
+    <li>Auto Fetch public and private IP</li>
+  </ul>
+
+  <h4>SSH Web Based</h4>
+  <ul>
+    <li>SSH using you browser with secure protect with both HTTP and ssh authentication layers</li>
+  </ul>
+  
+  <h4>APP Store</h4>
+  <ul>
+    <li>Install commanly used app from app store like Redis, Python, Elastisearch etc</li>
   </ul>
 
 <h2>Installation</h2>
