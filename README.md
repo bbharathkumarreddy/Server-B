@@ -43,7 +43,7 @@ Open Source Initiative
   
   <h4>APP Store</h4>
   <ul>
-    <li>Install commanly used app from app store like Redis, Python, Elastisearch etc</li>
+    <li>Install commonly used app from app store like Redis, Python, Elastisearch etc</li>
   </ul>
 
 <h2>Installation</h2>
