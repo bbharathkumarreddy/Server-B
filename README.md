@@ -30,7 +30,7 @@ Open Source Initiative
   <ul>
     <li>Server crtical metrics in dashboard and one click RAM Clear</li>
     <li>Stop - Start - Status for all services and server</li>
-    <li>Ubuntu Firewall Management (UFW Control)</li>
+    <li>Ubuntu Firewall Management - UFW</li>
     <li>Easy Logs and Config access links</li>
     <li>Cron setup and manage</li>
     <li>Auto Fetch public and private IP</li>
