@@ -11,7 +11,42 @@ Open Source Initiative
 <p align="center">
   <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
 </p>
-<hr>
+<h2>Features</h2>
+
+  <h4>Easy GIT Integration</h4>
+  <ul>
+    <li>Integrate GitHub, BitBucket, Gitlab etc in one step with auto generated <b>GIT Webhook Trigger URL</b></li>
+    <li>Auto-deployment and <b>built in build process</b> with optional support for deployment script, before trigger script and after trigger script <small><b>deployment.sh, before_update.sh, after_update.sh</b> in root folder of repository respectively</small></li>
+    <li>IP Restriction with IPs and CIDR comma seperated list supported for git trigger</li>
+  </ul>
+
+  <h4>File Manager | Viewer | IDE</h4>
+  <ul>
+    <li>Create Edit Delete files from browser in your server for development and view all config, Log, and development files</li>
+    <li>Multi Language support and themes</li>
+  </ul>
+
+  <h4>Dashboard | Metrics</h4>
+  <ul>
+    <li>Server crtical metrics in dashboard and one click RAM Clear</li>
+    <li>Stop - Start - Status for all services and server</li>
+    <li>Ubuntu Firewall Management - UFW</li>
+    <li>Easy Logs and Config access links</li>
+    <li>Cron setup and manage</li>
+    <li>Auto Fetch public and private IP</li>
+  </ul>
+
+  <h4>SSH Web Based</h4>
+  <ul>
+    <li>SSH using you browser with secure protect with both HTTP and ssh authentication layers</li>
+  </ul>
+  
+  <h4>APP Store</h4>
+  <ul>
+    <li>Install commonly used app from app store like Redis, Python, Elastisearch etc</li>
+  </ul>
+
+<h2>Installation</h2>
 <h4>Copy and Run Below Commands</h4>
 <h5>Step 1</h5>
 <code>sudo apt update -y && sudo apt-get install git vim -y</code>
@@ -28,8 +63,7 @@ Open Source Initiative
 <code>sudo bash /var/www/server-b/system/scripts/install.sh</code>
 <br>
 <br>
-<hr>
-<h3>Server B - General Shell Commands</h3>
+<h2>Server B - General Shell Commands</h2>
 <p>Show Legends<br><code>bash /var/www/server-b/system/scripts/service.sh show_legends</code></p>
 <p>Get MAC Address<br><code>bash /var/www/server-b/system/scripts/service.sh get_mac_address</code></p>
 <p>Get IP Addresses<br><code>bash /var/www/server-b/system/scripts/service.sh load_ip</code></p>
@@ -37,8 +71,7 @@ Open Source Initiative
 <p>Get Total Disk Space<br><code>bash /var/www/server-b/system/scripts/service.sh get_disk</code></p>
 <p>Get Total RAM Size<br><code>bash /var/www/server-b/system/scripts/service.sh get_mem</code></p>
 <p>Update Server B Console Domain<br><code>bash /var/www/server-b/system/scripts/service.sh setKey public_server_b_domain monitor.example.com</code></p>
-<hr>
-<h3>Server B - Troubleshoot</h3>
+<h2>Server B - Troubleshoot</h2>
 <p>Nginx / PHP Service error | 502 bad gateway<br>
 <code>bash /var/www/server-b/system/scripts/service.sh php_nginx_root_restart</code></p>
 <p>Restart Nginx<br>
