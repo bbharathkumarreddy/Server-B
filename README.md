@@ -47,7 +47,7 @@ Open Source Initiative
 
 <h2>Installation</h2>
 <h4>Copy and Run Below Commands</h4>
-<small><b>Supported OS: Ubuntu 14.04 & above</b></small>
+<sup><b>Supported OS: Ubuntu 14.04 & above</b></sup>
 <h5>Step 1</h5>
 <code>sudo apt update -y && sudo apt-get install git vim -y</code>
 <br>
