@@ -178,9 +178,9 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo $app_link; ?>dashboard.php#config">
+                <a class="nav-link" href="<?php echo $app_link; ?>nginx-config.php">
                     <i class="fa fa-cog"></i>
-                    <span>Config</span>
+                    <span>Nginx Config</span>
                 </a>
             </li>
 

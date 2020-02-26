@@ -148,11 +148,19 @@ install_nginx(){
     echo "Nginx Timezone setting complete"
     timedatectl status | grep "Time zone"
     write_log 'nginx timezone set'
-    sudo openssl req -x509 -nodes -days 5475 -newkey rsa:2048 -keyout /etc/nginx/server-b-cert.key -out /etc/nginx/server-b-cert.crt -subj "/OU=Server B Panel"
+    
+    mkdir -p /etc/ssl/default
+    mkdir -p /etc/ssl/server-b
+
+    sudo openssl req -x509 -nodes -days 5475 -newkey rsa:2048 -keyout /etc/ssl/server-b/server-b-cert.key -out /etc/ssl/server-b/server-b-cert.crt -subj "/OU=Server B"
+    sudo openssl req -x509 -nodes -days 5475 -newkey rsa:2048 -keyout /etc/ssl/default/ssl-cert.key -out /etc/ssl/default/ssl-cert.crt -subj "/OU=Nginx Server"
+    
     write_log 'openssl certificate created'
     sudo cp /etc/nginx/sites-enabled/default $backup_path'nginx-sites-enabled-default_bck'
     sudo cp /etc/nginx/nginx.conf $backup_path'nginx_conf_bck'
     sudo cp $files_path'server-b-nginx.conf' /etc/nginx/sites-enabled/server-b-nginx.conf
+    sudo cp $files_path'default-nginx.conf' /etc/nginx/sites-enabled/default
+    nginx -t
     sudo service nginx reload
     write_log 'nginx service restarted'
     addLogFile 'server_b_config' '/var/www/server-b-data/config.sh'
