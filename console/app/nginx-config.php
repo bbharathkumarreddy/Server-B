@@ -25,7 +25,8 @@
                 </div>
                     <div class="col-xs-12 col-md-6 md-6">
                           
-                        <p>Nginx default certificate file .crt, .pem <small><b>/etc/ssl/default/ssl-cert.crt</b></small> Edit and save your certifcate<a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a></p>
+                        <small>Nginx default certificate file .crt, .pem , Edit and save your certificate</small><br>
+                        <small><b>/etc/ssl/default/ssl-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/default/ssl-cert.crt');
@@ -34,7 +35,8 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">
                     
-                    <p>Nginx default certificate key file .key <small><b>/etc/ssl/default/ssl-cert.key</b></small> Edit and save your certifcate key<a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a></p>
+                    <small>Nginx default certificate key file .key , Edit and save your certifcate key</small><br>
+                    <small><b>/etc/ssl/default/ssl-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                                          
                         <br>
                         <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
@@ -53,8 +55,8 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">                       
                         
-                    <p>Server B Panel Only certificate file .crt, .pem <small><b>/etc/ssl/default/server-b-cert.crt</b></small> Edit and save your certifcate key<a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a><p>
-                        
+                    <small>Server B Panel Only certificate file .crt, .pem , Edit and save your certifcate key</small><br>
+                    <small><b>/etc/ssl/default/server-b-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
 
                         <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
@@ -64,8 +66,9 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">  
           
-                    <p>Server B Panel Only certificate key file .key <small><b>/etc/ssl/default/server-b-cert.key</b></small> Edit and save your certifcate key<a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a></p>
-                        <br>
+                    <small>Server B Panel Only certificate key file .key , Edit and save your certifcate key</small><br>
+                    <small><b>/etc/ssl/default/server-b-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                    <br>
                         
                         <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.key');
