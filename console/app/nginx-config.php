@@ -17,71 +17,64 @@
         <div class="col-xl-12 col-md-12 mb-12" id="server_moniter">
             <div class="card shadow mb-12">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary"> Nginx Config</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Nginx Config</h6>
                 </div>
                 <div class="card-body row">
-                <div class="col-xs-12 col-md-12 md-12">
-                    <h4>Nginx Default Server Block <a target="_blank" class="btn btn-sm btn-info shadow-sm fr mr-10" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=default&env=ace"> Edit </a></h4>
-                </div>
-                    <div class="col-xs-12 col-md-6 md-6">
-                          
+                    <div class="col-xs-12 col-md-12 md-12">
+                        <h4>Nginx Default Server Block <a target="_blank" class="btn btn-sm btn-info shadow-sm mr-20" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=default&env=ace"> Edit </a></h4>
+                    </div>
+                    <div class="col-xs-12 col-md-6 md-6">                          
                         <small>Nginx default certificate file .crt, .pem , Edit and save your certificate</small><br>
                         <small><b>/etc/ssl/default/ssl-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
+                        
                         <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
-                            $general_script = file_get_contents('/etc/ssl/default/ssl-cert.crt');
-                            if($general_script != '') echo $general_script;
-                            ?></textarea>
+                        $general_script = file_get_contents('/etc/ssl/default/ssl-cert.crt');
+                        if($general_script != '') echo $general_script;
+                        ?></textarea>
                     </div>
-                    <div class="col-xs-12 col-md-6 md-6">
-                    
-                    <small>Nginx default certificate key file .key , Edit and save your certifcate key</small><br>
-                    <small><b>/etc/ssl/default/ssl-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
-                                         
+                    <div class="col-xs-12 col-md-6 md-6">                    
+                        <small>Nginx default certificate key file .key , Edit and save your certifcate key</small><br>
+                        <small><b>/etc/ssl/default/ssl-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>             
                         <br>
+                        
                         <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
-                            $general_script = file_get_contents('/etc/ssl/default/ssl-cert.key');
-                            if($general_script != '') echo $general_script;
-                            ?></textarea>
-                           
+                        $general_script = file_get_contents('/etc/ssl/default/ssl-cert.key');
+                        if($general_script != '') echo $general_script;
+                        ?></textarea>                           
                     </div>
+                    </br><hr style="width:100%;"></br>
                     <div class="card-body row">
                     </br>
-                    <hr style="width:100%;">
-                    </br>
-                    </br>
                     <div class="col-xs-12 col-md-12 md-12">
-                    <h4>Server B Panel - Block <a target="_blank" class="btn btn-sm btn-danger shadow-sm fr mr-10" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=server-b-nginx.conf&env=ace"> Edit </a></h4>
+                        <h4>Server B Panel - Block <a target="_blank" class="btn btn-sm btn-danger shadow-sm mr-20" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=server-b-nginx.conf&env=ace"> Edit </a></h4>
                     </div>
-                    <div class="col-xs-12 col-md-6 md-6">                       
-                        
-                    <small>Server B Panel Only certificate file .crt, .pem , Edit and save your certifcate key</small><br>
-                    <small><b>/etc/ssl/default/server-b-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                    <div class="col-xs-12 col-md-6 md-6">
+                        <small>Server B Panel Only certificate file .crt, .pem , Edit and save your certifcate</small><br>
+                        <small><b>/etc/ssl/default/server-b-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
 
                         <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
-                            $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.crt');
-                            if($general_script != '') echo $general_script;
-                            ?></textarea>
+                        $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.crt');
+                        if($general_script != '') echo $general_script;
+                        ?></textarea>
                     </div>
-                    <div class="col-xs-12 col-md-6 md-6">  
-          
-                    <small>Server B Panel Only certificate key file .key , Edit and save your certifcate key</small><br>
-                    <small><b>/etc/ssl/default/server-b-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
-                    <br>
-                        
+                    <div class="col-xs-12 col-md-6 md-6">         
+                        <small>Server B Panel Only certificate key file .key , Edit and save your certifcate key</small><br>
+                        <small><b>/etc/ssl/default/server-b-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <br>
+
                         <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
-                            $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.key');
-                            if($general_script != '') echo $general_script;
+                        $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.key');
+                        if($general_script != '') echo $general_script;
                             ?></textarea>
-                        
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <br><br>
     </div>
-    <br><br>
-</div>
 
 <!-- Info Modal-->
 <div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="info_modal" aria-hidden="true">
