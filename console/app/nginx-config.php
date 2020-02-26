@@ -28,7 +28,7 @@
                         
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
-                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 450px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/default/ssl-cert.crt');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
@@ -38,7 +38,7 @@
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                                          
                         <br>
-                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 450px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/default/ssl-cert.key');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
@@ -46,7 +46,8 @@
                     </div>
                     <div class="card-body row">
                     </br>
-                    <hr>
+                    <hr style="width:100%;">
+                    </br>
                     </br>
                     <div class="col-xs-12 col-md-12 md-12">
                     <h4>Server B Panel - Block</h4>
@@ -58,7 +59,7 @@
                         
                         <br>
 
-                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 450px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.crt');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
@@ -68,7 +69,7 @@
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         
-                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 450px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
                             $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.key');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
