@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">
                         <small>Server B Panel Only certificate file .crt, .pem , Edit and save your certifcate</small><br>
-                        <small><b>/etc/ssl/default/server-b-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <small><b>/etc/ssl/server-b/server-b-cert.crt</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
 
                         <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="25" style="width: 475px;font-size:11px;"><?php
@@ -61,7 +61,7 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">         
                         <small>Server B Panel Only certificate key file .key , Edit and save your certifcate key</small><br>
-                        <small><b>/etc/ssl/default/server-b-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
+                        <small><b>/etc/ssl/server-b/server-b-cert.key</b></small> <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
 
                         <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="25" style="width: 475px;font-size:11px;"><?php
