@@ -40,6 +40,11 @@ Open Source Initiative
     <li>SSH using you browser with secure protect with both HTTP and ssh authentication layers</li>
   </ul>
   
+  <h4>Nginx Config | SSL</h4>
+  <ul>
+    <li>Easy upload your ssl certifcates and easy edit nginx config files from browser</li>
+  </ul>
+
   <h4>APP Store</h4>
   <ul>
     <li>Install commonly used app from app store like Redis, Python, Elastisearch etc</li>
