@@ -43,7 +43,7 @@
                         if($general_script != '') echo $general_script;
                         ?></textarea>                           
                     </div>
-                    </br><hr style="width:100%;"></br>
+                    </br></br><hr style="width:100%;"></br>
                     <div class="card-body row">
                     </br>
                     <div class="col-xs-12 col-md-12 md-12">
