@@ -26,24 +26,26 @@
                         
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
-                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="20" cols="10" style="width: 500px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="20" cols="9" style="width: 500px;font-size:10px;"><?php
                             $general_script = file_get_contents('/etc/ssl/default/ssl-cert.crt');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">
                     <br>
-                    <br>
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                                          
                         <br>
-                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="20" cols="10" style="width: 500px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="20" cols="9" style="width: 500px;font-size:10px;"><?php
                             $general_script = file_get_contents('/etc/ssl/default/ssl-cert.key');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
                            
                     </div>
                     <div class="card-body row">
+                    </br>
+                    <hr>
+                    </br>
                     <div class="col-xs-12 col-md-6 md-6">    
                     </div>               
                         <ht>                        
@@ -54,7 +56,7 @@
                         
                         <br>
 
-                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="20" cols="10" style="width: 500px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_crt" disabled="" placeholder="Click edit button and save certificate file" rows="20" cols="9" style="width: 500px;font-size:10px;"><?php
                             $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.crt');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
@@ -62,10 +64,11 @@
                     <div class="col-xs-12 col-md-6 md-6">  
                     <br>
                     <br>
+                    <br>
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         
-                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="20" cols="10" style="width: 500px;font-size:10px;"><?php
+                        <textarea id="ssl_cert_key" disabled="" placeholder="Click edit button and save key file" rows="20" cols="9" style="width: 500px;font-size:10px;"><?php
                             $general_script = file_get_contents('/etc/ssl/server-b/server-b-cert.key');
                             if($general_script != '') echo $general_script;
                             ?></textarea>
