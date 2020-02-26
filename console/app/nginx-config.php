@@ -20,8 +20,10 @@
                     <h6 class="m-0 font-weight-bold text-primary"> Nginx Config</h6>
                 </div>
                 <div class="card-body row">
+                <div class="col-xs-12 col-md-12 md-12">
+                    <h4>Nginx Default Server Block</h4>
+                </div>
                     <div class="col-xs-12 col-md-6 md-6">
-                        <h4>Nginx Default Server Block</h4>
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=default&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
@@ -46,10 +48,10 @@
                     </br>
                     <hr>
                     </br>
-                    <div class="col-xs-12 col-md-6 md-6">    
-                    </div>               
-                        <ht>                        
-                        <h4>Server B Panel - Block</h4>
+                    <div class="col-xs-12 col-md-12 md-12">
+                    <h4>Server B Panel - Block</h4>
+                    </div>
+                    <div class="col-xs-12 col-md-6 md-6">                       
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/nginx/sites-enabled/&edit=server-b-nginx.conf&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
 
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.crt&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
@@ -62,9 +64,7 @@
                             ?></textarea>
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">  
-                    <br>
-                    <br>
-                    <br>
+          
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                         <br>
                         
