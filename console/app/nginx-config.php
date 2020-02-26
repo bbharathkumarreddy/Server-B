@@ -33,7 +33,6 @@
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">
                     <br>
-                    <br>
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/default/&edit=ssl-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
                                          
                         <br>
@@ -44,6 +43,9 @@
                            
                     </div>
                     <div class="card-body row">
+                    </br>
+                    <hr>
+                    </br>
                     <div class="col-xs-12 col-md-6 md-6">    
                     </div>               
                         <ht>                        
@@ -60,6 +62,7 @@
                             ?></textarea>
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">  
+                    <br>
                     <br>
                     <br>
                         <a target="_blank" class="noline" href="<?php echo $app_link; ?>file-manager.php?p=etc/ssl/server-b/&edit=server-b-cert.key&env=ace"><small>Edit <i class="fa fa-edit"></i></small></a>
