@@ -27,8 +27,8 @@ Open Source Initiative
 
   <h4>Dashboard | Metrics</h4>
   <ul>
-    <li>Server crtical metrics in dashboard and one click RAM Clear</li>
-    <li>Stop - Start - Status for all services and server</li>
+    <li>Server critical metrics in dashboard and one click RAM Clear</li>
+    <li>Stop - Start - Status for all services</li>
     <li>Ubuntu Firewall Management - UFW</li>
     <li>Easy Logs and Config access links</li>
     <li>Cron setup and manage</li>
