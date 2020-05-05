@@ -1,13 +1,11 @@
 <?php
 if(!isset($_GET['tid']) || (isset($_GET['tid']) && $_GET['tid'] == '')){
-    history_write(array('failed'=>'TID missing from get parameter;'));
     header("HTTP/1.0 400 Bad Request");
-    die(json_encode(array('message'=>'Bad Request')));
+    die(json_encode(array('message'=>'TID Missing Bad Request')));
 }
 if(!isset($_GET['key']) || (isset($_GET['key']) && $_GET['key'] == '')){
-    history_write(array('failed'=>'Key missing from get parameter;'));
     header("HTTP/1.0 403 Access Denied");
-    die(json_encode(array('message'=>'Access Denied')));
+    die(json_encode(array('message'=>'Access Denied Key Missing')));
 }
 $service='bash /var/www/server-b/system/scripts/service.sh';
 $server_b_auth_key = trim(shell_exec($service.' getKey server_b_auth_key'));
