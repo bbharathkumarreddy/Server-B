@@ -98,7 +98,7 @@ get_cpu_cores(){
 }
 
 load_ip(){
-    public_ip=$(curl ifconfig.co)
+    public_ip=$(curl ipinfo.io/ip)
     private_ip=$(hostname -I)
     setKey 'public_ip' $public_ip
     setKey 'private_ip' $private_ip
