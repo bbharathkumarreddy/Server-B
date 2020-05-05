@@ -10,11 +10,11 @@ if(!isset($_GET['key']) || (isset($_GET['key']) && $_GET['key'] == '')){
 $service='bash /var/www/server-b/system/scripts/service.sh';
 $server_b_auth_key = trim(shell_exec($service.' getKey server_b_auth_key'));
 if($server_b_auth_key == ''){
-    history_write(array('failed'=>'server_b_auth_key parameter is missing from config.sh file; /var/www/server-b-data/config.sh;'));
+    history_write(array('failed'=>'server_b_auth_key parameter is missing from config.sh file; /var/www/server-b-data/config.sh;'),$tid);
     header("HTTP/1.0 403 Key Configuration Missing");
     die(json_encode(array('message'=>'Key Configuration Missing')));
 } else if(trim($server_b_auth_key) != trim($_GET['key'])) {
-    history_write(array('failed'=>'server_b_auth_key and key from paylaod is not matched, Hence Unauthorized;'));
+    history_write(array('failed'=>'server_b_auth_key and key from paylaod is not matched, Hence Unauthorized;'),$tid);
     header("HTTP/1.0 403 Unauthorized");
     die(json_encode(array('message'=>'Unauthorized')));
 }
@@ -85,11 +85,11 @@ function cidr_match($ip_check, $git_ip_list)
             }
         }
     }
-    if(!$allow) history_write(array('failed'=>'IP Access Denied by rule for => '.$ip_check.' ;'));
+    if(!$allow) history_write(array('failed'=>'IP Access Denied by rule for => '.$ip_check.' ;'),$tid);
     return $allow;
 }
-history_write(array('allowed'=>'true'));
-function history_write($message){
+history_write(array('allowed'=>'true'),$tid);
+function history_write($message,$tid){
     $message['time']=date("Y-m-d h:i:sa", time());
     $message['trigger-ip']=ip_get();
     $fp = fopen('/var/www/server-b-data/git_trigger_history_'.$tid.'.txt', 'w');
