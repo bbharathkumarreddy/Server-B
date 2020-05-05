@@ -96,8 +96,12 @@ if (isset($_GET['o'])) {
         if(!isset($_GET['mode'])){
             echo 'Invalid Git Button'; exit;
         }
-        $git_folder_path = trim(shell_exec($service.' getKey git_folder_path'));
-        $git_repo = trim(shell_exec($service.' getKey git_repo'));
+        if(!isset($_GET['tid'])){
+            echo 'Invalid tid'; exit;
+        }
+        $tid = $_GET['tid'];
+        $git_folder_path = trim(shell_exec($service.' getKey git_folder_path_'.$tid));
+        $git_repo = trim(shell_exec($service.' getKey git_repo_'.$tid));
         if($git_folder_path == '' || $git_repo == '') echo 'GIT folder path and GIT Repository is not configured';
         if(substr($git_folder_path, -1)  == '/') substr_replace($git_folder_path ,"",-1);
         if($_GET['mode'] == 'status') { 
@@ -122,13 +126,13 @@ if (isset($_GET['o'])) {
         }
         else if($_GET['mode'] == 'git_trigger_enable') { 
             shell_exec($service." write_log git triggers enabled");
-            $a = shell_exec($service.' setKey git_trigger_enable enable');
+            $a = shell_exec($service.' setKey git_trigger_enable_'.$tid.' enable');
             print_r($a);
             exit; 
         }
         else if($_GET['mode'] == 'git_trigger_disable') {
             shell_exec($service." write_log git triggers disabled");
-            $a = shell_exec($service.' setKey git_trigger_enable disable');
+            $a = shell_exec($service.' setKey git_trigger_enable_'.$tid.' disable');
             print_r($a);
             exit; 
         }
@@ -154,6 +158,10 @@ if (isset($_GET['o'])) {
         {
             echo 'GIT Folder Path and GIT Repository is mandatory'; exit;
         }
+        if(!isset($_GET['tid'])){
+            echo 'Invalid tid'; exit;
+        }
+        $tid = $_GET['tid'];
         shell_exec($service." write_log git config save initiated");
         $folder_path = trim($_GET['folder_path']);
         $git_repo = trim(base64_decode($_GET['git_repo']));
@@ -163,12 +171,12 @@ if (isset($_GET['o'])) {
         if($git_branch == '') $git_branch = 'master';
         $ip_list = trim($_GET['ip_list']);
         echo '<br>'.$service.' setKey git_ip_list '.$ip_list.'<br>';
-        echo shell_exec($service.' setKey git_folder_path '.$folder_path);
-        echo shell_exec($service.' setKey git_repo '.$git_repo);
-        echo shell_exec($service.' setKey git_username '.$git_username);
-        echo shell_exec($service.' setKey git_password '.$git_password);
-        echo shell_exec($service.' setKey git_ip_list '.$ip_list);
-        echo shell_exec($service.' setKey git_branch '.$git_branch);
+        echo shell_exec($service.' setKey git_folder_path_'.$tid.' '.$folder_path);
+        echo shell_exec($service.' setKey git_repo_'.$tid.' '.$git_repo);
+        echo shell_exec($service.' setKey git_username_'.$tid.' '.$git_username);
+        echo shell_exec($service.' setKey git_password_'.$tid.' '.$git_password);
+        echo shell_exec($service.' setKey git_ip_list_'.$tid.' '.$ip_list);
+        echo shell_exec($service.' setKey git_branch_'.$tid.' '.$git_branch);
         echo 'Git Saved Successfully';
     }
     else if ($o == 'change_port') {
