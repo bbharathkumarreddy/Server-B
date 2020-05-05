@@ -356,6 +356,9 @@
                                     $k = explode('=', $key);
                                     if ($k[0] == '') continue;
                                     $k[1] = str_replace("'", '', $k[1]);
+                                    if(strpos(strtolower($k[0]), 'password') !== false){
+                                        $k[1] = '***************';
+                                    }
                                     echo '<tr>
                                                 <td class="text-black">' . $k[0] . '</td>
                                                 <td class="pl-2">' . $k[1] . '</td>

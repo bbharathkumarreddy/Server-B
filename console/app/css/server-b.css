@@ -11,6 +11,11 @@
     cursor: pointer !important;
 }
 
+.repo_btn { 
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .vl {
     border-left: 3px #858796 green;
     height: 120px;

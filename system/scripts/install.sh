@@ -61,13 +61,47 @@ install(){
     echo ping_1_link"='"$ping_1_link"'" >> $server_b_config_path
     echo ping_2_link"='"$ping_2_link"'" >> $server_b_config_path
     echo domain"='"$domain"'" >> $server_b_config_path
-    echo git_folder_path"='"$git_folder_path"'" >> $server_b_config_path
-    echo git_repo"='"$git_repo"'" >> $server_b_config_path
-    echo git_username"='"$git_username"'" >> $server_b_config_path
-    echo git_password"='"$git_password"'" >> $server_b_config_path
-    echo git_ip_list"='"$git_ip_list"'" >> $server_b_config_path
-    echo git_trigger_enable"='"$git_trigger_enable"'" >> $server_b_config_path
-    echo git_branch"='"$git_branch"'" >> $server_b_config_path
+
+    echo git_folder_path_1"='"$git_folder_path_1"'" >> $server_b_config_path
+    echo git_repo_1"='"$git_repo_1"'" >> $server_b_config_path
+    echo git_username_1"='"$git_username_1"'" >> $server_b_config_path
+    echo git_password_1"='"$git_password_1"'" >> $server_b_config_path
+    echo git_ip_list_1"='"$git_ip_list_1"'" >> $server_b_config_path
+    echo git_trigger_enable_1"='"$git_trigger_enable_1"'" >> $server_b_config_path
+    echo git_branch_1"='"$git_branch_1"'" >> $server_b_config_path
+
+    echo git_folder_path_2"='"$git_folder_path_2"'" >> $server_b_config_path
+    echo git_repo_2"='"$git_repo_2"'" >> $server_b_config_path
+    echo git_username_2"='"$git_username_2"'" >> $server_b_config_path
+    echo git_password_2"='"$git_password_2"'" >> $server_b_config_path
+    echo git_ip_list_2"='"$git_ip_list_2"'" >> $server_b_config_path
+    echo git_trigger_enable_2"='"$git_trigger_enable_2"'" >> $server_b_config_path
+    echo git_branch_2"='"$git_branch_2"'" >> $server_b_config_path
+
+    echo git_folder_path_3"='"$git_folder_path_3"'" >> $server_b_config_path
+    echo git_repo_3"='"$git_repo_3"'" >> $server_b_config_path
+    echo git_username_3"='"$git_username_3"'" >> $server_b_config_path
+    echo git_password_3"='"$git_password_3"'" >> $server_b_config_path
+    echo git_ip_list_3"='"$git_ip_list_3"'" >> $server_b_config_path
+    echo git_trigger_enable_3"='"$git_trigger_enable_3"'" >> $server_b_config_path
+    echo git_branch_3"='"$git_branch_3"'" >> $server_b_config_path
+
+    echo git_folder_path_4"='"$git_folder_path_4"'" >> $server_b_config_path
+    echo git_repo_4"='"$git_repo_4"'" >> $server_b_config_path
+    echo git_username_4"='"$git_username_4"'" >> $server_b_config_path
+    echo git_password_4"='"$git_password_4"'" >> $server_b_config_path
+    echo git_ip_list_4"='"$git_ip_list_4"'" >> $server_b_config_path
+    echo git_trigger_enable_4"='"$git_trigger_enable_4"'" >> $server_b_config_path
+    echo git_branch_4"='"$git_branch_4"'" >> $server_b_config_path
+
+    echo git_folder_path_5"='"$git_folder_path_5"'" >> $server_b_config_path
+    echo git_repo_5"='"$git_repo_5"'" >> $server_b_config_path
+    echo git_username_5"='"$git_username_5"'" >> $server_b_config_path
+    echo git_password_5"='"$git_password_5"'" >> $server_b_config_path
+    echo git_ip_list_5"='"$git_ip_list_5"'" >> $server_b_config_path
+    echo git_trigger_enable_5"='"$git_trigger_enable_5"'" >> $server_b_config_path
+    echo git_branch_5"='"$git_branch_5"'" >> $server_b_config_path
+    
     echo cron_file"='"$cron_file"'" >> $server_b_config_path
     echo temp_cron"='"$temp_cron"'" >> $server_b_config_path
     source $server_b_main_path'system/scripts/main.sh'

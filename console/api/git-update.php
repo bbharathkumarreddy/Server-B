@@ -1,7 +1,6 @@
 <?php
-$service='bash /var/www/server-b/system/scripts/service.sh';
-$git_trigger_enable = trim(shell_exec($service.' getKey git_trigger_enable'));
-if($git_trigger_enable != 'enable') {
+if(!isset($_GET['tid']) || (isset($_GET['tid']) && $_GET['tid'] == '')){
+    history_write(array('failed'=>'TID missing from get parameter;'));
     header("HTTP/1.0 400 Bad Request");
     die(json_encode(array('message'=>'Bad Request')));
 }
@@ -10,15 +9,7 @@ if(!isset($_GET['key']) || (isset($_GET['key']) && $_GET['key'] == '')){
     header("HTTP/1.0 403 Access Denied");
     die(json_encode(array('message'=>'Access Denied')));
 }
-$git_ip_list = trim(shell_exec($service.' getKey git_ip_list'));
-if($git_ip_list != '')
-{   
-    $ip = ip_get();
-    if(!cidr_match($ip, $git_ip_list)){
-        header("HTTP/1.0 403 Access Denied");
-        die(json_encode(array('message'=>'Access Denied'))); 
-    }
-}
+$service='bash /var/www/server-b/system/scripts/service.sh';
 $server_b_auth_key = trim(shell_exec($service.' getKey server_b_auth_key'));
 if($server_b_auth_key == ''){
     history_write(array('failed'=>'server_b_auth_key parameter is missing from config.sh file; /var/www/server-b-data/config.sh;'));
@@ -29,6 +20,25 @@ if($server_b_auth_key == ''){
     header("HTTP/1.0 403 Unauthorized");
     die(json_encode(array('message'=>'Unauthorized')));
 }
+$tid_encr = $_GET['tid'];
+$tid=openssl_decrypt($tid_encr, 'AES-256-CBC', $server_b_auth_key);
+
+$git_trigger_enable = trim(shell_exec($service.' getKey git_trigger_enable_'.$tid));
+if($git_trigger_enable != 'enable') {
+    header("HTTP/1.0 400 Bad Request");
+    die(json_encode(array('message'=>'Bad Request')));
+}
+
+$git_ip_list = trim(shell_exec($service.' getKey git_ip_list_'.$tid));
+if($git_ip_list != '')
+{   
+    $ip = ip_get();
+    if(!cidr_match($ip, $git_ip_list)){
+        header("HTTP/1.0 403 Access Denied");
+        die(json_encode(array('message'=>'Access Denied'))); 
+    }
+}
+
 
 function ip_get()
 {    
@@ -84,18 +94,18 @@ history_write(array('allowed'=>'true'));
 function history_write($message){
     $message['time']=date("Y-m-d h:i:sa", time());
     $message['trigger-ip']=ip_get();
-    $fp = fopen('/var/www/server-b-data/git_trigger_history.txt', 'w');
+    $fp = fopen('/var/www/server-b-data/git_trigger_history_'.$tid.'.txt', 'w');
     fwrite($fp,json_encode(array($message,$_GET,$_POST,json_decode(file_get_contents('php://input')))));
     fclose($fp);
 }
 
-$git_folder_path=trim(shell_exec($service.' getKey git_folder_path'));
-$git_repo=trim(shell_exec($service.' getKey git_repo'));
-$git_username=urlencode(trim(shell_exec($service.' getKey git_username')));
-$git_password=urlencode(trim(shell_exec($service.' getKey git_password')));
+$git_folder_path=trim(shell_exec($service.' getKey git_folder_path_'.$tid));
+$git_repo=trim(shell_exec($service.' getKey git_repo_'.$tid));
+$git_username=urlencode(trim(shell_exec($service.' getKey git_username_'.$tid)));
+$git_password=urlencode(trim(shell_exec($service.' getKey git_password_'.$tid)));
 $git_repo_parse=parse_url($git_repo);
 $git_url=$git_repo_parse['scheme'].'://'.$git_username.':'.$git_password.'@'.$git_repo_parse['host'].$git_repo_parse['path'];
-$git_branch=trim(shell_exec($service.' getKey git_branch'));
+$git_branch=trim(shell_exec($service.' getKey git_branch_'.$tid));
 $resp_0 = exec('mkdir -p '.$git_folder_path.' 2>&1');
 $resp = exec('cd '.$git_folder_path.' && git status 2>&1');
 echo '<b>---------------------------------------------------------------------------------------------<br>';
