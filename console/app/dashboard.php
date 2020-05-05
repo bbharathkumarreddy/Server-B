@@ -328,7 +328,7 @@
                                     <td class="pl-2"><?php echo $service_run_count ?></td>
                                 </tr>
                                 <tr>
-                                    <td class="text-black">Stopper Services Count</td>
+                                    <td class="text-black">Stopped Services Count</td>
                                     <td class="pl-2"><?php echo $service_stop_count ?></td>
                                 </tr>
                             </table>
