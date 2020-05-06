@@ -94,7 +94,10 @@ Open Source Initiative
 <span>🥈 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></span>
 <br>
 <br>
-<b>Contributors - Welcome </b>🥇	🥈  🥉
+<b>Contributors are welcome </b>🥇	🥈  🥉
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
-<br>
+<hr>
+<h3>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h3><br>
+<img src="https://github.com/bbharathkumarreddy/server-b/blob/dev-z1/images/gcp.png?raw=true" >
+<img src="https://github.com/bbharathkumarreddy/server-b/blob/dev-z1aster/images/aws.png?raw=true" >
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
