@@ -94,8 +94,9 @@ Open Source Initiative
 <span>🥈 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></span>
 <br>
 <br>
-<b>Contributors are welcome </b>🥇	🥈  🥉
+<b>Contributors are welcome </b>
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
+<p>🥇 Level 1 | 🥈 Level 2  | Level 3 🥉 </p>
 <hr>
 <h4>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h4><br>
 <div>
