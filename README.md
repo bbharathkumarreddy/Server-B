@@ -99,7 +99,7 @@ Open Source Initiative
 <hr>
 <h3>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h3><br>
 <div>
- <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp-logo.png" style="display: inline;width:80px;">
+ <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png" style="display: inline;width:80px;">
  <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png" style="display: inline;width:80px;">
 </div>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
