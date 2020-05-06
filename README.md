@@ -98,5 +98,5 @@ Open Source Initiative
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
 <hr>
 <h3>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h3><br>
-![alt-text-1](https://github.com/bbharathkumarreddy/Server-B/blob/dev-z1/images/gcp.png?raw=true "GCP") ![alt-text-2](https://github.com/bbharathkumarreddy/Server-B/blob/dev-z1/images/aws.png?raw=true "AWS")
+![alt-text-1](https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png?raw=true "GCP") ![alt-text-2](https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png?raw=true "AWS")
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
