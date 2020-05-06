@@ -141,7 +141,7 @@ if(strpos($resp, 'ot a git repository') !== false){
     echo exec("cd ".$git_folder_path." && git stash 2>&1").'<br>';
     echo exec("cd ".$git_folder_path." && git reset 2>&1").'<br>';
     echo '<br><b>Info:</b>';
-    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Triggered -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     echo exec("cd ".$git_folder_path." && git pull ".$git_url." ".$git_branch."  2>&1").'<br>';
     fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     if (file_exists($git_folder_path.'/after_update.sh')) {
