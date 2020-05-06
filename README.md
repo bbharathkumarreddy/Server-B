@@ -103,4 +103,5 @@ Open Source Initiative
  <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png" style="display: inline;margin-left: 20px;" width="70">
 </div>
 <br>
-<p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
+<p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages.</small></sup></p>
+<p><sup><small>AWS, GCP names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</small></sup></p>
