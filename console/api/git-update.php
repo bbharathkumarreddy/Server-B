@@ -19,7 +19,7 @@ if($server_b_auth_key == ''){
     die(json_encode(array('message'=>'Unauthorized')));
 }
 $tid_encr = base64_decode($_GET['tid']);
-$tid=openssl_decrypt($tid_encr, 'AES-256-CBC', $server_b_auth_key);
+$tid=str_replace($server_b_auth_key,'',$tid_encr);
 
 $git_trigger_enable = trim(shell_exec($service.' getKey git_trigger_enable_'.$tid));
 if($git_trigger_enable != 'enable') {
