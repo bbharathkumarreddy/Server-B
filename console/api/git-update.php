@@ -106,7 +106,8 @@ $git_url=$git_repo_parse['scheme'].'://'.$git_username.':'.$git_password.'@'.$gi
 $git_branch=trim(shell_exec($service.' getKey git_branch_'.$tid));
 $resp_0 = exec('mkdir -p '.$git_folder_path.' 2>&1');
 $resp = exec('cd '.$git_folder_path.' && git status 2>&1');
-$git_logs = fopen('/var/www/server-b-data/git_logs.txt', 'w');
+fopen('/var/www/server-b-data/git_logs.txt', 'w');
+$git_logs = fopen('/var/www/server-b-data/git_logs.txt', 'a');
 if(filesize('/var/www/server-b-data/git_logs.txt') > 5000000){
     $string = shell_exec( 'tail -n 10 /var/www/server-b-data/git_logs.txt');
     fwrite($git_logs, $string);
