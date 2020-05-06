@@ -66,7 +66,6 @@
     </div>
     <br>
     <?php
-    ini_set('display_errors', '1');
     for ($i=1;$i<=5;$i++) {
         $git_trigger_enable = trim(shell_exec($getKey . ' git_trigger_enable_'.$i));
         $git_folder_path = trim(shell_exec($getKey . ' git_folder_path_'.$i));
@@ -105,7 +104,7 @@
         } else {
             $public_server_b_access = $public_ip;
         }
-        $tid=base64_encode(openssl_encrypt($i, 'AES-256-CBC', $server_b_auth_key));
+        $tid=base64_encode($server_b_auth_key.$i);
         $git_trigger_link = 'https://'.trim(shell_exec($getKey . ' server_b_username')).':'.trim(shell_exec($getKey . ' server_b_password')).'@'.$public_server_b_access.':'.trim(shell_exec($getKey . ' server_b_port')).'/api/git-update.php?key='.$server_b_auth_key.'&tid='.$tid; ?>
                         <button id="git_status_btn" git="status" tid="<?php echo $i; ?>" class="btn btn-sm btn-success shadow-sm mr-10 git_btn"><i class="fa fa-code-branch fa-sm text-white-50"></i> Git Status</button>
                         <a target="_blank" href="<?php echo $git_trigger_link; ?>" id="git_pull_btn" git="pull"  tid="<?php echo $i; ?>" class="btn btn-sm btn-info shadow-sm mr-10"><i class="fa fa-code-branch fa-sm text-white-50"></i> Git Pull - Update</a>
