@@ -106,9 +106,9 @@ $git_url=$git_repo_parse['scheme'].'://'.$git_username.':'.$git_password.'@'.$gi
 $git_branch=trim(shell_exec($service.' getKey git_branch_'.$tid));
 $resp_0 = exec('mkdir -p '.$git_folder_path.' 2>&1');
 $resp = exec('cd '.$git_folder_path.' && git status 2>&1');
-$git_logs = fopen('/var/www/server-b-data/git_logs.txt', 'w');
+$git_logs = fopen('/var/www/server-b-data/git_logs.txt', 'a');
 if(filesize('/var/www/server-b-data/git_logs.txt') > 5000000){
-    $string = shell_exec( 'tail -n 10 /var/www/server-b-data/git_logs.txt');
+    $string = shell_exec( 'tail -n 5000 /var/www/server-b-data/git_logs.txt');
     fwrite($git_logs, $string);
 }
 echo '<b>---------------------------------------------------------------------------------------------<br>';
@@ -117,39 +117,39 @@ echo '--------------------------------------------------------------------------
 echo 'Trigger Started<br><br>';
 echo '<b>Repository</b> => '.$git_repo.'<br><br>';
 if(strpos($resp, 'ot a git repository') !== false){
-    fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> New Deployment -> '.$git_repo_parse['path'].' Pass');
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> New Deployment -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     $cmd  = 'git clone -b '.$git_branch.' '.$git_url.' '.$git_folder_path.' 2>&1';
     echo exec($cmd);
-    fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Cloning -> '.$git_repo_parse['path'].' Pass');
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Cloning -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     echo '<br><b>Info: Created git clone in '.$git_folder_path.'</b><br>';
     if (file_exists($git_folder_path.'/deployment.sh')) {
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Found & Started -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
         echo "<br>====== Auto Deployment Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/deployment.sh');
         echo "<br>====== Auto Deployment Completed ======<br>";
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Completed -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     }
     
 } else {
     if (file_exists($git_folder_path.'/before_update.sh')) {
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Found & Started -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
         echo "<br>====== Auto Before Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/before_update.sh 2>&1').'<br>';
         echo "<br>====== Auto Before Update Completed ======<br>";
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Completed -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     } 
     echo exec("cd ".$git_folder_path." && git stash 2>&1").'<br>';
     echo exec("cd ".$git_folder_path." && git reset 2>&1").'<br>';
     echo '<br><b>Info:</b>';
-    fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Started -> '.$git_repo_parse['path'].' Pass');
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     echo exec("cd ".$git_folder_path." && git pull ".$git_url." ".$git_branch."  2>&1").'<br>';
-    fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Completed -> '.$git_repo_parse['path'].' Pass');
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     if (file_exists($git_folder_path.'/after_update.sh')) {
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Found & Started -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
         echo "<br>====== Auto After Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/after_update.sh 2>&1').'<br>';
         echo "<br>====== Auto After Update Completed ======<br>";
-        fwrite($git_logs, $date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Completed -> '.$git_repo_parse['path'].' Pass');
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
     }
 }
 echo '<br>';
