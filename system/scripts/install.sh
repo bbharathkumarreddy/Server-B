@@ -140,6 +140,7 @@ install(){
     crontab -l | { cat; echo "@reboot /var/www/server-b-data/reboot.sh load_ip > /dev/null 2>&1"; } | crontab -
     addLogFile 'syslog' '/var/log/syslog'
     addLogFile 'authlog' '/var/log/auth.log'
+    addLogFile 'GIT_Triggers' '/var/www/server-b-data/git_logs.txt'
     clear_ram
     show_legends
 }
