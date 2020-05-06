@@ -251,6 +251,7 @@
                 }
             });
         });
+        
         $('body').on('click','.git_save',function(){
             let tid = $(this).attr('tid');
             let folder_path = $('[tid="'+tid+'"].folder_path').val();
@@ -271,6 +272,7 @@
                 }
             });
         });
+
         $('body').on('click','.repo_btn',function(){
             let tid = $(this).attr('tid');
             for(let i=1;i<=5;i++){
