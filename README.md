@@ -8,7 +8,7 @@ Open Source Initiative
 <br>
 <br>
 <p align="center">
-  <img src="https://github.com/bbharathkumarreddy/server-b/blob/master/images/server-b-images.gif?raw=true">
+  <img src="https://github.com/bbharathkumarreddy/Server-B/blob/master/images/server-b-images.gif?raw=true">
 </p>
 <h2>Features</h2>
 
@@ -94,7 +94,15 @@ Open Source Initiative
 <span>🥈 KLuka<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KLuka" target="_blank"><sup><small>https://github.com/KLuka</small></sup></a></span>
 <br>
 <br>
-<b>Contributors - Welcome </b>🥇	🥈  🥉
+<b>Contributors are welcome </b>
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
-<br>
-<p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages</small></sup></p>
+<p>🥇 Level 1  &nbsp;&nbsp; 🥈 Level 2   &nbsp;&nbsp; Level 3 🥉 </p>
+<hr>
+<h4>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h4><br>
+<div>
+ <a href="https://cloud.google.com/compute" target="_blank" ><img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/master/images/gcp.png" title="Google Cloud Platform" style="display: inline;" width="80"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="https://aws.amazon.com/ec2/" target="_blank" ><img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/master/images/aws.png" title="Amazon Web Services" style="display: inline;padding-left: 20px;" width="80"/></a>
+</div>
+<br><br>
+<p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages.</small></sup></p>
+<p><sup><small>AWS, GCP names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</small></sup></p>
