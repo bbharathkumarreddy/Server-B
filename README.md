@@ -99,7 +99,7 @@ Open Source Initiative
 <hr>
 <h4>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h4><br>
 <div>
- <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png" style="display: inline;" width="80"/>
+ <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png" style="display: inline;" width="80"/>&nbsp;&nbsp;&nbsp;&nbsp;
  <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png" style="display: inline;padding-left: 20px;" width="80"/>
 </div>
 <br><br>
