@@ -96,7 +96,7 @@ Open Source Initiative
 <br>
 <b>Contributors are welcome </b>
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
-<p>🥇 Level 1  &nbsp;&nbsp; 🥈 Level 2   &nbsp;&nbsp; Level 3 🥉 </p>
+<p>🥇 Level 1  &nbsp;&nbsp; 🥈 Level 2   &nbsp;&nbsp; 🥉 Level 3 </p>
 <hr>
 <h4>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h4><br>
 <div>
