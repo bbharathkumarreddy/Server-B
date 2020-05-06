@@ -14,6 +14,7 @@ Open Source Initiative
 
   <h4>Easy GIT Integration</h4>
   <ul>
+    <li>🆕 Mutiple GIT Repository Deployments</li>
     <li>Integrate GitHub, BitBucket, Gitlab etc in one step with auto generated <b>GIT Webhook Trigger URL</b></li>
     <li>Auto-deployment and <b>built in build process</b> with optional support for deployment script, before trigger script and after trigger script <small><b>deployment.sh, before_update.sh, after_update.sh</b> in root folder of repository respectively</small></li>
     <li>IP Restriction with IPs and CIDR comma seperated list supported for git trigger</li>
