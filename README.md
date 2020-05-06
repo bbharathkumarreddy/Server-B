@@ -97,11 +97,11 @@ Open Source Initiative
 <b>Contributors are welcome </b>🥇	🥈  🥉
 <p>Features, Bug Fixes will be showcased in Server-B Hall of Fame and will be awarded a digital certificate of contribution.</p>
 <hr>
-<h3>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h3><br>
+<h4>Server B can be deployed in Ubuntu 14.04 & above | Public Clouds AWS - GCP Tested</h4><br>
 <div>
- <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png" style="display: inline;" width="70">
- <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png" style="display: inline;margin-left: 20px;" width="70">
+ <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/gcp.png" style="display: inline;" width="80">
+ <img src="https://raw.githubusercontent.com/bbharathkumarreddy/Server-B/dev-z1/images/aws.png" style="display: inline;margin-left: 20px;" width="80">
 </div>
-<br>
+<br><br>
 <p><sup><small><b>disclaimer:</b> Server B developers or cubepost is not responsible for any server manipulation, protection, actions and usage; usage of this software or console is solely responsible by the user for any actions or damages.</small></sup></p>
 <p><sup><small>AWS, GCP names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.</small></sup></p>
