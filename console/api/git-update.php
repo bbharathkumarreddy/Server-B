@@ -18,7 +18,7 @@ if($server_b_auth_key == ''){
     header("HTTP/1.0 403 Unauthorized");
     die(json_encode(array('message'=>'Unauthorized')));
 }
-$tid_encr = $_GET['tid'];
+$tid_encr = base64_decode($_GET['tid']);
 $tid=openssl_decrypt($tid_encr, 'AES-256-CBC', $server_b_auth_key);
 
 $git_trigger_enable = trim(shell_exec($service.' getKey git_trigger_enable_'.$tid));
