@@ -66,6 +66,7 @@
     </div>
     <br>
     <?php
+    ini_set('display_errors', '1');
     for ($i=1;$i<=5;$i++) {
         $git_trigger_enable = trim(shell_exec($getKey . ' git_trigger_enable_'.$i));
         $git_folder_path = trim(shell_exec($getKey . ' git_folder_path_'.$i));
