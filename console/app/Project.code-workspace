@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "D:\\keys\\Sitemap-B-Framework"
+		},
+		{
+			"path": "D:\\keys\\cubepost.red-master"
+		},
+		{
+			"path": "D:\\keys\\cubepost.red-public"
+		},
+		{
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

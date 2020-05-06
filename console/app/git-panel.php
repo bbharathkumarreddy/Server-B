@@ -234,12 +234,12 @@
             //     return 0;
             // }
             let mode = $(this).attr('git');
+            let tid = $(this).attr('tid');
             if(mode == 'git_enable') {
-                let git_trigger_enable = $('#git_trigger_enable').is(":checked");
+                let git_trigger_enable = $('[tid="'+tid+'"].git_trigger_enable').is(":checked");
                 if(git_trigger_enable) mode = 'git_trigger_enable';
                 else mode = 'git_trigger_disable';
             }
-            let tid = $(this).attr('tid');
             $.ajax({
                 url: api_link + 'api_service.php?o=git_process&mode=' + mode+ '&tid=' + tid ,
                 type: 'GET',
