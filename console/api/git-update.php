@@ -97,6 +97,29 @@ function history_write($message,$tid){
     fclose($fp);
 }
 
+function slack_triggers($message){
+    try {
+        $slack_webhook_url=trim(shell_exec($service.' getKey slack_webhook_url'));
+        $slack_name=trim(shell_exec($service.' getKey slack_name'));
+        $slack_icon_url=trim(shell_exec($service.' getKey slack_icon_url'));
+        if($slack_webhook_url != ''){
+            if($slack_name == '') { $slack_name = 'Server B'; }
+            $data = array('text' => $message, 'username' => $slack_name);     
+            if($slack_icon_url != '') { $data['slack_icon_url'] = $slack_icon_url; }
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $slack_webhook_url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30); 
+            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+            curl_exec($ch);
+            curl_close($curl);
+        }
+    }
+    catch (exception $e) { }
+}
+
 $git_folder_path=trim(shell_exec($service.' getKey git_folder_path_'.$tid));
 $git_repo=trim(shell_exec($service.' getKey git_repo_'.$tid));
 $git_username=urlencode(trim(shell_exec($service.' getKey git_username_'.$tid)));
@@ -117,39 +140,49 @@ echo '--------------------------------------------------------------------------
 echo 'Trigger Started<br><br>';
 echo '<b>Repository</b> => '.$git_repo.'<br><br>';
 if(strpos($resp, 'ot a git repository') !== false){
-    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> New Deployment -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> New Deployment -> '.$git_repo_parse['path'].' Start'.PHP_EOL);
+    slack_triggers('New Deployment -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Start');
     $cmd  = 'git clone -b '.$git_branch.' '.$git_url.' '.$git_folder_path.' 2>&1';
     echo exec($cmd);
     fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Cloning -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+    slack_triggers('GIT Cloning -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Pass');
     echo '<br><b>Info: Created git clone in '.$git_folder_path.'</b><br>';
     if (file_exists($git_folder_path.'/deployment.sh')) {
-        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
-        echo "<br>====== Auto Deployment Script Found & Started ======<br>";
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Started -> '.$git_repo_parse['path'].' Start'.PHP_EOL);
+        slack_triggers('Auto Deploy Script Started -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Start');
+        echo "<br>====== Auto Deployment Script Started ======<br>";
         echo exec('bash '.$git_folder_path.'/deployment.sh');
         echo "<br>====== Auto Deployment Completed ======<br>";
         fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Auto Deploy Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+        slack_triggers('Auto Deploy Script Completed -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Pass');
     }
     
 } else {
     if (file_exists($git_folder_path.'/before_update.sh')) {
-        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
-        echo "<br>====== Auto Before Update Script Found & Started ======<br>";
+        fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Started -> '.$git_repo_parse['path'].' Start'.PHP_EOL);
+        slack_triggers('Before Update Script Started -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Start');
+        echo "<br>====== Auto Before Update Script Started ======<br>";
         echo exec('bash '.$git_folder_path.'/before_update.sh 2>&1').'<br>';
         echo "<br>====== Auto Before Update Completed ======<br>";
         fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> Before Update Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+        slack_triggers('Before Update Script Completed -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Pass');
     } 
     echo exec("cd ".$git_folder_path." && git stash 2>&1").'<br>';
     echo exec("cd ".$git_folder_path." && git reset 2>&1").'<br>';
     echo '<br><b>Info:</b>';
-    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Triggered -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+    fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Triggered -> '.$git_repo_parse['path'].' Start'.PHP_EOL);
+    slack_triggers('GIT Update Triggered -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Start');
     echo exec("cd ".$git_folder_path." && git pull ".$git_url." ".$git_branch."  2>&1").'<br>';
     fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> GIT Update Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+    slack_triggers('GIT Update Completed -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Pass');
     if (file_exists($git_folder_path.'/after_update.sh')) {
         fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Found & Started -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+        slack_triggers('After Update Script Started -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Start');
         echo "<br>====== Auto After Update Script Found & Started ======<br>";
         echo exec('bash '.$git_folder_path.'/after_update.sh 2>&1').'<br>';
         echo "<br>====== Auto After Update Completed ======<br>";
         fwrite($git_logs, date('Y-m-d H:i:s').' Repo '.$tid.' -> After Update Script Completed -> '.$git_repo_parse['path'].' Pass'.PHP_EOL);
+        slack_triggers('After Update Script Completed -> Repo '.$tid.' '.$git_repo_parse['path'].'\nBranch -> '.$git_branch.'\n'.date('Y-m-d H:i:s').' Pass');
     }
 }
 echo '<br>';
