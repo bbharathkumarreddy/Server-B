@@ -5,7 +5,7 @@ echo '--------------------------------------------------------------------------
 echo shell_exec("cd /var/www/server-b/ && git stash").'<br>';
 echo shell_exec("cd /var/www/server-b/ && git reset").'<br>';
 echo '<br><b>Info:</b>';
-slack_triggers("Server B Application Started | Branch Master\n".date("Y-m-d").".".date("h:i:sa")." Start");
+slack_triggers("Server B Application Started | Branch Master\n".date("Y-m-d").".".date("h:i:sa")."\nStarted");
 echo shell_exec("cd /var/www/server-b/ && git pull origin master");
 echo '<br>';
 echo shell_exec("bash /var/www/server-b/bash/scripts/update-formation.sh").'<br>';
@@ -13,7 +13,7 @@ echo shell_exec("chmod -R 777 /var/www/server-b");
 echo shell_exec("chmod -R 777 /var/www/server-b-data").'<br>';
 echo shell_exec("bash /var/www/server-b/system/scripts/service.sh setKey update_date ".date("Y-m-d").'.'.date("h:i:sa"));
 echo '<br>complete<br>';
-slack_triggers("Server B Application Completed | Branch Master \n".date("Y-m-d").".".date("h:i:sa")." Pass");
+slack_triggers("Server B Application Completed | Branch Master \n".date("Y-m-d").".".date("h:i:sa")."\nPass");
 echo '<b>---------------------------------------------------------------------------------------------<br>';
 echo '..............................Server B Update Completed..............................................<br>';
 echo '---------------------------------------------------------------------------------------------</b><br>';
@@ -32,7 +32,7 @@ function slack_triggers($message){
               $public_server_b_access = $public_ip;
           }
           if($slack_name == '') { $slack_name = 'Server B'; }
-          $data = array('text' => $message."\n Server B @".$public_ip, 'username' => $slack_name); 
+          $data = array('text' => $message."\n Server B @ ".$public_ip, 'username' => $slack_name); 
           if($slack_icon_url != '') { $data['slack_icon_url'] = $slack_icon_url; }
           $ch = curl_init();
           curl_setopt($ch, CURLOPT_URL, $slack_webhook_url);
