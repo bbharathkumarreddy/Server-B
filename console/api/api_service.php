@@ -139,12 +139,14 @@ if (isset($_GET['o'])) {
         else if($_GET['mode'] == 'git_trigger_enable') { 
             shell_exec($service." write_log git triggers enabled");
             $a = shell_exec($service.' setKey git_trigger_enable_'.$tid.' enable');
+            slack_triggers("GIT Configuration Update\nTrigger Enabled For Repo - ".$tid."\n".date("Y-m-d").".".date("h:i:sa"));
             print_r($a);
             exit; 
         }
         else if($_GET['mode'] == 'git_trigger_disable') {
             shell_exec($service." write_log git triggers disabled");
             $a = shell_exec($service.' setKey git_trigger_enable_'.$tid.' disable');
+            slack_triggers("GIT Configuration Update\nTrigger Disabled For Repo - ".$tid."\n".date("Y-m-d").".".date("h:i:sa"));
             print_r($a);
             exit; 
         }
@@ -189,6 +191,7 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' setKey git_password_'.$tid.' '.$git_password);
         echo shell_exec($service.' setKey git_ip_list_'.$tid.' '.$ip_list);
         echo shell_exec($service.' setKey git_branch_'.$tid.' '.$git_branch);
+        slack_triggers("GIT Repo Configuration Update\nRepo - ".$tid." ".$_GET['git_repo']."\nBranch ".$git_branch."\n".date("Y-m-d").".".date("h:i:sa"));
         echo 'Git Saved Successfully';
     }
     else if ($o == 'change_port') {
@@ -234,3 +237,33 @@ if (isset($_GET['o'])) {
 } else {
     echo 'Server - B No Operation found';
 }
+function slack_triggers($message){
+    try {
+        $service='bash /var/www/server-b/system/scripts/service.sh';
+        $slack_webhook_url=trim(shell_exec($service.' getKey slack_webhook_url'));
+        $slack_name=trim(shell_exec($service.' getKey slack_name'));
+        $slack_icon_url=trim(shell_exec($service.' getKey slack_icon_url'));
+        if($slack_webhook_url != ''){
+            $public_server_b_domain = trim(shell_exec($service.' getKey public_server_b_domain'));
+            $public_ip = trim(shell_exec($service.' getKey public_ip'));
+              if ($public_server_b_domain != '') {
+                $public_server_b_access = $public_server_b_domain;
+            } else {
+                $public_server_b_access = $public_ip;
+            }
+            if($slack_name == '') { $slack_name = 'Server B'; }
+            $data = array('text' => $message."\n Server B @ ".$public_ip, 'username' => $slack_name); 
+            if($slack_icon_url != '') { $data['slack_icon_url'] = $slack_icon_url; }
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $slack_webhook_url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30); 
+            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+            curl_exec($ch);
+            curl_close($ch);
+        }
+    }
+    catch (exception $e) { }
+  }
