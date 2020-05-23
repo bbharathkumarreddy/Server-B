@@ -20,6 +20,12 @@ Open Source Initiative
     <li>IP Restriction with IPs and CIDR comma seperated list supported for git trigger</li>
   </ul>
 
+  <h4>Slack & Webhooks Triggers</h4>
+  <ul>
+    <li>🆕 Slack Notification for CIDI</li>
+    <li>HTTPS Post Triggers Supported</li>
+  </ul>
+  
   <h4>File Manager | Viewer | IDE</h4>
   <ul>
     <li>Create Edit Delete files from browser in your server for development and view all config, Log, and development files</li>
