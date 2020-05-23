@@ -244,15 +244,8 @@ function slack_triggers($message){
         $slack_name=trim(shell_exec($service.' getKey slack_name'));
         $slack_icon_url=trim(shell_exec($service.' getKey slack_icon_url'));
         if($slack_webhook_url != ''){
-            $public_server_b_domain = trim(shell_exec($service.' getKey public_server_b_domain'));
-            $public_ip = trim(shell_exec($service.' getKey public_ip'));
-              if ($public_server_b_domain != '') {
-                $public_server_b_access = $public_server_b_domain;
-            } else {
-                $public_server_b_access = $public_ip;
-            }
             if($slack_name == '') { $slack_name = 'Server B'; }
-            $data = array('text' => $message."\n Server B @ ".$public_ip, 'username' => $slack_name); 
+            $data = array('text' => $message."\n"); 
             if($slack_icon_url != '') { $data['slack_icon_url'] = $slack_icon_url; }
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $slack_webhook_url);
