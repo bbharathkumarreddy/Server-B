@@ -190,6 +190,13 @@ $api_link='https://'.$public_server_b_access.':'.$server_b_port.'/api/';
                     <span>App Store</span>
                 </a>
             </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="<?php echo $app_link; ?>slack-triggers.php">
+                    <i class="fab fa-slack" style="font-weight:100"></i>
+                    <span>Slack | Triggers</span>
+                </a>
+            </li>
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?php echo $app_link; ?>scripts.php">

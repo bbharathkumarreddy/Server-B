@@ -101,6 +101,10 @@ install(){
     echo git_ip_list_5"='"$git_ip_list_5"'" >> $server_b_config_path
     echo git_trigger_enable_5"='"$git_trigger_enable_5"'" >> $server_b_config_path
     echo git_branch_5"='"$git_branch_5"'" >> $server_b_config_path
+
+    echo slack_webhook_url"='"$slack_webhook_url"'" >> $server_b_config_path
+    echo slack_name"='"$slack_name"'" >> $server_b_config_path
+    echo slack_icon_url"='"$slack_icon_url"'" >> $server_b_config_path
     
     echo cron_file"='"$cron_file"'" >> $server_b_config_path
     echo temp_cron"='"$temp_cron"'" >> $server_b_config_path

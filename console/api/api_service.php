@@ -63,6 +63,18 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' removeLogFile '.$file_name);
         echo '\n Server B =>File Added';
     }
+    else if ($o == 'slack_update') {
+        if(isset($_GET['slack_webhook_url'])) { $slack_webhook_url=base64_decode($_GET['slack_webhook_url']); }
+        else { $slack_webhook_url = ''; }
+        if(isset($_GET['slack_name'])) { $slack_name=base64_decode($_GET['slack_name']); }
+        else { $slack_name = ''; }
+        if(isset($_GET['slack_icon_url'])) { $slack_icon_url=base64_decode($_GET['slack_icon_url']); }
+        else { $slack_icon_url = ''; }
+        echo shell_exec($service.' setKey slack_webhook_url '.$slack_webhook_url);
+        echo shell_exec($service.' setKey slack_name '.$slack_name);
+        echo shell_exec($service.' setKey slack_icon_url '.$slack_icon_url);
+        echo 'Slack Configuration Updated Successully';
+    }
     else if ($o == 'publish_cron_file') {
         echo shell_exec($service.' publish_cron_file');
         echo '\n Server B =>Cron Added Successully';
