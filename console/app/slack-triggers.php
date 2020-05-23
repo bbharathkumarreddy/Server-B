@@ -23,19 +23,19 @@
                     <div class="col-xs-12 col-md-12 md-12">
                         Slack Webhook URL or HTTPS Trigger URL <small>(POST HTTPS URL)</small>
                         <br>
-                        <input class="slack_webhook_url" type="text" placeholder="https://hooks.slack.com/services/A0FDFVFGR64/DOIRJGSAMPLE22Q58D47GTJFR"  style="width:100%" value="<?php echo shell_exec($getKey . ' slack_webhook_url'); ?>">
+                        <input id="slack_webhook_url" type="text" placeholder="https://hooks.slack.com/services/A0FDFVFGR64/DOIRJGSAMPLE22Q58D47GTJFR"  style="width:100%" value="<?php echo shell_exec($getKey . ' slack_webhook_url'); ?>">
                     </div>
                     <br><br><br><br>
                     <div class="col-xs-12 col-md-6 md-6">
                         Slack Name <small>(Slack Only Config)</small>
                         <br>
-                        <input class="slack_name" type="text" placeholder="Server B" style="width:100%" value="<?php echo shell_exec($getKey . ' slack_name'); ?>">
+                        <input id="slack_name" type="text" placeholder="Server B" style="width:100%" value="<?php echo shell_exec($getKey . ' slack_name'); ?>">
                     </div>
                     <br><br><br><br>
                     <div class="col-xs-12 col-md-6 md-6">
                         Slack Icon Url <small>(Slack Only Config)</small>
                         <br>
-                        <input class="slack_icon_url" type="text" placeholder="https://example.com/small-icon" style="width:100%" value="<?php echo shell_exec($getKey . ' slack_icon_url'); ?>">
+                        <input id="slack_icon_url" type="text" placeholder="https://example.com/small-icon" style="width:100%" value="<?php echo shell_exec($getKey . ' slack_icon_url'); ?>">
                         <br><br><br>    
                     </div>
                     <div class="col-xs-12 col-md-6 md-6">
