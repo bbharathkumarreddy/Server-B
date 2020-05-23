@@ -191,7 +191,7 @@ if (isset($_GET['o'])) {
         echo shell_exec($service.' setKey git_password_'.$tid.' '.$git_password);
         echo shell_exec($service.' setKey git_ip_list_'.$tid.' '.$ip_list);
         echo shell_exec($service.' setKey git_branch_'.$tid.' '.$git_branch);
-        slack_triggers("GIT Repo Configuration Update\nRepo - ".$tid." ".$_GET['git_repo']."\nBranch ".$git_branch."\n".date("Y-m-d").".".date("h:i:sa"));
+        slack_triggers("GIT Repo Configuration Update\nRepo - ".$tid." ".$git_repo."\nBranch ".$git_branch."\n".date("Y-m-d").".".date("h:i:sa"));
         echo 'Git Saved Successfully';
     }
     else if ($o == 'change_port') {
