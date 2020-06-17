@@ -125,7 +125,7 @@ install(){
     install_nano
     install_nginx
     install_php
-    sudo apt-get install php-curl
+    sudo apt-get install php-curl -y
     if [ "$install_mysql" = 'true' ]; then
     install_mysql $mysql_password $mysql_alt_user $mysql_alt_pwd $mysql_port 0.0.0.0
     fi
